@@ -1,0 +1,41 @@
+#!/usr/bin/python
+
+#idx format is like
+# word [partOfSpeech]* | count
+# replaceable text is treated as pure text, all punctuation remains.  It doesn't konw about contract'ns
+import sys
+import code
+import string
+import os
+import code
+import shutil
+
+
+def [fwdIdx,revIdx] = loadIndex(fn):
+    f=open(fn,'r') # open the file for reading
+    fwdIdx={} # initialize the indexes
+    revIdx={}
+    for line in f:
+        toks = line.split('|') # split line at '|'
+        if(len(toks)!=2): # malformed line
+            continue
+        numberOfTimesIveSeenThisWord = int(toks[1].strip())  #not used.
+        toks = toks[0].strip().split(' ') # split first part of line at ' '
+        if(len(toks)==1): # no parts of speech known
+            continue
+        word = toks[0].strip()
+        fwdIdx[word]=[]
+        for pos in toks[1:]: # every element of this list from 1 until end
+            pos = pos.strip()
+            fwdIdx[word].append(pos)
+            if(pos not in revIdx): 
+                revIdx[pos] = []
+            revIdx[pos].append(word)
+            
+
+if __name__ ==  "__main__":
+    indexFn = sys.argv[1] # '../index.idx'
+    replaceTxtFn = sys.argv[2]
+    [fwdIdx,revIdx] = loadIndex(indexFn)
+    newText = replaceWordsByPartsOfSpeech(replaceTextFn,fwdIdx,revIdx)
+
