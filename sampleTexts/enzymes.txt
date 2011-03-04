@@ -1,0 +1,20 @@
+Enzymes are biological catalysts. They speed up reactions by lowering the activation energy (the energy required for a reaction to begin). This is accomplished by increasing the local concentration of reactants (the compounds used in the reaction) and bringing the reactants into proper orientation for the reaction to begin. All enzymes are made of protein and their production is controlled by DNA. Enzymes can be reused many times. The standard suffix for enzymes is "ase."
+
+The induced fit model describes how enzymes work. Each enzyme has active sites that are specific in shape, size, or polarity to the particular reactant. When the substrate binds to the active site, the enzyme changes shape to move the substrate into a new position for the reaction to occur.
+induced fit
+
+
+Many factors influence enzyme function:
+
+    * Different enzymes function better at different pHs. Enzymes in your stomach may prefer an acidic environment with a low pH while enzymes elsewhere may not.
+
+    * In general, higher temperatures speed reactions -- to a point. Above 104 degrees fahreinheit, enzymes become denatured and can no longer catalyze reactions.
+
+    * Higher concentrations of substrate also speed reactions until the solution reaches a saturation point. Past that point, the addition of substrate will not affect the velocity of the reaction.
+
+    * Irreversible inhibition occurs when the inhibitor added denatures or destroys the enzyme. Addition of more substrate into the system will have no effect on reaction speed since the enzymes are not functioning. Similarly, removal of the inhibitor will have no effect on the reaction speed since the enzymes have already been destroyed.
+
+    * Reversible inhibition can be competitive or noncompetitive. In competitive inhibition, the inhibitor competes with the substrate for the same binding site on the enzyme. The addition of more substrate into the system would slightly speed up the reaction since there would be larger chance of the substrate binding to the active site than the inhibitor. The addition of more enzyme would also speed up the reaction since there would be more binding sites available. The removal of the inhibitor would also speed up the reaction. In noncompetitive inhibition the inhibitor temporarily binds to a site other than the binding site. If the enzyme is an allosteric enzyme, the presence of the inhibitor changes the shape of the enzyme and prevents the reaction from occurring. The addition of more substrate into this system would have no effect on reaction rate. The addition of more enzymes into this system would speed up the reaction slightly. The addition of more inhibitor would slow down the reaction. The removal of the inhibitor would speed up the reaction. 
+
+
+Along with enzymes, coenzymes and cofactors also influence reactions. Coenzymes are vitamins. They function as intermediate carriers of electrons, atoms, or functional groups. Cofactors are minerals. They are usually found near the active site and assist in binding substrates to the enzyme. 
