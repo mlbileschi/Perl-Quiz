@@ -1,0 +1,6 @@
+problems i've noticed:
+
+british spellings are highly favoured to create blanks from.
+years include 600,000
+years can be negative
+years can be after 2011
