@@ -1,1 +1,5 @@
-hey yall
+some commands that work:
+
+perl questionwriter.pl photosynth.txt
+perl questionwriter.pl math.txt --qword=monoid
+perl questionwriter.pl ww2.txt --years
