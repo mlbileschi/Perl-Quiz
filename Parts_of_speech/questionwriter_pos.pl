@@ -30,7 +30,7 @@ shift(@ARGV);	#we have to pop off the first @ARGV element because otherwise it w
 #we then get these options from the command line input.
 my $qword; my $years; 
 GetOptions ("qword=s" => \$qword, "years" => \$years) or die "Whups, got options we don't recognize!";
-$qword=lc($qword);
+#$qword=lc($qword);
 
 
 
@@ -69,10 +69,7 @@ foreach (@dict)
 	my @line = split(/\t/, $_); 			#to the left of the | is word(space)pos(space)....
 
 	my $word = $line[0];	#pop first elt off
-#	print "WORD: $word\n";
-
 	my $pos=$line[1];
-#	print "POS: $pos\n";
 
 	$hdict{$word}=[$pos, $line[2]/8382231];	#key is word, value is (part of speech, freq)#possibly add it with a really high value?
 															#want to change the denominator if you care, which is no longer the number of words spotted.
@@ -94,7 +91,7 @@ foreach(@file)
 		if($token =~ /^[A-Za-z]+[\.,]?$/)
 		{
 			chop($token) if ($token =~ /[\.,]+$/);	#chop that punctuation right off of there
-			$token = lc($token);							#treat words as all lower case for now
+#			$token = lc($token);							#treat words as all lower case for now
 			if(exists($localfreq{$token}))			#increase frequency/add depending if seen.
 			{
 				$localfreq{$token}++;
@@ -111,21 +108,20 @@ foreach(@file)
 #compute relative frequencies
 foreach my $key ( keys(%localfreq) ) 
 {
-	if(!exists($hdict{$key}))
+	if(!exists($hdict{lc($key)}))
 	{
 		$localfreq{$key}=0;		#possibly add it with a really high value?
 		print "word $key is not in hdict\n";
 	} 
 	else
 	{	
-		$localfreq{$key}= ($localfreq{$key})/(@{$hdict{$key}}[1]);  #tricky syntax because of array references in hash table
+		$localfreq{$key} = ($localfreq{$key})/(@{$hdict{lc($key)}}[1]);  #tricky syntax because of array references in hash table
 	}
 }
 
 #add each of the keys in decreasing order to @topwords
 foreach my $key (sort {$localfreq{$b} <=> $localfreq{$a}} keys(%localfreq)) 
 {
-	
 #	print "$key, ".@{$hdict{$key}}[0].", $localfreq{$key}\n";		#possibly print if --verbose
 	push(@topwords, $key);
 }
@@ -151,16 +147,16 @@ my $wholefile = "";
 foreach (@file)
 {
 	chomp;
-	$wholefile.=$_;
+	$wholefile.=$_." ";
 }
-my @sentences = split(/\./, $wholefile);
+my @sentences = split(/\."?\s+/, $wholefile);
 
 #foreach sentence, create the requested/relevant question
 #possibly change to calling each of the subs below with parameters instead
 #of depending on $_ to work properly
 foreach(@sentences)
 {
-
+	$_.="\.";
 	if($years) 
 	{
 		&years
@@ -191,19 +187,20 @@ sub years
 	#          (digits) 
 	# (digit,digit) etc.
 	#also, @matches gets each digit match per sentence.
-	if(($_ =~ $timeprepregex) && (@matches = $_=~m/[\s+,\(\-](\d+)[\.,\s+\-\)]?(^,\d)/g)) # check with that 600,000 number from stan's file
+	if(($_ =~ $timeprepregex) && (@matches = $_=~m/[^(,\d)][\s+,\(\-](\d+)[\.\s+\-\)]?[^(,\d+)( years)]/ig))
 	{
 		foreach my $match (@matches)
 		{
-			print "correct answer: $match\n";
+			print "correct answer: $match\n"; ##correct answer with AD/BC thing?
 			my @tokens = split(/\s+/, $_);
 			foreach my $word (@tokens)
 			{
+				if($word=~/(AD)|(BC)|(A\.D\.)|(B\.C\.)|(BCE)|(B\.C\.E\.)/) { next;}
 				if($word =~ $match)
 				{
-					#print " ".$` unless $` eq " "; #in case the number has brackets around it or something stupid #don't know why this is commented...
+					print " ".$` unless $` eq " "; #in case the number has brackets around it or something stupid
 					print "_______________";
-					print $'." " unless $' eq " "; #in case the number was followed by puncutation
+					print $'." " unless $' eq " "; #in case the number was followed by punctuation
 				}
 				else
 				{
@@ -213,6 +210,14 @@ sub years
 			print "\n";
 			my %numberchoice=(); #hash of randoms chosen
 			my $correct = int(rand(5));
+
+			#account for BC in years
+			if($_ =~ /$match (BC)|(B\.C\.)|(BCE)|(B\.C\.E\.)/)
+			{
+				$match = (-1)*$match;
+			}
+			my $lessthannow = (2011>$match);
+ 
 			$numberchoice{$match}=0;
 		
 			#make 4 random candidate numbers
@@ -223,22 +228,19 @@ sub years
 			#			BC/AD
 			#			check for proximity to months
 			my $one=$match; my $two=$match; my $three=$match; my $four=$match;
-			my $MOST_TRIES=25;
-			if( 1)
-			{
-				my $posneg = (-1)**int(rand(2));
-				while(exists($numberchoice{$one})) { $one = $match + $posneg*int(rand(sqrt($match*10))); $MOST_TRIES--; if($MOST_TRIES<=0) { $one = int(rand(100));} }
-				$numberchoice{$one}=0;
-				$posneg = (-1)**int(rand(2));
-				while(exists($numberchoice{$two})) { $two = $match + $posneg*int(rand(sqrt($match*5))); $MOST_TRIES--; if($MOST_TRIES<=0) { $two = int(rand(100));}}
-				$numberchoice{$two}=0;
-				$posneg = (-1)**int(rand(2));
-				while(exists($numberchoice{$three})) { $three = $match + $posneg*int(rand(sqrt($match*2))); $MOST_TRIES--; if($MOST_TRIES<=0) { $three = int(rand(100));}}
-				$numberchoice{$three}=0;
-				$posneg = (-1)**int(rand(2));
-				while(exists($numberchoice{$four})) { $four = $match + $posneg*int(rand(sqrt($match))); $MOST_TRIES--; if($MOST_TRIES<=0) { $four = int(rand(100));}}
-				$numberchoice{$four}=0;
- 			}
+
+			my $posneg = (-1)**int(rand(2));
+			while(exists($numberchoice{$one}) || ($lessthannow && 2011<$one)) { $one = $match + $posneg*(int(rand(50))+50); }
+			$numberchoice{$one}=0;
+			$posneg = (-1)**int(rand(2));
+			while(exists($numberchoice{$two}) || ($lessthannow && 2011<$two)) { $two = $match + $posneg*(int(rand(40))+10); }
+			$numberchoice{$two}=0;
+			$posneg = (-1)**int(rand(2));
+			while(exists($numberchoice{$three}) || ($lessthannow && 2011<$three)) { $three = $match + $posneg*int(rand(25)); }
+			$numberchoice{$three}=0;
+			$posneg = (-1)**int(rand(2));
+			while(exists($numberchoice{$four}) || ($lessthannow && 2011<$four)) { $four = $match + $posneg*int(rand(10)); }
+			$numberchoice{$four}=0;
 
 			#shuffle answers
 			my @pre = ( $match, $one, $two, $three, $four );
@@ -253,7 +255,18 @@ sub years
 			#print multiple-choice answers
 			for my $j (1..5)
 			{
+				if($match>99)
+				{
 					print "$j \. $post[$j-1]\n";
+				}
+				elsif($post[$j-1]<0) #note that the conditions are exclusive
+				{ 
+					print "$j \. ".(-1)*$post[$j-1]." B.C.\n";
+				}
+				else
+				{
+					print "$j \. $post[$j-1] A.D.\n";
+				}
 			}
 		}
 	}
@@ -262,13 +275,13 @@ sub years
 sub qword
 {
 	#we can't write a question about a word that's not there
-	if(! exists( $localfreq{$qword} ) )
+	if(! exists( $localfreq{lc($qword)} ) )
 	{
 		print "\n$qword is not in $infile\n\n";
 		last;
 	}
 	#not quite sure how to handle these cases right now
-	if(! exists( $hdict{$qword} ) )
+	if(! exists( $hdict{lc($qword)} ) )
 	{
 		print "\n$qword is not in dictionary file.\n\n";
 		last;
@@ -297,9 +310,7 @@ sub qword
 		my %numberchoice=(); #hash of randoms chosen
 		my $correct = int(rand(5))+1; #which answer is the correct one
 
-##dont think this is necessary anymore	
-		my $index_in_topwords= grep { lc($topwords[$_]) eq $qword } 0..$#topwords; #finds the index in topwords (so we don't choose it again)
-		$numberchoice{ $index_in_topwords }=0;
+
 	
 		my $maxtries=50;
 
@@ -313,23 +324,23 @@ sub qword
 			{
 				my $random=$correct;
 				#goes until a new topword is chosen
-				if(@{$hdict{$qword}}[0] ne "")
+				if(@{$hdict{lc($qword)}}[0] ne "")
 				{
 					while ( $maxtries>0
 								&& ( exists($numberchoice{$random})
 								|| ($topwords[$random] eq lc($qword))
-								|| @{$hdict{$topwords[$random]}}[0]!~@{$hdict{$qword}}[0]   )
+								|| @{$hdict{$topwords[$random]}}[0]!~@{$hdict{lc($qword)}}[0]   )
 								 )
 					{
 						$random=int(rand(20)); #how far into @topwords i want to look for candidate answers
 						$maxtries--;
 					}
 				}
-
-				if($maxtries<=0 || @{$hdict{$qword}}[0] eq "")
+				#unable to match parts of speech, indicated by print *
+				if($maxtries<=0 || @{$hdict{lc($qword)}}[0] eq "")
 				{
-#					print "Unable to match parts of speech in this question.\n";
-					print "*";
+					#print "Unable to match parts of speech in this question.\n";
+					print "*"; 
 					while ( exists($numberchoice{$random}) ||	$topwords[$random] eq lc($qword) )
 					{
 						$random=int(rand(20)); #how far into @topwords i want to look for wrong answers
@@ -349,15 +360,14 @@ sub default
 	#ten of top words
 	for my $i (0..10)
 	{
-		if(! exists( $hdict{$topwords[$i]} ) )
+		if(! exists( $hdict{lc($topwords[$i])} ) )
 		{
-			print "\n $topwords[$i] is not in dictionary file.\n\n";
+			print "\n ".lc($topwords[$i])." is not in dictionary file.\n\n";
 			next;
 		}
 		my $tempregex = $topwords[$i];
 		if($_=~/\s+$tempregex[\.,\s+]?/i)
 		{
-			print "correct answer: $topwords[$i]\n";
 			my @tokens = split(/\s+/, $_);
 			foreach my $word (@tokens)
 			{
@@ -372,6 +382,8 @@ sub default
 				}
 			}
 			print "\n";
+			print "correct answer: $topwords[$i]\n";
+
 
 
 			#find other candidate answers out of @topwords
@@ -392,15 +404,15 @@ sub default
 				{
 					my $random=$correct;
 					#goes until a new topword is chosen
-					if(@{$hdict{$topwords[$i]}}[0] ne "")
+					if(@{$hdict{lc($topwords[$i])}}[0] ne "")
 					{
-						while ( (exists($numberchoice{$random} ) || @{$hdict{$topwords[$random]}}[0]!~@{$hdict{$topwords[$i]}}[0]) && $maxtries>0)
+						while ( (exists($numberchoice{$random} ) || @{$hdict{lc($topwords[$random])}}[0]!~@{$hdict{lc($topwords[$i])}}[0]) && $maxtries>0)
 						{
 							$random=int(rand(30)); #how far into @topwords i want to look for wrong answers
 							$maxtries--;
 						}
 					}
-					if($maxtries<=0 || @{$hdict{$topwords[$i]}}[0] eq "")
+					if($maxtries<=0 || @{$hdict{lc($topwords[$i])}}[0] eq "")
 					{
 #					print "Unable to match parts of speech in this question.\n";
 					print "*";
