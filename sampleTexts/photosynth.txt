@@ -1,5 +1,4 @@
-
- Photosynthesis occurs in two stages. These stages are called the light reactions and the dark reactions. The light reactions take place in the presence of light. The dark reactions do not require direct light, however dark reactions in most plants occur during the day.
+Photosynthesis occurs in two stages. These stages are called the light reactions and the dark reactions. The light reactions take place in the presence of light. The dark reactions do not require direct light, however dark reactions in most plants occur during the day.
 
 Light reactions occur mostly in the thylakoid stacks of the grana. Here, sunlight is converted to chemical energy in the form of ATP (free energy containing molecule) and NADPH (high energy electron carrying molecule). Chlorophyll absorbs light energy and starts a chain of steps that result in the production of ATP, NADPH, and oxygen (through the splitting of water). Oxygen is released through the stomata. Both ATP and NADPH are used in the dark reactions to produce sugar.
 

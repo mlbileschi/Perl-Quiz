@@ -7,9 +7,7 @@ use Getopt::Long;
 ## mlbileschi@gmail.com
 ## creates questions
 
-#TODO Months
-#don't need to do hdict if --years /optimization/
-# what about ? and ! to end sentences?
+#TODO Months, what about ? and ! to end sentences?
 
 
 
@@ -86,7 +84,7 @@ if(!$years)
 			{
 				chop($token) if ($token =~ /[\.,]+$/);	#chop that punctuation right off of there
 	#			$token = lc($token);							#treat words as all lower case for now
-				if(exists($localfreq{$token}))			#increase frequency/add depending if seen.
+				if(exists($localfreq{$token}))			#increase frequency/add depending if seen. #TODO different casings of same word fix
 				{
 					$localfreq{$token}++;
 				}
@@ -119,7 +117,7 @@ if(!$years)
 	#	print "$key, ".@{$hdict{$key}}[0].", $localfreq{$key}\n";		#possibly print if --verbose
 		push(@topwords, $key);
 	}
-	#foreach (@topwords) { print "topword: $_\n"; } #possibly print if --verbose / for troubleshooting
+	foreach (@topwords) { print "topword: $_\n"; } #possibly print if --verbose / for troubleshooting
 
 }
 
@@ -158,7 +156,10 @@ my @sentences = split(/\."?\s+/, $wholefile);
 #of depending on $_ to work properly
 foreach my $sentence (@sentences)
 {
-	$sentence.="\.";
+
+#	print $sentence."\n\n";
+
+#	$sentence.="\."; #?
 	if($years) 
 	{
 		&years($sentence);
@@ -182,7 +183,7 @@ foreach my $sentence (@sentences)
 sub years
 {
 	my @matches = ();
-	my $sentence = $_[0];
+	my $sentence = $_[0]; #anon @_
 
 	#if sentence has a time preposition
 	# and if sentence has a digit in one of the predetermined formats
@@ -288,7 +289,8 @@ sub years
 
 sub qword
 {
-	my $sentence = $_[0];
+	my $sentence = $_[0]; #anon @_
+	my $nt_capitalize = 0;
 	#we can't write a question about a word that's not there
 	if(! exists( $localfreq{$qword} ) )
 	{
@@ -307,14 +309,16 @@ sub qword
 	{
 		print "correct answer: $qword\n";
 		my @tokens = split(/\s+/, $sentence);
-		foreach my $word (@tokens)
+		for my $j (0..$#tokens)
 		{
+			my $word = $tokens[$j];
 			if (!($word =~ /^$qword/i))
 			{
 				print $word." ";
 			}
 			else
 			{
+				if($j==0) {$nt_capitalize=1;}
 				print "___________________ ";
 				print $'." " unless $' eq " "; #in case the word was followed by puncutation
 			}
@@ -362,37 +366,49 @@ sub qword
 					}						
 				}
 				$numberchoice{$random}=0;
-				print "$j \. $topwords[$random]\n"; #print correct output
+				my $toprint = $topwords[$random];
+				$toprint =~ s/\b(\w+)\b/ucfirst($1)/ge if $nt_capitalize; 
+				print "$j \. $toprint\n"; #print correct output
 			}			
 		}
 	}
 }
 
-
+#TODO middle of sentence capitalization of candidate answers
 #default, i.e. if no command line parameters
 sub default
 {
-	my $sentence = $_[0];
+	my $sentence = $_[0]; #anon @_
+
 	#ten of top words
 	for my $i (0..10)
 	{
-		if(! exists( $hdict{lc($topwords[$i])} ) )
+
+		my $nt_capitalize = 0; #whether the replacement is the first word
+		#but what about if there are two replacements in the same line?
+
+
+		if( !exists( $hdict{lc($topwords[$i])} ) )
 		{
 			print "\n ".lc($topwords[$i])." is not in dictionary file.\n\n";
 			next;
 		}
+
 		my $tempregex = $topwords[$i];
-		if($sentence=~/\s+$tempregex[\.,\s+]?/i)
+		if($sentence=~/(\s+$tempregex[\.,\s+]?)|(^$tempregex[\.,\s+]?)/i)
 		{
 			my @tokens = split(/\s+/, $sentence);
-			foreach my $word (@tokens)
+			for my $j (0..$#tokens)
 			{
+				my $word = $tokens[$j];
+#				print "            the first thing is: $tokens[0]\n";
 				if (!($word =~ /^$topwords[$i]/i))
 				{
 					print $word." ";
 				}
 				else
-				{
+				{ #
+					if($j==0){$nt_capitalize=1;}
 					print "___________________ ";
 					print $'." " unless $' eq " "; #in case the word was followed by puncutation
 				}
@@ -440,7 +456,10 @@ sub default
 						}						
 					}
 					$numberchoice{$random}=0;
-					print "$j \. $topwords[$random]\n"; #print correct output
+					my $toprint = $topwords[$random];
+					$toprint =~ s/\b(\w+)\b/ucfirst($1)/ge if $nt_capitalize; 
+#					print "NTCAP = $nt_capitalize\n";
+					print "$j \. $toprint\n"; #print candidate answers
 				}
 			}
 		}

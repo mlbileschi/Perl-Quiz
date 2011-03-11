@@ -18,5 +18,7 @@ with numbers like 100 million, it thinks in some cases that 100 is a year. see w
 days of months are interpreeted as years
 
 captialization will be difficult.
+FIXED: beginning of sentence capitalization
 
-qword is case sensitive
+qword is case sensitive =(
+
