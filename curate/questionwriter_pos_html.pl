@@ -94,7 +94,7 @@ if(!$years)
 
 		$hdict{$word}=[$pos, $line[2]/8382231];	#key is word, value is (part of speech, freq)#possibly add it with a really high value?
 																#want to change the denominator if you care, which is no longer the number of words spotted.
-	#	$total+=$line[1]; #for counting the number of word occurrences in the dictionary
+	#	$total+=$line[2]; #for counting the number of word occurrences in the dictionary
 	}
 
 	#$total=0; #the number of words in the input text file
