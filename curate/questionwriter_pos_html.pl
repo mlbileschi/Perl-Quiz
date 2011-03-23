@@ -45,7 +45,7 @@ GetOptions ("qword=s" => \$qword, "years" => \$years) or die "Whups, got options
 #open an output file with html format
 open(HTML, ">uncurated_questions.html") or die "Can't open file to write html to";
 
-print HTML "<html>\n<body>\n";
+print HTML "<html>\n";
 
 print HTML "<head>
 <script language=\"Javascript\">
@@ -66,6 +66,8 @@ function toggleShowHide\(boxName, divName\)
 <\/script>
 <\/head>
 ";
+
+print HTML "<body>\n";
 
 my %hdict=();
 my %localfreq=();
