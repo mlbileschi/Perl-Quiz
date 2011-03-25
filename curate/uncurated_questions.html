@@ -1,20 +1,6 @@
 <html>
 <head>
-<script language="Javascript">
-function toggleShowHide(boxName, divName) 
-{
-	if (document.getElementById(boxName).checked==true)
-	{
-		document.getElementById(divName).style.visibility = 'hidden';
-		document.getElementById(divName).style.display = 'none';
-	}
-	else
-	{
-		document.getElementById(divName).style.visibility = 'visible';
-		document.getElementById(divName).style.display = 'block';
-	}
-}
-
+<script src="curator.js">
 </script>
 </head>
 <body>
@@ -22,193 +8,307 @@ word grana is not in hdict
 <br>
 <p><input type="checkbox" id="ckbox0" value="Click here" onClick="toggleShowHide('ckbox0','question0');"></p>
 <DIV ID="question0">
+<INPUT type="button" value="Finalize Question" name="button"0 onClick="finalize('question0'); this.disabled=1">
 ___________________  occurs in two stages <br>
 correct answer: Photosynthesis<br>
-1 . <input type="text" id="myInput" value="Stroma"> <br>
-2 . <input type="text" id="myInput" value="Chlorophyll"> <br>
-3 . Photosynthesis<br>
-4 . <input type="text" id="myInput" value="Sucrose"> <br>
-5 . <input type="text" id="myInput" value="Dioxide"> <br>
+<a style="display:none" id = "div0text1"> 1 . </a>
+<input type="text" id="textbox1" value="1 . Stroma">
+<a style="display:none" id = "div0text2"> 2 . </a>
+<input type="text" id="textbox2" value="2 . Dioxide">
+<a>3 . Photosynthesis</a>
+<a style="display:none" id = "div0text4"> 4 . </a>
+<input type="text" id="textbox4" value="4 . Electron">
+<a style="display:none" id = "div0text5"> 5 . </a>
+<input type="text" id="textbox5" value="5 . Thylakoid">
 </DIV>
+
 <p><input type="checkbox" id="ckbox2" value="Click here" onClick="toggleShowHide('ckbox2','question2');"></p>
 <DIV ID="question2">
+<INPUT type="button" value="Finalize Question" name="button"2 onClick="finalize('question2'); this.disabled=1">
 These stages are called the light ___________________  and the dark ___________________  <br>
 correct answer: reactions<br>
-1 . <input type="text" id="myInput" value="thylakoid"> <br>
-2 . reactions<br>
-3 . <input type="text" id="myInput" value="Photosynthesis"> <br>
-4 . <input type="text" id="myInput" value="Oxygen"> <br>
-5 . <input type="text" id="myInput" value="stroma"> <br>
+<a style="display:none" id = "div2text1"> 1 . </a>
+<input type="text" id="textbox1" value="1 . sucrose">
+<a style="display:none" id = "div2text2"> 2 . </a>
+<input type="text" id="textbox2" value="2 . sunlight">
+<a style="display:none" id = "div2text3"> 3 . </a>
+<input type="text" id="textbox3" value="3 . stomata">
+<a>4 . reactions</a>
+<a style="display:none" id = "div2text5"> 5 . </a>
+<input type="text" id="textbox5" value="5 . glucose">
 </DIV>
+
 <p><input type="checkbox" id="ckbox4" value="Click here" onClick="toggleShowHide('ckbox4','question4');"></p>
 <DIV ID="question4">
+<INPUT type="button" value="Finalize Question" name="button"4 onClick="finalize('question4'); this.disabled=1">
 The light ___________________  take place in the presence of light <br>
 correct answer: reactions<br>
-1 . <input type="text" id="myInput" value="sucrose"> <br>
-2 . <input type="text" id="myInput" value="stacks"> <br>
-3 . <input type="text" id="myInput" value="sunlight"> <br>
-4 . reactions<br>
-5 . <input type="text" id="myInput" value="fructose"> <br>
+<a>1 . reactions</a>
+<a style="display:none" id = "div4text2"> 2 . </a>
+<input type="text" id="textbox2" value="2 . stomata">
+<a style="display:none" id = "div4text3"> 3 . </a>
+<input type="text" id="textbox3" value="3 . Chlorophyll">
+<a style="display:none" id = "div4text4"> 4 . </a>
+<input type="text" id="textbox4" value="4 . dark">
+<a style="display:none" id = "div4text5"> 5 . </a>
+<input type="text" id="textbox5" value="5 . oxygen">
 </DIV>
+
 <p><input type="checkbox" id="ckbox6" value="Click here" onClick="toggleShowHide('ckbox6','question6');"></p>
 <DIV ID="question6">
+<INPUT type="button" value="Finalize Question" name="button"6 onClick="finalize('question6'); this.disabled=1">
 The dark ___________________  do not require direct light, however dark ___________________  in most plants occur during the day <br>
 correct answer: reactions<br>
-1 . <input type="text" id="myInput" value="sucrose"> <br>
-2 . <input type="text" id="myInput" value="molecules"> <br>
-3 . <input type="text" id="myInput" value="dark"> <br>
-4 . reactions<br>
-5 . <input type="text" id="myInput" value="stomata"> <br>
+<a style="display:none" id = "div6text1"> 1 . </a>
+<input type="text" id="textbox1" value="1 . stroma">
+<a style="display:none" id = "div6text2"> 2 . </a>
+<input type="text" id="textbox2" value="2 . carbon">
+<a>3 . reactions</a>
+<a style="display:none" id = "div6text4"> 4 . </a>
+<input type="text" id="textbox4" value="4 . oxygen">
+<a style="display:none" id = "div6text5"> 5 . </a>
+<input type="text" id="textbox5" value="5 . dioxide">
 </DIV>
+
 <p><input type="checkbox" id="ckbox8" value="Click here" onClick="toggleShowHide('ckbox8','question8');"></p>
 <DIV ID="question8">
+<INPUT type="button" value="Finalize Question" name="button"8 onClick="finalize('question8'); this.disabled=1">
 Light reactions occur mostly in the ___________________  stacks of the grana <br>
 correct answer: thylakoid<br>
-1 . <input type="text" id="myInput" value="sucrose"> <br>
-2 . thylakoid<br>
-3 . <input type="text" id="myInput" value="molecules"> <br>
-4 . <input type="text" id="myInput" value="dioxide"> <br>
-5 . <input type="text" id="myInput" value="sugar"> <br>
+<a style="display:none" id = "div8text1"> 1 . </a>
+<input type="text" id="textbox1" value="1 . Photosynthesis">
+<a style="display:none" id = "div8text2"> 2 . </a>
+<input type="text" id="textbox2" value="2 . glucose">
+<a style="display:none" id = "div8text3"> 3 . </a>
+<input type="text" id="textbox3" value="3 . oxygen">
+<a style="display:none" id = "div8text4"> 4 . </a>
+<input type="text" id="textbox4" value="4 . Chlorophyll">
+<a>5 . thylakoid</a>
 </DIV>
+
 <p><input type="checkbox" id="ckbox9" value="Click here" onClick="toggleShowHide('ckbox9','question9');"></p>
 <DIV ID="question9">
+<INPUT type="button" value="Finalize Question" name="button"9 onClick="finalize('question9'); this.disabled=1">
 Light ___________________  occur mostly in the thylakoid stacks of the grana <br>
 correct answer: reactions<br>
-1 . <input type="text" id="myInput" value="Photosynthesis"> <br>
-2 . <input type="text" id="myInput" value="thylakoid"> <br>
-3 . <input type="text" id="myInput" value="splitting"> <br>
-4 . <input type="text" id="myInput" value="Carbon"> <br>
-5 . reactions<br>
+<a style="display:none" id = "div9text1"> 1 . </a>
+<input type="text" id="textbox1" value="1 . sucrose">
+<a style="display:none" id = "div9text2"> 2 . </a>
+<input type="text" id="textbox2" value="2 . Chlorophyll">
+<a style="display:none" id = "div9text3"> 3 . </a>
+<input type="text" id="textbox3" value="3 . sugar">
+<a>4 . reactions</a>
+<a style="display:none" id = "div9text5"> 5 . </a>
+<input type="text" id="textbox5" value="5 . stroma">
 </DIV>
+
 <p><input type="checkbox" id="ckbox10" value="Click here" onClick="toggleShowHide('ckbox10','question10');"></p>
 <DIV ID="question10">
+<INPUT type="button" value="Finalize Question" name="button"10 onClick="finalize('question10'); this.disabled=1">
 Light reactions occur mostly in the thylakoid ___________________  of the grana <br>
 correct answer: stacks<br>
-1 . stacks<br>
-2 . <input type="text" id="myInput" value="stomata"> <br>
-3 . <input type="text" id="myInput" value="sucrose"> <br>
-4 . <input type="text" id="myInput" value="converted"> <br>
-5 . <input type="text" id="myInput" value="reactions"> <br>
+<a style="display:none" id = "div10text1"> 1 . </a>
+<input type="text" id="textbox1" value="1 . thylakoid">
+<a>2 . stacks</a>
+<a style="display:none" id = "div10text3"> 3 . </a>
+<input type="text" id="textbox3" value="3 . molecules">
+<a style="display:none" id = "div10text4"> 4 . </a>
+<input type="text" id="textbox4" value="4 . Carbon">
+<a style="display:none" id = "div10text5"> 5 . </a>
+<input type="text" id="textbox5" value="5 . dioxide">
 </DIV>
+
 <p><input type="checkbox" id="ckbox12" value="Click here" onClick="toggleShowHide('ckbox12','question12');"></p>
 <DIV ID="question12">
+<INPUT type="button" value="Finalize Question" name="button"12 onClick="finalize('question12'); this.disabled=1">
 Here, sunlight is converted to chemical energy in the form of ATP (free energy containing molecule) and ___________________  (high energy electron carrying molecule) <br>
 correct answer: NADPH<br>
-*1 . <input type="text" id="myInput" value="thylakoid"> <br>
-2 . NADPH<br>
-*3 . <input type="text" id="myInput" value="sucrose"> <br>
-*4 . <input type="text" id="myInput" value="ATP"> <br>
-*5 . <input type="text" id="myInput" value="Chlorophyll"> <br>
+<a>1 . NADPH</a>
+<a style="display:none" id = "div12text2"> 2 . </a>
+<input type="text" id="textbox2" value="2 . stomata">
+<a style="display:none" id = "div12text3"> 3 . </a>
+<input type="text" id="textbox3" value="3 . stroma">
+<a style="display:none" id = "div12text4"> 4 . </a>
+<input type="text" id="textbox4" value="4 . reactions">
+<a style="display:none" id = "div12text5"> 5 . </a>
+<input type="text" id="textbox5" value="5 . Calvin">
 </DIV>
+
 <p><input type="checkbox" id="ckbox14" value="Click here" onClick="toggleShowHide('ckbox14','question14');"></p>
 <DIV ID="question14">
+<INPUT type="button" value="Finalize Question" name="button"14 onClick="finalize('question14'); this.disabled=1">
 ___________________  absorbs light energy and starts a chain of steps that result in the production of ATP, NADPH, and oxygen (through the splitting of water) <br>
 correct answer: Chlorophyll<br>
-1 . <input type="text" id="myInput" value="Sucrose"> <br>
-2 . <input type="text" id="myInput" value="Oxygen"> <br>
-3 . <input type="text" id="myInput" value="Stacks"> <br>
-4 . Chlorophyll<br>
-5 . <input type="text" id="myInput" value="Dark"> <br>
+<a style="display:none" id = "div14text1"> 1 . </a>
+<input type="text" id="textbox1" value="1 . Photosynthesis">
+<a style="display:none" id = "div14text2"> 2 . </a>
+<input type="text" id="textbox2" value="2 . Carbon">
+<a style="display:none" id = "div14text3"> 3 . </a>
+<input type="text" id="textbox3" value="3 . Dioxide">
+<a style="display:none" id = "div14text4"> 4 . </a>
+<input type="text" id="textbox4" value="4 . Fructose">
+<a>5 . Chlorophyll</a>
 </DIV>
+
 <p><input type="checkbox" id="ckbox15" value="Click here" onClick="toggleShowHide('ckbox15','question15');"></p>
 <DIV ID="question15">
+<INPUT type="button" value="Finalize Question" name="button"15 onClick="finalize('question15'); this.disabled=1">
 Chlorophyll absorbs light energy and starts a chain of steps that result in the production of ATP, ___________________ , and oxygen (through the splitting of water) <br>
 correct answer: NADPH<br>
-*1 . <input type="text" id="myInput" value="Photosynthesis"> <br>
-*2 . <input type="text" id="myInput" value="stacks"> <br>
-*3 . <input type="text" id="myInput" value="fixation"> <br>
-*4 . <input type="text" id="myInput" value="Calvin"> <br>
-5 . NADPH<br>
+<a style="display:none" id = "div15text1"> 1 . </a>
+<input type="text" id="textbox1" value="1 . sucrose">
+<a style="display:none" id = "div15text2"> 2 . </a>
+<input type="text" id="textbox2" value="2 . stroma">
+<a style="display:none" id = "div15text3"> 3 . </a>
+<input type="text" id="textbox3" value="3 . thylakoid">
+<a>4 . NADPH</a>
+<a style="display:none" id = "div15text5"> 5 . </a>
+<input type="text" id="textbox5" value="5 . splitting">
 </DIV>
+
 <p><input type="checkbox" id="ckbox17" value="Click here" onClick="toggleShowHide('ckbox17','question17');"></p>
 <DIV ID="question17">
+<INPUT type="button" value="Finalize Question" name="button"17 onClick="finalize('question17'); this.disabled=1">
 Oxygen is released through the ___________________  <br>
 correct answer: stomata<br>
-1 . <input type="text" id="myInput" value="Photosynthesis"> <br>
-2 . <input type="text" id="myInput" value="stacks"> <br>
-3 . <input type="text" id="myInput" value="fructose"> <br>
-4 . <input type="text" id="myInput" value="splitting"> <br>
-5 . stomata<br>
+<a style="display:none" id = "div17text1"> 1 . </a>
+<input type="text" id="textbox1" value="1 . thylakoid">
+<a>2 . stomata</a>
+<a style="display:none" id = "div17text3"> 3 . </a>
+<input type="text" id="textbox3" value="3 . steps">
+<a style="display:none" id = "div17text4"> 4 . </a>
+<input type="text" id="textbox4" value="4 . electron">
+<a style="display:none" id = "div17text5"> 5 . </a>
+<input type="text" id="textbox5" value="5 . sugar">
 </DIV>
+
 <p><input type="checkbox" id="ckbox19" value="Click here" onClick="toggleShowHide('ckbox19','question19');"></p>
 <DIV ID="question19">
+<INPUT type="button" value="Finalize Question" name="button"19 onClick="finalize('question19'); this.disabled=1">
 Both ATP and ___________________  are used in the dark reactions to produce sugar <br>
 correct answer: NADPH<br>
-*1 . <input type="text" id="myInput" value="sucrose"> <br>
-*2 . <input type="text" id="myInput" value="sunlight"> <br>
-*3 . <input type="text" id="myInput" value="Photosynthesis"> <br>
-4 . NADPH<br>
-*5 . <input type="text" id="myInput" value="thylakoid"> <br>
+<a style="display:none" id = "div19text1"> 1 . </a>
+<input type="text" id="textbox1" value="1 . thylakoid">
+<a>2 . NADPH</a>
+<a style="display:none" id = "div19text3"> 3 . </a>
+<input type="text" id="textbox3" value="3 . absorbs">
+<a style="display:none" id = "div19text4"> 4 . </a>
+<input type="text" id="textbox4" value="4 . molecules">
+<a style="display:none" id = "div19text5"> 5 . </a>
+<input type="text" id="textbox5" value="5 . ATP">
 </DIV>
+
 <p><input type="checkbox" id="ckbox20" value="Click here" onClick="toggleShowHide('ckbox20','question20');"></p>
 <DIV ID="question20">
+<INPUT type="button" value="Finalize Question" name="button"20 onClick="finalize('question20'); this.disabled=1">
 Both ATP and NADPH are used in the dark ___________________  to produce sugar <br>
 correct answer: reactions<br>
-1 . reactions<br>
-2 . <input type="text" id="myInput" value="stomata"> <br>
-3 . <input type="text" id="myInput" value="sugar"> <br>
-4 . <input type="text" id="myInput" value="glucose"> <br>
-5 . <input type="text" id="myInput" value="Photosynthesis"> <br>
+<a>1 . reactions</a>
+<a style="display:none" id = "div20text2"> 2 . </a>
+<input type="text" id="textbox2" value="2 . stomata">
+<a style="display:none" id = "div20text3"> 3 . </a>
+<input type="text" id="textbox3" value="3 . stacks">
+<a style="display:none" id = "div20text4"> 4 . </a>
+<input type="text" id="textbox4" value="4 . splitting">
+<a style="display:none" id = "div20text5"> 5 . </a>
+<input type="text" id="textbox5" value="5 . thylakoid">
 </DIV>
+
 <p><input type="checkbox" id="ckbox22" value="Click here" onClick="toggleShowHide('ckbox22','question22');"></p>
 <DIV ID="question22">
+<INPUT type="button" value="Finalize Question" name="button"22 onClick="finalize('question22'); this.disabled=1">
 Dark reactions occur in the ___________________  <br>
 correct answer: stroma<br>
-1 . <input type="text" id="myInput" value="sucrose"> <br>
-2 . <input type="text" id="myInput" value="splitting"> <br>
-3 . <input type="text" id="myInput" value="Chlorophyll"> <br>
-4 . stroma<br>
-5 . <input type="text" id="myInput" value="dark"> <br>
+<a>1 . stroma</a>
+<a style="display:none" id = "div22text2"> 2 . </a>
+<input type="text" id="textbox2" value="2 . stomata">
+<a style="display:none" id = "div22text3"> 3 . </a>
+<input type="text" id="textbox3" value="3 . carbon">
+<a style="display:none" id = "div22text4"> 4 . </a>
+<input type="text" id="textbox4" value="4 . Oxygen">
+<a style="display:none" id = "div22text5"> 5 . </a>
+<input type="text" id="textbox5" value="5 . stages">
 </DIV>
+
 <p><input type="checkbox" id="ckbox23" value="Click here" onClick="toggleShowHide('ckbox23','question23');"></p>
 <DIV ID="question23">
+<INPUT type="button" value="Finalize Question" name="button"23 onClick="finalize('question23'); this.disabled=1">
 Dark ___________________  occur in the stroma <br>
 correct answer: reactions<br>
-1 . <input type="text" id="myInput" value="stroma"> <br>
-2 . <input type="text" id="myInput" value="stages"> <br>
-3 . reactions<br>
-4 . <input type="text" id="myInput" value="splitting"> <br>
-5 . <input type="text" id="myInput" value="stomata"> <br>
+<a style="display:none" id = "div23text1"> 1 . </a>
+<input type="text" id="textbox1" value="1 . stroma">
+<a style="display:none" id = "div23text2"> 2 . </a>
+<input type="text" id="textbox2" value="2 . Chlorophyll">
+<a>3 . reactions</a>
+<a style="display:none" id = "div23text4"> 4 . </a>
+<input type="text" id="textbox4" value="4 . carbon">
+<a style="display:none" id = "div23text5"> 5 . </a>
+<input type="text" id="textbox5" value="5 . sunlight">
 </DIV>
+
 <p><input type="checkbox" id="ckbox25" value="Click here" onClick="toggleShowHide('ckbox25','question25');"></p>
 <DIV ID="question25">
+<INPUT type="button" value="Finalize Question" name="button"25 onClick="finalize('question25'); this.disabled=1">
 Carbon dioxide is converted to sugar using ATP and ___________________  <br>
 correct answer: NADPH<br>
-*1 . <input type="text" id="myInput" value="sucrose"> <br>
-*2 . <input type="text" id="myInput" value="stomata"> <br>
-*3 . <input type="text" id="myInput" value="ATP"> <br>
-4 . NADPH<br>
-*5 . <input type="text" id="myInput" value="thylakoid"> <br>
+<a style="display:none" id = "div25text1"> 1 . </a>
+<input type="text" id="textbox1" value="1 . stroma">
+<a style="display:none" id = "div25text2"> 2 . </a>
+<input type="text" id="textbox2" value="2 . sugar">
+<a>3 . NADPH</a>
+<a style="display:none" id = "div25text4"> 4 . </a>
+<input type="text" id="textbox4" value="4 . sucrose">
+<a style="display:none" id = "div25text5"> 5 . </a>
+<input type="text" id="textbox5" value="5 . stacks">
 </DIV>
+
 <p><input type="checkbox" id="ckbox27" value="Click here" onClick="toggleShowHide('ckbox27','question27');"></p>
 <DIV ID="question27">
+<INPUT type="button" value="Finalize Question" name="button"27 onClick="finalize('question27'); this.disabled=1">
 This process is known as carbon ___________________  or the Calvin cycle <br>
 correct answer: fixation<br>
-1 . <input type="text" id="myInput" value="sucrose"> <br>
-2 . <input type="text" id="myInput" value="glucose"> <br>
-3 . <input type="text" id="myInput" value="oxygen"> <br>
-4 . fixation<br>
-5 . <input type="text" id="myInput" value="Chlorophyll"> <br>
+<a style="display:none" id = "div27text1"> 1 . </a>
+<input type="text" id="textbox1" value="1 . Photosynthesis">
+<a style="display:none" id = "div27text2"> 2 . </a>
+<input type="text" id="textbox2" value="2 . carbon">
+<a style="display:none" id = "div27text3"> 3 . </a>
+<input type="text" id="textbox3" value="3 . dark">
+<a style="display:none" id = "div27text4"> 4 . </a>
+<input type="text" id="textbox4" value="4 . sucrose">
+<a>5 . fixation</a>
 </DIV>
+
 <p><input type="checkbox" id="ckbox30" value="Click here" onClick="toggleShowHide('ckbox30','question30');"></p>
 <DIV ID="question30">
+<INPUT type="button" value="Finalize Question" name="button"30 onClick="finalize('question30'); this.disabled=1">
 The 6-carbon sugar is eventually broken-down into two molecules, glucose and ___________________  <br>
 correct answer: fructose<br>
-1 . <input type="text" id="myInput" value="Photosynthesis"> <br>
-2 . <input type="text" id="myInput" value="dioxide"> <br>
-3 . <input type="text" id="myInput" value="carbon"> <br>
-4 . <input type="text" id="myInput" value="sunlight"> <br>
-5 . fructose<br>
+<a style="display:none" id = "div30text1"> 1 . </a>
+<input type="text" id="textbox1" value="1 . thylakoid">
+<a>2 . fructose</a>
+<a style="display:none" id = "div30text3"> 3 . </a>
+<input type="text" id="textbox3" value="3 . Oxygen">
+<a style="display:none" id = "div30text4"> 4 . </a>
+<input type="text" id="textbox4" value="4 . stomata">
+<a style="display:none" id = "div30text5"> 5 . </a>
+<input type="text" id="textbox5" value="5 . dioxide">
 </DIV>
+
 <p><input type="checkbox" id="ckbox32" value="Click here" onClick="toggleShowHide('ckbox32','question32');"></p>
 <DIV ID="question32">
+<INPUT type="button" value="Finalize Question" name="button"32 onClick="finalize('question32'); this.disabled=1">
 These two molecules make ___________________  or sugar <br>
 correct answer: sucrose<br>
-1 . <input type="text" id="myInput" value="Photosynthesis"> <br>
-2 . <input type="text" id="myInput" value="dark"> <br>
-3 . <input type="text" id="myInput" value="electron"> <br>
-4 . <input type="text" id="myInput" value="glucose"> <br>
-5 . sucrose<br>
+<a style="display:none" id = "div32text1"> 1 . </a>
+<input type="text" id="textbox1" value="1 . molecules">
+<a style="display:none" id = "div32text2"> 2 . </a>
+<input type="text" id="textbox2" value="2 . Photosynthesis">
+<a style="display:none" id = "div32text3"> 3 . </a>
+<input type="text" id="textbox3" value="3 . Oxygen">
+<a>4 . sucrose</a>
+<a style="display:none" id = "div32text5"> 5 . </a>
+<input type="text" id="textbox5" value="5 . reactions">
 </DIV>
+
 </html>
 </body>

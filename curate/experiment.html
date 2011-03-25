@@ -1,0 +1,42 @@
+<p id="text" name = "text" onclick="change();">Hello, world. Click me please.</p>
+<form onsubmit="return false;">
+<input type="hidden" id="textbox" />
+<input type="hidden" id="done" onclick="changeBack();" value="Done"/>
+
+<p id="text" name = "text" onclick="change();">Hello, world. Click me please.</p>
+<form onsubmit="return false;">
+<input type="hidden" id="textbox" />
+<input type="hidden" id="done" onclick="changeBack();" value="Done"/>
+</form>
+
+
+<script type="text/javascript">
+/*<![CDATA[*/
+var textNode = document.getElementById('text');
+var textValue = textNode.firstChild.nodeValue;
+var textboxNode = document.getElementById('textbox');
+var doneButton = document.getElementById('done');
+
+function change() {
+
+	// Grab all elements that have tagname input
+var inputArr = document.getElementsByName( "text" );
+alert(inputArr.length);
+
+// Loop through those elements and alert to user
+for (var i = 0; i < inputArr.length; i++) alert( inputArr[i].value );
+
+
+  textboxNode.setAttribute('value', textValue);
+  textNode.style.display = 'none';
+  textboxNode.setAttribute('type','text');
+  doneButton.setAttribute('type','button');
+}
+function changeBack() {
+  textNode.firstChild.nodeValue = textboxNode.value;
+  textNode.style.display = 'block';
+  textboxNode.setAttribute('type', 'hidden');
+  doneButton.setAttribute('type','hidden');
+}
+/*]]>*/
+</script>

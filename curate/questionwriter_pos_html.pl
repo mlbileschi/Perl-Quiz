@@ -48,21 +48,7 @@ open(HTML, ">uncurated_questions.html") or die "Can't open file to write html to
 print HTML "<html>\n";
 
 print HTML "<head>
-<script language=\"Javascript\">
-function toggleShowHide\(boxName, divName\) 
-\{
-	if \(document\.getElementById\(boxName\)\.checked==true\)
-	\{
-		document\.getElementById\(divName\)\.style\.visibility = 'hidden'\;
-		document\.getElementById\(divName\)\.style\.display = 'none'\;
-	\}
-	else
-	\{
-		document\.getElementById\(divName\)\.style\.visibility = 'visible'\;
-		document\.getElementById\(divName\)\.style\.display = 'block'\;
-	\}
-\}
-
+<script src=\"curator.js\">
 <\/script>
 <\/head>
 ";
@@ -231,7 +217,8 @@ sub years
 			my $tempbox = "ckbox".$counter;
 			print HTML "<p><input type=\"checkbox\" id=\"ckbox".$counter."\" value=\"Click here\" onClick=\"toggleShowHide('".$tempbox."','".$tempdiv."');\"></p>\n";
 			print HTML "<DIV ID=\"question".$counter."\">\n";
-			$counter++;
+			print HTML "<INPUT type=\"button\" value=\"Finalize Question\" name=\"button\"".$counter." onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
+
 
 			print HTML "correct answer: $match "; ##correct answer with AD/BC thing?
 			#account for BC in years
@@ -309,34 +296,38 @@ sub years
 				{
 					if($match>99)
 					{
-						print HTML "$j \. <input type=\"text\" id=\"myInput\" value=\"".$post[$j-1]."\"> <br>\n";
+						print HTML "<a style=\"display:none\" id = \"div".$counter."text".$j."\"> ".$j." \. </a>\n";
+						print HTML "<input type=\"text\" id=\"textbox".$j."\" value=\"$j \. ".$post[$j-1]."\">\n";
 					}
 					elsif($post[$j-1]<0) #note that the conditions are exclusive
 					{ 
-						print HTML "$j \. <input type=\"text\" id=\"myInput\" value=\"".$post[$j-1]."\"> B.C.<br>\n";
+						print HTML "<a style=\"display:none\" id = \"div".$counter."text".$j."\"> ".$j." \. </a>\n";
+						print HTML "<input type=\"text\" id=\"textbox".$j."\" value=\"$j \. ".$post[$j-1]." B.C.\">\n";
 					}
 					else
 					{
-						print HTML "$j \. <input type=\"text\" id=\"myInput\" value=\"".$post[$j-1]."\">  A.D.<br>\n";
+						print HTML "<a style=\"display:none\" id = \"div".$counter."text".$j."\"> ".$j." \. </a>\n";
+						print HTML "<input type=\"text\" id=\"textbox".$j."\" value=\"$j \. ".$post[$j-1]." A.D.\">\n";
 					}
 				}
 				else	#print just the correct answer
 				{
 					if($match>99)
 					{
-						print HTML "$j \. $post[$j-1]<br>\n";
+						print HTML "<a>$j \. $post[$j-1]</a>\n";
 					}
 					elsif($post[$j-1]<0) #note that the conditions are exclusive
 					{ 
-						print HTML "$j \. ".(-1)*$post[$j-1]." B\.C\.<br>\n";
+						print HTML "<a>$j \. ".(-1)*$post[$j-1]." B\.C\.</a>\n";
 					}
 					else
 					{
-						print HTML "$j \. $post[$j-1] A\.D\.<br>\n";
+						print HTML "<a>$j \. $post[$j-1] A\.D\.</a>\n";
 					}
 				}
 			}
 			print HTML "<\/DIV>\n"; #end HTMl DIV
+			$counter++;
 		}
 	}
 }
@@ -366,7 +357,7 @@ sub qword
 		my $tempbox = "ckbox".$counter;
 		print HTML "<p><input type=\"checkbox\" id=\"ckbox".$counter."\" value=\"Click here\" onClick=\"toggleShowHide('".$tempbox."','".$tempdiv."');\"></p>\n";
 		print HTML "<DIV ID=\"question".$counter."\">\n";
-		$counter++;
+		print HTML "<INPUT type=\"button\" value=\"Finalize Question\" name=\"button\"".$counter." onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
 
 		print HTML "correct answer: $qword<br>\n";
 		my @tokens = split(/\s+/, $sentence);
@@ -398,7 +389,7 @@ sub qword
 		{
 			if($j==$correct)
 			{
-				print HTML "$j \. $qword<br>\n";
+					print HTML "<a>$j \. $qword</a>\n";
 			}
 			else
 			{
@@ -420,7 +411,7 @@ sub qword
 				if($maxtries<=0 || @{$hdict{lc($qword)}}[0] eq "")
 				{
 					#print "Unable to match parts of speech in this question.\n";
-					print HTML "*"; 
+					#print HTML "*"; 
 					while ( exists($numberchoice{$random}) ||	$topwords[$random] eq lc($qword) )
 					{
 						$random=int(rand(20)); #how far into @topwords i want to look for candidate answers
@@ -429,10 +420,14 @@ sub qword
 				$numberchoice{$random}=0;
 				my $toprint = $topwords[$random];
 				$toprint =~ s/\b(\w+)\b/ucfirst($1)/ge if $nt_capitalize; 
-				print HTML "$j \. <input type=\"text\" id=\"myInput\" value=\"".$toprint."\"> <br>\n";
+
+				print HTML "<a style=\"display:none\" id = \"div".$counter."text".$j."\"> ".$j." \. </a>\n";
+				print HTML "<input type=\"text\" id=\"textbox".$j."\" value=\"$j \. ".$toprint."\">\n";
+
 			}			
 		}
 		print HTML "<\/DIV>\n"; #end HTMl DIV
+		$counter++;
 	}
 }
 
@@ -464,7 +459,8 @@ sub default
 			my $tempbox = "ckbox".$counter;
 			print HTML "<p><input type=\"checkbox\" id=\"ckbox".$counter."\" value=\"Click here\" onClick=\"toggleShowHide('".$tempbox."','".$tempdiv."');\"></p>\n";
 			print HTML "<DIV ID=\"question".$counter."\">\n";
-			$counter++;
+			print HTML "<INPUT type=\"button\" value=\"Finalize Question\" name=\"button\"".$counter." onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
+			
 
 			my @tokens = split(/\s+/, $sentence);
 			for my $j (0..$#tokens)
@@ -498,7 +494,7 @@ sub default
 			{
 				if($j==$correct) #print the correct answer
 				{
-					print HTML "$j \. $topwords[$i]<br>\n";
+					print HTML "<a>$j \. $topwords[$i]</a>\n";
 				}
 				else
 				{
@@ -516,24 +512,23 @@ sub default
 					}
 					if($maxtries<=0 || @{$hdict{lc($topwords[$i])}}[0] eq "")
 					{
-#					print "Unable to match parts of speech in this question.\n";
-					print HTML "*";
+					#print "Unable to match parts of speech in this question.\n";
+					#print HTML "*";
 						while ( exists($numberchoice{$random} ) )
 						{
-							$random=int(rand(20)); #how far into @topwords i want to look for wrong answers
+							$random=int(rand(20)); #how far into @topwords i want to look for candidate answers
 						}						
 					}
 					$numberchoice{$random}=0;
 					my $toprint = $topwords[$random];
 					$toprint =~ s/\b(\w+)\b/ucfirst($1)/ge if $nt_capitalize; 
-#					print "NTCAP = $nt_capitalize\n";
 
-					print HTML "$j \. <input type=\"text\" id=\"myInput\" value=\"".$toprint."\"> <br>\n";
-
-#					print HTML "$j \. $toprint<br>\n"; #print candidate answers
+					print HTML "<a style=\"display:none\" id = \"div".$counter."text".$j."\"> ".$j." \. </a>\n";
+					print HTML "<input type=\"text\" id=\"textbox".$j."\" value=\"$j \. ".$toprint."\">\n";
 				}
 			}
-			print HTML "<\/DIV>\n"; #end HTMl DIV
+			print HTML "<\/DIV>\n\n"; #end HTMl DIV
+			$counter++;
 		}
 	}
 }
