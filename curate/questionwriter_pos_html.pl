@@ -192,7 +192,6 @@ foreach my $sentence (@sentences)
 	{
 		&default($sentence);
 	}
-	$counter++; ###??
 }
 
 ######### END MAIN #########
@@ -459,7 +458,7 @@ sub default
 			my $tempbox = "ckbox".$counter;
 			print HTML "<p><input type=\"checkbox\" id=\"ckbox".$counter."\" value=\"Click here\" onClick=\"toggleShowHide('".$tempbox."','".$tempdiv."');\"></p>\n";
 			print HTML "<DIV ID=\"question".$counter."\">\n";
-			print HTML "<INPUT type=\"button\" value=\"Finalize Question\" name=\"button\"".$counter." onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
+			print HTML "<INPUT type=\"button\" value=\"Finalize Question\" name=\"button".$counter."\" onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
 			
 
 			my @tokens = split(/\s+/, $sentence);
@@ -523,8 +522,8 @@ sub default
 					my $toprint = $topwords[$random];
 					$toprint =~ s/\b(\w+)\b/ucfirst($1)/ge if $nt_capitalize; 
 
-					print HTML "<a style=\"display:none\" id = \"div".$counter."text".$j."\"> ".$j." \. </a>\n";
-					print HTML "<input type=\"text\" id=\"textbox".$j."\" value=\"$j \. ".$toprint."\">\n";
+					print HTML "<a style=\"display:none\" id = \"div".$counter."text".$j."\"> ".$j." \. </a>\n"; #text
+					print HTML "<input type=\"text\" id=\"textbox".$j."\" value=\"$j \. ".$toprint."\">\n";	#text box
 				}
 			}
 			print HTML "<\/DIV>\n\n"; #end HTMl DIV

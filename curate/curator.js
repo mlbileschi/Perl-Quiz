@@ -21,9 +21,9 @@ function finalize(divName)
 	{
 		inputArr[i].style.visibility = 'hidden';
 		inputArr[i].style.display = 'none';
-		var toShow = ("div" + divName.charAt(divName.length-1) + "text" + (inputArr[i].id).charAt((inputArr[i].id).length-1));
+		var toShow = ("div" + divName.substr(8) + "text" + (inputArr[i].id).substr(7));
 
-		alert(toShow);
+//		alert(toShow); //debug
 		document.getElementById(toShow).style.visibility = 'visible';
 		document.getElementById(toShow).style.display = 'block';
 		document.getElementById(toShow).firstChild.nodeValue = inputArr[i].value;
