@@ -1,27 +1,27 @@
-function toggleShowHide(boxName, divName) 
+function toggleShowHide(boxName, divId) 
 {
 	if (document.getElementById(boxName).checked==true)
 	{
-		document.getElementById(divName).style.visibility = 'hidden';
-		document.getElementById(divName).style.display = 'none';
+		document.getElementById(divId).style.visibility = 'hidden';
+		document.getElementById(divId).style.display = 'none';
 	}
 	else
 	{
-		document.getElementById(divName).style.visibility = 'visible';
-		document.getElementById(divName).style.display = 'block';
+		document.getElementById(divId).style.visibility = 'visible';
+		document.getElementById(divId).style.display = 'block';
 	}
 }
 
-function finalize(divName)
+function finalize(divId)
 {
-	var inputArr = document.getElementById(divName).getElementsByTagName( "input" );
+	var inputArr = document.getElementById(divId).getElementsByTagName( "input" );
 	
 	//the first item found will be the finalize button, so we start at i=1
 	for (var i = 1; i < inputArr.length; i++)
 	{
 		inputArr[i].style.visibility = 'hidden';
 		inputArr[i].style.display = 'none';
-		var toShow = ("div" + divName.substr(8) + "text" + (inputArr[i].id).substr(7));
+		var toShow = ("div" + divId.substr(8) + "text" + (inputArr[i].id).substr(7));
 
 //		alert(toShow); //debug
 		document.getElementById(toShow).style.visibility = 'visible';
@@ -30,3 +30,31 @@ function finalize(divName)
 	
 	}
 }
+
+
+function finalizeAll()
+{
+	var inputArr = document.getElementsByTagName( "input" );
+
+	for (var i = 0; i < inputArr.length; i++)
+	{
+//		inputArr[i].style.visibility = 'hidden';
+//		inputArr[i].style.display = 'none';
+//		alert(inputArr[i].parentNode.id);
+		if (inputArr[i].parentNode.id!="") finalize(inputArr[i].parentNode.id);
+		if (inputArr[i].id=="finalizeOne")
+		{
+			inputArr[i].disabled=1;
+			inputArr[i].style.visibility = 'hidden';
+			inputArr[i].style.display = 'none';			
+		}
+		else if (inputArr[i].type=="checkbox")
+		{
+			inputArr[i].disabled=1;
+			inputArr[i].style.visibility = 'hidden';
+			inputArr[i].style.display = 'none';	
+		}
+	}
+}
+
+

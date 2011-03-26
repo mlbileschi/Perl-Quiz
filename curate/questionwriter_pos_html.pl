@@ -37,9 +37,9 @@ GetOptions ("qword=s" => \$qword, "years" => \$years) or die "Whups, got options
 
 
 
-	#open dicitonary files don't use if ($years)
-	open(DICTIONARY, "<index_regex2.idx") or die "Can't open dicitonary file index_regex2.idx\n";
-	my @dict = <DICTIONARY>;
+#open dicitonary files don't use if ($years)
+open(DICTIONARY, "<index_regex2.idx") or die "Can't open dicitonary file index_regex2.idx\n";
+my @dict = <DICTIONARY>;
 
 
 #open an output file with html format
@@ -54,6 +54,10 @@ print HTML "<head>
 ";
 
 print HTML "<body>\n";
+
+
+#finalize all button
+print HTML "<input type=\"button\" id=\"FinalizeAll\" value=\"Finalize Quiz\" name=\"FinalizeAll\" onClick=\"finalizeAll(); this\.disabled=1\">\n"; 
 
 my %hdict=();
 my %localfreq=();
@@ -116,7 +120,7 @@ if(!$years)
 		if(!exists($hdict{lc($key)}))
 		{
 			$localfreq{$key}=0;		#possibly add it with a really high value?
-			print HTML "word $key is not in hdict\n";
+			#print HTML "word $key is not in hdict\n"; #for cl output
 		} 
 		else
 		{	
@@ -216,7 +220,7 @@ sub years
 			my $tempbox = "ckbox".$counter;
 			print HTML "<p><input type=\"checkbox\" id=\"ckbox".$counter."\" value=\"Click here\" onClick=\"toggleShowHide('".$tempbox."','".$tempdiv."');\"></p>\n";
 			print HTML "<DIV ID=\"question".$counter."\">\n";
-			print HTML "<INPUT type=\"button\" value=\"Finalize Question\" name=\"button\"".$counter." onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
+			print HTML "<INPUT type=\"button\" id=\"finalizeOne\" value=\"Finalize Question\" name=\"button\"".$counter." onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
 
 
 			print HTML "correct answer: $match "; ##correct answer with AD/BC thing?
@@ -356,7 +360,7 @@ sub qword
 		my $tempbox = "ckbox".$counter;
 		print HTML "<p><input type=\"checkbox\" id=\"ckbox".$counter."\" value=\"Click here\" onClick=\"toggleShowHide('".$tempbox."','".$tempdiv."');\"></p>\n";
 		print HTML "<DIV ID=\"question".$counter."\">\n";
-		print HTML "<INPUT type=\"button\" value=\"Finalize Question\" name=\"button\"".$counter." onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
+		print HTML "<INPUT type=\"button\" id=\"finalizeOne\" value=\"Finalize Question\" name=\"button\"".$counter." onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
 
 		print HTML "correct answer: $qword<br>\n";
 		my @tokens = split(/\s+/, $sentence);
@@ -445,7 +449,7 @@ sub default
 
 		if( !exists( $hdict{lc($topwords[$i])} ) )
 		{
-			print HTML "<br>\n ".lc($topwords[$i])." is not in dictionary file.<br>\n<br>\n";
+			#print HTML "<br>\n ".lc($topwords[$i])." is not in dictionary file.<br>\n<br>\n"; #for cl output
 			next;
 		}
 
@@ -458,7 +462,7 @@ sub default
 			my $tempbox = "ckbox".$counter;
 			print HTML "<p><input type=\"checkbox\" id=\"ckbox".$counter."\" value=\"Click here\" onClick=\"toggleShowHide('".$tempbox."','".$tempdiv."');\"></p>\n";
 			print HTML "<DIV ID=\"question".$counter."\">\n";
-			print HTML "<INPUT type=\"button\" value=\"Finalize Question\" name=\"button".$counter."\" onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
+			print HTML "<INPUT type=\"button\" id=\"finalizeOne\" value=\"Finalize Question\" name=\"button".$counter."\" onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
 			
 
 			my @tokens = split(/\s+/, $sentence);
