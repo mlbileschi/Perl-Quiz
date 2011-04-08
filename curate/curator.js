@@ -38,11 +38,8 @@ function finalizeAll()
 
 	for (var i = 0; i < inputArr.length; i++)
 	{
-//		inputArr[i].style.visibility = 'hidden';
-//		inputArr[i].style.display = 'none';
-//		alert(inputArr[i].parentNode.id);
 		if (inputArr[i].parentNode.id!="") finalize(inputArr[i].parentNode.id);
-		if (inputArr[i].id=="finalizeOne")
+		if (inputArr[i].name=="finalizeOne")
 		{
 			inputArr[i].disabled=1;
 			inputArr[i].style.visibility = 'hidden';

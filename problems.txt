@@ -22,3 +22,4 @@ FIXED: beginning of sentence capitalization
 
 qword is case sensitive =(
 
+backreferences for the months vs years problem

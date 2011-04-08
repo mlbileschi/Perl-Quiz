@@ -138,6 +138,7 @@ if(!$years)
 
 }
 
+my $months = "(\s?)\(Jan\)\|\(Feb\)\|\(Mar\)\|\(Apr\)\|\(May\)\|\(Jun\)\|\(Jul\)\|\(Aug\)\|\(Sep\)\|\(Oct\)\|\(Nov\)\|\(Dec\)(\s?)";
 if ($years)
 {
 	#use only if $years
@@ -211,8 +212,15 @@ sub years
 	#          (digits) 
 	# (digit,digit) etc.
 	#also, @matches gets each digit match per sentence.
-	if(($sentence =~ $timeprepregex) && (@matches = $sentence=~m/[^(,\d)][\s+,\(\-](\d+)[\.\s+\-\)]?[^(,\d+)( years)]/ig))
+	#TODO fix the below regex... backreferences for months?
+	if(($sentence =~ $timeprepregex) && (@matches = $sentence=~m/[^(,\d)]\s+,?\(?\-?(\d+),?\.?\s?\-?\)?[^(,\d+)( years)($months)]/ig))
 	{
+		print "MATCHES";
+		foreach(@matches)
+		{
+			print $sentence."\n";
+			print $_."\n";
+		}
 		foreach my $match (@matches)
 		{
 			#create an HTML DIV for each question for show/hide
@@ -220,7 +228,7 @@ sub years
 			my $tempbox = "ckbox".$counter;
 			print HTML "<p><input type=\"checkbox\" id=\"ckbox".$counter."\" value=\"Click here\" onClick=\"toggleShowHide('".$tempbox."','".$tempdiv."');\"></p>\n";
 			print HTML "<DIV ID=\"question".$counter."\">\n";
-			print HTML "<INPUT type=\"button\" id=\"finalizeOne\" value=\"Finalize Question\" name=\"button\"".$counter." onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
+			print HTML "<INPUT type=\"button\" id=\"button".$counter."\" value=\"Finalize Question\" name=\"finalizeOne\" onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
 
 
 			print HTML "correct answer: $match "; ##correct answer with AD/BC thing?
@@ -237,7 +245,7 @@ sub years
 			my @tokens = split(/\s+/, $sentence);
 			foreach my $word (@tokens)
 			{
-				if($word=~/(AD)|(BC)|(A\.D\.)|(B\.C\.)|(BCE)|(B\.C\.E\.)/) { next;}
+				if($word=~/(AD)|(BC)|(A\.D\.)|(B\.C\.)|(BCE)|(B\.C\.E\.)/) { next; }
 				if($word =~ $match)
 				{
 					print HTML " ".$` unless $` eq " "; #in case the number has brackets around it or something stupid
@@ -269,17 +277,33 @@ sub years
 			#			check for proximity to months
 			my $one=$match; my $two=$match; my $three=$match; my $four=$match;
 
-			my $posneg = (-1)**int(rand(2)); #plus or minus
-			while(exists($numberchoice{$one}) || ($lessthannow && 2011<$one)) { $one = $match + $posneg*(int(rand(50))+50); }
+			my $posneg=1;
+			while(exists($numberchoice{$one}) || ($lessthannow && 2011<$one)) 
+			{
+				$posneg = (-1)**int(rand(2)); #plus or minus
+				$one = $match + $posneg*(int(rand(50))+50); 
+			}
 			$numberchoice{$one}=0;
-			$posneg = (-1)**int(rand(2));
-			while(exists($numberchoice{$two}) || ($lessthannow && 2011<$two)) { $two = $match + $posneg*(int(rand(40))+10); }
+
+			while(exists($numberchoice{$two}) || ($lessthannow && 2011<$two)) 
+			{
+				$posneg = (-1)**int(rand(2));
+				$two = $match + $posneg*(int(rand(40))+10); 
+			}
 			$numberchoice{$two}=0;
-			$posneg = (-1)**int(rand(2));
-			while(exists($numberchoice{$three}) || ($lessthannow && 2011<$three)) { $three = $match + $posneg*int(rand(25)); }
+
+			while(exists($numberchoice{$three}) || ($lessthannow && 2011<$three)) 
+			{
+				$posneg = (-1)**int(rand(2));
+				$three = $match + $posneg*int(rand(25));
+			}
 			$numberchoice{$three}=0;
-			$posneg = (-1)**int(rand(2));
-			while(exists($numberchoice{$four}) || ($lessthannow && 2011<$four)) { $four = $match + $posneg*int(rand(10)); }
+
+			while(exists($numberchoice{$four}) || ($lessthannow && 2011<$four)) 
+			{
+				$posneg = (-1)**int(rand(2));
+				$four = $match + $posneg*int(rand(10)); 
+			}
 			$numberchoice{$four}=0;
 
 			#shuffle answers
@@ -360,7 +384,7 @@ sub qword
 		my $tempbox = "ckbox".$counter;
 		print HTML "<p><input type=\"checkbox\" id=\"ckbox".$counter."\" value=\"Click here\" onClick=\"toggleShowHide('".$tempbox."','".$tempdiv."');\"></p>\n";
 		print HTML "<DIV ID=\"question".$counter."\">\n";
-		print HTML "<INPUT type=\"button\" id=\"finalizeOne\" value=\"Finalize Question\" name=\"button\"".$counter." onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
+		print HTML "<INPUT type=\"button\" id=\"button".$counter."\" value=\"Finalize Question\" name=\"finalizeOne\" onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
 
 		print HTML "correct answer: $qword<br>\n";
 		my @tokens = split(/\s+/, $sentence);
@@ -462,8 +486,7 @@ sub default
 			my $tempbox = "ckbox".$counter;
 			print HTML "<p><input type=\"checkbox\" id=\"ckbox".$counter."\" value=\"Click here\" onClick=\"toggleShowHide('".$tempbox."','".$tempdiv."');\"></p>\n";
 			print HTML "<DIV ID=\"question".$counter."\">\n";
-			print HTML "<INPUT type=\"button\" id=\"finalizeOne\" value=\"Finalize Question\" name=\"button".$counter."\" onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
-			
+			print HTML "<INPUT type=\"button\" id=\"button".$counter."\" value=\"Finalize Question\" name=\"finalizeOne\" onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 			
 
 			my @tokens = split(/\s+/, $sentence);
 			for my $j (0..$#tokens)
@@ -536,7 +559,7 @@ sub default
 	}
 }
 
-print HTML "<\/html>\n<\/body>\n";
+print HTML "<\/body>\n<\/html>\n";
 close(HTML);
 close(INFILE);
 close(DICTIONARY);
