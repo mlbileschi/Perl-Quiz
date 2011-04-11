@@ -11,7 +11,7 @@ use strict;
 ## then runs a loop which wgets random wikipedia articles and (tries to) parse them into plaintext
 
 
-open(INDEX, "<dictionary20110411.txt") or die "couldn't open file dictionary.txt to read from\n";
+open(INDEX, "<dictionary20110411.txt") or die "couldn't open file dictionary20110411.txt to read from\n";
 my %whash=();	#(key,value) = (word, frequency)
 
 #read dictionary.txt into whash
@@ -19,7 +19,7 @@ foreach (<INDEX>)
 {
 	chomp;
 	my @key_value=split(/\s+/, $_);
-	$whash{@key_value[0]}=@key_value[1];
+	$whash{$key_value[0]}=$key_value[1];
 }
 close(INDEX);
 
@@ -29,19 +29,21 @@ for my $i (1..1)
 	print $i."\n";		#print progress
 
 	#wget and open a random wikipedia article
-	system("wget", "http://en.wikipedia.org/wiki/Special:Random", "-O", "wikipedia_random_article.txt", "-q");
-	open(INFILE, "<wikipedia_random_article.txt") or die "couldn't open file wikipedia_random_article.txt\n";
+	system("wget", "http://en.wikipedia.org/wiki/Special:Random", "-O", "wikipedia_random_article.html", "-q");
+	open(INFILE, "<wikipedia_random_article.html") or die "couldn't open file wikipedia_random_article.html\n";
 	my @filearr = <INFILE>;
 	
 	foreach (@filearr)
 	{
 		chomp;
-		@line = split(/ /, $_);
+		my @line = split(/ /, $_);
 
 		foreach my $token (@line)
 		{
-			if($token =~ /^[>][A-Za-z]+[<]$/)
+			if($token =~ /^(?:[>])?[A-Za-z]+[,\.\?\!]?(?:[<])?$/) #the <> for optional following or leading HTML tags
 			{
+#				my @temp_tok = ($token =~ /[A-Za-z]/);
+#				$token = $temp_tok[0];		#match only the text
 				$token = lc($token);
 				#either increment the frequency or set equal to 1
 				if(exists($whash{$token}))
@@ -57,7 +59,8 @@ for my $i (1..1)
 	}
 }
 
-
+my @len = keys(%whash);
+print "size of hash is ".$#len."\n";
 open(OUTFILE, ">dictionary20110411.txt")or die "couldn't open file dictionary.txt";
 #print the dicitonary sorted alphabetically
 foreach my $key ( sort(keys(%whash))) {  
