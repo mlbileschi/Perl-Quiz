@@ -1,0 +1,226 @@
+package net.cs76.ncaa;
+
+import java.lang.reflect.Field;
+import java.util.HashMap;
+import java.util.Random;
+
+import net.cs76.ncaa.R;
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
+import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
+import android.widget.TextView;
+
+public class Question extends Activity  implements OnClickListener, OnCompletionListener {
+
+
+	MediaPlayer player;
+	Button b1, b2, b3, b4;
+	HashMap<Integer,String> strButtonName=null;
+	Bitmap thumb;
+	// a list of resource IDs for the images we want to display
+	private Integer[] images;
+	private String[] answers;
+    
+	// store a cache of resized bitmaps
+	// Note: we're not managing the cache size to ensure it doesn't 
+	// exceed any maximum memory usage requirements
+	private Bitmap[] cache;
+	private int questionRowIdx;
+	private int correctButtonIdx;
+	private Button[] my_buttons;
+	//
+	int score = 0;
+	int nTrys = 0;
+	
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        
+        // connect the button to an object
+        b1 = (Button)findViewById(R.id.MyButton1);
+        b1.setOnClickListener(this);        
+        b2 = (Button)findViewById(R.id.MyButton2);
+        b2.setOnClickListener(this);
+        b3 = (Button)findViewById(R.id.MyButton3);
+        b3.setOnClickListener(this);
+        b4 = (Button)findViewById(R.id.MyButton4);
+        b4.setOnClickListener(this);
+
+        // fill in button names
+        strButtonName = new HashMap<Integer,String>();
+        strButtonName.put(R.id.MyButton1,"MyButton1");
+        strButtonName.put(R.id.MyButton2,"MyButton2");
+        strButtonName.put(R.id.MyButton3,"MyButton3");
+        strButtonName.put(R.id.MyButton4,"MyButton4");
+        my_buttons = new Button[4];
+        my_buttons[0] = (Button) findViewById(R.id.MyButton1);
+        my_buttons[1] = (Button) findViewById(R.id.MyButton2);
+        my_buttons[2] = (Button) findViewById(R.id.MyButton3);
+        my_buttons[3] = (Button) findViewById(R.id.MyButton4);
+
+        // reset text values
+		//Text r1 = (Text)findViewByID(R.id.MyText2);
+		TextView myScore = (TextView)findViewById(R.id.MyText1);
+		myScore.setText("Booyeah");
+		loadImages();
+		myScore.setText("Images loaded");
+		
+    }
+    
+    public void nextQuestion() {
+		// try to change the picture
+		//Field[] list = R.drawable.class.getFields();
+		Integer idx = (new Random()).nextInt(images.length);
+		questionRowIdx = idx;
+		Integer resource_id = null;
+		try{
+			resource_id = images[idx];
+		} catch(Exception e) {}
+		ImageView iv = (ImageView)findViewById(R.id.MyPicture);
+		BitmapFactory.Options options = new BitmapFactory.Options();
+		// options.inSampleSize = 1;		
+		// options.outHeight = 300;
+		// options.outWidth = 300;
+		thumb = BitmapFactory.decodeResource(getResources(), resource_id, options);
+		BitmapDrawable bmd = resizeBitmap(thumb,200,200);
+	       
+		// set the Drawable on the ImageView
+		iv.setImageDrawable(bmd);
+		
+		// center the Image
+		iv.setScaleType(ScaleType.CENTER);		// /Copy paste image resize		
+		//iv.setImageBitmap(thumb);
+		correctButtonIdx = (new Random()).nextInt(4);
+		for (int iBut=0;iBut<4;iBut++){
+			Button b = my_buttons[iBut];findViewById(R.id.MyButton1);
+			if(iBut == correctButtonIdx) {
+				b.setText(answers[questionRowIdx]);
+			} else {
+				b.setText(wrongAnswer(questionRowIdx));
+			}
+		}
+    }
+
+    public String wrongAnswer(int rightAnsIdx){
+    	int nAns = answers.length;
+    	int idx = (new Random()).nextInt(nAns);
+    	while(idx == rightAnsIdx){
+        	idx = (new Random()).nextInt(nAns);
+    	}
+    	String wrongAnswer = answers[idx];
+    	return wrongAnswer;
+    }
+    
+    public void loadImages() {
+		// obtain a list of all of the objects in the R.drawable class
+		Field[] list = R.drawable.class.getFields();
+
+		
+		int count = 0, index = 0, j = list.length;
+
+		// We first need to figure out how many of our images we have before
+		// we can request the memory for an array of integers to hold their contents.
+
+		// loop over all of the fields in the R.drawable class
+		for(int i=0; i < j; i++)
+			// if the name starts with img_ then we have one of our images!
+			if(list[i].getName().startsWith("img_")) count++;
+
+		// We now know how many images we have. Reserve the memory for an 
+		// array of integers with length 'count' and initialize our cache.
+		images = new Integer[count];
+		cache = new Bitmap[count];
+		answers = new String[count];
+		// Next, (unsafely) try to get the values of each of those fields
+		// into the images array.
+		try {
+			for(int i=0; i < j; i++)
+				if(list[i].getName().startsWith("img_"))
+					images[index++] = list[i].getInt(null);
+		} catch(Exception e) {}
+		// safer: catch IllegalArgumentException & IllegalAccessException
+				// Next, (unsafely) try to get the values of each of those fields
+		// into the images array.
+		count = 5;
+		images = new Integer[count];
+		cache = new Bitmap[count];
+		images[0] = R.drawable.img_blu;
+		images[1] = R.drawable.img_green;
+		images[2] = R.drawable.img_purp;
+		images[3] = R.drawable.img_red;
+		images[4] = R.drawable.img_yello;
+		answers[0] = "blue";
+		answers[1] = "green";
+		answers[2] = "purp";
+		answers[3] = "red";
+		answers[4] = "yellow";
+    }
+    
+    public BitmapDrawable resizeBitmap(Bitmap inimg, int newWidth, int newHeight) {
+	       
+	        int width = thumb.getWidth();
+	        int height = thumb.getHeight();
+	       
+	        // calculate the scale - in this case = 0.4f
+	        float scaleWidth = ((float) newWidth) / width;
+	        float scaleHeight = ((float) newHeight) / height;
+	       
+	        // createa matrix for the manipulation
+	        Matrix matrix = new Matrix();
+	        // resize the bit map
+	        matrix.postScale(scaleWidth, scaleHeight);
+	        // rotate the Bitmap
+	        // matrix.postRotate(45);
+	 
+	        // recreate the new Bitmap
+	        Bitmap resizedBitmap = Bitmap.createBitmap(thumb, 0, 0,
+	                          width, height, matrix, true);
+	   
+	        // make a Drawable from Bitmap to allow to set the BitMap
+	        // to the ImageView, ImageButton or what ever
+	        BitmapDrawable bmd = new BitmapDrawable(resizedBitmap);
+	        return bmd;
+    }
+    
+    // when the button is clicked we want to hear a sound
+	public void onClick(View v) {
+		resetOtherButtonText();
+		TextView myScore = (TextView)findViewById(R.id.MyText1);
+        Button b = (Button)findViewById(v.getId());
+        if (b.getId() == my_buttons[correctButtonIdx].getId()){
+        	score++;
+        }
+        nTrys++;
+        String myText = "you got " +score + " out of " +nTrys ;
+		myScore.setText(myText);
+		nextQuestion();
+	}
+	public void resetOtherButtonText() {
+	    b1 = (Button)findViewById(R.id.MyButton1);
+		b1.setText("answer 1");
+	    b1 = (Button)findViewById(R.id.MyButton2);
+		b1.setText("answer 2");
+	    b1 = (Button)findViewById(R.id.MyButton3);
+		b1.setText("answer 3");
+	    b1 = (Button)findViewById(R.id.MyButton4);
+		b1.setText("answer 4");
+	}
+	
+	// reset button text when the sound is done playing
+	public void onCompletion(MediaPlayer mp) {
+		b1.setText(R.string.right);
+	}
+}

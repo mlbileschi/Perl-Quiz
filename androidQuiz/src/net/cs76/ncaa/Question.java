@@ -40,8 +40,8 @@ public class Question extends Activity  implements OnClickListener, OnCompletion
 	private int correctButtonIdx;
 	private Button[] my_buttons;
 	//
-	int score = 0;
-	int nTrys = 0;
+	int score = 0;		//number of user's correct answers
+	int nTrys = 0;		//number of questions completed
 	
     /** Called when the activity is first created. */
     @Override
@@ -81,6 +81,7 @@ public class Question extends Activity  implements OnClickListener, OnCompletion
     }
     
     public void nextQuestion() {
+    	
 		// try to change the picture
 		//Field[] list = R.drawable.class.getFields();
 		Integer idx = (new Random()).nextInt(images.length);
@@ -105,7 +106,8 @@ public class Question extends Activity  implements OnClickListener, OnCompletion
 		//iv.setImageBitmap(thumb);
 		correctButtonIdx = (new Random()).nextInt(4);
 		for (int iBut=0;iBut<4;iBut++){
-			Button b = my_buttons[iBut];findViewById(R.id.MyButton1);
+			Button b = my_buttons[iBut];
+			findViewById(R.id.MyButton1);
 			if(iBut == correctButtonIdx) {
 				b.setText(answers[questionRowIdx]);
 			} else {
@@ -197,16 +199,20 @@ public class Question extends Activity  implements OnClickListener, OnCompletion
     
     // when the button is clicked we want to hear a sound
 	public void onClick(View v) {
-		resetOtherButtonText();
 		TextView myScore = (TextView)findViewById(R.id.MyText1);
         Button b = (Button)findViewById(v.getId());
         if (b.getId() == my_buttons[correctButtonIdx].getId()){
         	score++;
         }
         nTrys++;
-        String myText = "you got " +score + " out of " +nTrys ;
-		myScore.setText(myText);
-		nextQuestion();
+    	if(nTrys>=5){
+    		endGame(v);
+    	}else{
+    		resetOtherButtonText();
+			nextQuestion();
+	        String myText = "you got " +score + " out of " +nTrys ;
+	        myScore.setText(myText);
+    	}
 	}
 	public void resetOtherButtonText() {
 	    b1 = (Button)findViewById(R.id.MyButton1);
@@ -222,5 +228,18 @@ public class Question extends Activity  implements OnClickListener, OnCompletion
 	// reset button text when the sound is done playing
 	public void onCompletion(MediaPlayer mp) {
 		b1.setText(R.string.right);
+	}
+	
+	public void endGame(View v) {
+		TextView tv = (TextView)findViewById(R.id.MyText1);
+		tv.setText("The game is over. You've scored " + score + " out of " + nTrys);
+		b1.setVisibility(0);
+		b2.setVisibility(0);
+		b3.setVisibility(0);
+		b4.setVisibility(0);
+		b1.setClickable(false);
+		b2.setClickable(false);
+		b3.setClickable(false);
+		b4.setClickable(false);
 	}
 }
