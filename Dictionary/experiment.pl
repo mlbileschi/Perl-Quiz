@@ -48,7 +48,7 @@ for my $i (1..$num_articles)
 
 	#read file into sentences
 	$file = join("\. ", (split(/\n+/,$file)));
-	my @sentences = split(/\."?\s+/, $file);
+	my @sentences = split(/\.\"?\s+/, $file);
 
 
 	foreach my $sentence (@sentences)
