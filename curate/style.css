@@ -1,0 +1,19 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	background-color: #7C92AE;
+}
+
+div
+{
+	font-family: Helvetica, sans-serif;
+	padding: 5px;
+	display: block;
+	border: 1px #000 solid;
+}
+
+a
+{
+	font-weight: bold;
+	background-color: #CCCCCC;
+}

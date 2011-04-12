@@ -1,356 +1,2708 @@
-1 1050 
-a 28 
-about 9 
-actor 5 
-actress 2 
-actresses 1 
-added 1 
-adding 1 
-additional 4 
-additional, 1 
-aerial 4 
-after 1 
-again 1 
-all 6 
-also 2 
-ambox 1 
-an 2 
-and 24 
-another 2 
-appearance, 1 
-apply. 3 
-architecture 3 
-are 3 
-argument 3 
-article 6 
-articles 6 
-as 3 
-assessment 1 
-at 4 
-atom 3 
-attribution 1 
-august 3 
-available 3 
-background 3 
-battlefields 1 
-be 2 
-been 1 
-before 3 
-belongs 1 
-best 3 
-biodiversity 1 
-biographical 1 
-biography 1 
-bodycontent 3 
-bodytext 3 
-bombay 3 
-book 4 
-bring 1 
-british 1 
-brother 1 
-browsing 3 
-building 5 
-buildings, 1 
-built 1 
-burst, 1 
-butterflies 7 
-butterflies. 1 
-button 3 
-by 13 
-bytes 6 
-cache 9 
-called 1 
-can 9 
-catlinks 3 
-ceilings 1 
-centralnotice 3 
-changes 6 
-cite 3 
-city 1 
-collapsible 1 
-collapsing 1 
-common 1 
-commons 3 
-contact 3 
-containing 3 
-content 12 
-contentious 1 
-contributed 1 
-coordinate 1 
-cost 3 
-county 8 
-county, 2 
-courthouse 3 
-courthouses 3 
-create 3 
-current 4 
-damage 1 
-data 4 
-dates 3 
-deprecated 3 
-director 1 
-district 1 
-dmy 3 
-do, 3 
-does 1 
-douglas 1 
-edit 6 
-encouraged 3 
-english 4 
-especially 1 
-even 1 
-expensive 3 
-extensively 1 
-exterior 1 
-external 2 
-facility. 1 
-fairly 1 
-false, 33 
-february 4 
-files 3 
-find 3 
-fire 1 
-first 1 
-firstheading 3 
-fixalpha 3 
-flooding 1 
-footer 3 
-for 19 
-found 1 
-foundation, 3 
-free 6 
-from 24 
-function 3 
-gallons 1 
-get 3 
-ghats, 1 
-half 1 
-harish 1 
-harmful. 1 
-has 2 
-having 1 
-he 2 
-header 3 
-help 4 
-here 3 
-himalaya 1 
-historic 24 
-historical 4 
-history 3 
-how 6 
-however, 3 
-html 3 
-identification 1 
-ie 3 
-if 4 
-imdb 3 
-in 35 
-include 3 
-including 1 
-india 2 
-india. 2 
-indian 2 
-information 4 
-information. 1 
-insurance 1 
-interaction 3 
-interior 1 
-is 20 
-it 4 
-its 3 
-january 2 
-journal 1 
-judicial 1 
-jumpto 3 
-key 3 
-lacking 9 
-landmarks 1 
-languages 3 
-lapithis 1 
-last 3 
-limit 3 
-link 3 
-linked 3 
-links 6 
-list 3 
-listed 1 
-listing 1 
-listings 1 
-living 2 
-loads 3 
-location 1 
-log 3 
-logo 3 
-lt 3 
-ltr 3 
-main 6 
-mandatory. 3 
-march 9 
-material 1 
-may 4 
-maybury 1 
-meena 1 
-memorials 1 
-military 1 
-million 2 
-million, 1 
-minnesota 3 
-modified 3 
-monuments 1 
-more. 1 
-most 1 
-mountain 1 
-movie 2 
-much 1 
-mumbai, 3 
-national 5 
-natural 4 
-navigation 3 
-nearly 1 
-needs 1 
-newpp 3 
-node 3 
-not 5 
-now 1 
-null, 6 
-of 88 
-offices 1 
-ohman 1 
-old 1 
-on 17 
-only 4 
-or 7 
-original 2 
-oswald 1 
-other 5 
-out 3 
-over 2 
-oxford 1 
-page 27 
-page. 3 
-pages 9 
-paid 1 
-panel 3 
-park 2 
-parks 2 
-parser 6 
-patricia 1 
-pdf 3 
-peninsular 1 
-person 3 
-persons 1 
-photos, 4 
-piping 1 
-place 3 
-places 5 
-places. 1 
-plainlinks 8 
-please 1 
-poorly 1 
-potentially 1 
-preprocessor 3 
-press, 1 
-preview 3 
-probably 1 
-project, 3 
-prolific 1 
-public 3 
-random 3 
-recent 3 
-references 3 
-region, 1 
-register 18 
-registered 6 
-reliable 4 
-relocated 1 
-remodeling 1 
-removed 1 
-renovated 2 
-renovation 2 
-repair 1 
-repairs, 1 
-report 3 
-restoring 1 
-retrieved 5 
-returned 1 
-revision 3 
-revival 3 
-role 1 
-romanesque 3 
-saved 3 
-saving. 3 
-search 3 
-secs. 3 
-see 4 
-september 1 
-served 3 
-sikkim 1 
-sister 1 
-sitenotice 3 
-sites 1 
-small 1 
-society, 2 
-solid 3 
-son 1 
-sourced 4 
-sources 4 
-special 3 
-spent 2 
-sprinkler 1 
-sri 1 
-standard 1 
-states 1 
-structure 1 
-subtitle 3 
-suppression 1 
-system. 1 
-tagline 3 
-television 4 
-television, 1 
-template 3 
-terms 3 
-that 2 
-the 75 
-theatre 1 
-their 1 
-this 55 
-threatened 1 
-timestamp 3 
-to 38 
-toolbox 3 
-total 1 
-touring 1 
-trademark 3 
-true, 21 
-type 1 
-uk 1 
-under 3 
-united 6 
-universities 1 
-university 1 
-unsourced 1 
-until 1 
-up 2 
-use 6 
-using 3 
-version 6 
-versions 3 
-w. 1 
-was 9 
-water 2 
-watling 1 
-watling, 1 
-were 1 
-western 1 
-what 3 
-where 3 
-which 1 
-wiki 6 
-wikipedia 12 
-wikipedia, 6 
-winona 3 
-with 11 
-work. 1 
-worked 1 
-xhtml 3 
-you 6 
+A	(noun)|(verb)|(adjective)	22
+AS		1
+Abbey	(proper noun)	1
+Abstinence		1
+Academy		1
+Accidental		1
+According		1
+Acol	(proper noun)	2
+Action		1
+Actor		1
+Actors		1
+Adjacent		2
+Adscene		2
+Advent	(proper noun)	1
+Africa	(proper noun)|(adjective)	2
+African	(adjective)|(noun)	3
+Agaristinae		3
+Age	(noun)|(proper noun)	1
+Ages	(noun)|(plural)	1
+Ahorn	(noun)	1
+Aid		1
+Aigen		3
+All	(noun)	12
+Allan	(proper noun)	12
+Alois	(proper noun)	1
+Altenmarkt		1
+Am		1
+American	(noun)|(proper noun)|(adjective)	5
+Amor	(noun)	1
+And		1
+Anglers	(noun)	1
+Angling		1
+Annual		1
+Another		1
+Anthology		1
+Antoinette	(proper noun)	1
+Antonio	(proper noun)	1
+Apocalypse	(proper noun)	1
+Apportionment		1
+April	(proper noun)	8
+Archaeological		1
+Architects		2
+Archive	(noun)|(plural)	1
+Archives	(noun)	1
+Area	(noun)	1
+Armstrong	(proper noun)	1
+Army	(proper noun)	1
+Art	(proper noun)	2
+Articles		8
+Arts	(noun)|(plural)	9
+As	(verb)|(adverb)|(noun)	1
+Asbury		1
+Ashford		2
+Asian	(noun)|(adjective)	3
+Assassin		1
+Associates	(noun)|(plural)	2
+Association		2
+Attractions		1
+Aug		1
+August	(proper noun)|(verb)	9
+Aussee		1
+Australia	(proper noun)|(adjective)	3
+Australian	(noun)|(adjective)|(proper noun)	10
+Austria	(proper noun)	1
+Austrian	(noun)|(adjective)	3
+Auxiliary		3
+Award		1
+B	(noun)|(proper noun)	2
+BBC	(adjective)	6
+Baby	(noun)	1
+Bachelor	(noun)	1
+Bad	(noun)|(proper noun)	10
+Baen		1
+Baker	(proper noun)	2
+Band	(noun)	1
+Bandon		1
+Barbra	(proper noun)	1
+Baroque	(adjective)|(proper noun)	4
+Baseball	(noun)	1
+Based		1
+Battle	(proper noun)	1
+Bavaria	(proper noun)	1
+Bay	(proper noun)	25
+Beach		2
+Become		1
+Before	(preposition)|(verb)|(adverb)	1
+Beijing	(proper noun)	1
+Bell	(proper noun)	1
+Belvedere		3
+Beresford		4
+Bertram	(proper noun)	2
+Best	(adjective)|(verb)|(adverb)|(noun)	1
+Billboard		1
+Bilten		1
+Biographical		1
+Biography		2
+Birchenton		1
+Birchington		35
+Bishop		2
+Black	(proper noun)	3
+Blanding		5
+Blue	(proper noun)	1
+Board		1
+Boca		1
+Bodkin		1
+Bologna	(proper noun)	2
+Bolognese	(adjective)	1
+Book		1
+Books		2
+Born	(proper noun)	1
+Borough	(proper noun)	8
+Bosanski		3
+Bosne		1
+Bosnia	(proper noun)	6
+Boston	(proper noun)	1
+Brad	(proper noun)	4
+Bradford	(proper noun)	2
+Bradley	(proper noun)	7
+Braves		1
+Bray		1
+Bridge	(noun)	1
+Britain	(proper noun)	1
+British	(proper noun)|(adjective)	1
+Brittain		3
+Broadstairs		5
+Brod		4
+Bromley	(proper noun)	1
+Brooklyn	(proper noun)	1
+Brooks	(proper noun)	1
+Bruce	(proper noun)	8
+Bruno	(proper noun)	1
+Buckley	(proper noun)	1
+Buddhist	(adjective)|(noun)	1
+Building		1
+Bull		1
+Bureau		3
+Burley		1
+Burma	(proper noun)	2
+BurmaHidden		1
+Burmese	(adjective)|(noun)|(proper noun)	2
+C	(noun)|(proper noun)	4
+CD	(noun)	9
+CEST		1
+CET		1
+CUP		1
+Camp	(proper noun)	5
+Cannon		1
+Cantarini		1
+Canterbury	(proper noun)	4
+Cape		2
+Capuchin	(proper noun)	1
+Carl	(proper noun)	1
+Carnival	(proper noun)	1
+Carol	(proper noun)	1
+Carolina	(proper noun)	1
+Cathedral		1
+Catholic	(adjective)|(noun)	1
+Cats	(noun)|(plural)	1
+Celtic	(proper noun)|(adjective)	2
+Census		2
+Central		2
+Centre	(proper noun)	2
+Cesare	(proper noun)	4
+Chairman		1
+Championships		1
+Chan	(proper noun)	2
+Channel	(proper noun)	1
+Chapel		32
+Chapelle		2
+Characters		2
+Chatham	(proper noun)	3
+Chess		1
+Chicago	(proper noun)	1
+Chinese	(proper noun)|(adjective)|(plural)	1
+Cho		1
+Christian	(noun)|(proper noun)|(adjective)	4
+Christmas	(proper noun)	2
+Chronicles	(proper noun)	2
+Church	(proper noun)	10
+Cinema		1
+Cities		3
+City	(proper noun)	5
+Civil		1
+Clarendon	(proper noun)	1
+Clarke	(proper noun)	2
+Claws		1
+Clay	(proper noun)	29
+Cleveland	(proper noun)	1
+Climate		2
+Clongowes		1
+Cloth	(noun)	1
+Cloyne		1
+Club	(noun)	9
+Co	(proper noun)	1
+Coast		4
+Coghill		1
+Collection		5
+College		18
+Colleges		1
+Colton	(proper noun)	1
+Commendation		1
+Commons	(proper noun)	15
+Communities		2
+Community		2
+Compared		1
+Compilation		1
+Conservation		1
+Conservative	(proper noun)	3
+Conservatives		1
+Control		1
+Cops		1
+Coral	(proper noun)	1
+Cork	(proper noun)	30
+Cotton	(proper noun)	3
+Could	(verb)	1
+Council	(noun)	12
+Counties		2
+County	(noun)	45
+Cove		8
+Covent		1
+Crafts		9
+Cranbrook		1
+Crane		1
+Cranky		2
+Crawford	(proper noun)	2
+Crayons		1
+Creative		13
+Crescent		2
+Critical		1
+Cronin		1
+Cubs	(proper noun)|(plural)	1
+Culture		2
+Daimbert		3
+Dale	(proper noun)	3
+Dance		1
+Dante	(proper noun)	2
+Dartford		2
+Database		1
+Daughter		1
+David	(proper noun)	3
+Daylight		3
+Deal	(noun)	1
+Dean	(proper noun)	1
+Dec		1
+December	(proper noun)	4
+Democrats	(noun)|(plural)	2
+Demographics	(noun)	2
+Demography		2
+Density		2
+Design	(noun)	1
+Development		1
+Digital		1
+Digitized		1
+Director		1
+Disambiguation		1
+District		13
+Division	(noun)	2
+Doctors		1
+Dominic	(proper noun)	1
+Donna	(proper noun)	8
+Dover	(proper noun)	2
+Drunken		1
+Dublin	(proper noun)|(adjective)	7
+During	(proper noun)	2
+Duval	(proper noun)	4
+Ear		1
+East	(proper noun)	9
+Easter	(noun)	1
+Economic		1
+Economy		2
+Edenbridge		1
+Edit	(proper noun)	11
+Edmund	(proper noun)	1
+Education		2
+Egan		2
+El	(proper noun)	1
+Election		1
+Elizabeth	(proper noun)	4
+Emerald	(proper noun)	1
+En		1
+Encore		1
+Endless		1
+England	(proper noun)	10
+English	(adjective)|(proper noun)|(verb)	6
+Engravers		1
+Ennstal		3
+Enquiries		1
+Epple		3
+Erlebach		1
+Estimates		1
+Estuary		6
+Ethelbert	(proper noun)	3
+Ethnic		1
+Europe	(proper noun)	3
+European	(adjective)|(noun)	4
+Evelyn	(proper noun)	1
+Express	(adjective)|(noun)|(verb)	2
+External		10
+Extra		2
+Eye	(proper noun)	1
+FM		1
+Family	(noun)|(adjective)	1
+Farms		2
+Faversham		2
+Featured		1
+Feb		1
+February	(proper noun)	5
+Feel		1
+Ferdinand		1
+Ferre		1
+Field	(proper noun)	3
+Filmography		2
+Finbarr		1
+Finbarre		1
+Firkin		1
+First	(noun)	3
+Flag	(noun)|(verb)	1
+Flaminio	(proper noun)	1
+Fleming	(noun)|(proper noun)	2
+Florida	(proper noun)	26
+Focus	(noun)|(verb)	1
+Fogg		1
+Folkestone	(proper noun)	1
+Football		1
+For		1
+Force	(proper noun)	1
+Ford	(proper noun)	1
+Fordwich		1
+Forgotten		1
+Fort	(noun)	2
+Forum	(noun)	1
+Foster	(proper noun)	2
+Foundation		13
+Four		1
+Fr		1
+France	(proper noun)	1
+Franz	(proper noun)	1
+Friedrich	(proper noun)	1
+Fu	(proper noun)	1
+Fulham		1
+Fun		1
+Further		1
+G	(noun)	2
+GCSE	(noun)	2
+GCSEs	(noun)|(plural)	1
+Gabriel	(proper noun)	2
+Gaishorn		1
+Gale		1
+Gallery		2
+Gams	(noun)|(verb)|(adjective)|(plural)	1
+Gap	(proper noun)	3
+Garden	(noun)|(plural)	1
+Gates		1
+Gazette		2
+Generation	(noun)	1
+Geneva	(proper noun)	1
+Geography		7
+George	(proper noun)	1
+German	(noun)|(proper noun)|(adjective)	3
+Germany	(proper noun)	2
+Giants	(proper noun)	2
+Gillingham		2
+Giorgio	(proper noun)	1
+Girls		2
+Giulio	(proper noun)	3
+Given		1
+Glass	(noun)|(verb)|(adjective)	1
+Gmina		1
+Go	(proper noun)	2
+Gold	(noun)	3
+Golden		4
+Golf	(noun)	2
+Gothic		1
+Government		1
+Governor	(noun)	1
+Governors		2
+Graves	(proper noun)	1
+Gravesend		1
+Gravesham		1
+Graz	(proper noun)	1
+Greater	(adjective)|(noun)	4
+Greatest		2
+Green	(proper noun)	8
+Greenwood		1
+Grenham		2
+Ground		1
+Grover	(proper noun)	1
+Guard		2
+Guild		1
+Guy	(proper noun)	2
+H	(noun)	1
+Hall	(proper noun)|(verb)	1
+Hammer	(noun)	1
+Hand	(noun)	1
+Hans	(proper noun)	1
+Hard		2
+Harry	(proper noun)	2
+Hastings	(proper noun)	1
+Haus	(noun)	1
+He	(noun)	1
+Health		5
+Heckett		3
+Heights		2
+Hellboy		1
+Henry	(proper noun)	2
+Hercegovine		1
+Heritage		3
+Herne	(proper noun)	9
+Herzegovina	(proper noun)	7
+Hidden		1
+High		1
+Hill	(proper noun)	1
+Hindu	(adjective)|(proper noun)	2
+Hirscher		1
+Hispanic	(adjective)|(noun)	1
+Historic		1
+Historical		3
+History		8
+Hits		2
+Hoffman	(proper noun)	1
+Hollywood	(proper noun)	2
+Holy	(adjective)|(noun)	3
+Honan		44
+Hong		2
+Honoured		2
+Hospital		3
+Hostel		2
+Hot		1
+Hotel		2
+Hour	(noun)	2
+House	(proper noun)	7
+Hubert	(proper noun)	1
+Hurley		2
+Hythe	(proper noun)	1
+I	(noun)|(verb)	10
+II		7
+III		1
+ISBN		3
+Identity		1
+Imogen	(proper noun)	1
+Important		2
+In		11
+Inch		1
+Incorporated	(adjective)|(verb)	2
+Independence		2
+Indian	(adjective)|(noun)|(proper noun)	1
+Inlet		1
+Institute	(noun)|(plural)	2
+Internet	(proper noun)	1
+Intimacy		1
+Irdning		11
+Ireland	(proper noun)	7
+Irish	(proper noun)|(adjective)	12
+Iron	(noun)|(adjective)|(verb)	1
+Is	(noun)|(plural)	12
+Isabella	(proper noun)	1
+Island	(proper noun)	2
+Islander	(noun)	1
+Isle	(noun)	3
+It	(noun)|(adjective)|(verb)|(preposition)	12
+Italian	(adjective)|(noun)|(proper noun)	5
+Its		1
+J	(noun)	1
+Jabara		1
+Jackie		2
+Jacksonville	(proper noun)	2
+James	(proper noun)	8
+Jan	(proper noun)	1
+January	(proper noun)	10
+Japanese	(adjective)|(noun)|(proper noun)	1
+Jesuits	(noun)|(plural)	2
+Jet		1
+Jewish	(adjective)|(proper noun)	1
+Joachim	(proper noun)	1
+Joe	(proper noun)	1
+John	(proper noun)	12
+Johns	(proper noun)	2
+Jones	(proper noun)	1
+Joong		1
+Josef	(proper noun)	1
+Jul	(proper noun)	1
+July	(proper noun)	4
+Jun		1
+June	(proper noun)	2
+Junior	(noun)	2
+KM		4
+Karlino		3
+Kenneth	(proper noun)	1
+Kent	(proper noun)	30
+KentHidden		1
+Kentucky	(proper noun)	1
+Key		1
+Keystone		1
+Kidd		1
+Kim	(proper noun)	1
+King	(proper noun)	4
+Kingdom		3
+Kingsley		1
+Knights		1
+Know	(verb)|(noun)	1
+Kong	(proper noun)|(adjective)	3
+Krainer		1
+La		1
+Labour	(proper noun)	1
+Lady	(noun)	1
+Lake		1
+Land	(proper noun)	2
+Language		1
+Las		1
+Later		1
+Latina	(proper noun)|(adjective)	1
+Latino	(adjective)|(noun)|(proper noun)	1
+Launching		1
+League		6
+Lee	(proper noun)	3
+Legacy		1
+Leisure		1
+Lent	(proper noun)	1
+Lepidoptera	(proper noun)	1
+Liang		1
+Liberal	(proper noun)|(adjective)	1
+Library		2
+Liezen		4
+Lille	(proper noun)	1
+Line	(proper noun)	1
+List	(noun)	2
+Live	(proper noun)	4
+Living		1
+Local		3
+London	(proper noun)	4
+Lords	(proper noun)	1
+Love	(proper noun)	7
+Ltd		3
+Lucie	(proper noun)	1
+Ludwig	(proper noun)	4
+Lydd		1
+M	(noun)	1
+MVP		1
+Madox		1
+Madrid	(proper noun)|(adjective)	1
+Mage		1
+Magic	(proper noun)	1
+Maidstone	(proper noun)	2
+Main	(proper noun)	14
+Major	(noun)	3
+Malling		2
+Manchester	(proper noun)	2
+Mandalay		1
+Mandarin	(proper noun)	1
+Many		2
+Mar		1
+March	(proper noun)	5
+Margate	(proper noun)	11
+Maria	(proper noun)	2
+Marriage	(noun)	1
+Martin	(proper noun)	1
+Mass	(noun)	2
+Master	(noun)|(proper noun)	3
+Mathew	(proper noun)	1
+May	(proper noun)	4
+McMullen		2
+Meadowbrook		2
+Medal		1
+Medallion		1
+Media	(proper noun)	1
+Medical	(adjective)|(noun)	9
+Medway		1
+Melbourne	(proper noun)	3
+Member		1
+Memorial		1
+Met	(noun)	4
+Metro	(noun)	1
+Metropolitan		3
+Miami	(proper noun)	3
+Michael	(proper noun)	2
+Michelle	(proper noun)	1
+Middle	(noun)|(adjective)	1
+Middleburg		3
+Milani		3
+Military		3
+Minnis		5
+MinnisBay		2
+Minster		1
+Mirams		1
+Mirror		1
+Mistaken		1
+Money		1
+Monologue		1
+More	(proper noun)	5
+Moritz	(proper noun)	1
+Motion		1
+Mount	(noun)	1
+Movement		3
+Movie		1
+Mr		4
+Municipal		1
+Museum	(noun)	9
+Museums	(noun)	3
+Music		1
+Muslim	(adjective)|(noun)|(verb)	1
+My	(noun)|(proper noun)	1
+Myanmar	(proper noun)	4
+NL		1
+NS		1
+National		6
+Native	(adjective)|(noun)|(plural)	1
+Nature	(proper noun)	1
+Necessary		1
+Nederlands	(adjective)|(proper noun)	3
+Netball		3
+New	(adjective)	4
+News		4
+Newspaper		1
+Nice	(proper noun)	2
+Nicholas	(proper noun)	2
+Night	(proper noun)	2
+Nikolai	(proper noun)	1
+Ninety		1
+Noctuidae		1
+Noon		1
+North	(proper noun)	9
+Northfleet		1
+Nouveau		1
+Nov		1
+November	(proper noun)	9
+Number		1
+Nymph	(noun)	2
+OS	(noun)	2
+Oakland	(proper noun)	1
+Oct		1
+October	(proper noun)	7
+Of		3
+Office		8
+Official		1
+Ogg	(proper noun)	1
+Old		1
+Once		1
+One		1
+Online	(adjective)|(verb)|(adverb)	3
+Oppenheimer		5
+Orange	(proper noun)|(adjective)	2
+Original	(noun)	2
+Orphaned		1
+Oswald	(proper noun)	1
+Our	(adjective)|(noun)	1
+Outside	(proper noun)	1
+P	(proper noun)	1
+PDFPrintable		13
+Pachernegg		1
+Pacific	(proper noun)	1
+Pacifier		1
+Paddock		1
+Padova	(proper noun)	1
+Painters		1
+Palm	(proper noun)	7
+Pan	(proper noun)	1
+Panama	(proper noun)|(adjective)	1
+Panhandle		1
+Parish		7
+Park	(noun)	9
+Parliament	(proper noun)	1
+Parliamentary	(adjective)	1
+Party	(noun)	1
+Patrick	(proper noun)	2
+Paul	(proper noun)	3
+Pembroke	(proper noun)	1
+Penney		1
+Pensacola		1
+People		4
+Pete	(proper noun)	1
+Peter	(proper noun)	2
+Philipp	(proper noun)	1
+Piccolomini		1
+Pichlarn		1
+Picture		1
+Pilgrim	(proper noun)	1
+Pitcher		1
+Pius	(proper noun)	1
+Place		1
+Places		2
+Plan	(noun)	1
+Planneralm		1
+Players		1
+Poland	(proper noun)	1
+Police	(noun)|(verb)	1
+Politics		5
+Pomerania	(proper noun)	1
+Pomeranian	(adjective)|(noun)	2
+Pompano		1
+Pope	(proper noun)	1
+Populated		2
+Population	(noun)	2
+Port	(noun)|(adjective)|(verb)	2
+Portal	(noun)	1
+Powell	(proper noun)	6
+Praunfalk		1
+Premier	(noun)	1
+Press	(noun)|(verb)	2
+Primary		1
+Prince	(proper noun)	2
+Project		1
+Promo		2
+Punta		1
+Putterersee		1
+Quay		1
+Queen	(proper noun)	2
+Queenborough		1
+Quest		1
+Quex		9
+R	(noun)	2
+RIAI		1
+Rail		1
+Railroad		1
+Railway		2
+Rainbow		1
+Rainham		1
+Ramsau		1
+Ramsgate	(proper noun)	5
+Rd		1
+Read	(proper noun)	13
+Real	(proper noun)	1
+Recreation		1
+Red	(noun)|(adjective)	1
+Reeves		1
+References		14
+Region	(noun)	1
+Register	(noun)	2
+Religion	(noun)	2
+Remember		1
+Republican	(proper noun)	2
+Republika		2
+Rev		4
+Reverend	(noun)	1
+Richard	(proper noun)	1
+Riddick		2
+Riesneralm		1
+Right		1
+Rising		1
+Rivers		1
+Road		2
+Robert	(proper noun)	4
+Roberts	(noun)|(proper noun)|(plural)	5
+Rochester	(proper noun)	2
+Roger	(proper noun)	1
+Roma	(proper noun)	1
+Roman	(adjective)|(noun)|(proper noun)	5
+Rome	(proper noun)|(plural)	2
+Romney		1
+Ron	(proper noun)	1
+Roscrea		1
+Ross	(proper noun)	2
+Rossetti		2
+Roundabout		4
+Rowland	(proper noun)	1
+Royal	(proper noun)	4
+Rush	(proper noun)	2
+Sailing		3
+Saint	(noun)	2
+Saints	(noun)|(proper noun)|(plural)	3
+Salzburg	(proper noun)	1
+Sam	(proper noun)	3
+San	(proper noun)|(adjective)	1
+Sandwich	(proper noun)	1
+Sankt	(noun)	4
+Santa	(proper noun)|(adjective)	2
+Sarah	(proper noun)	1
+Sarajevo	(proper noun)	1
+Sarre	(proper noun)	2
+Saturday	(noun)|(verb)|(adverb)	2
+Schladming		1
+Schloss	(noun)	1
+School		4
+Schools		2
+Scientific		1
+Scott	(proper noun)	1
+Scurrell		1
+Sea		3
+Seasons		1
+Second		1
+Secretary		1
+See	(proper noun)	19
+Selo		5
+Selva		2
+Seminar	(noun)	1
+Senate	(proper noun)	1
+Seosamh	(proper noun)	1
+Sep		1
+September	(proper noun)	2
+Servi		1
+Services		2
+Sevenoaks		2
+Shandon		1
+Shanghai	(proper noun)|(verb)	3
+She		1
+Sheerness		1
+Shepway		1
+Sheriff	(noun)	1
+Siena	(proper noun)	1
+Silver	(proper noun)	1
+Silvio	(proper noun)	1
+Simone	(proper noun)	1
+Since		1
+Single	(noun)	4
+Singles		1
+Sir		2
+Sisk		5
+Site		1
+Sites		1
+Sittingbourne		1
+Six		1
+Ski	(noun)|(proper noun)	1
+Smoorenburg		1
+Snodland		1
+Society		2
+Somerfield		1
+Somme	(proper noun)	1
+Son	(proper noun)	2
+Songs	(noun)|(plural)	1
+Sons		3
+Soul	(proper noun)	1
+Sources		2
+South	(proper noun)	7
+Southborough		1
+Southern	(adjective)	1
+Southwest		1
+Space		1
+Spanish	(adjective)|(proper noun)	2
+Special		2
+Speed	(proper noun)	1
+Spell		6
+Spirit	(proper noun)	2
+Spoken		1
+Sport		3
+Sporting		1
+Sports		1
+Springs		7
+Spy		1
+Srpska		1
+Srpski		1
+St		21
+Stage		2
+Stagecoach		1
+Stainach		1
+Stained		1
+Stallone		1
+State	(proper noun)	3
+States	(proper noun)	5
+Station		1
+Statistical		1
+Statistics		1
+Stoke	(proper noun)	1
+Stories		1
+Story		1
+Street		3
+Streisand		1
+Strood		1
+Stuart	(proper noun)	1
+Studio	(noun)	1
+Studios	(noun)|(plural)	1
+Stunt	(noun)	1
+Stunts		2
+Stuttgart	(proper noun)	1
+Styria		4
+Sudano		1
+Summer	(proper noun)	13
+Sun	(proper noun)	1
+Sunday	(noun)|(verb)|(adverb)	2
+Swale		1
+Swanley		1
+Swanscombe		1
+Sylvester	(proper noun)	1
+Symbolism		1
+Symmes		1
+Synopsis	(noun)	2
+Systems	(noun)	1
+Szczecin	(proper noun)|(adjective)	1
+TERYT		1
+Tallahassee	(proper noun)	2
+Tampa	(proper noun)	2
+Tang	(proper noun)	1
+Tauplitzalm		1
+Team	(noun)	1
+Tears		2
+Technical		1
+Technology		8
+Teehan		3
+Tenterden		1
+Terms		13
+Terrace		1
+Territorial		1
+Textual		1
+Thames	(proper noun)	6
+Thanet		32
+The		32
+There		9
+This		1
+Thomas	(noun)|(proper noun)	1
+Thousands		1
+Throat		1
+Through		1
+Thursday	(noun)|(verb)|(adverb)	1
+Time	(proper noun)	5
+Times	(proper noun)	2
+Tipperary	(proper noun)	1
+To		2
+Today		1
+Tom	(proper noun)	1
+Tonbridge		2
+Torre		1
+Total		2
+Tower	(noun)|(proper noun)	3
+Township		1
+Transport	(noun)	3
+Treasure		1
+Trilogy		1
+Trinity	(proper noun)	3
+Trust		2
+Tudor	(noun)|(adjective)	2
+Tunbridge		2
+Tuxedo		1
+Twelve		1
+Twinning		1
+UK		5
+US	(noun)	4
+Ultimate		1
+Unincorporated		2
+United	(proper noun)	10
+Unity	(proper noun)	1
+Universities		3
+University		17
+Upon		1
+Use		13
+Vasquez		3
+Vatican	(proper noun)|(adjective)	1
+Verdadero		1
+Very		1
+VfB		1
+Victoria	(proper noun)	2
+View		1
+Village		4
+Villages		3
+Virgin	(proper noun)	1
+Virginia	(proper noun)	5
+Vision	(noun)	2
+Visitor	(noun)	1
+Vocal		1
+Voiselle		3
+Voivodeship		1
+Volumes		1
+Voluntary		1
+W	(noun)	1
+Wade	(proper noun)	2
+Wakeboard		1
+Walmer		1
+Walter	(proper noun)	1
+Walton		1
+Wanderer	(noun)	1
+Wantsum		1
+War		10
+Washington	(proper noun)	1
+Waste		1
+Water		3
+Waterloo	(proper noun)	3
+Weather		1
+Weddings		2
+Wells	(proper noun)	2
+Weng		1
+West	(proper noun)	5
+Westerham		1
+Western	(adjective)|(noun)	2
+Westgate		1
+Westwood		1
+White	(proper noun)	4
+Whitstable		1
+Who		1
+Wicklow	(proper noun)	1
+Wikimedia		13
+Wikipedia	(proper noun)|(verb)	86
+Wiktionary		1
+Will	(proper noun)	1
+William	(proper noun)	2
+Wincott		3
+Windle		2
+Wing		1
+Witch		1
+Without		1
+Wizard		3
+Wood	(proper noun)	4
+Woodfood		1
+Work		1
+Works		2
+World		12
+Wushu		3
+Wye		3
+XiphQT		1
+Yangon	(proper noun)	9
+Year		1
+Yesterday		1
+York	(proper noun)	3
+You		3
+Yurt		13
+Zavod		1
+Zwartowo		1
+a	(noun)|(preposition)|(verb)|(adverb)|(adjective)	192
+about	(preposition)|(verb)|(adverb)|(adjective)|(noun)	34
+above	(preposition)|(verb)|(adverb)|(adjective)|(noun)	2
+academies	(noun)|(plural)	1
+accepts	(verb)|(noun)	1
+access	(noun)|(verb)	2
+accompanied	(verb)	1
+according	(verb)|(adjective)|(adverb)	2
+account	(noun)|(verb)	13
+accounts	(noun)|(verb)|(plural)	2
+achieve	(verb)	1
+acquired	(verb)|(adjective)	2
+acre	(noun)|(adjective)	1
+action	(noun)|(verb)	8
+actions	(noun)|(verb)|(plural)	13
+active	(adjective)|(noun)|(verb)	2
+activities	(noun)|(plural)	1
+activity	(noun)|(adjective)	1
+actor	(noun)	6
+actors	(noun)|(plural)	1
+actual	(adjective)|(noun)|(verb)|(adverb)	1
+addition	(noun)	1
+additional	(adjective)	13
+address	(noun)|(verb)	1
+adjacent	(adjective)	1
+administration	(noun)	1
+administrative	(adjective)	1
+adult	(noun)|(adjective)	1
+affecting	(adjective)|(verb)	1
+affiliations	(noun)|(plural)	1
+after	(verb)|(adverb)|(preposition)|(adjective)	5
+against	(preposition)|(verb)|(adverb)	1
+age	(noun)|(verb)|(adjective)|(plural)	11
+aged	(adjective)|(verb)|(preposition)	10
+ago	(adjective)|(verb)|(adverb)|(noun)|(preposition)	1
+agriculture	(noun)	1
+aikido	(noun)	1
+aims	(noun)|(verb)|(plural)	1
+album	(noun)|(adjective)	4
+albums	(noun)|(plural)	2
+all	(verb)|(adverb)|(noun)|(adjective)	6
+allan		1
+alleviate	(verb)	1
+allocated	(verb)	1
+alone	(adjective)|(verb)|(adverb)|(noun)	2
+along	(preposition)|(verb)|(adverb)	2
+aloud	(verb)|(adverb)|(adjective)	1
+also	(verb)|(adverb)|(preposition)	19
+altar	(noun)|(verb)	4
+altarpiece	(noun)	1
+alternative	(noun)|(adjective)|(plural)	2
+although		4
+altitude	(noun)	3
+am	(verb)|(noun)|(preposition)|(adjective)	4
+amazing	(verb)|(adjective)	1
+ambo	(noun)|(adjective)	1
+ambulance	(noun)	1
+among	(preposition)	1
+amongst	(preposition)	1
+an	(noun)|(preposition)|(verb)|(adverb)|(adjective)|(plural)	27
+and	(noun)|(verb)|(adverb)|(adjective)	276
+animal	(noun)|(adjective)|(verb)|(adverb)	1
+animalia		1
+animals	(noun)|(plural)	3
+anniversary	(noun)|(adjective)	1
+annual	(adjective)|(noun)	2
+another	(noun)	1
+any	(verb)|(adverb)|(noun)	2
+apartment	(noun)	1
+appear	(verb)	2
+appearance	(noun)	3
+appeared	(verb)	2
+apply	(verb)|(adjective)|(noun)	13
+approximately	(verb)|(adverb)	2
+apr		1
+archaeological	(adjective)	1
+archeologist	(noun)	1
+architect	(noun)|(verb)	1
+architectural	(adjective)	1
+architecture	(noun)	1
+archived	(verb)|(adjective)	9
+archives	(noun)|(verb)|(plural)	1
+are	(verb)|(noun)|(plural)	28
+area	(noun)	11
+areas	(noun)|(plural)	2
+aristocracy	(noun)	2
+arose	(verb)	1
+around	(preposition)|(adjective)|(verb)|(adverb)	12
+arranges	(verb)	1
+art	(noun)|(verb)	3
+artefacts	(noun)|(plural)	3
+arthropoda		1
+article	(noun)|(verb)	39
+articles	(noun)|(plural)	19
+artifacts	(noun)|(plural)	1
+artist	(noun)|(adjective)	6
+artistically	(verb)|(adverb)	1
+artists	(noun)|(plural)	4
+arts	(noun)|(plural)	3
+artwork	(noun)	3
+as	(verb)|(adverb)|(preposition)|(noun)|(adjective)	57
+asbury		1
+ashford		1
+asian	(noun)	1
+asphalt	(noun)|(verb)	1
+assistant	(adjective)|(noun)|(verb)	2
+assisted	(verb)	1
+associated	(verb)	1
+at	(preposition)|(noun)|(verb)	51
+athletics	(noun)	1
+attack	(noun)|(verb)	1
+attempt	(noun)|(verb)	1
+attempts	(noun)|(verb)|(plural)	1
+attendance	(noun)	1
+attended	(verb)|(adjective)	1
+attractions	(noun)|(plural)	5
+attracts	(verb)	1
+audio	(adjective)|(noun)|(verb)	1
+aunt	(noun)	1
+author	(noun)|(verb)	3
+authoring	(verb)|(noun)	1
+authorities	(noun)|(plural)	1
+autographs	(noun)|(plural)|(verb)	1
+available	(adjective)	18
+avatar	(noun)	1
+average	(noun)|(adjective)|(verb)	14
+award	(noun)|(verb)	1
+awareness	(noun)	1
+b	(noun)	8
+baen		1
+ballad	(noun)	2
+band	(noun)|(verb)|(plural)	1
+baptismal	(adjective)	1
+barely	(verb)|(adverb)	2
+bargain	(noun)|(verb)|(plural)	1
+barracuda	(noun)	1
+base	(noun)|(verb)|(adjective)	1
+baseball	(noun)	1
+based	(adjective)|(verb)|(noun)	1
+bases	(noun)|(verb)	1
+batted	(verb)	1
+bay	(noun)|(verb)|(adjective)	2
+be	(verb)|(noun)|(adjective)|(adverb)|(preposition)	8
+beach	(noun)|(verb)	6
+beaches	(noun)|(plural)|(verb)	3
+became	(verb)	8
+because	(verb)|(adverb)	2
+become	(verb)|(adjective)	1
+becoming	(verb)|(noun)|(adjective)	1
+bedtime	(noun)	1
+been	(verb)|(noun)	10
+before	(preposition)|(verb)|(adverb)	5
+befriends	(verb)	1
+began	(verb)	2
+behaviour	(noun)	1
+behind	(preposition)|(verb)|(adverb)|(noun)	1
+bei	(preposition)|(adjective)|(verb)|(noun)	4
+being	(verb)|(noun)	6
+believed	(verb)	1
+bell	(noun)|(verb)|(adjective)	1
+belmore		1
+below	(preposition)|(verb)|(adverb)	3
+benefactors	(noun)|(plural)	1
+bereich		1
+beside	(preposition)|(verb)|(adverb)	1
+best	(adjective)|(verb)|(adverb)|(noun)	1
+between	(preposition)	17
+big	(adjective)|(noun)|(verb)	3
+birch	(noun)|(verb)	1
+birchington		11
+birth	(noun)|(adjective)|(verb)	4
+births	(noun)|(plural)	2
+blended	(verb)	1
+bloody	(adjective)|(verb)|(adverb)	1
+boats	(noun)|(plural)	1
+book	(noun)|(verb)	4
+bookDownload		13
+bookings	(noun)|(plural)	1
+books	(noun)|(verb)|(plural)	1
+born	(verb)|(adjective)|(noun)	5
+boroughs	(noun)|(plural)	1
+bosanski	(adjective)|(verb)|(adverb)	1
+both	(noun)	3
+boxing	(verb)|(noun)	1
+bricked	(verb)	1
+brief	(adjective)|(noun)|(verb)	1
+briefly	(verb)|(adverb)	1
+broke	(adjective)|(verb)	1
+brought	(verb)|(noun)	2
+browser		1
+bryan		1
+build	(verb)|(noun)	2
+builder	(noun)	2
+builders	(noun)|(plural)	1
+building	(noun)	3
+built	(verb)|(noun)	14
+bungalow	(noun)	1
+burial	(noun)	1
+buried	(adjective)|(verb)	1
+bus	(noun)|(verb)	1
+business	(adjective)|(noun)	1
+but	(preposition)|(verb)|(adverb)|(noun)|(adjective)	5
+by	(preposition)|(verb)|(adverb)|(adjective)|(noun)	79
+bye	(noun)|(preposition)	1
+c	(noun)	2
+cache	(noun)|(verb)|(adjective)	26
+cafes	(noun)|(plural)	1
+calcium	(noun)	1
+camp	(noun)|(adjective)|(verb)	1
+can	(verb)|(noun)|(adverb)|(adjective)	11
+cannot	(noun)|(verb)	1
+canvas	(noun)|(verb)	1
+canvass	(noun)|(verb)	9
+capita	(noun)|(verb)	1
+capital	(noun)|(adjective)	1
+caravan	(noun)|(verb)	1
+care	(noun)|(verb)|(adjective)|(plural)	4
+carnival	(noun)	1
+carried	(verb)	1
+carvings	(noun)|(plural)	1
+case	(noun)|(adjective)|(verb)|(plural)	2
+caster	(noun)	1
+castle	(noun)|(verb)	4
+catalyst	(noun)	1
+catamaran	(noun)	1
+catered	(verb)	1
+causing	(verb)	1
+caves	(noun)|(verb)|(plural)	1
+cdps		1
+ceased	(verb)	1
+celebrated	(adjective)|(verb)	1
+celebration	(noun)	1
+cellars	(noun)|(plural)	1
+census	(noun)|(verb)	11
+center	(noun)|(adjective)|(verb)|(preposition)	1
+central	(adjective)|(noun)	5
+centre	(noun)|(verb)|(adverb)	2
+century	(noun)	15
+chair	(noun)|(verb)	1
+chalk	(noun)|(verb)	5
+change	(noun)|(verb)|(adjective)	3
+changes	(noun)|(verb)|(plural)	27
+channel	(noun)|(verb)	4
+chapel	(adjective)|(noun)	16
+chapels	(noun)|(plural)	1
+chaplain	(noun)	2
+chaplaincy	(noun)	1
+character	(noun)|(verb)	1
+characters	(noun)|(plural)	1
+charming	(adjective)|(verb)	1
+chart	(noun)|(verb)	1
+charter	(noun)|(adjective)|(verb)	1
+children	(noun)	2
+choice	(noun)|(adjective)	1
+choirs	(noun)|(plural)	1
+choose	(verb)	2
+choreographer	(noun)	8
+choreographs	(verb)	1
+choreography	(noun)	1
+chronology	(noun)	1
+church	(noun)|(verb)	10
+churchmen	(noun)|(plural)	1
+churchyard	(noun)	2
+cite	(verb)|(noun)	13
+cites	(noun)|(verb)|(plural)	1
+cities	(noun)|(plural)	2
+city	(noun)|(proper noun)	4
+civil	(adjective)|(noun)	4
+claimed	(verb)	3
+classed	(verb)	1
+classes	(noun)|(verb)|(plural)	1
+classification		1
+cleaned	(verb)|(adjective)	1
+cleanliness	(noun)|(verb)	1
+cliff	(noun)	4
+cliffs	(noun)|(plural)	4
+climate	(noun)	2
+close	(verb)|(noun)|(adjective)|(adverb)	2
+closed	(adjective)|(verb)	1
+closely	(verb)|(adverb)	1
+club	(noun)|(verb)	1
+clubs	(verb)|(noun)|(plural)	2
+clues	(noun)|(verb)|(plural)	1
+coach	(noun)|(verb)	1
+coast	(noun)|(verb)	5
+coastal	(adjective)	5
+coastline	(noun)	1
+coat	(noun)|(verb)	1
+code	(noun)|(verb)|(plural)	2
+cohabiting	(verb)	1
+collaboration	(noun)	2
+collected	(verb)|(adjective)	1
+collection	(noun)	10
+college	(noun)	4
+colleges	(noun)|(plural)	6
+colourful	(adjective)	1
+come	(verb)|(noun)|(preposition)|(adverb)|(adjective)	1
+command	(noun)|(verb)	1
+commemorates	(verb)	1
+commission	(noun)|(verb)	4
+commissioned	(verb)	3
+commissioners	(noun)|(plural)	1
+common	(adjective)|(noun)|(verb)|(proper noun)	2
+communications	(noun)|(plural)	1
+communities	(noun)|(plural)	3
+community	(noun)	18
+commute	(verb)|(adjective)	2
+commuting	(verb)|(noun)|(adjective)	1
+company	(noun)|(verb)	2
+compared	(verb)	4
+compatriots	(noun)|(plural)	1
+compete	(verb)	1
+competes	(verb)	1
+competitions	(noun)|(plural)	1
+compilations	(noun)|(plural)	1
+complete	(verb)|(adjective)|(noun)	1
+complex	(adjective)|(noun)|(verb)	4
+component	(noun)|(adjective)|(verb)	1
+composed	(adjective)|(verb)	1
+composer	(noun)|(verb)	1
+composition		1
+comprehensive	(adjective)|(noun)	1
+concerts	(verb)|(noun)|(plural)	3
+conductor	(noun)	1
+consecration	(noun)	1
+conservation	(noun)	5
+considers	(verb)	2
+consists	(noun)|(verb)|(plural)	1
+constituencies	(noun)|(plural)	1
+construction	(noun)	4
+contact	(noun)|(verb)	13
+contacting	(verb)	1
+contain	(verb)	1
+containing	(verb)	2
+contains	(verb)	1
+content	(noun)|(adjective)|(verb)	13
+contents	(noun)|(verb)|(adjective)|(plural)	20
+continued	(verb)	2
+continues	(verb)	1
+contractors	(noun)|(plural)	1
+coolest	(adjective)	1
+coordinates	(noun)|(verb)|(plural)	1
+coordinator	(noun)	2
+cork	(noun)|(adjective)|(verb)	1
+cottages	(noun)|(plural)	1
+council	(noun)	1
+counties	(noun)|(plural)	6
+countries	(noun)|(plural)	1
+country	(noun)|(adjective)	5
+county	(noun)	13
+couples	(noun)|(verb)|(plural)	3
+course	(noun)|(verb)	2
+court	(noun)|(verb)|(adjective)	2
+cover	(noun)|(adjective)|(verb)	1
+covered	(adjective)|(verb)	1
+covering	(noun)|(verb)	1
+crabs	(noun)|(verb)|(plural)	1
+craft	(noun)|(verb)	2
+craftsmanship	(noun)	2
+craftsmen	(noun)|(plural)	1
+craftswomen	(noun)|(plural)	1
+create	(verb)|(adjective)	26
+created	(verb)	2
+creating	(noun)|(verb)	1
+crew	(noun)|(verb)	1
+cronan		1
+cronin		1
+crosses	(noun)|(verb)|(plural)	1
+cultural	(adjective)	1
+curling	(noun)|(verb)	2
+current	(noun)|(adjective)|(verb)	14
+currently	(verb)|(adverb)	1
+customer	(noun)	1
+cutting	(verb)|(noun)|(adjective)	1
+cyphocampa		5
+d	(noun)|(adjective)	15
+daimbert		3
+dance	(noun)|(verb)	1
+darker	(adjective)	1
+data	(noun)|(verb)|(plural)	3
+database	(noun)|(verb)	1
+date	(noun)|(verb)|(plural)	3
+dated	(adjective)	1
+dates	(noun)|(verb)|(plural)	2
+daughter	(noun)	1
+dead	(adjective)|(noun)|(verb)|(adverb)	10
+deals	(noun)|(verb)|(plural)	1
+death	(noun)	2
+deaths	(noun)|(plural)	1
+debuted	(verb)	1
+decades	(noun)|(plural)	3
+decline	(noun)|(verb)|(adjective)	1
+decorate	(verb)	1
+decorated	(verb)	1
+decree	(noun)|(verb)	1
+dedicated	(adjective)|(verb)	3
+dedication	(noun)	1
+definition	(noun)	1
+defunct	(adjective)|(verb)	1
+degree	(noun)	2
+del	(noun)|(verb)|(preposition)|(adjective)|(adverb)	1
+democratic	(adjective)	1
+demolished	(verb)	1
+demon	(noun)	2
+demonstrate	(verb)	1
+density	(noun)	2
+dependent	(adjective)|(noun)|(verb)|(preposition)	1
+depicting	(verb)	1
+deposited	(verb)	1
+der	(verb)|(adverb)|(noun)|(plural)|(adjective)	1
+derived	(adjective)|(verb)	1
+description	(noun)	1
+design	(noun)|(verb)	2
+designated	(verb)|(adjective)	1
+designed	(verb)|(adjective)	10
+despite	(noun)|(preposition)	1
+destination	(noun)	3
+destroyed	(verb)	1
+detail	(noun)|(verb)	3
+details	(verb)|(noun)|(plural)	13
+deutsch	(adjective)	3
+develop	(verb)	1
+developed	(adjective)|(verb)	1
+di	(noun)|(verb)|(preposition)|(plural)|(adverb)	1
+dictionary	(noun)	2
+did	(verb)|(noun)	2
+died	(verb)|(noun)	4
+dimensions	(noun)|(verb)|(plural)	1
+dinghy	(noun)	1
+direction	(noun)	1
+directly	(verb)|(adverb)	1
+director	(noun)	2
+disabled	(adjective)|(noun)|(verb)	1
+disambiguation	(noun)	5
+disaster	(noun)	1
+discharged	(verb)	1
+disclaimers	(noun)|(plural)	13
+disco	(noun)|(verb)	2
+discovered	(verb)	1
+discussion	(noun)	14
+display	(noun)|(verb)	2
+displayed	(verb)|(adjective)	1
+displays	(noun)|(verb)|(plural)	1
+distribution	(noun)|(verb)	1
+district	(noun)|(verb)	10
+districts	(noun)|(verb)|(plural)	1
+do	(noun)|(verb)|(preposition)|(adverb)	2
+doctors	(noun)|(plural)|(verb)	1
+documents	(noun)|(verb)|(plural)	1
+does	(noun)|(verb)|(plural)	3
+donate	(verb)|(adverb)	13
+donated	(verb)	1
+doolan		1
+double	(adjective)|(verb)|(adverb)|(noun)	1
+down	(noun)|(verb)|(adverb)|(preposition)|(adjective)	1
+download	(noun)|(verb)	1
+downloads	(noun)|(verb)|(plural)	1
+dragon	(noun)	1
+drama	(noun)	1
+draws	(noun)|(verb)|(plural)	1
+drinking	(verb)	1
+driving	(verb)|(adjective)|(noun)	1
+drunken	(adjective)	1
+due	(adjective)|(verb)|(adverb)|(noun)	5
+duet	(noun)|(verb)	2
+duets	(noun)|(plural)	1
+during	(preposition)	9
+dyke	(noun)	1
+e	(noun)|(preposition)|(verb)	8
+eCeremonial		1
+eDonna		1
+eGmina		1
+eMunicipalities		2
+eTowns		1
+each	(noun)|(verb)|(adjective)	3
+early	(adjective)|(verb)|(adverb)|(noun)	5
+east	(noun)|(adjective)|(verb)|(adverb)	5
+easy	(adjective)	1
+eclipsed	(verb)	1
+economic	(adjective)	1
+economically	(verb)|(adverb)	1
+economy	(noun)|(adjective)	2
+ecumenical	(adjective)	1
+ed	(noun)	1
+edition	(noun)	2
+edits	(noun)|(verb)|(plural)	1
+educated	(adjective)|(verb)	3
+education	(noun)	3
+either	(noun)|(verb)|(adverb)	1
+elderly	(adjective)	1
+elected	(verb)	1
+election	(noun)	1
+elections	(noun)|(plural)	3
+electoral	(adjective)	2
+elevation	(noun)	1
+elmo	(noun)	1
+email	(noun)|(verb)	1
+embarrassment	(noun)	1
+employed	(adjective)|(verb)	1
+employment	(noun)	3
+enamels	(noun)|(plural)|(verb)	1
+encyclopedia	(noun)	26
+end	(noun)|(verb)|(adjective)	2
+energy	(noun)	1
+engineer	(noun)|(verb)|(adjective)	1
+enquiries	(noun)|(plural)	1
+envisaged	(verb)|(adjective)	1
+equivalent	(adjective)|(noun)	1
+eragon		1
+erlebach		1
+erosion	(noun)	1
+especially	(verb)|(adverb)	1
+essays	(noun)|(verb)|(plural)	1
+established	(verb)	1
+establishment	(noun)|(verb)	1
+establishments	(noun)|(plural)	1
+estate	(noun)|(verb)	4
+estimate	(noun)|(verb)	1
+estimates	(noun)|(plural)	1
+ethnicity	(noun)	1
+events	(noun)|(plural)	14
+eventually	(verb)|(adverb)	1
+ever	(verb)|(adverb)|(adjective)|(noun)	1
+every		3
+everyone	(noun)	1
+evidence	(noun)|(verb)	1
+evil	(adjective)|(noun)	2
+example	(noun)|(verb)	1
+excise	(noun)|(verb)	1
+executor	(noun)	1
+exhibition	(noun)	1
+existence	(noun)	1
+exotic	(adjective)|(noun)	1
+expanding	(verb)	6
+expansion	(noun)	1
+expeditions	(noun)|(plural)	1
+exposed	(verb)	1
+expositur		2
+extension	(noun)|(verb)	1
+exterior	(adjective)|(noun)	1
+external	(adjective)	10
+f	(noun)|(verb)	1
+fabric	(noun)	2
+facilities	(noun)|(plural)	2
+facing	(adjective)|(noun)|(verb)	1
+failed	(verb)	1
+fairly	(verb)|(adverb)|(adjective)	1
+faith	(noun)	2
+false	(adjective)|(noun)|(verb)	143
+families	(noun)|(plural)	3
+family		7
+famous	(adjective)	1
+famously	(verb)|(adverb)	1
+fantasy	(noun)|(verb)	3
+farm	(noun)|(verb)	3
+farming	(noun)|(adjective)|(verb)	1
+farms	(noun)|(verb)|(plural)	1
+featured	(adjective)|(verb)	13
+features	(verb)|(noun)|(plural)	1
+fee	(noun)|(plural)	2
+fellow	(noun)|(adjective)|(verb)	1
+female	(adjective)|(noun)	2
+females	(noun)|(plural)	4
+few	(noun)	1
+fictional	(adjective)	1
+fifth	(adjective)|(noun)	1
+fifty	(noun)	1
+fight	(verb)|(noun)	3
+fights	(noun)|(plural)|(verb)	1
+figure	(noun)|(verb)|(plural)	2
+figures	(noun)|(verb)|(plural)	2
+file	(noun)|(verb)|(adverb)|(plural)	14
+files	(noun)|(verb)|(plural)	1
+film	(noun)|(verb)	8
+filming	(noun)|(verb)	1
+films	(noun)|(verb)|(plural)	2
+final	(noun)|(adjective)	1
+finance	(noun)|(verb)|(adverb)	2
+finds	(noun)|(verb)|(plural)	1
+finished	(adjective)|(verb)	1
+finishing	(verb)|(noun)	1
+fire	(noun)|(verb)|(plural)	1
+firearms	(noun)|(plural)	1
+firm	(noun)|(adjective)|(verb)	3
+firms	(noun)|(plural)|(verb)	2
+first	(adjective)|(verb)|(adverb)|(noun)	16
+five	(noun)	3
+fleet	(noun)|(verb)|(adjective)	1
+flight	(noun)|(adjective)|(verb)	1
+floating	(adjective)|(verb)	1
+floor	(noun)|(verb)	7
+focuses	(noun)|(verb)|(plural)	1
+followed	(verb)	1
+following	(adjective)|(preposition)|(noun)	1
+follows	(verb)	1
+font	(noun)|(verb)	1
+foot	(noun)|(verb)|(adjective)	1
+football	(noun)	4
+footnotes	(noun)|(verb)|(plural)	1
+for	(preposition)|(verb)|(adverb)|(noun)	92
+force	(noun)|(verb)|(adjective)|(adverb)|(preposition)	2
+forced	(verb)|(adjective)	2
+forces	(noun)|(verb)|(plural)	1
+foreign	(adjective)	1
+format	(noun)|(verb)|(adjective)	1
+former	(adjective)|(noun)|(verb)	2
+formerly	(verb)|(adverb)	2
+forming	(verb)	1
+forms	(noun)|(verb)|(plural)	1
+forum	(noun)	1
+fostered	(verb)	1
+foundation	(noun)	5
+founded	(verb)|(adjective)	3
+four	(noun)	3
+fourth	(adjective)|(noun)	1
+fragile	(adjective)	1
+free	(adjective)|(verb)|(adverb)|(noun)	28
+freelance	(noun)|(adjective)|(verb)	1
+frequency	(noun)	1
+frequented	(verb)	1
+frogs	(noun)|(plural)|(verb)	1
+from	(preposition)|(adjective)	98
+full	(adjective)|(verb)|(adverb)|(noun)	1
+fun	(adjective)|(noun)|(verb)	1
+funding	(verb)|(noun)	1
+furnishings	(noun)|(plural)	2
+furniture	(noun)	1
+further	(verb)|(adjective)|(adverb)|(preposition)	1
+g	(noun)	1
+ga	(verb)|(noun)	1
+gained	(verb)	3
+galleries	(noun)|(plural)	2
+gallery	(noun)	1
+gardens	(noun)|(verb)|(plural)	1
+gas	(noun)|(verb)|(adjective)	1
+gates	(noun)|(verb)|(plural)	1
+gave	(verb)|(noun)|(adjective)	2
+gazetteer	(noun)	1
+general	(adjective)|(noun)	2
+generally	(verb)|(adverb)	1
+generated	(verb)	2
+generation	(noun)	1
+generations	(noun)	1
+genre	(noun)	1
+genus		2
+geocoordinate		4
+geography	(noun)	7
+geology	(noun)	1
+gesture	(noun)|(verb)	1
+get	(noun)|(verb)|(preposition)|(adjective)	15
+give	(verb)|(noun)	1
+glass	(noun)|(verb)|(adjective)	3
+gmina	(noun)	1
+goals	(noun)|(plural)	1
+gobnait		1
+golf	(noun)|(verb)	1
+gorgeous	(adjective)	1
+government	(noun)	4
+grades	(noun)|(verb)|(plural)	1
+graduated	(verb)|(adjective)	3
+grammar	(noun)	1
+greatly	(verb)|(adverb)	1
+grew	(verb)	1
+grid	(noun)|(verb)	2
+gross	(adjective)|(noun)|(verb)	1
+grounds	(noun)|(verb)	2
+group	(noun)|(verb)	1
+guard	(noun)|(verb)	1
+guided	(verb)|(adjective)	1
+gymnastics	(noun)	1
+h	(noun)	2
+hAudio		2
+had	(verb)|(noun)|(plural)	21
+haimeric		1
+handed	(adjective)|(verb)	2
+hangings	(noun)|(plural)	2
+hardness	(noun)	1
+has	(verb)|(adjective)|(noun)	24
+have	(verb)|(noun)|(adjective)|(preposition)	9
+having	(verb)	1
+he	(noun)|(verb)|(adverb)	29
+health	(noun)	2
+heard	(verb)|(adjective)	1
+heats	(verb)	1
+held	(verb)|(noun)|(plural)	4
+hellboy		1
+help	(noun)|(verb)|(plural)	20
+helping	(noun)|(verb)	2
+her	(adjective)|(noun)|(verb)|(adverb)|(preposition)	3
+herbal	(adjective)|(noun)	1
+here	(noun)|(verb)|(adverb)|(adjective)	16
+high	(adjective)|(verb)|(adverb)|(noun)	5
+higher	(adjective)	4
+highest	(adjective)	2
+him	(noun)|(verb)|(preposition)	2
+himself	(noun)|(verb)|(preposition)	1
+hired	(verb)|(noun)	1
+his	(noun)|(adjective)	17
+historical	(adjective)	1
+historically	(verb)|(adverb)	1
+history	(noun)	16
+hit	(noun)|(verb)|(adverb)|(adjective)	1
+home	(noun)|(verb)|(adjective)|(adverb)	3
+homes	(noun)|(verb)|(plural)	1
+hometown	(noun)	1
+honan	(noun)	3
+hong	(noun)	1
+honor	(noun)|(verb)	2
+horse	(noun)|(verb)	1
+hospital	(noun)|(adjective)	1
+hosted	(verb)	1
+hosts	(noun)|(verb)|(plural)	1
+hot	(adjective)|(verb)|(noun)	1
+hotel	(noun)	1
+hotels	(noun)|(plural)	3
+house	(noun)|(verb)	4
+household	(noun)|(adjective)	2
+householder	(noun)	1
+households	(noun)|(plural)	7
+houses	(noun)|(verb)|(plural)	5
+housing	(verb)|(noun)	1
+however	(verb)|(adverb)	3
+hrvatski	(adjective)|(verb)|(adverb)	1
+hundred	(noun)	1
+hunting	(verb)|(noun)	1
+husband	(noun)|(verb)	1
+huts	(noun)|(plural)	1
+i	(noun)|(preposition)|(verb)|(adverb)	1
+identity	(noun)	2
+if	(noun)|(verb)	53
+illustrating	(verb)	2
+illustrator	(noun)|(verb)	1
+im	(noun)|(verb)|(adjective)|(preposition)	6
+image	(noun)|(verb)	3
+images	(noun)|(verb)|(plural)	1
+imaging	(verb)|(noun)	1
+importance	(noun)	2
+important	(adjective)|(verb)	3
+impression	(noun)|(verb)	1
+improvisational	(adjective)	1
+in	(preposition)|(verb)|(adverb)|(noun)|(adjective)	250
+inactive	(adjective)	1
+include	(verb)|(noun)|(adjective)	2
+included	(verb)	3
+includes	(verb)	1
+including	(preposition)|(verb)	8
+income	(noun)	5
+incorporates	(verb)	1
+independence	(noun)	1
+individual	(noun)|(adjective)	1
+individuals	(noun)|(plural)	3
+industries	(noun)|(plural)	1
+industry	(noun)|(verb)	3
+information	(noun)	1
+inhabited	(adjective)	1
+inline	(adjective)|(verb)	1
+innings	(noun)|(plural)	1
+inscribed	(verb)	1
+insecta		1
+inside	(noun)|(preposition)|(verb)|(adverb)|(adjective)	1
+inspired	(adjective)|(verb)	1
+instead	(verb)|(adverb)	1
+intended	(adjective)|(noun)|(verb)	1
+interaction	(noun)	13
+interest	(noun)|(verb)	2
+interior	(adjective)|(noun)|(verb)|(adverb)|(preposition)	1
+internal	(adjective)	1
+international	(adjective)|(noun)	1
+internationally	(verb)|(adverb)	2
+interplay	(noun)|(verb)	1
+into	(preposition)|(noun)|(adjective)|(verb)|(adverb)	2
+introduce	(verb)|(noun)	1
+inventor	(noun)	1
+invited	(verb)	4
+involved	(adjective)|(verb)	1
+irdning		7
+is	(verb)|(noun)|(adverb)|(adjective)|(preposition)|(plural)	127
+island	(noun)|(verb)	1
+isle	(noun)	3
+issues	(noun)|(verb)|(plural)	1
+it	(noun)|(adjective)|(verb)|(preposition)	14
+italiano	(proper noun)|(adjective)	2
+items	(noun)|(plural)	2
+its	(adjective)|(noun)	24
+itself	(noun)|(verb)|(preposition)	2
+jacket	(noun)|(verb)	1
+jackie		2
+jersey	(noun)	1
+jet	(noun)|(verb)|(adjective)	1
+joachim		1
+jobs	(noun)|(plural)	3
+join	(verb)|(noun)|(plural)	1
+joined	(verb)	1
+journalist	(noun)	2
+jump	(verb)|(noun)|(adverb)	13
+just	(adjective)|(verb)|(adverb)|(noun)	4
+kamayut		1
+karate	(noun)	1
+karlino		2
+keen	(adjective)|(verb)|(noun)	1
+keystone	(noun)	1
+kickboxing	(noun)	1
+killed	(verb)	1
+king	(noun)|(verb)|(plural)	1
+kingdom	(noun)	2
+kingdoms	(noun)|(plural)	1
+kings	(noun)|(plural)	1
+kiss	(verb)|(noun)	1
+kmfm		1
+knew	(verb)	1
+known	(adjective)|(verb)|(noun)	3
+kung	(noun)	1
+label	(noun)|(verb)	1
+laboratory	(noun)	1
+lack	(noun)|(verb)	1
+lady	(noun)	2
+laid	(verb)|(adjective)	2
+lake	(noun)|(verb)	2
+lakeside	(noun)|(adjective)	1
+land	(noun)|(verb)|(adjective)|(proper noun)	6
+language	(noun)|(verb)|(adjective)	3
+languages	(noun)|(plural)	9
+large	(adjective)	1
+largest	(adjective)	4
+last	(adjective)|(verb)|(adverb)|(noun)|(plural)	14
+late	(noun)|(adjective)|(verb)|(adverb)	4
+later	(verb)|(adverb)|(adjective)|(noun)	3
+launched	(verb)	1
+leader	(noun)|(verb)	1
+leading	(verb)|(adjective)|(noun)	3
+leads	(noun)|(verb)|(plural)	1
+league	(noun)|(verb)	2
+leagues	(noun)|(verb)|(plural)	1
+learned	(verb)|(adjective)|(noun)	1
+learning	(verb)|(noun)	1
+learns	(verb)	1
+least	(verb)|(adverb)|(noun)|(adjective)	1
+led	(verb)|(noun)|(adjective)	1
+lehmann		1
+leisure	(noun)|(verb)	1
+length	(noun)	1
+lepidoptera		1
+less	(verb)|(adverb)|(adjective)|(preposition)|(noun)	1
+level	(adjective)|(noun)|(verb)	1
+li	(noun)|(preposition)|(verb)|(adverb)	1
+licence	(noun)|(verb)	1
+lies	(noun)|(verb)|(adjective)|(plural)	3
+lieu	(noun)	1
+liezen		1
+life	(noun)	2
+like	(verb)|(noun)|(adjective)|(adverb)|(preposition)	3
+limited	(adjective)|(verb)	1
+line	(noun)|(verb)	2
+lining	(noun)|(verb)	1
+link	(noun)|(verb)|(adjective)|(preposition)|(adverb)	16
+linked	(verb)|(adjective)	1
+links	(noun)|(verb)|(adverb)|(adjective)|(plural)	36
+list	(noun)|(verb)	2
+listed	(verb)|(adjective)	1
+listen	(verb)|(noun)|(plural)	1
+listings	(noun)|(plural)	3
+lists	(noun)|(verb)|(plural)	1
+litre	(noun)	1
+liturgical	(adjective)	7
+liturgy	(noun)	3
+living	(verb)|(adjective)|(noun)	8
+local	(adjective)|(noun)	12
+locally	(verb)|(adverb)	2
+locals	(noun)|(plural)	1
+located	(verb)	5
+location	(noun)|(verb)	6
+lodge	(noun)|(verb)	1
+log	(noun)|(verb)|(adjective)	13
+lone	(adjective)|(verb)	1
+look	(verb)|(noun)	1
+looking	(verb)	1
+lost	(verb)|(adjective)|(plural)	1
+low	(adjective)|(noun)|(verb)	2
+lowest	(adjective)	1
+made	(verb)|(noun)	7
+magic	(noun)|(adjective)|(verb)	4
+magical	(adjective)	1
+main	(adjective)|(noun)|(verb)|(plural)	4
+mainland	(noun)	1
+mainly	(verb)|(adverb)	2
+major	(noun)|(adjective)|(verb)	5
+majority	(noun)	1
+make	(verb)|(noun)|(adjective)	1
+makeup	(noun)	1
+making	(verb)|(noun)	1
+males	(noun)|(verb)|(plural)	4
+mammals	(noun)|(plural)	1
+manage	(verb)|(noun)	1
+manor	(noun)|(verb)	5
+manston		1
+manufacturing	(noun)|(verb)	1
+many	(noun)	1
+maresborough		1
+mark	(noun)|(verb)	1
+market	(noun)|(verb)|(adjective)	2
+marriage	(noun)	1
+married	(adjective)|(verb)|(noun)	2
+marry	(verb)|(preposition)	1
+marshland	(noun)	2
+martial	(adjective)	5
+martyrdom	(noun)	1
+maths	(noun)|(plural)	1
+maximum	(noun)|(adjective)	2
+may	(verb)|(noun)|(adverb)	16
+mayor	(noun)|(adjective)	1
+mcmullen		1
+mcrae		1
+meaning	(verb)|(noun)	1
+means	(noun)|(verb)|(plural)|(adjective)	2
+media	(noun)|(adjective)|(verb)|(plural)	2
+median	(noun)|(adjective)|(verb)|(plural)	4
+medical	(adjective)|(noun)	4
+medicine	(noun)|(plural)	2
+meet	(verb)|(noun)|(adjective)|(preposition)	1
+meets	(noun)|(verb)|(plural)	1
+melbourne		2
+member	(noun)	3
+members	(noun)|(plural)	5
+memorial	(noun)|(adjective)	1
+memory	(noun)	1
+mentioned	(verb)	3
+merchants	(noun)|(plural)	1
+met	(verb)|(preposition)|(noun)	1
+metropolitan	(adjective)|(noun)	2
+middleburg		2
+migrant	(noun)|(adjective)|(verb)	1
+mild	(adjective)|(noun)	1
+mile	(noun)|(plural)	1
+miles	(noun)|(plural)	3
+military	(adjective)|(noun)	2
+minimum	(noun)|(adjective)	2
+ministry	(noun)	3
+minnis		3
+missing	(verb)|(adjective)	4
+mm		1
+modern	(adjective)|(noun)|(verb)	1
+modified	(adjective)|(verb)|(noun)	13
+monastery	(noun)	1
+monastic	(adjective)|(noun)	1
+money	(noun)	1
+month	(noun)	1
+more	(verb)|(adverb)|(noun)|(adjective)|(plural)	2
+morning	(noun)	1
+mosaic	(noun)|(adjective)	6
+most	(verb)|(adverb)|(noun)|(adjective)	5
+mothball	(noun)|(verb)	1
+moths		1
+motifs	(noun)|(plural)	1
+motorway	(noun)	1
+mounted	(adjective)|(verb)	1
+movement	(noun)	6
+movie	(noun)	1
+much	(verb)|(adverb)|(noun)	1
+multiplatinum	(adjective)	1
+municipalities	(noun)|(plural)	3
+municipality	(noun)	6
+museum	(noun)	1
+music	(noun)|(adjective)	1
+muslim	(noun)|(verb)	1
+mystery	(noun)	1
+myths	(noun)|(plural)	1
+name	(noun)|(verb)|(adverb)	5
+named	(adjective)|(verb)	3
+names	(noun)|(verb)|(plural)	3
+namesHidden		1
+namespaces	(noun)|(plural)	13
+narrator	(noun)|(verb)	1
+national	(adjective)|(noun)	15
+natural		2
+navigation	(noun)	26
+near	(adjective)|(verb)|(adverb)|(preposition)	2
+nearby	(adjective)|(verb)|(adverb)	4
+nearly	(verb)|(adverb)	1
+necessary	(adjective)|(noun)	1
+need	(noun)|(verb)|(adjective)	1
+needed	(verb)|(adjective)	2
+needing	(verb)	4
+needs	(verb)|(adverb)|(noun)|(plural)	1
+neighboring	(adjective)|(verb)	1
+neighbouring	(adjective)|(verb)	2
+nephew	(noun)	1
+netball	(noun)	1
+never	(verb)|(adverb)	2
+new	(adjective)|(verb)|(adverb)|(noun)	6
+news	(noun)	1
+newsmagazines	(noun)|(plural)	1
+newspapers	(noun)|(verb)	3
+next	(adjective)|(verb)|(adverb)|(preposition)|(noun)	1
+nicknamed	(verb)	1
+nineteen	(adjective)	1
+ninja	(noun)|(verb)	1
+no	(verb)|(adverb)|(noun)|(preposition)	7
+noctuidae		1
+north	(noun)|(adjective)|(verb)|(adverb)	3
+northeast	(noun)|(adjective)	3
+northern	(adjective)	4
+northwest	(noun)|(adjective)	1
+not	(verb)|(adverb)|(noun)	7
+notable	(adjective)|(noun)	2
+noted	(adjective)|(verb)|(noun)	1
+novel	(adjective)|(noun)	1
+novels	(noun)|(plural)	1
+novelsHidden		1
+novo	(adjective)|(verb)	4
+now	(adjective)|(verb)|(adverb)|(noun)	7
+null	(noun)|(adjective)|(verb)	26
+number	(noun)|(verb)|(adjective)	8
+oakleaf	(adjective)	1
+observe	(verb)|(noun)	1
+obtained	(verb)	1
+occupation	(noun)	1
+occupies	(verb)	1
+oclc		1
+of	(preposition)|(verb)|(adverb)|(noun)|(adjective)|(proper noun)	368
+off	(verb)|(adverb)|(adjective)|(preposition)	1
+offers	(noun)|(verb)|(plural)	1
+officers	(noun)|(plural)	1
+offices	(noun)|(plural)	1
+often	(verb)|(adverb)	1
+old	(adjective)|(noun)|(verb)	3
+older	(adjective)|(noun)	3
+on	(adjective)|(verb)|(adverb)|(preposition)|(noun)	73
+once	(verb)|(adverb)|(noun)|(plural)	6
+one	(noun)|(adjective)|(verb)|(adverb)|(preposition)	4
+only	(adjective)|(verb)|(adverb)	3
+onwards	(verb)|(adverb)	1
+open	(adjective)|(verb)|(noun)|(adverb)	1
+opened	(verb)	3
+operate	(verb)|(adjective)|(plural)	1
+opportunities	(noun)|(plural)	1
+opportunity	(noun)	1
+or	(noun)|(adjective)|(verb)|(adverb)|(preposition)	21
+order	(noun)|(verb)	1
+organ	(noun)	1
+organised	(adjective)|(verb)	1
+organized	(adjective)|(verb)	1
+oriental	(adjective)|(noun)	1
+original	(adjective)|(noun)	9
+origins	(noun)|(plural)	1
+ornate	(adjective)|(verb)	1
+orphan	(noun)|(adjective)|(verb)	1
+orphaned	(adjective)|(verb)	2
+other	(adjective)|(noun)|(verb)|(adverb)	13
+out	(verb)|(adverb)|(preposition)|(noun)|(adjective)	8
+outbreak	(noun)|(verb)	1
+outside	(noun)|(adjective)|(verb)|(adverb)|(preposition)	3
+over	(adjective)|(verb)|(adverb)|(noun)|(preposition)	8
+overall	(adjective)|(verb)|(adverb)|(noun)	2
+owing	(adjective)|(verb)	1
+own	(verb)|(adjective)|(noun)	1
+owned	(verb)	7
+owner	(noun)	2
+owners	(noun)|(plural)	1
+ownership	(noun)	1
+paddling	(noun)|(verb)	2
+page	(noun)|(verb)	29
+pages	(noun)|(verb)|(plural)	18
+painted	(verb)	1
+painter	(noun)|(verb)	4
+painters	(noun)|(plural)	3
+paintings	(noun)|(plural)	1
+parents	(noun)|(verb)|(plural)	1
+parish	(noun)	8
+parishes	(noun)|(plural)	6
+parkland	(noun)	1
+parks	(noun)|(verb)|(plural)	1
+part	(noun)|(verb)|(adjective)|(adverb)|(preposition)	7
+particular	(adjective)|(noun)|(verb)|(preposition)	1
+passed	(verb)|(adjective)	1
+pastor	(noun)|(verb)	1
+patron	(noun)	2
+patronage	(noun)|(verb)	3
+patrons	(noun)|(plural)	2
+payable	(noun)|(adjective)	1
+peace	(noun)	1
+peaked	(adjective)	1
+peaking	(verb)	1
+penney		1
+pensionable	(adjective)	1
+people	(noun)|(verb)	6
+per	(preposition)|(noun)|(verb)	5
+percent	(noun)|(verb)	1
+percentage	(noun)	2
+performances	(noun)|(plural)	1
+performer	(noun)	15
+performers	(noun)|(plural)	1
+period	(adjective)|(noun)	3
+permanent	(adjective)|(noun)|(verb)|(adverb)	13
+permanently	(verb)|(adverb)	1
+permission	(noun)	1
+permitted	(verb)	1
+person	(noun)	1
+personal	(adjective)|(noun)	14
+persondata		1
+personnel	(noun)|(adjective)	1
+phase	(noun)|(verb)|(proper noun)	1
+phases	(noun)|(plural)	1
+photographic	(adjective)	1
+physical	(adjective)|(noun)	1
+physiotherapy	(noun)	1
+pitch	(noun)|(verb)	1
+pitched	(verb)|(adjective)	1
+pitcher	(noun)|(verb)	1
+place	(noun)|(verb)	10
+places	(noun)|(verb)|(plural)	5
+plate	(noun)|(verb)|(adjective)	4
+play	(noun)|(verb)|(preposition)	1
+played	(verb)	6
+player	(noun)|(adjective)|(verb)	1
+players	(noun)|(plural)	1
+plays	(noun)|(verb)|(plural)	2
+please	(verb)|(adverb)|(noun)|(plural)	1
+poet	(noun)	1
+poetry	(noun)	1
+point	(noun)|(verb)|(adverb)	1
+points	(noun)|(verb)|(plural)	1
+police	(noun)|(verb)	1
+policy	(noun)	13
+political	(noun)|(adjective)	1
+polski	(verb)|(adjective)|(noun)	2
+pond	(noun)|(verb)	1
+pool	(noun)|(verb)	2
+pop	(noun)|(verb)|(adjective)	2
+popular	(adjective)	6
+popularity	(noun)	1
+populated	(adjective)|(verb)	1
+population	(noun)	14
+populations	(noun)|(plural)	1
+porcelain	(noun)	1
+portal	(noun)	14
+portions	(noun)|(verb)|(plural)	1
+post	(noun)|(verb)|(adverb)|(preposition)	3
+postal	(adjective)|(noun)	1
+potions	(noun)|(plural)	1
+poverty	(noun)	1
+power		1
+powers	(noun)|(verb)|(plural)	1
+pp		1
+practitioners	(noun)|(plural)	1
+prayer	(noun)	1
+precipitation	(noun)	1
+predecessor	(noun)	2
+predominately	(verb)|(adverb)|(adjective)	1
+prehistoric	(adjective)	1
+present	(adjective)|(noun)|(verb)|(adverb)	2
+preserve	(noun)|(verb)|(plural)	1
+president	(noun)|(verb)	2
+presidential	(adjective)	2
+prevent	(verb)	1
+primarily	(verb)|(adverb)	1
+primary	(adjective)|(noun)|(verb)	2
+print	(adjective)|(verb)|(noun)	1
+printing	(noun)|(verb)	2
+prior	(adjective)|(verb)|(adverb)|(noun)	1
+privacy	(noun)	13
+produced	(verb)	4
+producer	(noun)|(verb)	1
+productions	(noun)|(plural)	1
+products	(noun)|(plural)	1
+profile	(noun)|(verb)	1
+programs	(noun)|(verb)|(plural)	1
+progressed	(verb)	1
+project	(noun)|(verb)	3
+promenade	(noun)|(verb)	1
+prominent	(adjective)|(verb)|(noun)	1
+promoting	(verb)	1
+provided	(verb)	1
+providing	(verb)	1
+provincial	(adjective)|(noun)	1
+proximity	(noun)	1
+pub	(noun)	1
+public	(adjective)|(noun)	4
+publication	(noun)	1
+published	(verb)	1
+publisher	(noun)|(verb)	1
+publishing	(verb)|(noun)	1
+pupil	(noun)	1
+pupils	(noun)|(plural)	2
+purchased	(verb)	1
+purposes	(noun)|(verb)|(plural)	1
+put	(verb)|(noun)	1
+putnam		2
+qualification	(noun)	1
+quex		2
+race	(noun)|(verb)	1
+races	(noun)|(verb)|(plural)	2
+racial	(adjective)	1
+radio	(noun)|(verb)	2
+radiography	(noun)	1
+railway	(noun)	2
+rainfall	(noun)	3
+random	(noun)|(adjective)	13
+ranked	(verb)	1
+ranking	(adjective)|(noun)|(verb)	1
+rate	(noun)|(verb)|(adjective)|(plural)	1
+reached	(verb)	1
+reads	(noun)|(verb)|(plural)	2
+real	(noun)|(adjective)|(verb)|(adverb)	1
+reasons	(noun)|(verb)|(plural)	1
+receive	(verb)	1
+received	(verb)|(adjective)	1
+recent	(adjective)	15
+recorded	(verb)|(adjective)	5
+recreational	(adjective)	1
+recuperate	(verb)	1
+rediscovering	(verb)	1
+refer	(verb)	2
+references	(noun)|(verb)|(plural)	1
+referred	(verb)	2
+refers	(verb)	1
+reflect	(verb)	1
+reflected	(verb)|(adjective)	1
+regarded	(verb)	1
+region	(noun)	2
+regional	(adjective)|(noun)	1
+regions	(noun)|(plural)	1
+registered	(verb)|(adjective)	14
+regularly	(verb)|(adverb)	1
+related	(adjective)|(verb)	17
+relatively	(verb)|(adverb)	2
+release	(noun)|(verb)	1
+released	(verb)	2
+reliably	(verb)|(adverb)	1
+religion	(noun)	3
+religious	(adjective)|(noun)	2
+relocate	(verb)	1
+remembrance	(noun)|(verb)	1
+remix	(noun)|(verb)	2
+remixes	(verb)	2
+remodeling	(verb)|(noun)	1
+remote	(adjective)|(noun)|(plural)	1
+renew	(verb)	2
+rented	(verb)	1
+replacement	(noun)	1
+report	(verb)|(noun)	1
+representing	(verb)	1
+represents	(verb)	1
+request	(noun)|(verb)	2
+resided	(verb)	1
+residence	(noun)	1
+residents	(noun)|(plural)	10
+residing	(verb)	2
+resort	(noun)|(verb)	6
+resorts	(noun)|(verb)|(plural)	2
+restaurants	(noun)|(plural)	2
+restored	(adjective)|(verb)	1
+results	(noun)|(verb)|(plural)	2
+retail	(noun)|(adjective)|(verb)|(adverb)	1
+retailers	(noun)|(plural)	1
+retired	(adjective)|(verb)	2
+retirement	(noun)	2
+retrieved	(verb)	74
+return	(verb)|(noun)	1
+returned	(verb)	1
+reveal	(noun)|(verb)	1
+revealed	(adjective)|(verb)	1
+revision	(noun)	1
+revival	(noun)	2
+rich	(adjective)|(noun)	1
+riding	(verb)|(noun)	1
+rigger	(noun)	1
+ringing	(noun)|(adjective)|(verb)	2
+rises	(verb)	1
+rivals	(noun)|(verb)|(plural)	1
+rivers	(noun)|(verb)|(plural)	1
+road	(noun)|(adjective)|(verb)	2
+role	(noun)|(verb)	6
+roles	(noun)|(verb)|(plural)	1
+rookie	(noun)|(adjective)	1
+rooms	(noun)|(verb)|(plural)	1
+round	(adjective)|(noun)|(preposition)|(verb)|(adverb)	2
+rounds	(noun)|(verb)|(plural)	1
+routes	(noun)|(verb)|(plural)	2
+royal	(adjective)|(noun)|(verb)	1
+rule	(noun)|(verb)	1
+ruler	(noun)|(verb)	1
+ruling	(adjective)|(noun)|(verb)	1
+run	(noun)|(adjective)|(verb)	3
+running	(adjective)|(verb)|(adverb)|(noun)	1
+runs	(noun)|(verb)|(plural)	5
+sail	(noun)|(verb)|(plural)	1
+sailing	(noun)|(adjective)|(verb)	2
+saints	(noun)|(verb)|(adjective)|(plural)	1
+same	(adjective)|(noun)|(verb)|(adverb)	3
+sandy	(adjective)	1
+saturday		1
+scenes	(noun)|(plural)	1
+scholarship	(noun)	1
+school	(noun)|(verb)	9
+schools	(noun)|(verb)|(plural)	6
+scientific		1
+scratch	(verb)|(noun)|(adjective)	1
+screenwriter	(noun)	1
+sculpture	(noun)|(verb)	1
+sculptures	(noun)|(plural)	1
+sea	(noun)|(verb)|(adverb)	5
+seals	(noun)|(verb)|(plural)	1
+seamstresses	(noun)|(plural)	1
+search	(verb)|(noun)	26
+searches	(noun)|(plural)|(verb)	1
+searching	(verb)|(adjective)|(noun)	1
+seas	(noun)|(verb)	1
+seaside	(noun)|(adjective)	5
+season	(noun)|(verb)	3
+seat	(noun)|(verb)	4
+seats	(noun)|(verb)|(plural)	2
+second	(adjective)|(noun)|(verb)|(adverb)	3
+secondary	(adjective)|(noun)	4
+section	(noun)|(verb)	1
+see	(verb)|(noun)|(adjective)	2
+seeking	(noun)|(adjective)|(verb)	1
+seen	(verb)|(noun)	1
+selection	(noun)	1
+sell	(verb)|(noun)	1
+seller	(noun)|(verb)	1
+selling	(verb)|(noun)	1
+seminar	(noun)	1
+sense	(noun)|(verb)|(preposition)	1
+separate	(adjective)|(verb)|(noun)|(adverb)	1
+sequel	(noun)	1
+serve	(noun)|(verb)|(plural)	3
+service	(noun)|(verb)	1
+services	(noun)|(plural)	2
+serving	(adjective)|(noun)|(verb)	2
+set	(verb)|(noun)|(adjective)	1
+settlements	(noun)|(plural)	4
+settlers	(noun)|(plural)	1
+several	(verb)|(adverb)|(noun)	6
+sewage	(noun)	1
+shaped	(verb)|(adjective)	1
+shipped	(adjective)|(verb)	1
+shopping	(verb)|(noun)	2
+shops	(noun)|(verb)|(plural)	1
+short	(adjective)|(verb)|(adverb)|(noun)	1
+show	(verb)|(noun)	1
+shown	(verb)	2
+shqip	(adjective)	1
+sick	(adjective)|(noun)|(verb)	1
+side	(noun)|(verb)|(adverb)|(adjective)	1
+signed	(adjective)|(verb)	1
+significant	(adjective)|(verb)	5
+significantly	(verb)|(adverb)	1
+silted	(verb)	1
+silver	(noun)|(adjective)|(verb)	1
+similar	(adjective)|(noun)	1
+simple	(adjective)|(noun)|(verb)|(adverb)	1
+since	(verb)|(adverb)|(preposition)	5
+singer	(noun)|(verb)	2
+single	(adjective)|(noun)|(verb)	10
+singles	(adjective)|(noun)|(verb)|(plural)	3
+sir	(noun)|(verb)	3
+site	(noun)|(verb)|(adjective)|(plural)	3
+situated	(adjective)|(verb)	2
+six	(noun)	1
+size	(noun)|(verb)	2
+skate	(noun)|(verb)	1
+ski	(noun)|(verb)	2
+skiing	(verb)|(noun)	1
+skills	(noun)|(plural)	1
+skirmishes	(noun)|(plural)|(verb)	1
+skis	(noun)|(plural)	2
+small	(adjective)|(verb)|(adverb)|(noun)	1
+smaller	(adjective)	2
+smugglers	(noun)|(plural)	1
+so	(verb)|(adverb)|(adjective)|(noun)|(preposition)|(plural)	2
+social	(noun)|(adjective)	3
+socially	(verb)|(adverb)	1
+societies	(noun)|(plural)	1
+society	(noun)	1
+software	(noun)	1
+solid	(adjective)|(noun)|(verb)|(adverb)	1
+some	(noun)|(verb)|(adverb)|(plural)	2
+someone	(noun)	2
+somewhat	(verb)|(adverb)|(noun)	1
+song	(noun)	3
+songs	(noun)|(plural)	1
+songwriter	(noun)	1
+sons	(noun)|(plural)	1
+soon	(adjective)|(verb)|(adverb)|(noun)	2
+soul	(noun)|(adjective)	1
+source	(noun)|(verb)	3
+sources	(noun)|(verb)|(plural)	2
+south	(noun)|(adjective)|(verb)|(adverb)	5
+southern	(adjective)	2
+southwest	(noun)|(adjective)	4
+special	(adjective)|(noun)	15
+specialist	(adjective)|(noun)	1
+specially	(verb)|(adverb)	1
+specifically	(verb)|(adverb)	1
+spectators	(noun)|(plural)	1
+spell	(noun)|(verb)	3
+spells	(noun)|(plural)|(verb)	1
+spending	(verb)	1
+spent	(adjective)|(verb)	1
+spiritual	(adjective)|(noun)	1
+spoken	(adjective)|(verb)|(noun)|(plural)	2
+sport	(adjective)|(noun)|(verb)	1
+sports	(noun)|(verb)|(plural)	1
+spread	(verb)|(noun)	1
+spring	(verb)|(noun)	1
+springs	(noun)|(verb)|(plural)	1
+square	(noun)|(adjective)|(verb)	1
+stacks	(noun)|(verb)|(plural)	3
+staff	(noun)|(verb)	1
+stained	(adjective)|(verb)	3
+starring	(adjective)|(verb)|(noun)	1
+started	(verb)	1
+starting	(verb)	1
+state	(noun)|(verb)	8
+stated	(verb)	1
+states	(noun)|(verb)|(plural)	1
+statesman	(noun)	1
+station	(noun)|(verb)|(preposition)	7
+stationed	(verb)	1
+stations	(noun)|(verb)|(plural)	1
+statistiku		1
+steamboats	(noun)|(plural)	1
+still	(adjective)|(verb)|(adverb)|(noun)	1
+stone	(noun)|(verb)|(adjective)|(adverb)	4
+stop	(verb)|(adverb)|(noun)	1
+storage	(noun)	1
+stories	(noun)|(plural)	1
+storing	(verb)|(noun)	1
+story	(noun)	4
+street	(noun)|(preposition)	2
+stretches	(noun)|(verb)|(plural)	1
+strikeouts	(noun)|(plural)	1
+stub	(noun)|(verb)|(adjective)	6
+stubsHidden		3
+students	(noun)|(plural)	8
+studied	(verb)	1
+studio	(noun)|(verb)	2
+study	(verb)|(noun)	3
+stuffed	(verb)|(adjective)|(adverb)	2
+stunt	(noun)|(verb)	29
+style	(noun)|(verb)	4
+styria		1
+subjected	(verb)	1
+subsequent	(adjective)	1
+subsequently	(verb)|(adverb)	2
+subtitle	(noun)|(verb)	1
+success	(noun)|(verb)	1
+such	(adjective)|(noun)|(verb)	8
+suggestions	(noun)|(plural)	1
+summer	(noun)|(verb)	1
+sunday		1
+sundisc		1
+sung	(verb)	1
+superior	(adjective)|(noun)	2
+supermarket	(noun)	1
+supernatural	(adjective)|(noun)	1
+supply	(verb)|(noun)|(adverb)	1
+support	(noun)|(verb)	2
+supported	(adjective)|(verb)	2
+supports	(noun)|(verb)|(plural)	1
+surrounded	(verb)	2
+suspecting	(verb)	1
+svenska	(adjective)|(noun)|(plural)	1
+swimming	(verb)|(noun)	2
+synge	(verb)	1
+system	(noun)	1
+systematic	(adjective)	1
+tabernacle	(noun)	1
+tables	(noun)|(verb)|(plural)	1
+take	(verb)|(noun)	1
+taken	(adjective)|(verb)|(noun)|(plural)	1
+takes	(verb)|(noun)|(plural)	4
+target	(noun)|(verb)	1
+tastes	(noun)|(verb)|(plural)	1
+tax	(noun)|(verb)	1
+taxidermist	(noun)	1
+te	(noun)|(verb)|(adverb)|(preposition)|(adjective)	1
+team	(noun)|(verb)	10
+teams	(noun)|(verb)|(plural)	2
+technology	(noun)|(adjective)	2
+tel	(noun)|(verb)|(adjective)|(adverb)	1
+telephones	(noun)|(plural)|(verb)	1
+temperature	(noun)	1
+temperatures	(noun)|(plural)	3
+ten	(noun)|(preposition)|(verb)|(adverb)	1
+tennis	(noun)|(verb)	1
+terms	(noun)|(plural)	13
+testament	(noun)	2
+text	(noun)|(verb)	16
+textile	(noun)|(adjective)	1
+textiles	(noun)|(adjective)|(plural)	1
+than	(preposition)|(verb)|(adverb)|(noun)|(adjective)	4
+thanet		9
+that	(noun)|(verb)|(adverb)	12
+the	(verb)|(adverb)|(noun)|(adjective)|(proper noun)	659
+their	(noun)|(verb)	6
+them	(noun)|(verb)|(preposition)	4
+theme	(noun)|(verb)	1
+themselves	(noun)|(verb)|(preposition)	3
+then	(verb)|(adverb)|(adjective)|(noun)	1
+therapeutic	(adjective)	1
+there	(verb)|(adverb)|(noun)	14
+these	(noun)|(plural)	5
+they	(noun)	2
+third	(noun)|(verb)|(adjective)	2
+this	(noun)|(adjective)	55
+those	(plural)	3
+though	(verb)|(adverb)	1
+thought	(noun)|(verb)	1
+three	(noun)|(verb)|(adverb)	6
+threshold	(noun)	1
+threw	(verb)	1
+through	(preposition)|(adjective)|(verb)|(adverb)|(noun)	6
+throughout	(preposition)|(verb)|(adverb)	2
+time	(noun)|(verb)|(adverb)|(preposition)	8
+tiny	(adjective)	1
+title	(noun)|(verb)	1
+to	(preposition)|(verb)|(adverb)|(noun)|(adjective)	144
+today	(verb)|(adverb)|(noun)	2
+together	(verb)|(adverb)|(adjective)	3
+tombstone	(noun)|(verb)	1
+toolbox	(noun)	13
+tools	(noun)|(verb)|(plural)	13
+top	(noun)|(verb)|(adjective)|(adverb)	2
+topics	(noun)|(plural)	3
+tops	(verb)|(adverb)|(noun)|(plural)	1
+total	(noun)|(adjective)|(verb)	2
+tour	(noun)|(verb)	1
+tourism	(noun)	1
+tourist	(noun)	1
+tourists	(noun)|(plural)	2
+tours	(noun)|(verb)|(plural)	1
+towards	(preposition)|(verb)|(adverb)	2
+tower	(noun)|(verb)	4
+towers	(noun)|(verb)|(plural)	1
+town	(noun)	8
+towns	(noun)|(plural)	7
+track	(noun)|(verb)	4
+tracks	(noun)|(verb)|(plural)	1
+trade	(adjective)|(noun)|(verb)	1
+trademark	(noun)|(verb)	13
+trading	(verb)	1
+tradition	(noun)|(verb)	1
+traditional	(adjective)	1
+traditions	(noun)|(plural)	1
+train	(noun)|(verb)	2
+trained	(adjective)|(verb)	2
+training	(verb)|(noun)	3
+trains	(noun)|(verb)|(plural)	1
+transport	(verb)|(noun)	1
+travels	(noun)|(verb)|(plural)	1
+treated	(verb)	1
+trees	(noun)|(verb)|(plural)	1
+trips	(noun)|(verb)|(plural)	2
+troops	(noun)|(verb)|(plural)	1
+true	(adjective)|(verb)|(adverb)|(noun)	91
+tunnels	(noun)|(plural)	1
+turn	(verb)|(noun)	2
+twentieth	(adjective)|(noun)	1
+twice	(verb)|(adverb)	1
+twinned	(verb)	2
+two	(noun)|(verb)|(adverb)	9
+type	(noun)|(verb)|(adjective)	2
+typical	(adjective)	1
+ul	(noun)|(verb)	1
+ultimately	(verb)|(adverb)	1
+under	(preposition)|(verb)|(adverb)|(adjective)|(noun)	20
+undergone	(verb)	1
+undergraduate	(noun)|(adjective)	1
+underground	(adjective)|(verb)|(adverb)|(noun)	1
+underlined	(verb)	1
+unearthed	(verb)	1
+unemployed	(adjective)|(noun)	2
+unincorporated	(adjective)	1
+unique	(adjective)	4
+unit	(noun)|(adjective)|(verb)	1
+unitary	(adjective)|(noun)	1
+united	(verb)|(adjective)	1
+units	(noun)|(plural)	1
+unity	(noun)|(adjective)	2
+universal	(adjective)|(noun)|(verb)|(preposition)	1
+universities	(noun)|(plural)	1
+university	(noun)	7
+unknown	(adjective)|(noun)	1
+unofficial	(adjective)	2
+unparished	(adjective)	1
+until	(preposition)	5
+up	(verb)|(adverb)|(preposition)|(adjective)|(noun)	10
+upkeep	(noun)|(verb)	1
+upload	(verb)|(noun)	13
+upon	(preposition)|(verb)|(adverb)	1
+us	(noun)|(verb)|(adverb)|(preposition)|(plural)	13
+use	(noun)|(verb)	2
+used	(verb)|(adjective)	4
+uses	(noun)|(verb)|(plural)	1
+using	(verb)	1
+v	(noun)|(preposition)	7
+vampire	(noun)|(plural)	1
+vandalism	(noun)	1
+variants	(noun)|(adjective)|(plural)	13
+various	(adjective)	2
+vast	(adjective)|(noun)|(verb)	1
+velvet	(noun)|(verb)|(adjective)	1
+versus	(preposition)|(verb)|(adverb)|(noun)	1
+very	(adjective)|(verb)|(adverb)	1
+vestments	(noun)|(plural)	2
+via	(noun)|(preposition)|(verb)|(adverb)|(adjective)	2
+victims	(noun)|(plural)	3
+view	(noun)|(verb)	16
+views	(noun)|(verb)|(plural)	13
+village	(noun)	30
+villages	(noun)|(plural)	3
+violent	(adjective)|(verb)	1
+virtual	(adjective)|(noun)	1
+visit	(verb)|(noun)	1
+visited	(adjective)|(verb)	1
+visiting	(verb)	1
+visitors	(noun)|(plural)	2
+visual	(adjective)|(noun)	1
+visually	(verb)|(adverb)	1
+voiselle		1
+voivodeship	(noun)	1
+volleyball	(noun)	1
+vote	(noun)|(verb)	2
+voters	(noun)|(plural)	1
+voting	(verb)|(adjective)|(noun)	1
+vs	(preposition)	1
+walking	(verb)|(noun)|(adjective)	1
+wall	(verb)|(noun)	3
+war	(noun)|(verb)|(preposition)|(adjective)	2
+wards	(noun)|(verb)|(plural)	2
+warm	(adjective)|(verb)|(adverb)	1
+warmest	(adjective)	1
+wars	(noun)|(verb)|(plural)	1
+was	(verb)|(noun)|(plural)	95
+watch	(noun)|(verb)	1
+water	(noun)|(verb)|(adjective)	8
+way	(noun)|(verb)|(adverb)|(adjective)	1
+wealthy	(adjective)|(noun)	1
+weapons	(noun)|(plural)	1
+wear	(verb)|(noun)	1
+weather	(noun)|(verb)	1
+website	(noun)	5
+weddings	(noun)|(plural)	1
+week	(noun)|(adjective)|(verb)	1
+weekly	(verb)|(adverb)|(adjective)|(noun)	2
+well	(verb)|(adverb)|(adjective)|(noun)	1
+were	(verb)|(noun)	31
+west	(noun)|(adjective)|(verb)|(adverb)	5
+westgate		1
+wettest	(adjective)|(verb)	1
+what	(noun)|(verb)|(adverb)	13
+when	(verb)|(adverb)|(noun)	8
+whenever	(verb)|(adverb)	2
+where	(verb)|(adverb)|(noun)	6
+which	(noun)	13
+while	(noun)|(verb)|(adjective)	5
+white	(adjective)|(noun)	1
+who	(noun)|(verb)|(preposition)	10
+whole	(adjective)|(verb)|(adverb)|(noun)	1
+wikimedia		2
+wild	(adjective)|(verb)|(adverb)|(noun)	2
+wildlife	(noun)	1
+will	(noun)|(verb)	2
+winaray		1
+window	(noun)	1
+windows	(noun)|(plural)	2
+windsurfing	(noun)|(verb)	2
+wins	(noun)|(verb)|(plural)	1
+winter	(noun)|(verb)	1
+wish	(noun)|(verb)	1
+with	(preposition)|(verb)	54
+within	(preposition)	2
+without	(verb)|(adverb)|(preposition)	2
+wizard	(noun)|(adjective)|(verb)	2
+wizardry	(noun)	2
+wizards	(noun)|(plural)|(verb)	3
+women	(noun)|(plural)	1
+won	(verb)|(noun)	3
+wood	(noun)|(adjective)|(verb)	1
+words	(noun)|(verb)|(plural)	1
+work	(noun)|(verb)	9
+worked	(verb)	3
+workers	(noun)|(plural)	1
+working	(verb)|(noun)|(adjective)	1
+works	(noun)|(verb)|(plural)	2
+workshop	(noun)|(verb)	1
+world	(noun)|(verb)	1
+worn	(verb)|(noun)	1
+worship	(noun)|(verb)	1
+would	(verb)|(noun)	2
+writer	(noun)	1
+written	(adjective)|(verb)	4
+wrote	(verb)	2
+wushu	(noun)	2
+yards	(noun)|(plural)	1
+year	(noun)|(proper noun)	9
+years	(noun)|(plural)	8
+yeats	(noun)|(plural)	1
+yet	(verb)|(noun)|(adverb)	1
+you	(noun)|(verb)|(adverb)|(plural)|(preposition)	8
+your	(noun)	1
+za	(noun)|(preposition)|(verb)	1
+zahlfast		1
+zone	(noun)|(verb)|(adjective)|(plural)	2

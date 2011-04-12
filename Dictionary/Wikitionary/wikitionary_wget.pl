@@ -20,7 +20,7 @@ foreach (<DICT>)
 	
 	#wget entry on $word from wikitionary
 	my $url = "http://en.wiktionary.org/wiki/".$word;
-	#system("wget", $url, "-q", "-O", "wiktionary_lookup_file.txt");
+	system("wget", $url, "-q", "-O", "wiktionary_lookup_file.txt");
 	print "Query $i of $length  Querying Wiktionary for: $word\n"; #prints progress
 
 	#check the wiki file for parts of speech

@@ -50,6 +50,7 @@ print HTML "<html>\n";
 print HTML "<head>
 <script src=\"curator.js\">
 <\/script>
+<link href =\"style.css\" rel = \"stylesheet\">
 <\/head>
 ";
 
@@ -228,7 +229,8 @@ sub years
 			my $tempbox = "ckbox".$counter;
 			print HTML "<p><input type=\"checkbox\" id=\"ckbox".$counter."\" value=\"Click here\" onClick=\"toggleShowHide('".$tempbox."','".$tempdiv."');\"></p>\n";
 			print HTML "<DIV ID=\"question".$counter."\">\n";
-			print HTML "<INPUT type=\"button\" id=\"button".$counter."\" value=\"Finalize Question\" name=\"finalizeOne\" onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
+			print HTML "<INPUT type=\"button\" id=\"button".$counter."\" value=\"Finalize Question\" name=\"finalizeOne\" onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n";
+			print HTML "<br>"; 
 
 
 			print HTML "correct answer: $match "; ##correct answer with AD/BC thing?
@@ -385,6 +387,7 @@ sub qword
 		print HTML "<p><input type=\"checkbox\" id=\"ckbox".$counter."\" value=\"Click here\" onClick=\"toggleShowHide('".$tempbox."','".$tempdiv."');\"></p>\n";
 		print HTML "<DIV ID=\"question".$counter."\">\n";
 		print HTML "<INPUT type=\"button\" id=\"button".$counter."\" value=\"Finalize Question\" name=\"finalizeOne\" onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 
+		print HTML "<br>";
 
 		print HTML "correct answer: $qword<br>\n";
 		my @tokens = split(/\s+/, $sentence);
@@ -487,6 +490,7 @@ sub default
 			print HTML "<p><input type=\"checkbox\" id=\"ckbox".$counter."\" value=\"Click here\" onClick=\"toggleShowHide('".$tempbox."','".$tempdiv."');\"></p>\n";
 			print HTML "<DIV ID=\"question".$counter."\">\n";
 			print HTML "<INPUT type=\"button\" id=\"button".$counter."\" value=\"Finalize Question\" name=\"finalizeOne\" onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n"; 			
+			print HTML "<br>";
 
 			my @tokens = split(/\s+/, $sentence);
 			for my $j (0..$#tokens)

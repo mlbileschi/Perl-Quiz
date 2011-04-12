@@ -42,8 +42,6 @@ for my $i (1..1)
 		{
 			if($token =~ /^(?:[>])?[A-Za-z]+[,\.\?\!]?(?:[<])?$/) #the <> for optional following or leading HTML tags
 			{
-#				my @temp_tok = ($token =~ /[A-Za-z]/);
-#				$token = $temp_tok[0];		#match only the text
 				$token = lc($token);
 				#either increment the frequency or set equal to 1
 				if(exists($whash{$token}))
@@ -70,7 +68,13 @@ foreach my $key ( sort(keys(%whash))) {
 close(INFILE);
 close(OUTFILE);
 
-
+#for HTML parser
+sub text
+{
+	my ($self,$text) = @_;
+  
+	$self->{TEXT} .= $text;
+}
 
 ##### IDEAS
 

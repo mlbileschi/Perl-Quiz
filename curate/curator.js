@@ -23,12 +23,13 @@ function finalize(divId)
 		inputArr[i].style.display = 'none';
 		var toShow = ("div" + divId.substr(8) + "text" + (inputArr[i].id).substr(7));
 
-//		alert(toShow); //debug
+//		alert(inputArr[i].name); //debug
 		document.getElementById(toShow).style.visibility = 'visible';
 		document.getElementById(toShow).style.display = 'block';
 		document.getElementById(toShow).firstChild.nodeValue = inputArr[i].value;
-	
 	}
+	inputArr[0].style.visibility = 'hidden';
+	inputArr[0].style.display = 'none';
 }
 
 
