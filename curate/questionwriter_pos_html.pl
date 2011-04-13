@@ -65,7 +65,7 @@ my %hdict=();
 my %localfreq=();
 my @topwords=();
 my @countries=();
-my @countryans=();
+my %countryans=();
 my @file = <INFILE>;
 my $total=0;
 my @line = ();
@@ -147,23 +147,15 @@ my $months = "(\s?)\(Jan\)\|\(Feb\)\|\(Mar\)\|\(Apr\)\|\(May\)\|\(Jun\)\|\(Jul\)
 if ($years)
 {
 	open(TIMEPREPS, "<time_preps.txt") or die "Can't find time preposition dictionary time_preps.txt\n";
-<<<<<<< HEAD
+
 		foreach my $prep (<TIMEPREPS>)
-=======
-		foreach(<TIMEPREPS>)
->>>>>>> c69586bb9f23f890b6a79b50f33b34da5b68ade1
 		{
-		#print $_;
 			$prep =~ s/\r|\n//g;  #the new chomp
 			#chop($prep); #COMMENT OUT FOR LINUX
 			$timeprepregex.="( ".$prep." )\|";  	#this way they can be a regex of "or" expressions	
 													#like (in)|(during)|...
 		}
-<<<<<<< HEAD
 	chop($timeprepregex);           				#to take last "|" off
-=======
-	chop($timeprepregex); 			#to take last "|" off
->>>>>>> c69586bb9f23f890b6a79b50f33b34da5b68ade1
 	close(TIMEPREPS);
 }
 
@@ -189,35 +181,38 @@ if ($countries && !$years)
 		#there are four spaces before each entry so this will cut them off
 		$place =~ s/^\s+//;
 		$place =~ s/\r|\n//g;
-		#chop($place); #COMMENT OUT FOR LINUX
 		push(@countries, $place);
-		$countriesregex.="( ".$place." )\|";	#this way they can be a regex of "or" expressions
+		$countriesregex.=" ".$place." \|";	#this way they can be a regex of "or" expressions
 												#like (Soviet Union)|(Peru)|...
 	}
 	chop($countriesregex); 			#to take last "|" off
 	close(COUNTRIES);
 	
 	#to be used for more relevant answers
-	my @words;
+	my @words;	#all the words in the file
+	#read the file into words
 	foreach my $sentence (@sentences)
 	{
-		my @temparray=();
+		my @temparray=();		#words in current sentence
 		@temparray = split(/\s+/, $sentence);
 		foreach my $word (@temparray)
 		{
-			$words[$#words + 1] = $word;
+			push(@words, " ".$word." ");
+#			$words[$#words + 1] $word;
 		}
 	}
+	
+	#for each word in the file, check if it's a country
 	foreach my $word (@words)
 	{
-		$word =~ s/[^A-Za-z]//g; 
-#TODO the first part of this if is broken
-		if (($word =~ $countriesregex) && ($word != ""))
+		$word =~ s/[^A-Za-z\s]//g;
+		if (($word =~ /$countriesregex/i) && ($word ne ""))
 		{
-			$countryans[$#countryans + 1] = $word;
+			$countryans{$word}++;
 		}
 	}
-	#print @countryans;
+
+	$countriesregex =~ s/^\s+//;
 }
 
 my $counter = 0;
@@ -268,7 +263,6 @@ sub years
 	#TODO fix the below regex... backreferences for months?
 	# 
 	if(($sentence =~ $timeprepregex) && (@matches = $sentence=~m/[^(,\d)]\s+,?\(?\-?(\d+),?\.?\s?\-?\)?[^(,\d+)( years)($months)]/ig))
-<<<<<<< HEAD
 	{	
 		#print "MATCHES";
 		#foreach(@matches)
@@ -276,15 +270,6 @@ sub years
 		#	print $sentence."\n";
 		#	print $_."\n";
 		#}
-=======
-	{
-#		print "MATCHES";
-#		foreach(@matches)
-#		{
-#			print $sentence."\n";
-#			print $_."\n";
-#		}
->>>>>>> c69586bb9f23f890b6a79b50f33b34da5b68ade1
 		foreach my $match (@matches)
 		{
 			#create an HTML DIV for each question for show/hide
@@ -533,21 +518,9 @@ sub countries
 	#TODO make it make sure it matches both words, i.e., "Soviet Union"
 	if(($sentence =~ $countriesregex) && (@matches = $sentence =~ m/$countriesregex/g))
 	{									#match global amount of times ^
-		
-		#print "\n\r";
-		#print @matches;
-		
-		#for debug
-		#foreach my $meow (@matches)
-		#{
-		#	print $sentence."\n";
-		#	print $meow."\n"; 
-		#}
-
 		foreach my $match (@matches)
 		{
-			
-			#print "$match";
+			$match =~ s/\s//g;
 			#create an HTML DIV for each question for show/hide
 			my $tempdiv = "question".$counter;
 			my $tempbox = "ckbox".$counter;
@@ -564,6 +537,8 @@ sub countries
 			my @tokens = split(/\s+/, $sentence);
 			foreach my $word (@tokens)
 			{
+#				$word = " ".$word." ";
+				print "\|$match\|\t\|$word\|\n";
 				if($word =~ $match)
 				{
 					#print HTML " ".$` unless $` eq " "; #in case the word has brackets around it or something stupid
