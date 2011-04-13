@@ -13,8 +13,9 @@ use Getopt::Long;
 
 die "wrong number of parameters from comand line \n
 usage:  executable   <input text file> [options] \n    OPTIONS:
---qword=<word you want a question about> (will be overriden by --years)\n
---years (will target years instead of text. Will override the qword option)\n"
+--qword=<word you want a question about> (will be overriden by --years and --countries)\n
+--years (will target years instead of text. Will override the --qword and --countries options)\n
+--countries (will target countries in the text. Will be overridden by --years and will override --qword)\n"
 unless ($#ARGV>=0);
 
 
@@ -26,9 +27,10 @@ shift(@ARGV);	#we have to pop off the first @ARGV element because otherwise it w
 #flags for what "mode" we will be in.
 #qword will call sub &qword and will write questions only about a specific word
 #years tells us whether to target numbers in the text, and to treat them as years when near a time preposition
+#countries will call sub &countries and will write questions about countries
 #we then get these options from the command line input.
-my $qword; my $years; 
-GetOptions ("qword=s" => \$qword, "years" => \$years) or die "Whups, got options we don't recognize!";
+my $qword; my $years; my $countries;
+GetOptions ("qword=s" => \$qword, "years" => \$years, "countries" => \$countries) or die "Whups, got options we don't recognize!";
 #$qword=lc($qword);
 
 
@@ -37,7 +39,7 @@ GetOptions ("qword=s" => \$qword, "years" => \$years) or die "Whups, got options
 
 
 
-#open dicitonary files don't use if ($years)
+#open dicitonary files don't use if ($years) or if ($countries)
 open(DICTIONARY, "<index_regex2.idx") or die "Can't open dicitonary file index_regex2.idx\n";
 my @dict = <DICTIONARY>;
 
@@ -56,20 +58,21 @@ print HTML "<head>
 
 print HTML "<body>\n";
 
-
 #finalize all button
 print HTML "<input type=\"button\" id=\"FinalizeAll\" value=\"Finalize Quiz\" name=\"FinalizeAll\" onClick=\"finalizeAll(); this\.disabled=1\">\n"; 
 
 my %hdict=();
 my %localfreq=();
 my @topwords=();
+my @countries=();
+my @countryans=();
 my @file = <INFILE>;
 my $total=0;
 my @line = ();
 my $timeprepregex="";
+my $countriesregex="";
 
-
-if(!$years)
+if(!$years && !$countries)
 {
 
 	#read each line from the dictionary file, then put into a hash
@@ -139,28 +142,22 @@ if(!$years)
 
 }
 
+#declaration of $months outside the following due to a scoping issue?
 my $months = "(\s?)\(Jan\)\|\(Feb\)\|\(Mar\)\|\(Apr\)\|\(May\)\|\(Jun\)\|\(Jul\)\|\(Aug\)\|\(Sep\)\|\(Oct\)\|\(Nov\)\|\(Dec\)(\s?)";
 if ($years)
 {
-	#use only if $years
 	open(TIMEPREPS, "<time_preps.txt") or die "Can't find time preposition dictionary time_preps.txt\n";
-
-	#do this only if --years.
-
-	if($years) #read in time prepositions
-	{
-		foreach(<TIMEPREPS>)
+		foreach my $prep (<TIMEPREPS>)
 		{
-			chomp;
-			$timeprepregex.="( ".$_." )\|";	#this way they can be a regex of "or" expressions
-														#like (in)|(during)|...
+		#print $_;
+			$prep =~ s/\r|\n//g;  #the new chomp
+			#chop($prep); #COMMENT OUT FOR LINUX
+			$timeprepregex.="( ".$prep." )\|";  	#this way they can be a regex of "or" expressions	
+													#like (in)|(during)|...
 		}
-	}
-	chop($timeprepregex); 			#to take last "|" off
+	chop($timeprepregex);           				#to take last "|" off
 	close(TIMEPREPS);
 }
-
-
 
 #read file into sentences
 my $wholefile = "";
@@ -171,28 +168,75 @@ foreach (@file)
 }
 my @sentences = split(/\."?\s+/, $wholefile);
 
+if ($countries && !$years)
+{
+	#use only if $countries and !$years
+	open(COUNTRIES, "<country_list.txt") or die "Can't find country dictionary country_list.txt\n";
+	
+	#do this only if --countries and not --years.
+	
+	#read in list of countries
+	foreach my $place (<COUNTRIES>)
+	{
+		#there are four spaces before each entry so this will cut them off
+		$place =~ s/^\s+//;
+		$place =~ s/\r|\n//g;
+		#chop($place); #COMMENT OUT FOR LINUX
+		push(@countries, $place);
+		$countriesregex.="( ".$place." )\|";	#this way they can be a regex of "or" expressions
+												#like (Soviet Union)|(Peru)|...
+	}
+	chop($countriesregex); 			#to take last "|" off
+	close(COUNTRIES);
+	
+	#to be used for more relevant answers
+	my @words;
+	foreach my $sentence (@sentences)
+	{
+		my @temparray=();
+		@temparray = split(/\s+/, $sentence);
+		foreach my $word (@temparray)
+		{
+			$words[$#words + 1] = $word;
+		}
+	}
+	foreach my $word (@words)
+	{
+		$word =~ s/[^A-Za-z]//g; 
+#TODO the first part of this if is broken
+		if (($word =~ $countriesregex) && ($word != ""))
+		{
+			$countryans[$#countryans + 1] = $word;
+		}
+	}
+	#print @countryans;
+}
+
 my $counter = 0;
 #foreach sentence, create the requested/relevant question
 #possibly change to calling each of the subs below with parameters instead
 #of depending on $_ to work properly
 foreach my $sentence (@sentences)
 {
-
 #	print $sentence."\n\n";
-
-	
 #	$sentence.="\."; #?
 	if($years) 
 	{
 		&years($sentence);
 	}
-
-	#find only specific questions
+	
+	#find only specific questions containing countries
+	elsif($countries)
+	{
+		&countries($sentence);
+	}
+	
+	#find only specific questions containing a given word
 	elsif($qword)
 	{
 		&qword($sentence);
 	}
-
+	
 	#print questions about each of the top words
 	else
 	{
@@ -214,14 +258,15 @@ sub years
 	# (digit,digit) etc.
 	#also, @matches gets each digit match per sentence.
 	#TODO fix the below regex... backreferences for months?
+	# 
 	if(($sentence =~ $timeprepregex) && (@matches = $sentence=~m/[^(,\d)]\s+,?\(?\-?(\d+),?\.?\s?\-?\)?[^(,\d+)( years)($months)]/ig))
-	{
-		print "MATCHES";
-		foreach(@matches)
-		{
-			print $sentence."\n";
-			print $_."\n";
-		}
+	{	
+		#print "MATCHES";
+		#foreach(@matches)
+		#{
+		#	print $sentence."\n";
+		#	print $_."\n";
+		#}
 		foreach my $match (@matches)
 		{
 			#create an HTML DIV for each question for show/hide
@@ -231,7 +276,6 @@ sub years
 			print HTML "<DIV ID=\"question".$counter."\">\n";
 			print HTML "<INPUT type=\"button\" id=\"button".$counter."\" value=\"Finalize Question\" name=\"finalizeOne\" onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n";
 			print HTML "<br>"; 
-
 
 			print HTML "correct answer: $match "; ##correct answer with AD/BC thing?
 			#account for BC in years
@@ -456,8 +500,100 @@ sub qword
 
 			}			
 		}
-		print HTML "<\/DIV>\n"; #end HTMl DIV
+		print HTML "<\/DIV>\n"; #end HTML DIV
 		$counter++;
+	}
+}
+
+#--countries command line parameter
+#TODO add countries found to a list to use as possible answers
+sub countries
+{
+	my @matches = ();
+	my $sentence = $_[0]; #anon @_
+
+	#TODO make it make sure it matches both words, i.e., "Soviet Union"
+	if(($sentence =~ $countriesregex) && (@matches = $sentence =~ m/$countriesregex/g))
+	{									#match global amount of times ^
+		
+		#print "\n\r";
+		#print @matches;
+		
+		#for debug
+		#foreach my $meow (@matches)
+		#{
+		#	print $sentence."\n";
+		#	print $meow."\n"; 
+		#}
+
+		foreach my $match (@matches)
+		{
+			
+			#print "$match";
+			#create an HTML DIV for each question for show/hide
+			my $tempdiv = "question".$counter;
+			my $tempbox = "ckbox".$counter;
+			print HTML "<p><input type=\"checkbox\" id=\"ckbox".$counter."\" value=\"Click here\" onClick=\"toggleShowHide('".$tempbox."','".$tempdiv."');\"></p>\n";
+			print HTML "<DIV ID=\"question".$counter."\">\n";
+			print HTML "<INPUT type=\"button\" id=\"button".$counter."\" value=\"Finalize Question\" name=\"finalizeOne\" onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n";
+			print HTML "<br>"; 
+			print HTML "correct answer: ".$match;
+			print HTML "<br>\n";
+			
+			#want biggest matches so that we dont ask a question about "Union" instead of "Soviet Union"
+			#TODO check for phrases that arent a subset of another phrase in the same sentence,
+			#do it by concatination parts of tokens and checking to see if it is in the sentence
+			my @tokens = split(/\s+/, $sentence);
+			foreach my $word (@tokens)
+			{
+				if($word =~ $match)
+				{
+					#print HTML " ".$` unless $` eq " "; #in case the word has brackets around it or something stupid
+					print HTML "_______________";
+					print HTML $'." " unless $' eq " "; #in case the word was followed by punctuation
+					#disable after first find so you dont put in multiple blanks?
+				}
+				else
+				{
+					print HTML $word." ";
+				}
+			}
+			print HTML "<br>\n";
+			
+			#find other candidate answers out of @countries
+			my %numberchoice=(); #hash of randoms chosen
+			my $correct = int(rand(5))+1; #where the correct answer will appear in the others
+			#TODO why not $correct and instead $i in the default subroutine 
+			$numberchoice{$correct}=0; 
+
+			#find and print all answers
+			for my $i (1..5)
+			{
+				if($i==$correct) #print the correct answer
+				{
+					print HTML "<a>".$i." \. ".$match."</a>\n";
+				}
+				else
+				{
+					my $random = $correct;
+					#goes until a new country is chosen
+					my $tempcountry = $countries[$random];
+					#while ((exists($numberchoice{$random} )) && ($match=~$tempcountry)) #it's not in the correct answer
+					#{
+					#print "im stuck";
+						$random=int(rand($#countries + 1));
+						$tempcountry = $countries[$random];
+					#}
+					$numberchoice{$random}=0;
+
+					print HTML "<a style=\"display:none\" id = \"div".$counter."text".$i."\"> ".$i." \. </a>\n"; #text
+					print HTML "<input type=\"text\" id=\"textbox".$i."\" value=\"$i \. ".$countries[$random]."\">\n";	#text box
+					#TODO the value assignment above and in default are incorrect?
+				}
+			}
+			print HTML "<\/DIV>\n\n"; #end HTML DIV
+			$counter++;
+		}
 	}
 }
 
@@ -473,7 +609,6 @@ sub default
 		my $nt_capitalize = 0; #whether the replacement is the first word
 		#but what about if there are two replacements in the same line?
 
-
 		if( !exists( $hdict{lc($topwords[$i])} ) )
 		{
 			#print HTML "<br>\n ".lc($topwords[$i])." is not in dictionary file.<br>\n<br>\n"; #for cl output
@@ -483,7 +618,6 @@ sub default
 		my $tempregex = $topwords[$i];
 		if($sentence=~/(\s+$tempregex[\.,\s+]?)|(^$tempregex[\.,\s+]?)/i)
 		{
-
 			#create an HTML DIV for each question for show/hide
 			my $tempdiv = "question".$counter;
 			my $tempbox = "ckbox".$counter;
@@ -501,7 +635,7 @@ sub default
 					print HTML $word." ";
 				}
 				else
-				{ #
+				{ 
 					if($j==0){$nt_capitalize=1;}
 					print HTML "___________________ ";
 					print HTML $'." " unless $' eq " "; #in case the word was followed by puncutation
@@ -509,8 +643,6 @@ sub default
 			}
 			print HTML "<br>\n";
 			print HTML "correct answer: $topwords[$i]<br>\n";
-
-
 
 			#find other candidate answers out of @topwords
 			my %numberchoice=(); #hash of randoms chosen
