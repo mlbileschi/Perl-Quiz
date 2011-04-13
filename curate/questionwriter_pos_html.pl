@@ -147,7 +147,11 @@ my $months = "(\s?)\(Jan\)\|\(Feb\)\|\(Mar\)\|\(Apr\)\|\(May\)\|\(Jun\)\|\(Jul\)
 if ($years)
 {
 	open(TIMEPREPS, "<time_preps.txt") or die "Can't find time preposition dictionary time_preps.txt\n";
+<<<<<<< HEAD
 		foreach my $prep (<TIMEPREPS>)
+=======
+		foreach(<TIMEPREPS>)
+>>>>>>> c69586bb9f23f890b6a79b50f33b34da5b68ade1
 		{
 		#print $_;
 			$prep =~ s/\r|\n//g;  #the new chomp
@@ -155,7 +159,11 @@ if ($years)
 			$timeprepregex.="( ".$prep." )\|";  	#this way they can be a regex of "or" expressions	
 													#like (in)|(during)|...
 		}
+<<<<<<< HEAD
 	chop($timeprepregex);           				#to take last "|" off
+=======
+	chop($timeprepregex); 			#to take last "|" off
+>>>>>>> c69586bb9f23f890b6a79b50f33b34da5b68ade1
 	close(TIMEPREPS);
 }
 
@@ -260,6 +268,7 @@ sub years
 	#TODO fix the below regex... backreferences for months?
 	# 
 	if(($sentence =~ $timeprepregex) && (@matches = $sentence=~m/[^(,\d)]\s+,?\(?\-?(\d+),?\.?\s?\-?\)?[^(,\d+)( years)($months)]/ig))
+<<<<<<< HEAD
 	{	
 		#print "MATCHES";
 		#foreach(@matches)
@@ -267,6 +276,15 @@ sub years
 		#	print $sentence."\n";
 		#	print $_."\n";
 		#}
+=======
+	{
+#		print "MATCHES";
+#		foreach(@matches)
+#		{
+#			print $sentence."\n";
+#			print $_."\n";
+#		}
+>>>>>>> c69586bb9f23f890b6a79b50f33b34da5b68ade1
 		foreach my $match (@matches)
 		{
 			#create an HTML DIV for each question for show/hide

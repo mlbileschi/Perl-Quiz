@@ -29,7 +29,7 @@ close(INDEX);
 
 print "\n";
 
-my $num_articles=10;
+my $num_articles=1000;
 for my $i (1..$num_articles)
 {
 
