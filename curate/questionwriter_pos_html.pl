@@ -2,36 +2,40 @@
 use strict;
 #warnings??
 use Getopt::Long;
+use List::MoreUtils qw(uniq);
 
 ## Written by Max Bileschi, Spring 2011
 ## mlbileschi@gmail.com
 ## creates questions, outputs to an html doc
 
 #TODO Months, what about ? and ! to end sentences?
+#TODO can explicitly request default behavior
 
 
 
 die "wrong number of parameters from comand line \n
 usage:  executable   <input text file> [options] \n    OPTIONS:
---qword=<word you want a question about> (will be overriden by --years and --countries)\n
---years (will target years instead of text. Will override the --qword and --countries options)\n
---countries (will target countries in the text. Will be overridden by --years and will override --qword)\n"
+--default is the default behavior that is provided if no other flags are used. 
+	Is not provided when other flags are asserted unless explicitly told to do so.\n
+--qword=<word you want a question about> \n
+--years (will target years instead of text.)\n
+--countries (will target countries in the text.)\n"
 unless ($#ARGV>=0);
 
 
 my $infile=$ARGV[0];
 open(INFILE, "<$infile") or die "Can't open infile $infile\n";
 shift(@ARGV);	#we have to pop off the first @ARGV element because otherwise it will screw
-					#with Getopt::Long::GetOptions below.
+					#with Getopt::Long::GsetOptions below.
 
 #flags for what "mode" we will be in.
 #qword will call sub &qword and will write questions only about a specific word
 #years tells us whether to target numbers in the text, and to treat them as years when near a time preposition
 #countries will call sub &countries and will write questions about countries
 #we then get these options from the command line input.
-my $qword; my $years; my $countries;
-GetOptions ("qword=s" => \$qword, "years" => \$years, "countries" => \$countries) or die "Whups, got options we don't recognize!";
-#$qword=lc($qword);
+my $default; my $qword; my $years; my $countries;
+GetOptions ("default"=>\$default, "qword=s" => \$qword, "years" => \$years, "countries" => \$countries) or die "Whups, got options we don't recognize!";
+#$qword=lc($qword); #TODO
 
 
 
@@ -71,78 +75,81 @@ my $total=0;
 my @line = ();
 my $timeprepregex="";
 my $countriesregex="";
+my $countriesregex2="";
+my $countriesregex3="";
+my $countriesregex4="";
 
-if(!$years && !$countries)
+
+
+
+#read each line from the dictionary file, then put into a hash
+# whose key is the word, and whose value is a two-elt array
+# which is (parts of speech, frequency)
+foreach (@dict)
 {
+	chomp;
+	my @line = split(/\t/, $_); 			#to the left of the | is word(space)pos(space)....
 
-	#read each line from the dictionary file, then put into a hash
-	# whose key is the word, and whose value is a two-elt array
-	# which is (parts of speech, frequency)
-	foreach (@dict)
-	{
-		chomp;
-		my @line = split(/\t/, $_); 			#to the left of the | is word(space)pos(space)....
+	my $word = $line[0];	#pop first elt off
+	my $pos=$line[1];
 
-		my $word = $line[0];	#pop first elt off
-		my $pos=$line[1];
-
-		$hdict{$word}=[$pos, $line[2]/8382231];	#key is word, value is (part of speech, freq)#possibly add it with a really high value?
-																#want to change the denominator if you care, which is no longer the number of words spotted.
-	#	$total+=$line[2]; #for counting the number of word occurrences in the dictionary
-	}
-
-	#$total=0; #the number of words in the input text file
-
-	#for each 
-	foreach(@file)
-	{
-		chomp;
-		@line = split(/ /, $_);
-	#	$total+=$#line+1; for counting the number of lines
-		foreach my $token (@line)
-		{
-			if($token =~ /^[A-Za-z]+[\.,]?$/)
-			{
-				chop($token) if ($token =~ /[\.,]+$/);	#chop that punctuation right off of there
-	#			$token = lc($token);							#treat words as all lower case for now
-				if(exists($localfreq{$token}))			#increase frequency/add depending if seen. #TODO different casings of same word fix
-				{
-					$localfreq{$token}++;
-				}
-				else
-				{
-					$localfreq{$token} = 1;
-				}
-			} 
-		}
-	}
-
-
-	#compute relative frequencies
-	foreach my $key ( keys(%localfreq) ) 
-	{
-		if(!exists($hdict{lc($key)}))
-		{
-			$localfreq{$key}=0;		#possibly add it with a really high value?
-			#print HTML "word $key is not in hdict\n"; #for cl output
-		} 
-		else
-		{	
-			$localfreq{$key} = ($localfreq{$key})/(@{$hdict{lc($key)}}[1]);  #tricky syntax because of array references in hash table
-		}
-	}
-	print HTML "<br>\n";
-	#add each of the keys in decreasing order to @topwords
-	foreach my $key (sort {$localfreq{$b} <=> $localfreq{$a}} keys(%localfreq)) 
-	{
-	#	print "$key, ".@{$hdict{$key}}[0].", $localfreq{$key}\n";		#possibly print if --verbose
-		push(@topwords, $key);
-	}
-#	foreach (@topwords) { print HTML "topword: $_\n"; } #possibly print if --verbose / for troubleshooting
-
+	$hdict{$word}=[$pos, $line[2]/8382231];	#key is word, value is (part of speech, freq)#possibly add it with a really high value?
+															#want to change the denominator if you care, which is no longer the number of words spotted.
+#	$total+=$line[2]; #for counting the number of word occurrences in the dictionary #TODO
 }
 
-#declaration of $months outside the following due to a scoping issue?
+#$total=0; #the number of words in the input text file #TODO
+
+
+foreach(@file)
+{
+	chomp;
+	@line = split(/ /, $_);
+#	$total+=$#line+1; for counting the number of lines #TODO
+	foreach my $token (@line)
+	{
+		if($token =~ /^[A-Za-z]+[\.,]?$/)
+		{
+			chop($token) if ($token =~ /[\.,]+$/);	#chop that punctuation right off of there
+#			$token = lc($token);							#treat words as all lower case for now #TODO
+			if(exists($localfreq{$token}))			#increase frequency/add depending if seen. #TODO different casings of same word fix
+			{
+				$localfreq{$token}++;
+			}
+			else
+			{
+				$localfreq{$token} = 1;
+			}
+		} 
+	}
+}
+
+
+#compute relative frequencies
+foreach my $key ( keys(%localfreq) ) 
+{
+	if(!exists($hdict{lc($key)}))
+	{
+		$localfreq{$key}=0;		#possibly add it with a really high value?
+		#print HTML "word $key is not in hdict\n"; #for cl output
+	} 
+	else
+	{	
+		$localfreq{$key} = ($localfreq{$key})/(@{$hdict{lc($key)}}[1]);  #tricky syntax because of array references in hash table
+	}
+}
+print HTML "<br>\n";
+#add each of the keys in decreasing order to @topwords
+foreach my $key (sort {$localfreq{$b} <=> $localfreq{$a}} keys(%localfreq)) 
+{
+#	print "$key, ".@{$hdict{$key}}[0].", $localfreq{$key}\n";		#TODO possibly print if --verbose
+	push(@topwords, $key);
+}
+#	foreach (@topwords) { print HTML "topword: $_\n"; } #TODO possibly print if --verbose / for troubleshooting
+
+
+
+#TODO months... declaration of $months outside the following due to a scoping issue?
 my $months = "(\s?)\(Jan\)\|\(Feb\)\|\(Mar\)\|\(Apr\)\|\(May\)\|\(Jun\)\|\(Jul\)\|\(Aug\)\|\(Sep\)\|\(Oct\)\|\(Nov\)\|\(Dec\)(\s?)";
 if ($years)
 {
@@ -151,7 +158,6 @@ if ($years)
 		foreach my $prep (<TIMEPREPS>)
 		{
 			$prep =~ s/\r|\n//g;  #the new chomp
-			#chop($prep); #COMMENT OUT FOR LINUX
 			$timeprepregex.="( ".$prep." )\|";  	#this way they can be a regex of "or" expressions	
 													#like (in)|(during)|...
 		}
@@ -168,7 +174,7 @@ foreach (@file)
 }
 my @sentences = split(/\."?\s+/, $wholefile);
 
-if ($countries && !$years)
+if ($countries)
 {
 	#use only if $countries and !$years
 	open(COUNTRIES, "<country_list.txt") or die "Can't find country dictionary country_list.txt\n";
@@ -179,26 +185,49 @@ if ($countries && !$years)
 	foreach my $place (<COUNTRIES>)
 	{
 		#there are four spaces before each entry so this will cut them off
-		$place =~ s/^\s+//;
 		$place =~ s/\r|\n//g;
 		push(@countries, $place);
 		$countriesregex.=" ".$place." \|";	#this way they can be a regex of "or" expressions
 												#like (Soviet Union)|(Peru)|...
+												#leave as multiple countries..?
+		my @tokenized_country = split(/\s/, $place);
+		$countriesregex2.=" ".$place." \|" if($#tokenized_country==1);
+		$countriesregex3.=" ".$place." \|" if($#tokenized_country==2);
+		$countriesregex4.=" ".$place." \|" if($#tokenized_country==3);
 	}
 	chop($countriesregex); 			#to take last "|" off
+	chop($countriesregex2); 			#to take last "|" off
+	chop($countriesregex3); 			#to take last "|" off
+	chop($countriesregex4); 			#to take last "|" off
 	close(COUNTRIES);
 	
-	#to be used for more relevant answers
+	#to be used for more relevant answersâ€“
 	my @words;	#all the words in the file
+	my @two_words;	#sequences of two words apeice, delimited by sentence
+	my @three_words;	# ^^
+	my @four_words;
 	#read the file into words
 	foreach my $sentence (@sentences)
 	{
 		my @temparray=();		#words in current sentence
 		@temparray = split(/\s+/, $sentence);
-		foreach my $word (@temparray)
+		foreach my $i (0..$#temparray)
 		{
-			push(@words, " ".$word." ");
-#			$words[$#words + 1] $word;
+			push(@words, " ".$temparray[$i]." ");
+
+			#make the mulitple-word-per-index arrays
+			if($i<=$#temparray-1)
+			{
+				push(@two_words, " ".$temparray[$i]." ".$temparray[$i+1]." ");
+			}
+			if($i<=$#temparray-2)
+			{
+				push(@three_words, " ".$temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]." ");
+			}
+			if($i<=$#temparray-3)
+			{
+				push(@four_words, " ".$temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]." ".$temparray[$i+3]." ");				
+			}
 		}
 	}
 	
@@ -206,16 +235,44 @@ if ($countries && !$years)
 	foreach my $word (@words)
 	{
 		$word =~ s/[^A-Za-z\s]//g;
-		if (($word =~ /$countriesregex/i) && ($word ne ""))
+		if ($word =~ /$countriesregex/i)
 		{
 			$countryans{$word}++;
 		}
 	}
 
-	$countriesregex =~ s/^\s+//;
+	#for each two words in the file, check if it's a country
+	foreach my $two_word (@two_words)
+	{
+		$two_word =~ s/[^A-Za-z\s]//g;
+		if ($two_word =~ /$countriesregex2/i) 
+		{
+			$countryans{$two_word}++;
+		}
+	}
+
+	#for each three words in the file, check if it's a country
+	foreach my $three_word (@three_words)
+	{
+		$three_word =~ s/[^A-Za-z\s]//g;
+		if ($three_word =~ /$countriesregex3/i) 
+		{
+			$countryans{$three_word}++;
+		}
+	}
+
+	#for each four words in the file, check if it's a country
+	foreach my $four_word (@four_words)
+	{
+		$four_word =~ s/[^A-Za-z\s]//g;
+		if ($four_word =~ /$countriesregex4/i) 
+		{
+			$countryans{$four_word}++;
+		}
+	}
 }
 
-my $counter = 0;
+my $counter = 0; #for the HTML formatting/JS methods
 #foreach sentence, create the requested/relevant question
 #possibly change to calling each of the subs below with parameters instead
 #of depending on $_ to work properly
@@ -229,19 +286,19 @@ foreach my $sentence (@sentences)
 	}
 	
 	#find only specific questions containing countries
-	elsif($countries)
+	if($countries)
 	{
 		&countries($sentence);
 	}
 	
 	#find only specific questions containing a given word
-	elsif($qword)
+	if($qword)
 	{
 		&qword($sentence);
 	}
 	
 	#print questions about each of the top words
-	else
+	if(( ! ($countries) && ! ($qword) && ! ($years) ) || $default)
 	{
 		&default($sentence);
 	}
@@ -261,15 +318,8 @@ sub years
 	# (digit,digit) etc.
 	#also, @matches gets each digit match per sentence.
 	#TODO fix the below regex... backreferences for months?
-	# 
-	if(($sentence =~ $timeprepregex) && (@matches = $sentence=~m/[^(,\d)]\s+,?\(?\-?(\d+),?\.?\s?\-?\)?[^(,\d+)( years)($months)]/ig))
+	if(($sentence =~ $timeprepregex) && (@matches = uniq($sentence=~m/[^(,\d)]\s+,?\(?\-?(\d+),?\.?\s?\-?\)?[^(,\d+)( years)($months)]/ig)))
 	{	
-		#print "MATCHES";
-		#foreach(@matches)
-		#{
-		#	print $sentence."\n";
-		#	print $_."\n";
-		#}
 		foreach my $match (@matches)
 		{
 			#create an HTML DIV for each question for show/hide
@@ -509,18 +559,15 @@ sub qword
 }
 
 #--countries command line parameter
-#TODO add countries found to a list to use as possible answers
 sub countries
 {
 	my @matches = ();
 	my $sentence = $_[0]; #anon @_
 
-	#TODO make it make sure it matches both words, i.e., "Soviet Union"
-	if(($sentence =~ $countriesregex) && (@matches = $sentence =~ m/$countriesregex/g))
-	{									#match global amount of times ^
+	if(@matches = uniq($sentence =~ m/$countriesregex/g))
+	{					#match global amount of times ^
 		foreach my $match (@matches)
 		{
-			$match =~ s/\s//g;
 			#create an HTML DIV for each question for show/hide
 			my $tempdiv = "question".$counter;
 			my $tempbox = "ckbox".$counter;
@@ -535,59 +582,114 @@ sub countries
 			#TODO check for phrases that arent a subset of another phrase in the same sentence,
 			#do it by concatination parts of tokens and checking to see if it is in the sentence
 			my @tokens = split(/\s+/, $sentence);
-			foreach my $word (@tokens)
+			#word doesn't have spaces around it, but match does, because countriesregex has spaces, to prevent things like JapanESE
+
+			my @tmp=split(/\s/, $match);
+			for my $idx (0..$#tmp)
 			{
-#				$word = " ".$word." ";
-				print "\|$match\|\t\|$word\|\n";
-				if($word =~ $match)
+				if($tmp[$idx] eq "")
+				{
+					splice(@tmp, $idx, 1);
+				}
+			}
+
+			my $length = $#tmp+1;
+
+			my $i = 0;
+			while( $i<=$#tokens)
+			{
+				my $word = $tokens[$i];
+				my $multiword = " ";
+				if($length>1)
+				{	
+					for my $j ($i..$i+$length-1)
+					{
+						$multiword.=$tokens[$j]." ";
+					}
+				}
+				if($multiword ne " " && $multiword =~ /$match/) #then we need to not print some extra spaces.
+				{
+						print HTML "_______________";
+						$i+=($length-1);
+				}
+				elsif((" ".$word." ") =~ /$match/)
 				{
 					#print HTML " ".$` unless $` eq " "; #in case the word has brackets around it or something stupid
 					print HTML "_______________";
-					print HTML $'." " unless $' eq " "; #in case the word was followed by punctuation
-					#disable after first find so you dont put in multiple blanks?
+					print HTML $' unless $' =~ " "; #in case the word was followed by punctuation
 				}
 				else
 				{
 					print HTML $word." ";
 				}
+				$i++;
 			}
 			print HTML "<br>\n";
 			
 			#find other candidate answers out of @countries
 			my %numberchoice=(); #hash of randoms chosen
-			my $correct = int(rand(5))+1; #where the correct answer will appear in the others
-			#TODO why not $correct and instead $i in the default subroutine 
-			$numberchoice{$correct}=0; 
+
+			my @temp_countryans = keys(%countryans);
+
+			for my $j (0..$#temp_countryans)
+			{
+				$numberchoice{$temp_countryans[$j]}=0 if ($temp_countryans[$j] eq $match);
+			}
+
+			my $ans = $match; my $one = $match; my $two = $match; my $three = $match; my $four = $match;
+			my @answers = ($one, $two, $three, $four);
+			$numberchoice{$ans}=0;
+
+			foreach my $i (0..$#answers)
+			{
+				my $most_tries = 50;
+				while(exists($numberchoice{$answers[$i]}) && $most_tries>0)
+				{
+					$answers[$i] = $temp_countryans[int(rand($#temp_countryans+1))];
+					$most_tries--;
+				}
+				while(exists($numberchoice{$answers[$i]}) && $most_tries==0) #shouldn't ever get less than 0...
+				{
+					$answers[$i] = $countries[int(rand($#countries+1))];
+				}
+				$numberchoice{$answers[$i]}=0;
+			}
+			push(@answers, $ans);
+
+			@answers = &shuffle(@answers);
+
 
 			#find and print all answers
 			for my $i (1..5)
 			{
-				if($i==$correct) #print the correct answer
+				if( $answers[$i-1] =~ $match )
 				{
 					print HTML "<a>".$i." \. ".$match."</a>\n";
-				}
+				}			
 				else
 				{
-					my $random = $correct;
-					#goes until a new country is chosen
-					my $tempcountry = $countries[$random];
-					#while ((exists($numberchoice{$random} )) && ($match=~$tempcountry)) #it's not in the correct answer
-					#{
-					#print "im stuck";
-						$random=int(rand($#countries + 1));
-						$tempcountry = $countries[$random];
-					#}
-					$numberchoice{$random}=0;
-
 					print HTML "<a style=\"display:none\" id = \"div".$counter."text".$i."\"> ".$i." \. </a>\n"; #text
-					print HTML "<input type=\"text\" id=\"textbox".$i."\" value=\"$i \. ".$countries[$random]."\">\n";	#text box
-					#TODO the value assignment above and in default are incorrect?
+					print HTML "<input type=\"text\" id=\"textbox".$i."\" value=\"$i \. ".$answers[$i-1]."\">\n";	#text box
 				}
 			}
 			print HTML "<\/DIV>\n\n"; #end HTML DIV
 			$counter++;
 		}
 	}
+}
+
+sub shuffle
+{
+	#shuffle answers
+	my @pre = @_;
+	my @post = ();
+	for (my $i=$#_+1; $i>=1; $i--)
+	{
+		my $choice = int(rand($i));
+		push(@post, $pre[$choice]);
+		splice(@pre,$choice,1);
+	}
+	return @post;
 }
 
 #TODO middle of sentence capitalization of candidate answers
