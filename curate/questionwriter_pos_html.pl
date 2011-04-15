@@ -19,7 +19,9 @@ usage:  executable   <input text file> [options] \n    OPTIONS:
 	Is not provided when other flags are asserted unless explicitly told to do so.\n
 --qword=<word you want a question about> \n
 --years (will target years instead of text.)\n
---countries (will target countries in the text.)\n"
+--countries (will target countries in the text.)\n
+--qfile=<file path of desired question words> \n
+(for qfile: each desired question word or phrase needs to be separated by a new line; only considers phrases of four words or less.)\n"
 unless ($#ARGV>=0);
 
 
@@ -33,20 +35,15 @@ shift(@ARGV);	#we have to pop off the first @ARGV element because otherwise it w
 #years tells us whether to target numbers in the text, and to treat them as years when near a time preposition
 #countries will call sub &countries and will write questions about countries
 #we then get these options from the command line input.
-my $default; my $qword; my $years; my $countries;
-GetOptions ("default"=>\$default, "qword=s" => \$qword, "years" => \$years, "countries" => \$countries) or die "Whups, got options we don't recognize!";
+my $default; my $qword; my $years; my $countries; my $qfile;
+GetOptions ("default"=>\$default, "qword=s" => \$qword, "years" => \$years, "countries" => \$countries, "qfile=s" => \$qfile) or die "Whups, got options we don't recognize!";
 #$qword=lc($qword); #TODO
 
-
-
 #######MAIN#######
-
-
 
 #open dicitonary files don't use if ($years) or if ($countries)
 open(DICTIONARY, "<index_regex2.idx") or die "Can't open dicitonary file index_regex2.idx\n";
 my @dict = <DICTIONARY>;
-
 
 #open an output file with html format
 open(HTML, ">uncurated_questions.html") or die "Can't open file to write html to";
@@ -62,48 +59,53 @@ print HTML "<head>
 
 print HTML "<body>\n";
 
+#TODO print quiz button #call it something else because print is associated with printer?
+#print HTML "<input type=\"button\" id=\"PrintQuiz\" value=\"Print Quiz\" name=\"PrintQuiz\" onClick=\"printQuiz(); this\.disabled=1\">\n"; 
+
 #finalize all button
 print HTML "<input type=\"button\" id=\"FinalizeAll\" value=\"Finalize Quiz\" name=\"FinalizeAll\" onClick=\"finalizeAll(); this\.disabled=1\">\n"; 
 
-my %hdict=();
-my %localfreq=();
-my @topwords=();
-my @countries=();
-my %countryans=();
-my @file = <INFILE>;
-my $total=0;
-my @line = ();
-my $timeprepregex="";
-my $countriesregex="";
-my $countriesregex2="";
-my $countriesregex3="";
-my $countriesregex4="";
-
-
-
+my %hdict=(); #TODO
+my %localfreq=(); #key is the word and the value is the local freqency (number of times apearing in the document)
+my @topwords=(); #list of the highest relative frequency words in the document (#TODO)
+my @countries=(); #list of countries (one to four words long)
+my @qfilelines=(); #list of desired answers for the qfile input (one to four words long)
+my %countryans=(); #group of answers that are also countries found in the document
+my %qfileans=(); #group of answers that are relevant to the desired options
+my @file = <INFILE>; #the file you are making quizes on
+my $total=0; #TODO ?
+my @line = (); #used for parsing the dictionary/determining localfreq 
+#The following regex's are in the form:  ( word )|( word )|... where the word is sometimes a phrase
+my $timeprepregex=""; #for determining if the sentence could contain a date
+my $countriesregex=""; #regex of all lines in the country list file
+my $countriesregex2=""; #regex of two word lines in the country list file
+my $countriesregex3=""; #regex of three word lines in the country list file
+my $countriesregex4=""; #regex of four word lines in the country list file
+my $qfileregex=""; #regex of all lines in qfile
+my $qfileregex2=""; #regex of two word lines in qfile
+my $qfileregex3=""; #regex of three word lines in qfile
+my $qfileregex4=""; #regex of four word lines in qfile
 
 #read each line from the dictionary file, then put into a hash
 # whose key is the word, and whose value is a two-elt array
 # which is (parts of speech, frequency)
 foreach (@dict)
 {
-	chomp;
+	$_ =~ s/\r|\n//g; #the new chomp
 	my @line = split(/\t/, $_); 			#to the left of the | is word(space)pos(space)....
 
 	my $word = $line[0];	#pop first elt off
 	my $pos=$line[1];
 
 	$hdict{$word}=[$pos, $line[2]/8382231];	#key is word, value is (part of speech, freq)#possibly add it with a really high value?
-															#want to change the denominator if you care, which is no longer the number of words spotted.
+											#want to change the denominator if you care, which is no longer the number of words spotted.
 #	$total+=$line[2]; #for counting the number of word occurrences in the dictionary #TODO
 }
-
 #$total=0; #the number of words in the input text file #TODO
-
 
 foreach(@file)
 {
-	chomp;
+	$_ =~ s/\r|\n//g; #the new chomp
 	@line = split(/ /, $_);
 #	$total+=$#line+1; for counting the number of lines #TODO
 	foreach my $token (@line)
@@ -123,7 +125,6 @@ foreach(@file)
 		} 
 	}
 }
-
 
 #compute relative frequencies
 foreach my $key ( keys(%localfreq) ) 
@@ -147,8 +148,6 @@ foreach my $key (sort {$localfreq{$b} <=> $localfreq{$a}} keys(%localfreq))
 }
 #	foreach (@topwords) { print HTML "topword: $_\n"; } #TODO possibly print if --verbose / for troubleshooting
 
-
-
 #TODO months... declaration of $months outside the following due to a scoping issue?
 my $months = "(\s?)\(Jan\)\|\(Feb\)\|\(Mar\)\|\(Apr\)\|\(May\)\|\(Jun\)\|\(Jul\)\|\(Aug\)\|\(Sep\)\|\(Oct\)\|\(Nov\)\|\(Dec\)(\s?)";
 if ($years)
@@ -159,7 +158,7 @@ if ($years)
 		{
 			$prep =~ s/\r|\n//g;  #the new chomp
 			$timeprepregex.="( ".$prep." )\|";  	#this way they can be a regex of "or" expressions	
-													#like (in)|(during)|...
+													#like ( in )|( during )|...
 		}
 	chop($timeprepregex);           				#to take last "|" off
 	close(TIMEPREPS);
@@ -169,43 +168,42 @@ if ($years)
 my $wholefile = "";
 foreach (@file)
 {
-	chomp;
+	$_ =~ s/\r|\n//g; #the new chomp
 	$wholefile.=$_." ";
 }
 my @sentences = split(/\."?\s+/, $wholefile);
 
+#breaks up the list of countrys and finds relevant answers
 if ($countries)
 {
-	#use only if $countries and !$years
+	#use only if $countries
 	open(COUNTRIES, "<country_list.txt") or die "Can't find country dictionary country_list.txt\n";
 	
-	#do this only if --countries and not --years.
+	#do this only if --countries
 	
 	#read in list of countries
 	foreach my $place (<COUNTRIES>)
 	{
-		#there are four spaces before each entry so this will cut them off
 		$place =~ s/\r|\n//g;
 		push(@countries, $place);
 		$countriesregex.=" ".$place." \|";	#this way they can be a regex of "or" expressions
-												#like (Soviet Union)|(Peru)|...
-												#leave as multiple countries..?
+												#like ( Soviet Union )|( Peru )|...
 		my @tokenized_country = split(/\s/, $place);
 		$countriesregex2.=" ".$place." \|" if($#tokenized_country==1);
 		$countriesregex3.=" ".$place." \|" if($#tokenized_country==2);
 		$countriesregex4.=" ".$place." \|" if($#tokenized_country==3);
 	}
-	chop($countriesregex); 			#to take last "|" off
+	chop($countriesregex); 				#to take last "|" off
 	chop($countriesregex2); 			#to take last "|" off
 	chop($countriesregex3); 			#to take last "|" off
 	chop($countriesregex4); 			#to take last "|" off
 	close(COUNTRIES);
 	
-	#to be used for more relevant answersâ€“
+	#to be used for more relevant answers
 	my @words;	#all the words in the file
 	my @two_words;	#sequences of two words apeice, delimited by sentence
-	my @three_words;	# ^^
-	my @four_words;
+	my @three_words;	#sequences of three words apeice, delimited by sentence
+	my @four_words;		#sequences of four words apeice, delimited by sentence
 	#read the file into words
 	foreach my $sentence (@sentences)
 	{
@@ -272,6 +270,104 @@ if ($countries)
 	}
 }
 
+#breaks up the list given by qfile and finds relevant answers
+if ($qfile)
+{
+	#use only if $qfile
+	open(QFILE, "<".$qfile) or die "Can't find ".$qfile." Confirm that this is the correct path to the file.\n";
+	
+	#do this only if --qfile=<file>
+	
+	#read in list of desired question topics
+	foreach my $line (<QFILE>)
+	{
+		$line =~ s/\r|\n//g;
+		push(@qfilelines, $line);
+		$qfileregex.=" ".$line." \|";	#this way they can be a regex of "or" expressions
+											#like ( Soviet Union )|( Peru )|...
+		my @tokenized_line = split(/\s/, $line);
+		$qfileregex2.=" ".$line." \|" if($#tokenized_line==1);
+		$qfileregex3.=" ".$line." \|" if($#tokenized_line==2);
+		$qfileregex4.=" ".$line." \|" if($#tokenized_line==3);
+	}
+	chop($qfileregex); 				#to take last "|" off
+	chop($qfileregex2); 			#to take last "|" off
+	chop($qfileregex3); 			#to take last "|" off
+	chop($qfileregex4); 			#to take last "|" off
+	close(QFILE);
+	
+	#to be used for more relevant answers
+	my @words;	#all the words in the file
+	my @two_words;	#sequences of two words apeice, delimited by sentence
+	my @three_words;	#sequences of three words apeice, delimited by sentence
+	my @four_words;		#sequences of four words apeice, delimited by sentence
+	#read the file into words
+	foreach my $sentence (@sentences)
+	{
+		my @temparray=();		#words in current sentence
+		@temparray = split(/\s+/, $sentence);
+		foreach my $i (0..$#temparray)
+		{
+			push(@words, " ".$temparray[$i]." ");
+
+			#make the mulitple-word-per-index arrays
+			if($i<=$#temparray-1)
+			{
+				push(@two_words, " ".$temparray[$i]." ".$temparray[$i+1]." ");
+			}
+			if($i<=$#temparray-2)
+			{
+				push(@three_words, " ".$temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]." ");
+			}
+			if($i<=$#temparray-3)
+			{
+				push(@four_words, " ".$temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]." ".$temparray[$i+3]." ");				
+			}
+		}
+	}
+
+#TODO consider punctuation? dont modity the words before checking them against the regex?	
+	#for each word in the file, check if it's a one word line in qfile
+	foreach my $word (@words)
+	{
+		$word =~ s/[^A-Za-z\s]//g;
+		if ($word =~ /$qfileregex/i)
+		{
+			$qfileans{$word}++;
+		}
+	}
+
+	#for each two words in the file, check if it's a two word line in qfile
+	foreach my $two_word (@two_words)
+	{
+		$two_word =~ s/[^A-Za-z\s]//g;
+		if ($two_word =~ /$qfileregex2/i) 
+		{
+			$qfileans{$two_word}++;
+		}
+	}
+
+	#for each three words in the file, check if it's a three word line in qfile
+	foreach my $three_word (@three_words)
+	{
+		$three_word =~ s/[^A-Za-z\s]//g;
+		if ($three_word =~ /$qfileregex3/i) 
+		{
+			$qfileans{$three_word}++;
+		}
+	}
+
+	#for each four words in the file, check if it's a four word line in qfile
+	foreach my $four_word (@four_words)
+	{
+		$four_word =~ s/[^A-Za-z\s]//g;
+		if ($four_word =~ /$qfileregex4/i) 
+		{
+			$qfileans{$four_word}++;
+		}
+	}
+}
+
 my $counter = 0; #for the HTML formatting/JS methods
 #foreach sentence, create the requested/relevant question
 #possibly change to calling each of the subs below with parameters instead
@@ -291,6 +387,12 @@ foreach my $sentence (@sentences)
 		&countries($sentence);
 	}
 	
+	#find only specific questions containing a given set of words/phrases
+	if($qfile)
+	{
+		&qfile($sentence);
+	}
+	
 	#find only specific questions containing a given word
 	if($qword)
 	{
@@ -298,7 +400,7 @@ foreach my $sentence (@sentences)
 	}
 	
 	#print questions about each of the top words
-	if(( ! ($countries) && ! ($qword) && ! ($years) ) || $default)
+	if(( !($countries) && !($qword) && !($years) && !($qfile)) || $default)
 	{
 		&default($sentence);
 	}
@@ -306,6 +408,7 @@ foreach my $sentence (@sentences)
 
 ######### END MAIN #########
 ####### SUBROUTINES ########
+#--years command line parameter
 sub years
 {
 	my @matches = ();
@@ -458,6 +561,7 @@ sub years
 	}
 }
 
+#--qword=<word> command line parameter
 sub qword
 {
 	my $sentence = $_[0]; #anon @_
@@ -558,6 +662,125 @@ sub qword
 	}
 }
 
+#--qfile=<file> command line parameter
+sub qfile
+{
+	my @matches = ();
+	my $sentence = $_[0]; #anon @_
+
+	if(@matches = uniq($sentence =~ m/$qfileregex/g))
+	{					#match global amount of times ^
+		foreach my $match (@matches)
+		{
+			#create an HTML DIV for each question for show/hide
+			my $tempdiv = "question".$counter;
+			my $tempbox = "ckbox".$counter;
+			print HTML "<p><input type=\"checkbox\" id=\"ckbox".$counter."\" value=\"Click here\" onClick=\"toggleShowHide('".$tempbox."','".$tempdiv."');\"></p>\n";
+			print HTML "<DIV ID=\"question".$counter."\">\n";
+			print HTML "<INPUT type=\"button\" id=\"button".$counter."\" value=\"Finalize Question\" name=\"finalizeOne\" onClick=\"finalize('question".$counter."'); this\.disabled=1\">\n";
+			print HTML "<br>"; 
+			print HTML "correct answer: ".$match;
+			print HTML "<br>\n";
+			
+			#want biggest matches so that we dont ask a question about "Union" instead of "Soviet Union"
+			#TODO check for phrases that arent a subset of another phrase in the same sentence,
+			#do it by concatination parts of tokens and checking to see if it is in the sentence
+			my @tokens = split(/\s+/, $sentence);
+			#word doesn't have spaces around it, but match does, because countriesregex has spaces, to prevent things like JapanESE
+
+			my @tmp=split(/\s/, $match);
+			for my $idx (0..$#tmp)
+			{
+				if($tmp[$idx] eq "")
+				{
+					splice(@tmp, $idx, 1);
+				}
+			}
+
+			my $length = $#tmp+1;
+
+			my $i = 0;
+			while( $i<=$#tokens)
+			{
+				my $word = $tokens[$i];
+				my $multiword = " ";
+				if($length>1)
+				{	
+					for my $j ($i..$i+$length-1)
+					{
+						$multiword.=$tokens[$j]." ";
+					}
+				}
+				if($multiword ne " " && $multiword =~ /$match/) #then we need to not print extra spaces.
+				{
+						print HTML "_______________";
+						$i+=($length-1);
+				}
+				elsif((" ".$word." ") =~ /$match/)
+				{
+					#print HTML " ".$` unless $` eq " "; #in case the word has brackets around it or something stupid
+					print HTML "_______________";
+					print HTML $' unless $' =~ " "; #in case the word was followed by punctuation
+				}
+				else
+				{
+					print HTML $word." ";
+				}
+				$i++;
+			}
+			print HTML "<br>\n";
+			
+			#find other candidate answers out of @qfilelines
+			my %numberchoice=(); #hash of randoms chosen
+
+			my @temp_qfileans = keys(%qfileans);
+
+			for my $j (0..$#temp_qfileans)
+			{
+				$numberchoice{$temp_qfileans[$j]}=0 if ($temp_qfileans[$j] eq $match);
+			}
+
+			my $ans = $match; my $one = $match; my $two = $match; my $three = $match; my $four = $match;
+			my @answers = ($one, $two, $three, $four);
+			$numberchoice{$ans}=0;
+
+			foreach my $i (0..$#answers)
+			{
+				my $most_tries = 50;
+				while(exists($numberchoice{$answers[$i]}) && $most_tries>0)
+				{
+					$answers[$i] = $temp_qfileans[int(rand($#temp_qfileans+1))];
+					$most_tries--;
+				}
+				while(exists($numberchoice{$answers[$i]}) && $most_tries==0) #shouldn't ever get less than 0...
+				{
+					$answers[$i] = $qfilelines[int(rand($#qfilelines+1))];
+				}
+				$numberchoice{$answers[$i]}=0;
+			}
+			push(@answers, $ans);
+
+			@answers = &shuffle(@answers);
+
+			#find and print all answers
+			for my $i (1..5)
+			{
+				if( $answers[$i-1] =~ $match )
+				{
+					print HTML "<a>".$i." \. ".$match."</a>\n";
+				}			
+				else
+				{
+					print HTML "<a style=\"display:none\" id = \"div".$counter."text".$i."\"> ".$i." \. </a>\n"; #text
+					print HTML "<input type=\"text\" id=\"textbox".$i."\" value=\"$i \. ".$answers[$i-1]."\">\n";	#text box
+				}
+			}
+			print HTML "<\/DIV>\n\n"; #end HTML DIV
+			$counter++;
+		}
+	}
+}
+
 #--countries command line parameter
 sub countries
 {
@@ -607,7 +830,7 @@ sub countries
 						$multiword.=$tokens[$j]." ";
 					}
 				}
-				if($multiword ne " " && $multiword =~ /$match/) #then we need to not print some extra spaces.
+				if($multiword ne " " && $multiword =~ /$match/) #then we need to not print extra spaces.
 				{
 						print HTML "_______________";
 						$i+=($length-1);
@@ -657,7 +880,6 @@ sub countries
 			push(@answers, $ans);
 
 			@answers = &shuffle(@answers);
-
 
 			#find and print all answers
 			for my $i (1..5)
