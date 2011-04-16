@@ -10,8 +10,7 @@ use List::MoreUtils qw(uniq);
 
 #TODO Months, what about ? and ! to end sentences?
 #TODO can explicitly request default behavior
-
-
+#TODO make qfile and Countries non-case sensitive
 
 die "wrong number of parameters from comand line \n
 usage:  executable   <input text file> [options] \n    OPTIONS:
@@ -21,9 +20,9 @@ usage:  executable   <input text file> [options] \n    OPTIONS:
 --years (will target years instead of text.)\n
 --countries (will target countries in the text.)\n
 --qfile=<file path of desired question words> \n
-(for qfile: each desired question word or phrase needs to be separated by a new line; only considers phrases of four words or less.)\n"
+(for qfile: each desired question word or phrase needs to be separated by a new line; only considers phrases of four words or less.)\n
+(for both qfile and countries, entries are case sensitive, Countries must have proper capitalization)\n"
 unless ($#ARGV>=0);
-
 
 my $infile=$ARGV[0];
 open(INFILE, "<$infile") or die "Can't open infile $infile\n";
@@ -171,7 +170,12 @@ foreach (@file)
 	$_ =~ s/\r|\n//g; #the new chomp
 	$wholefile.=$_." ";
 }
-my @sentences = split(/\."?\s+/, $wholefile);
+
+my @sentences = split(/\."?\s+/, $wholefile); #split into sentences
+
+foreach (@sentences) {
+	$_ = " ".$_." ";  #allow the first and last words in sentences to be in the regex format
+}
 
 #breaks up the list of countrys and finds relevant answers
 if ($countries)
@@ -198,7 +202,7 @@ if ($countries)
 	chop($countriesregex3); 			#to take last "|" off
 	chop($countriesregex4); 			#to take last "|" off
 	close(COUNTRIES);
-	
+
 	#to be used for more relevant answers
 	my @words;	#all the words in the file
 	my @two_words;	#sequences of two words apeice, delimited by sentence
@@ -209,6 +213,15 @@ if ($countries)
 	{
 		my @temparray=();		#words in current sentence
 		@temparray = split(/\s+/, $sentence);
+
+		for my $i (0..$#temparray) #trim all empty strings in the sentence
+		{
+			if($temparray[$i] eq "") 
+			{
+				splice(@temparray, $i, 1);
+			}
+		}	
+		
 		foreach my $i (0..$#temparray)
 		{
 			push(@words, " ".$temparray[$i]." ");
@@ -228,7 +241,7 @@ if ($countries)
 			}
 		}
 	}
-	
+
 	#for each word in the file, check if it's a country
 	foreach my $word (@words)
 	{
@@ -306,6 +319,15 @@ if ($qfile)
 	{
 		my @temparray=();		#words in current sentence
 		@temparray = split(/\s+/, $sentence);
+		
+		for my $i (0..$#temparray) #trim all empty strings in the sentence
+		{
+			if($temparray[$i] eq "") 
+			{
+				splice(@temparray, $i, 1);
+			}
+		}	
+		
 		foreach my $i (0..$#temparray)
 		{
 			push(@words, " ".$temparray[$i]." ");
@@ -374,26 +396,25 @@ my $counter = 0; #for the HTML formatting/JS methods
 #of depending on $_ to work properly
 foreach my $sentence (@sentences)
 {
-#	print $sentence."\n\n";
-#	$sentence.="\."; #?
+	#find specific questions regarding years
 	if($years) 
 	{
 		&years($sentence);
 	}
 	
-	#find only specific questions containing countries
+	#find specific questions containing countries
 	if($countries)
 	{
 		&countries($sentence);
 	}
 	
-	#find only specific questions containing a given set of words/phrases
+	#find specific questions containing a given set of words/phrases
 	if($qfile)
 	{
 		&qfile($sentence);
 	}
 	
-	#find only specific questions containing a given word
+	#find specific questions containing a given word
 	if($qword)
 	{
 		&qword($sentence);
@@ -682,14 +703,11 @@ sub qfile
 			print HTML "correct answer: ".$match;
 			print HTML "<br>\n";
 			
-			#want biggest matches so that we dont ask a question about "Union" instead of "Soviet Union"
-			#TODO check for phrases that arent a subset of another phrase in the same sentence,
-			#do it by concatination parts of tokens and checking to see if it is in the sentence
 			my @tokens = split(/\s+/, $sentence);
 			#word doesn't have spaces around it, but match does, because countriesregex has spaces, to prevent things like JapanESE
 
 			my @tmp=split(/\s/, $match);
-			for my $idx (0..$#tmp)
+			for my $idx (0..$#tmp) #trim out any empty strings from match
 			{
 				if($tmp[$idx] eq "")
 				{
@@ -787,7 +805,7 @@ sub countries
 	my @matches = ();
 	my $sentence = $_[0]; #anon @_
 
-	if(@matches = uniq($sentence =~ m/$countriesregex/g))
+	if(@matches = uniq($sentence =~ /$countriesregex/g))
 	{					#match global amount of times ^
 		foreach my $match (@matches)
 		{
@@ -801,14 +819,11 @@ sub countries
 			print HTML "correct answer: ".$match;
 			print HTML "<br>\n";
 			
-			#want biggest matches so that we dont ask a question about "Union" instead of "Soviet Union"
-			#TODO check for phrases that arent a subset of another phrase in the same sentence,
-			#do it by concatination parts of tokens and checking to see if it is in the sentence
 			my @tokens = split(/\s+/, $sentence);
 			#word doesn't have spaces around it, but match does, because countriesregex has spaces, to prevent things like JapanESE
 
 			my @tmp=split(/\s/, $match);
-			for my $idx (0..$#tmp)
+			for my $idx (0..$#tmp) #trim out any empty strings from match
 			{
 				if($tmp[$idx] eq "")
 				{
