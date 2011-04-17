@@ -54,16 +54,16 @@ for my $i (0..$#pt)
 		if($pt[$i]=~m/^[5] \. /)
 		{
 			$pt[$i]=~s/^[\d] \. //;
-			print HTML "\t\t\t\t<a style=\"display:none\" id = \"div".$divNum."text".$ansNum."\">  </a>\n"; #text
-			print HTML "\t\t\t\t<input type=\"text\" name=\"textbox".$ansNum."\" value=\"".$pt[$i]."\">\n";	#text box
+			print HTML "\t\t\t\t<li><a style=\"display:none\" id = \"div".$divNum."text".$ansNum."\">  </a>\n"; #text
+			print HTML "\t\t\t\t<input type=\"text\" name=\"textbox".$ansNum."\" value=\"".$pt[$i]."\"><\/li>\n";	#text box
 #			print HTML "\t\t\t\t\t<li>$pt[$i]</li>\n";
 			print HTML "\t\t\t<\/ol>\n";
 		}
 		else
 		{
 			$pt[$i]=~s/^[\d] \. //;
-			print HTML "\t\t\t\t<a style=\"display:none\" id = \"div".$divNum."text".$ansNum."\">  </a>\n"; #text
-			print HTML "\t\t\t\t<input type=\"text\" name=\"textbox".$ansNum."\" value=\"".$pt[$i]."\">\n";	#text box
+			print HTML "\t\t\t\t<li><a style=\"display:none\" id = \"div".$divNum."text".$ansNum."\">  </a>\n"; #text
+			print HTML "\t\t\t\t<input type=\"text\" name=\"textbox".$ansNum."\" value=\"".$pt[$i]."\"><\/li>\n";	#text box
 #			print HTML "\t\t\t\t\t<li>$pt[$i]</li>\n";
 		}
 		$ansNum = (($ansNum)%5)+1; #indexed 1 thru 5
