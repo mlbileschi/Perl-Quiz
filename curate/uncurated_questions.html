@@ -1,331 +1,625 @@
 <html>
-<head>
-<script src="curator.js">
-</script>
-<link href ="style.css" rel = "stylesheet">
-</head>
-<body>
+	<head>
+		<script src="curator_plaintext.js">
+		</script>
+		<link href ="style.css" rel = "stylesheet">
+	</head>
+
+
+	<body>
 <input type="button" id="FinalizeAll" value="Finalize Quiz" name="FinalizeAll" onClick="finalizeAll(); this.disabled=1">
-<br>
-<p><input type="checkbox" id="ckbox0" value="Click here" onClick="toggleShowHide('ckbox0','question0');"></p>
-<DIV ID="question0">
-<INPUT type="button" id="button0" value="Finalize Question" name="finalizeOne" onClick="finalize('question0'); this.disabled=1">
-<br>correct answer:  World War <br>
- _______________II, or the Second World War[1] (often abbreviated as WWII or WW2), was a global military conflict lasting from 1939 to 1945, which involved most of the world's nations, including all of the great powers: eventually forming two opposing military alliances, the Allies and the Axis <br>
-<a style="display:none" id = "div0text1"> 1 . </a>
-<input type="text" id="textbox1" value="1 .  Italy ">
-<a style="display:none" id = "div0text2"> 2 . </a>
-<input type="text" id="textbox2" value="2 .  China ">
-<a>3 .  World War </a>
-<a style="display:none" id = "div0text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  and its allies ">
-<a style="display:none" id = "div0text5"> 5 . </a>
-<input type="text" id="textbox5" value="5 .  France ">
-</DIV>
+		<p><input type="checkbox" id="ckbox0" value="Click here" onClick="toggleShowHide('ckbox0','question0');"></p>
+		<DIV ID="question0">
+			<INPUT type="button" id="button0" value="Finalize Question" name="finalizeOne" onClick="finalize('question0'); this.disabled=1">
+			<br>
+			<a>correct answer: enzymes</a>
+			<ol>
+				<a>  ___________________  are biological catalysts </a>
+				<br>
+				<a style="display:none" id = "div0text1">  </a>
+				<input type="text" name="textbox1" value="lowering">
+				<a style="display:none" id = "div0text2">  </a>
+				<input type="text" name="textbox2" value="cofactors">
+				<a style="display:none" id = "div0text3">  </a>
+				<input type="text" name="textbox3" value="Enzymes">
+				<a style="display:none" id = "div0text4">  </a>
+				<input type="text" name="textbox4" value="reactant">
+				<a style="display:none" id = "div0text5">  </a>
+				<input type="text" name="textbox5" value="enzymes">
+			</ol>
 
-<p><input type="checkbox" id="ckbox1" value="Click here" onClick="toggleShowHide('ckbox1','question1');"></p>
-<DIV ID="question1">
-<INPUT type="button" id="button1" value="Finalize Question" name="finalizeOne" onClick="finalize('question1'); this.disabled=1">
-<br>correct answer:  The war is <br>
- _______________generally accepted to have begun on 1 September 1939, with the invasion of Poland by Germany and Slovakia, and subsequent declarations of war on Germany by France and most of the countries of the British Empire and Commonwealth <br>
-<a>1 .  The war is </a>
-<a style="display:none" id = "div1text2"> 2 . </a>
-<input type="text" id="textbox2" value="2 .  Poland ">
-<a style="display:none" id = "div1text3"> 3 . </a>
-<input type="text" id="textbox3" value="3 .  and its allies ">
-<a style="display:none" id = "div1text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  ended with the ">
-<a style="display:none" id = "div1text5"> 5 . </a>
-<input type="text" id="textbox5" value="5 .  France ">
-</DIV>
+		</DIV>
 
-<p><input type="checkbox" id="ckbox2" value="Click here" onClick="toggleShowHide('ckbox2','question2');"></p>
-<DIV ID="question2">
-<INPUT type="button" id="button2" value="Finalize Question" name="finalizeOne" onClick="finalize('question2'); this.disabled=1">
-<br>correct answer:  Poland <br>
- The war is generally accepted to have begun on 1 September 1939, with the invasion of _______________by Germany and Slovakia, and subsequent declarations of war on Germany by France and most of the countries of the British Empire and Commonwealth <br>
-<a style="display:none" id = "div2text1"> 1 . </a>
-<input type="text" id="textbox1" value="1 .  Germany ">
-<a>2 .  Poland </a>
-<a style="display:none" id = "div2text3"> 3 . </a>
-<input type="text" id="textbox3" value="3 .  of the region ">
-<a style="display:none" id = "div2text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  Soviet Union ">
-<a style="display:none" id = "div2text5"> 5 . </a>
-<input type="text" id="textbox5" value="5 .  ended with the ">
-</DIV>
+		<p><input type="checkbox" id="ckbox1" value="Click here" onClick="toggleShowHide('ckbox1','question1');"></p>
+		<DIV ID="question1">
+			<INPUT type="button" id="button1" value="Finalize Question" name="finalizeOne" onClick="finalize('question1'); this.disabled=1">
+			<br>
+			<a>correct answer: catalysts</a>
+			<ol>
+				<a> Enzymes are biological  ___________________  </a>
+				<br>
+				<a style="display:none" id = "div1text1">  </a>
+				<input type="text" name="textbox1" value="reactant">
+				<a style="display:none" id = "div1text2">  </a>
+				<input type="text" name="textbox2" value="reactants">
+				<a style="display:none" id = "div1text3">  </a>
+				<input type="text" name="textbox3" value="catalysts">
+				<a style="display:none" id = "div1text4">  </a>
+				<input type="text" name="textbox4" value="binds">
+				<a style="display:none" id = "div1text5">  </a>
+				<input type="text" name="textbox5" value="polarity">
+			</ol>
 
-<p><input type="checkbox" id="ckbox3" value="Click here" onClick="toggleShowHide('ckbox3','question3');"></p>
-<DIV ID="question3">
-<INPUT type="button" id="button3" value="Finalize Question" name="finalizeOne" onClick="finalize('question3'); this.disabled=1">
-<br>correct answer:  Germany <br>
- The war is generally accepted to have begun on 1 September 1939, with the invasion of Poland by _______________and Slovakia, and subsequent declarations of war on _______________by France and most of the countries of the British Empire and Commonwealth <br>
-<a style="display:none" id = "div3text1"> 1 . </a>
-<input type="text" id="textbox1" value="1 .  Poland ">
-<a>2 .  Germany </a>
-<a style="display:none" id = "div3text3"> 3 . </a>
-<input type="text" id="textbox3" value="3 .  Soviet Union ">
-<a style="display:none" id = "div3text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  of the region ">
-<a style="display:none" id = "div3text5"> 5 . </a>
-<input type="text" id="textbox5" value="5 .  Italy ">
-</DIV>
+		</DIV>
 
-<p><input type="checkbox" id="ckbox4" value="Click here" onClick="toggleShowHide('ckbox4','question4');"></p>
-<DIV ID="question4">
-<INPUT type="button" id="button4" value="Finalize Question" name="finalizeOne" onClick="finalize('question4'); this.disabled=1">
-<br>correct answer:  France <br>
- The war is generally accepted to have begun on 1 September 1939, with the invasion of Poland by Germany and Slovakia, and subsequent declarations of war on Germany by _______________and most of the countries of the British Empire and Commonwealth <br>
-<a style="display:none" id = "div4text1"> 1 . </a>
-<input type="text" id="textbox1" value="1 .  Japan ">
-<a style="display:none" id = "div4text2"> 2 . </a>
-<input type="text" id="textbox2" value="2 .  Italy ">
-<a style="display:none" id = "div4text3"> 3 . </a>
-<input type="text" id="textbox3" value="3 .  China ">
-<a style="display:none" id = "div4text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  and its allies ">
-<a>5 .  France </a>
-</DIV>
+		<p><input type="checkbox" id="ckbox2" value="Click here" onClick="toggleShowHide('ckbox2','question2');"></p>
+		<DIV ID="question2">
+			<INPUT type="button" id="button2" value="Finalize Question" name="finalizeOne" onClick="finalize('question2'); this.disabled=1">
+			<br>
+			<a>correct answer: reactants</a>
+			<ol>
+				<a> This is accomplished by increasing the local concentration of  ___________________  (the compounds used in the reaction) and bringing the  ___________________  into proper orientation for the reaction to begin </a>
+				<br>
+				<a style="display:none" id = "div2text1">  </a>
+				<input type="text" name="textbox1" value="binding">
+				<a style="display:none" id = "div2text2">  </a>
+				<input type="text" name="textbox2" value="vitamins">
+				<a style="display:none" id = "div2text3">  </a>
+				<input type="text" name="textbox3" value="saturation">
+				<a style="display:none" id = "div2text4">  </a>
+				<input type="text" name="textbox4" value="reactants">
+				<a style="display:none" id = "div2text5">  </a>
+				<input type="text" name="textbox5" value="reactant">
+			</ol>
 
-<p><input type="checkbox" id="ckbox5" value="Click here" onClick="toggleShowHide('ckbox5','question5');"></p>
-<DIV ID="question5">
-<INPUT type="button" id="button5" value="Finalize Question" name="finalizeOne" onClick="finalize('question5'); this.disabled=1">
-<br>correct answer:  Germany <br>
- _______________set out to establish a large empire in Europe <br>
-<a style="display:none" id = "div5text1"> 1 . </a>
-<input type="text" id="textbox1" value="1 .  Slovakia ">
-<a>2 .  Germany </a>
-<a style="display:none" id = "div5text3"> 3 . </a>
-<input type="text" id="textbox3" value="3 .  ended with the ">
-<a style="display:none" id = "div5text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  Poland ">
-<a style="display:none" id = "div5text5"> 5 . </a>
-<input type="text" id="textbox5" value="5 .  Italy ">
-</DIV>
+		</DIV>
 
-<p><input type="checkbox" id="ckbox6" value="Click here" onClick="toggleShowHide('ckbox6','question6');"></p>
-<DIV ID="question6">
-<INPUT type="button" id="button6" value="Finalize Question" name="finalizeOne" onClick="finalize('question6'); this.disabled=1">
-<br>correct answer:  Germany <br>
- From late 1939 to early 1941, in a series of campaigns and treaties, _______________conquered or subdued much of continental Europe; amid Nazi-Soviet agreements, the nominally neutral Soviet Union fully or partially occupied and annexed territories of its six European neighbours <br>
-<a>1 .  Germany </a>
-<a style="display:none" id = "div6text2"> 2 . </a>
-<input type="text" id="textbox2" value="2 .  Italy ">
-<a style="display:none" id = "div6text3"> 3 . </a>
-<input type="text" id="textbox3" value="3 .  of the region ">
-<a style="display:none" id = "div6text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  Japan ">
-<a style="display:none" id = "div6text5"> 5 . </a>
-<input type="text" id="textbox5" value="5 .  World War ">
-</DIV>
+		<p><input type="checkbox" id="ckbox3" value="Click here" onClick="toggleShowHide('ckbox3','question3');"></p>
+		<DIV ID="question3">
+			<INPUT type="button" id="button3" value="Finalize Question" name="finalizeOne" onClick="finalize('question3'); this.disabled=1">
+			<br>
+			<a>correct answer: reactant</a>
+			<ol>
+				<a> This is accomplished by increasing the local concentration of  ___________________ s (the compounds used in the reaction) and bringing the  ___________________ s into proper orientation for the reaction to begin </a>
+				<br>
+				<a style="display:none" id = "div3text1">  </a>
+				<input type="text" name="textbox1" value="binding">
+				<a style="display:none" id = "div3text2">  </a>
+				<input type="text" name="textbox2" value="inhibition">
+				<a style="display:none" id = "div3text3">  </a>
+				<input type="text" name="textbox3" value="reactions">
+				<a style="display:none" id = "div3text4">  </a>
+				<input type="text" name="textbox4" value="reactant">
+				<a style="display:none" id = "div3text5">  </a>
+				<input type="text" name="textbox5" value="polarity">
+			</ol>
 
-<p><input type="checkbox" id="ckbox7" value="Click here" onClick="toggleShowHide('ckbox7','question7');"></p>
-<DIV ID="question7">
-<INPUT type="button" id="button7" value="Finalize Question" name="finalizeOne" onClick="finalize('question7'); this.disabled=1">
-<br>correct answer:  Soviet Union <br>
- From late 1939 to early 1941, in a series of campaigns and treaties, Germany conquered or subdued much of continental Europe; amid Nazi-Soviet agreements, the nominally neutral _______________fully or partially occupied and annexed territories of its six European neighbours <br>
-<a style="display:none" id = "div7text1"> 1 . </a>
-<input type="text" id="textbox1" value="1 .  of the region ">
-<a style="display:none" id = "div7text2"> 2 . </a>
-<input type="text" id="textbox2" value="2 .  ended with the ">
-<a>3 .  Soviet Union </a>
-<a style="display:none" id = "div7text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  Japan ">
-<a style="display:none" id = "div7text5"> 5 . </a>
-<input type="text" id="textbox5" value="5 .  Slovakia ">
-</DIV>
+		</DIV>
 
-<p><input type="checkbox" id="ckbox8" value="Click here" onClick="toggleShowHide('ckbox8','question8');"></p>
-<DIV ID="question8">
-<INPUT type="button" id="button8" value="Finalize Question" name="finalizeOne" onClick="finalize('question8'); this.disabled=1">
-<br>correct answer:  China <br>
- In December 1941, Japan, which had been at war with _______________since 1937,[3] and aimed to dominate Asia, attacked the United States and European possessions in the Pacific Ocean, quickly conquering much of the region <br>
-<a style="display:none" id = "div8text1"> 1 . </a>
-<input type="text" id="textbox1" value="1 .  ended with the ">
-<a style="display:none" id = "div8text2"> 2 . </a>
-<input type="text" id="textbox2" value="2 .  Slovakia ">
-<a>3 .  China </a>
-<a style="display:none" id = "div8text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  Soviet Union ">
-<a style="display:none" id = "div8text5"> 5 . </a>
-<input type="text" id="textbox5" value="5 .  Japan ">
-</DIV>
+		<p><input type="checkbox" id="ckbox4" value="Click here" onClick="toggleShowHide('ckbox4','question4');"></p>
+		<DIV ID="question4">
+			<INPUT type="button" id="button4" value="Finalize Question" name="finalizeOne" onClick="finalize('question4'); this.disabled=1">
+			<br>
+			<a>correct answer: enzymes</a>
+			<ol>
+				<a> All  ___________________  are made of protein and their production is controlled by DNA </a>
+				<br>
+				<a style="display:none" id = "div4text1">  </a>
+				<input type="text" name="textbox1" value="enzymes">
+				<a style="display:none" id = "div4text2">  </a>
+				<input type="text" name="textbox2" value="reaction">
+				<a style="display:none" id = "div4text3">  </a>
+				<input type="text" name="textbox3" value="substrates">
+				<a style="display:none" id = "div4text4">  </a>
+				<input type="text" name="textbox4" value="Cofactors">
+				<a style="display:none" id = "div4text5">  </a>
+				<input type="text" name="textbox5" value="inhibitor">
+			</ol>
 
-<p><input type="checkbox" id="ckbox9" value="Click here" onClick="toggleShowHide('ckbox9','question9');"></p>
-<DIV ID="question9">
-<INPUT type="button" id="button9" value="Finalize Question" name="finalizeOne" onClick="finalize('question9'); this.disabled=1">
-<br>correct answer:  of the region <br>
- In December 1941, Japan, which had been at war with China since 1937,[3] and aimed to dominate Asia, attacked the United States and European possessions in the Pacific Ocean, quickly conquering much _______________<br>
-<a>1 .  of the region </a>
-<a style="display:none" id = "div9text2"> 2 . </a>
-<input type="text" id="textbox2" value="2 .  Japan ">
-<a style="display:none" id = "div9text3"> 3 . </a>
-<input type="text" id="textbox3" value="3 .  World War ">
-<a style="display:none" id = "div9text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  Poland ">
-<a style="display:none" id = "div9text5"> 5 . </a>
-<input type="text" id="textbox5" value="5 .  ended with the ">
-</DIV>
+		</DIV>
 
-<p><input type="checkbox" id="ckbox10" value="Click here" onClick="toggleShowHide('ckbox10','question10');"></p>
-<DIV ID="question10">
-<INPUT type="button" id="button10" value="Finalize Question" name="finalizeOne" onClick="finalize('question10'); this.disabled=1">
-<br>correct answer:  Japan <br>
- The Axis advance was stopped in 1942 after the defeat of _______________in a series of naval battles and after defeats of European Axis troops in North Africa and, decisively, at Stalingrad <br>
-<a style="display:none" id = "div10text1"> 1 . </a>
-<input type="text" id="textbox1" value="1 .  World War ">
-<a>2 .  Japan </a>
-<a style="display:none" id = "div10text3"> 3 . </a>
-<input type="text" id="textbox3" value="3 .  Soviet Union ">
-<a style="display:none" id = "div10text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  Italy ">
-<a style="display:none" id = "div10text5"> 5 . </a>
-<input type="text" id="textbox5" value="5 .  France ">
-</DIV>
+		<p><input type="checkbox" id="ckbox5" value="Click here" onClick="toggleShowHide('ckbox5','question5');"></p>
+		<DIV ID="question5">
+			<INPUT type="button" id="button5" value="Finalize Question" name="finalizeOne" onClick="finalize('question5'); this.disabled=1">
+			<br>
+			<a>correct answer: enzymes</a>
+			<ol>
+				<a>  ___________________  can be reused many times </a>
+				<br>
+				<a style="display:none" id = "div5text1">  </a>
+				<input type="text" name="textbox1" value="enzymes">
+				<a style="display:none" id = "div5text2">  </a>
+				<input type="text" name="textbox2" value="inhibition">
+				<a style="display:none" id = "div5text3">  </a>
+				<input type="text" name="textbox3" value="substrate">
+				<a style="display:none" id = "div5text4">  </a>
+				<input type="text" name="textbox4" value="enzyme">
+				<a style="display:none" id = "div5text5">  </a>
+				<input type="text" name="textbox5" value="polarity">
+			</ol>
 
-<p><input type="checkbox" id="ckbox11" value="Click here" onClick="toggleShowHide('ckbox11','question11');"></p>
-<DIV ID="question11">
-<INPUT type="button" id="button11" value="Finalize Question" name="finalizeOne" onClick="finalize('question11'); this.disabled=1">
-<br>correct answer:  Soviet Union <br>
- In 1944, the Western Allies invaded France, while the _______________regained all territorial losses and invaded Germany and its allies <br>
-<a style="display:none" id = "div11text1"> 1 . </a>
-<input type="text" id="textbox1" value="1 .  ended with the ">
-<a>2 .  Soviet Union </a>
-<a style="display:none" id = "div11text3"> 3 . </a>
-<input type="text" id="textbox3" value="3 .  Italy ">
-<a style="display:none" id = "div11text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  World War ">
-<a style="display:none" id = "div11text5"> 5 . </a>
-<input type="text" id="textbox5" value="5 .  The war is ">
-</DIV>
+		</DIV>
 
-<p><input type="checkbox" id="ckbox12" value="Click here" onClick="toggleShowHide('ckbox12','question12');"></p>
-<DIV ID="question12">
-<INPUT type="button" id="button12" value="Finalize Question" name="finalizeOne" onClick="finalize('question12'); this.disabled=1">
-<br>correct answer:  Germany <br>
- In 1944, the Western Allies invaded France, while the Soviet Union regained all territorial losses and invaded _______________and its allies <br>
-<a style="display:none" id = "div12text1"> 1 . </a>
-<input type="text" id="textbox1" value="1 .  ended with the ">
-<a style="display:none" id = "div12text2"> 2 . </a>
-<input type="text" id="textbox2" value="2 .  The war is ">
-<a>3 .  Germany </a>
-<a style="display:none" id = "div12text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  France ">
-<a style="display:none" id = "div12text5"> 5 . </a>
-<input type="text" id="textbox5" value="5 .  Italy ">
-</DIV>
+		<p><input type="checkbox" id="ckbox6" value="Click here" onClick="toggleShowHide('ckbox6','question6');"></p>
+		<DIV ID="question6">
+			<INPUT type="button" id="button6" value="Finalize Question" name="finalizeOne" onClick="finalize('question6'); this.disabled=1">
+			<br>
+			<a>correct answer: enzymes</a>
+			<ol>
+				<a> The standard suffix for  ___________________  is "ase </a>
+				<br>
+				<a style="display:none" id = "div6text1">  </a>
+				<input type="text" name="textbox1" value="reaction">
+				<a style="display:none" id = "div6text2">  </a>
+				<input type="text" name="textbox2" value="Cofactors">
+				<a style="display:none" id = "div6text3">  </a>
+				<input type="text" name="textbox3" value="Enzymes">
+				<a style="display:none" id = "div6text4">  </a>
+				<input type="text" name="textbox4" value="catalysts">
+				<a style="display:none" id = "div6text5">  </a>
+				<input type="text" name="textbox5" value="enzymes">
+			</ol>
 
-<p><input type="checkbox" id="ckbox13" value="Click here" onClick="toggleShowHide('ckbox13','question13');"></p>
-<DIV ID="question13">
-<INPUT type="button" id="button13" value="Finalize Question" name="finalizeOne" onClick="finalize('question13'); this.disabled=1">
-<br>correct answer:  ended with the <br>
- The war in Europe _______________capture of Berlin by Soviet and Polish troops and the subsequent German unconditional surrender on 8 May 1945 <br>
-<a style="display:none" id = "div13text1"> 1 . </a>
-<input type="text" id="textbox1" value="1 .  Germany ">
-<a style="display:none" id = "div13text2"> 2 . </a>
-<input type="text" id="textbox2" value="2 .  China ">
-<a style="display:none" id = "div13text3"> 3 . </a>
-<input type="text" id="textbox3" value="3 .  Soviet Union ">
-<a style="display:none" id = "div13text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  Italy ">
-<a>5 .  ended with the </a>
-</DIV>
+		</DIV>
 
-<p><input type="checkbox" id="ckbox14" value="Click here" onClick="toggleShowHide('ckbox14','question14');"></p>
-<DIV ID="question14">
-<INPUT type="button" id="button14" value="Finalize Question" name="finalizeOne" onClick="finalize('question14'); this.disabled=1">
-<br>correct answer:  Japan <br>
- The war in Asia ended on 15 August 1945 with the surrender of _______________<br>
-<a style="display:none" id = "div14text1"> 1 . </a>
-<input type="text" id="textbox1" value="1 .  France ">
-<a>2 .  Japan </a>
-<a style="display:none" id = "div14text3"> 3 . </a>
-<input type="text" id="textbox3" value="3 .  ended with the ">
-<a style="display:none" id = "div14text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  World War ">
-<a style="display:none" id = "div14text5"> 5 . </a>
-<input type="text" id="textbox5" value="5 .  of the region ">
-</DIV>
+		<p><input type="checkbox" id="ckbox7" value="Click here" onClick="toggleShowHide('ckbox7','question7');"></p>
+		<DIV ID="question7">
+			<INPUT type="button" id="button7" value="Finalize Question" name="finalizeOne" onClick="finalize('question7'); this.disabled=1">
+			<br>
+			<a>correct answer: enzymes</a>
+			<ol>
+				<a> The induced fit model describes how  ___________________  work </a>
+				<br>
+				<a style="display:none" id = "div7text1">  </a>
+				<input type="text" name="textbox1" value="reactants">
+				<a style="display:none" id = "div7text2">  </a>
+				<input type="text" name="textbox2" value="substrate">
+				<a style="display:none" id = "div7text3">  </a>
+				<input type="text" name="textbox3" value="Cofactors">
+				<a style="display:none" id = "div7text4">  </a>
+				<input type="text" name="textbox4" value="catalysts">
+				<a style="display:none" id = "div7text5">  </a>
+				<input type="text" name="textbox5" value="enzymes">
+			</ol>
 
-<p><input type="checkbox" id="ckbox15" value="Click here" onClick="toggleShowHide('ckbox15','question15');"></p>
-<DIV ID="question15">
-<INPUT type="button" id="button15" value="Finalize Question" name="finalizeOne" onClick="finalize('question15'); this.disabled=1">
-<br>correct answer:  ended with the <br>
- The war _______________total victory of the Allies over Germany and Japan in 1945 <br>
-<a style="display:none" id = "div15text1"> 1 . </a>
-<input type="text" id="textbox1" value="1 .  Germany ">
-<a style="display:none" id = "div15text2"> 2 . </a>
-<input type="text" id="textbox2" value="2 .  Slovakia ">
-<a style="display:none" id = "div15text3"> 3 . </a>
-<input type="text" id="textbox3" value="3 .  Soviet Union ">
-<a style="display:none" id = "div15text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  and its allies ">
-<a>5 .  ended with the </a>
-</DIV>
+		</DIV>
 
-<p><input type="checkbox" id="ckbox16" value="Click here" onClick="toggleShowHide('ckbox16','question16');"></p>
-<DIV ID="question16">
-<INPUT type="button" id="button16" value="Finalize Question" name="finalizeOne" onClick="finalize('question16'); this.disabled=1">
-<br>correct answer:  Germany <br>
- The war ended with the total victory of the Allies over _______________and Japan in 1945 <br>
-<a style="display:none" id = "div16text1"> 1 . </a>
-<input type="text" id="textbox1" value="1 .  Slovakia ">
-<a style="display:none" id = "div16text2"> 2 . </a>
-<input type="text" id="textbox2" value="2 .  France ">
-<a style="display:none" id = "div16text3"> 3 . </a>
-<input type="text" id="textbox3" value="3 .  Poland ">
-<a style="display:none" id = "div16text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  Italy ">
-<a>5 .  Germany </a>
-</DIV>
+		<p><input type="checkbox" id="ckbox8" value="Click here" onClick="toggleShowHide('ckbox8','question8');"></p>
+		<DIV ID="question8">
+			<INPUT type="button" id="button8" value="Finalize Question" name="finalizeOne" onClick="finalize('question8'); this.disabled=1">
+			<br>
+			<a>correct answer: reactant</a>
+			<ol>
+				<a> Each enzyme has active sites that are specific in shape, size, or polarity to the particular  ___________________  </a>
+				<br>
+				<a style="display:none" id = "div8text1">  </a>
+				<input type="text" name="textbox1" value="reactants">
+				<a style="display:none" id = "div8text2">  </a>
+				<input type="text" name="textbox2" value="reactant">
+				<a style="display:none" id = "div8text3">  </a>
+				<input type="text" name="textbox3" value="enzymes">
+				<a style="display:none" id = "div8text4">  </a>
+				<input type="text" name="textbox4" value="saturation">
+				<a style="display:none" id = "div8text5">  </a>
+				<input type="text" name="textbox5" value="enzyme">
+			</ol>
 
-<p><input type="checkbox" id="ckbox17" value="Click here" onClick="toggleShowHide('ckbox17','question17');"></p>
-<DIV ID="question17">
-<INPUT type="button" id="button17" value="Finalize Question" name="finalizeOne" onClick="finalize('question17'); this.disabled=1">
-<br>correct answer:  Japan <br>
- The war ended with the total victory of the Allies over Germany and _______________in 1945 <br>
-<a style="display:none" id = "div17text1"> 1 . </a>
-<input type="text" id="textbox1" value="1 .  World War ">
-<a style="display:none" id = "div17text2"> 2 . </a>
-<input type="text" id="textbox2" value="2 .  Slovakia ">
-<a style="display:none" id = "div17text3"> 3 . </a>
-<input type="text" id="textbox3" value="3 .  ended with the ">
-<a style="display:none" id = "div17text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  Poland ">
-<a>5 .  Japan </a>
-</DIV>
+		</DIV>
 
-<p><input type="checkbox" id="ckbox18" value="Click here" onClick="toggleShowHide('ckbox18','question18');"></p>
-<DIV ID="question18">
-<INPUT type="button" id="button18" value="Finalize Question" name="finalizeOne" onClick="finalize('question18'); this.disabled=1">
-<br>correct answer:  World War <br>
- _______________II altered the political alignment and social structure of the world <br>
-<a style="display:none" id = "div18text1"> 1 . </a>
-<input type="text" id="textbox1" value="1 .  France ">
-<a style="display:none" id = "div18text2"> 2 . </a>
-<input type="text" id="textbox2" value="2 .  China ">
-<a>3 .  World War </a>
-<a style="display:none" id = "div18text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  and its allies ">
-<a style="display:none" id = "div18text5"> 5 . </a>
-<input type="text" id="textbox5" value="5 .  of the region ">
-</DIV>
+		<p><input type="checkbox" id="ckbox9" value="Click here" onClick="toggleShowHide('ckbox9','question9');"></p>
+		<DIV ID="question9">
+			<INPUT type="button" id="button9" value="Finalize Question" name="finalizeOne" onClick="finalize('question9'); this.disabled=1">
+			<br>
+			<a>correct answer: polarity</a>
+			<ol>
+				<a> Each enzyme has active sites that are specific in shape, size, or  ___________________  to the particular reactant </a>
+				<br>
+				<a style="display:none" id = "div9text1">  </a>
+				<input type="text" name="textbox1" value="polarity">
+				<a style="display:none" id = "div9text2">  </a>
+				<input type="text" name="textbox2" value="reactants">
+				<a style="display:none" id = "div9text3">  </a>
+				<input type="text" name="textbox3" value="Cofactors">
+				<a style="display:none" id = "div9text4">  </a>
+				<input type="text" name="textbox4" value="inhibitor">
+				<a style="display:none" id = "div9text5">  </a>
+				<input type="text" name="textbox5" value="cofactors">
+			</ol>
 
-<p><input type="checkbox" id="ckbox19" value="Click here" onClick="toggleShowHide('ckbox19','question19');"></p>
-<DIV ID="question19">
-<INPUT type="button" id="button19" value="Finalize Question" name="finalizeOne" onClick="finalize('question19'); this.disabled=1">
-<br>correct answer:  Soviet Union <br>
- The _______________and the United States emerged as rival superpowers, setting the stage for the Cold War, which would last for the next 46 years <br>
-<a>1 .  Soviet Union </a>
-<a style="display:none" id = "div19text2"> 2 . </a>
-<input type="text" id="textbox2" value="2 .  France ">
-<a style="display:none" id = "div19text3"> 3 . </a>
-<input type="text" id="textbox3" value="3 .  World War ">
-<a style="display:none" id = "div19text4"> 4 . </a>
-<input type="text" id="textbox4" value="4 .  Germany ">
-<a style="display:none" id = "div19text5"> 5 . </a>
-<input type="text" id="textbox5" value="5 .  Poland ">
-</DIV>
+		</DIV>
 
-</body>
+		<p><input type="checkbox" id="ckbox10" value="Click here" onClick="toggleShowHide('ckbox10','question10');"></p>
+		<DIV ID="question10">
+			<INPUT type="button" id="button10" value="Finalize Question" name="finalizeOne" onClick="finalize('question10'); this.disabled=1">
+			<br>
+			<a>correct answer: enzymes</a>
+			<ol>
+				<a> induced fit Many factors influence enzyme function: * Different  ___________________  function better at different pHs </a>
+				<br>
+				<a style="display:none" id = "div10text1">  </a>
+				<input type="text" name="textbox1" value="reactants">
+				<a style="display:none" id = "div10text2">  </a>
+				<input type="text" name="textbox2" value="enzymes">
+				<a style="display:none" id = "div10text3">  </a>
+				<input type="text" name="textbox3" value="polarity">
+				<a style="display:none" id = "div10text4">  </a>
+				<input type="text" name="textbox4" value="vitamins">
+				<a style="display:none" id = "div10text5">  </a>
+				<input type="text" name="textbox5" value="reaction">
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox11" value="Click here" onClick="toggleShowHide('ckbox11','question11');"></p>
+		<DIV ID="question11">
+			<INPUT type="button" id="button11" value="Finalize Question" name="finalizeOne" onClick="finalize('question11'); this.disabled=1">
+			<br>
+			<a>correct answer: enzymes</a>
+			<ol>
+				<a>  ___________________  in your stomach may prefer an acidic environment with a low pH while  ___________________  elsewhere may not </a>
+				<br>
+				<a style="display:none" id = "div11text1">  </a>
+				<input type="text" name="textbox1" value="reactant">
+				<a style="display:none" id = "div11text2">  </a>
+				<input type="text" name="textbox2" value="Enzymes">
+				<a style="display:none" id = "div11text3">  </a>
+				<input type="text" name="textbox3" value="enzymes">
+				<a style="display:none" id = "div11text4">  </a>
+				<input type="text" name="textbox4" value="inhibition">
+				<a style="display:none" id = "div11text5">  </a>
+				<input type="text" name="textbox5" value="saturation">
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox12" value="Click here" onClick="toggleShowHide('ckbox12','question12');"></p>
+		<DIV ID="question12">
+			<INPUT type="button" id="button12" value="Finalize Question" name="finalizeOne" onClick="finalize('question12'); this.disabled=1">
+			<br>
+			<a>correct answer: denatured</a>
+			<ol>
+				<a> Above 104 degrees fahreinheit, enzymes become  ___________________  and can no longer catalyze reactions </a>
+				<br>
+				<a style="display:none" id = "div12text1">  </a>
+				<input type="text" name="textbox1" value="denatured">
+				<a style="display:none" id = "div12text2">  </a>
+				<input type="text" name="textbox2" value="denatures">
+				<a style="display:none" id = "div12text3">  </a>
+				<input type="text" name="textbox3" value="noncompetitive">
+				<a style="display:none" id = "div12text4">  </a>
+				<input type="text" name="textbox4" value="Irreversible">
+				<a style="display:none" id = "div12text5">  </a>
+				<input type="text" name="textbox5" value="acidic">
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox13" value="Click here" onClick="toggleShowHide('ckbox13','question13');"></p>
+		<DIV ID="question13">
+			<INPUT type="button" id="button13" value="Finalize Question" name="finalizeOne" onClick="finalize('question13'); this.disabled=1">
+			<br>
+			<a>correct answer: enzymes</a>
+			<ol>
+				<a> Above 104 degrees fahreinheit,  ___________________  become denatured and can no longer catalyze reactions </a>
+				<br>
+				<a style="display:none" id = "div13text1">  </a>
+				<input type="text" name="textbox1" value="reactants">
+				<a style="display:none" id = "div13text2">  </a>
+				<input type="text" name="textbox2" value="catalysts">
+				<a style="display:none" id = "div13text3">  </a>
+				<input type="text" name="textbox3" value="substrates">
+				<a style="display:none" id = "div13text4">  </a>
+				<input type="text" name="textbox4" value="vitamins">
+				<a style="display:none" id = "div13text5">  </a>
+				<input type="text" name="textbox5" value="enzymes">
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox14" value="Click here" onClick="toggleShowHide('ckbox14','question14');"></p>
+		<DIV ID="question14">
+			<INPUT type="button" id="button14" value="Finalize Question" name="finalizeOne" onClick="finalize('question14'); this.disabled=1">
+			<br>
+			<a>correct answer: denatures</a>
+			<ol>
+				<a> * Irreversible inhibition occurs when the inhibitor added  ___________________  or destroys the enzyme </a>
+				<br>
+				<a style="display:none" id = "div14text1">  </a>
+				<input type="text" name="textbox1" value="lowering">
+				<a style="display:none" id = "div14text2">  </a>
+				<input type="text" name="textbox2" value="catalyze">
+				<a style="display:none" id = "div14text3">  </a>
+				<input type="text" name="textbox3" value="binds">
+				<a style="display:none" id = "div14text4">  </a>
+				<input type="text" name="textbox4" value="denatures">
+				<a style="display:none" id = "div14text5">  </a>
+				<input type="text" name="textbox5" value="denatured">
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox15" value="Click here" onClick="toggleShowHide('ckbox15','question15');"></p>
+		<DIV ID="question15">
+			<INPUT type="button" id="button15" value="Finalize Question" name="finalizeOne" onClick="finalize('question15'); this.disabled=1">
+			<br>
+			<a>correct answer: Irreversible</a>
+			<ol>
+				<a> *  ___________________  inhibition occurs when the inhibitor added denatures or destroys the enzyme </a>
+				<br>
+				<a style="display:none" id = "div15text1">  </a>
+				<input type="text" name="textbox1" value="Reversible">
+				<a style="display:none" id = "div15text2">  </a>
+				<input type="text" name="textbox2" value="Irreversible">
+				<a style="display:none" id = "div15text3">  </a>
+				<input type="text" name="textbox3" value="noncompetitive">
+				<a style="display:none" id = "div15text4">  </a>
+				<input type="text" name="textbox4" value="allosteric">
+				<a style="display:none" id = "div15text5">  </a>
+				<input type="text" name="textbox5" value="reactions">
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox16" value="Click here" onClick="toggleShowHide('ckbox16','question16');"></p>
+		<DIV ID="question16">
+			<INPUT type="button" id="button16" value="Finalize Question" name="finalizeOne" onClick="finalize('question16'); this.disabled=1">
+			<br>
+			<a>correct answer: inhibition</a>
+			<ol>
+				<a> * Irreversible  ___________________  occurs when the inhibitor added denatures or destroys the enzyme </a>
+				<br>
+				<a style="display:none" id = "div16text1">  </a>
+				<input type="text" name="textbox1" value="inhibition">
+				<a style="display:none" id = "div16text2">  </a>
+				<input type="text" name="textbox2" value="vitamins">
+				<a style="display:none" id = "div16text3">  </a>
+				<input type="text" name="textbox3" value="cofactors">
+				<a style="display:none" id = "div16text4">  </a>
+				<input type="text" name="textbox4" value="substrate">
+				<a style="display:none" id = "div16text5">  </a>
+				<input type="text" name="textbox5" value="lowering">
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox17" value="Click here" onClick="toggleShowHide('ckbox17','question17');"></p>
+		<DIV ID="question17">
+			<INPUT type="button" id="button17" value="Finalize Question" name="finalizeOne" onClick="finalize('question17'); this.disabled=1">
+			<br>
+			<a>correct answer: enzymes</a>
+			<ol>
+				<a> Addition of more substrate into the system will have no effect on reaction speed since the  ___________________  are not functioning </a>
+				<br>
+				<a style="display:none" id = "div17text1">  </a>
+				<input type="text" name="textbox1" value="enzymes">
+				<a style="display:none" id = "div17text2">  </a>
+				<input type="text" name="textbox2" value="reactions">
+				<a style="display:none" id = "div17text3">  </a>
+				<input type="text" name="textbox3" value="binds">
+				<a style="display:none" id = "div17text4">  </a>
+				<input type="text" name="textbox4" value="reactants">
+				<a style="display:none" id = "div17text5">  </a>
+				<input type="text" name="textbox5" value="Cofactors">
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox18" value="Click here" onClick="toggleShowHide('ckbox18','question18');"></p>
+		<DIV ID="question18">
+			<INPUT type="button" id="button18" value="Finalize Question" name="finalizeOne" onClick="finalize('question18'); this.disabled=1">
+			<br>
+			<a>correct answer: enzymes</a>
+			<ol>
+				<a> Similarly, removal of the inhibitor will have no effect on the reaction speed since the  ___________________  have already been destroyed </a>
+				<br>
+				<a style="display:none" id = "div18text1">  </a>
+				<input type="text" name="textbox1" value="enzymes">
+				<a style="display:none" id = "div18text2">  </a>
+				<input type="text" name="textbox2" value="reactant">
+				<a style="display:none" id = "div18text3">  </a>
+				<input type="text" name="textbox3" value="vitamins">
+				<a style="display:none" id = "div18text4">  </a>
+				<input type="text" name="textbox4" value="Enzymes">
+				<a style="display:none" id = "div18text5">  </a>
+				<input type="text" name="textbox5" value="inhibitor">
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox19" value="Click here" onClick="toggleShowHide('ckbox19','question19');"></p>
+		<DIV ID="question19">
+			<INPUT type="button" id="button19" value="Finalize Question" name="finalizeOne" onClick="finalize('question19'); this.disabled=1">
+			<br>
+			<a>correct answer: noncompetitive</a>
+			<ol>
+				<a> * Reversible inhibition can be competitive or  ___________________  </a>
+				<br>
+				<a style="display:none" id = "div19text1">  </a>
+				<input type="text" name="textbox1" value="Irreversible">
+				<a style="display:none" id = "div19text2">  </a>
+				<input type="text" name="textbox2" value="lowering">
+				<a style="display:none" id = "div19text3">  </a>
+				<input type="text" name="textbox3" value="Reversible">
+				<a style="display:none" id = "div19text4">  </a>
+				<input type="text" name="textbox4" value="noncompetitive">
+				<a style="display:none" id = "div19text5">  </a>
+				<input type="text" name="textbox5" value="induced">
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox20" value="Click here" onClick="toggleShowHide('ckbox20','question20');"></p>
+		<DIV ID="question20">
+			<INPUT type="button" id="button20" value="Finalize Question" name="finalizeOne" onClick="finalize('question20'); this.disabled=1">
+			<br>
+			<a>correct answer: inhibition</a>
+			<ol>
+				<a> * Reversible  ___________________  can be competitive or noncompetitive </a>
+				<br>
+				<a style="display:none" id = "div20text1">  </a>
+				<input type="text" name="textbox1" value="vitamins">
+				<a style="display:none" id = "div20text2">  </a>
+				<input type="text" name="textbox2" value="substrates">
+				<a style="display:none" id = "div20text3">  </a>
+				<input type="text" name="textbox3" value="saturation">
+				<a style="display:none" id = "div20text4">  </a>
+				<input type="text" name="textbox4" value="inhibition">
+				<a style="display:none" id = "div20text5">  </a>
+				<input type="text" name="textbox5" value="Cofactors">
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox21" value="Click here" onClick="toggleShowHide('ckbox21','question21');"></p>
+		<DIV ID="question21">
+			<INPUT type="button" id="button21" value="Finalize Question" name="finalizeOne" onClick="finalize('question21'); this.disabled=1">
+			<br>
+			<a>correct answer: inhibition</a>
+			<ol>
+				<a> In competitive  ___________________ , the inhibitor competes with the substrate for the same binding site on the enzyme </a>
+				<br>
+				<a style="display:none" id = "div21text1">  </a>
+				<input type="text" name="textbox1" value="inhibition">
+				<a style="display:none" id = "div21text2">  </a>
+				<input type="text" name="textbox2" value="Enzymes">
+				<a style="display:none" id = "div21text3">  </a>
+				<input type="text" name="textbox3" value="enzymes">
+				<a style="display:none" id = "div21text4">  </a>
+				<input type="text" name="textbox4" value="cofactors">
+				<a style="display:none" id = "div21text5">  </a>
+				<input type="text" name="textbox5" value="vitamins">
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox22" value="Click here" onClick="toggleShowHide('ckbox22','question22');"></p>
+		<DIV ID="question22">
+			<INPUT type="button" id="button22" value="Finalize Question" name="finalizeOne" onClick="finalize('question22'); this.disabled=1">
+			<br>
+			<a>correct answer: noncompetitive</a>
+			<ol>
+				<a> In  ___________________  inhibition the inhibitor temporarily binds to a site other than the binding site </a>
+				<br>
+				<a style="display:none" id = "div22text1">  </a>
+				<input type="text" name="textbox1" value="denatured">
+				<a style="display:none" id = "div22text2">  </a>
+				<input type="text" name="textbox2" value="induced">
+				<a style="display:none" id = "div22text3">  </a>
+				<input type="text" name="textbox3" value="acidic">
+				<a style="display:none" id = "div22text4">  </a>
+				<input type="text" name="textbox4" value="binding">
+				<a style="display:none" id = "div22text5">  </a>
+				<input type="text" name="textbox5" value="noncompetitive">
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox23" value="Click here" onClick="toggleShowHide('ckbox23','question23');"></p>
+		<DIV ID="question23">
+			<INPUT type="button" id="button23" value="Finalize Question" name="finalizeOne" onClick="finalize('question23'); this.disabled=1">
+			<br>
+			<a>correct answer: inhibition</a>
+			<ol>
+				<a> In noncompetitive  ___________________  the inhibitor temporarily binds to a site other than the binding site </a>
+				<br>
+				<a style="display:none" id = "div23text1">  </a>
+				<input type="text" name="textbox1" value="substrate">
+				<a style="display:none" id = "div23text2">  </a>
+				<input type="text" name="textbox2" value="saturation">
+				<a style="display:none" id = "div23text3">  </a>
+				<input type="text" name="textbox3" value="reactants">
+				<a style="display:none" id = "div23text4">  </a>
+				<input type="text" name="textbox4" value="inhibition">
+				<a style="display:none" id = "div23text5">  </a>
+				<input type="text" name="textbox5" value="binds">
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox24" value="Click here" onClick="toggleShowHide('ckbox24','question24');"></p>
+		<DIV ID="question24">
+			<INPUT type="button" id="button24" value="Finalize Question" name="finalizeOne" onClick="finalize('question24'); this.disabled=1">
+			<br>
+			<a>correct answer: enzymes</a>
+			<ol>
+				<a> The addition of more  ___________________  into this system would speed up the reaction slightly </a>
+				<br>
+				<a style="display:none" id = "div24text1">  </a>
+				<input type="text" name="textbox1" value="reactant">
+				<a style="display:none" id = "div24text2">  </a>
+				<input type="text" name="textbox2" value="lowering">
+				<a style="display:none" id = "div24text3">  </a>
+				<input type="text" name="textbox3" value="enzymes">
+				<a style="display:none" id = "div24text4">  </a>
+				<input type="text" name="textbox4" value="binding">
+				<a style="display:none" id = "div24text5">  </a>
+				<input type="text" name="textbox5" value="polarity">
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox25" value="Click here" onClick="toggleShowHide('ckbox25','question25');"></p>
+		<DIV ID="question25">
+			<INPUT type="button" id="button25" value="Finalize Question" name="finalizeOne" onClick="finalize('question25'); this.disabled=1">
+			<br>
+			<a>correct answer: enzymes</a>
+			<ol>
+				<a> Along with  ___________________ , coenzymes and cofactors also influence reactions </a>
+				<br>
+				<a style="display:none" id = "div25text1">  </a>
+				<input type="text" name="textbox1" value="polarity">
+				<a style="display:none" id = "div25text2">  </a>
+				<input type="text" name="textbox2" value="binds">
+				<a style="display:none" id = "div25text3">  </a>
+				<input type="text" name="textbox3" value="cofactors">
+				<a style="display:none" id = "div25text4">  </a>
+				<input type="text" name="textbox4" value="substrates">
+				<a style="display:none" id = "div25text5">  </a>
+				<input type="text" name="textbox5" value="enzymes">
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox26" value="Click here" onClick="toggleShowHide('ckbox26','question26');"></p>
+		<DIV ID="question26">
+			<INPUT type="button" id="button26" value="Finalize Question" name="finalizeOne" onClick="finalize('question26'); this.disabled=1">
+			<br>
+			<a>correct answer: cofactors</a>
+			<ol>
+				<a> Along with enzymes, coenzymes and  ___________________  also influence reactions </a>
+				<br>
+				<a style="display:none" id = "div26text1">  </a>
+				<input type="text" name="textbox1" value="reactant">
+				<a style="display:none" id = "div26text2">  </a>
+				<input type="text" name="textbox2" value="catalysts">
+				<a style="display:none" id = "div26text3">  </a>
+				<input type="text" name="textbox3" value="cofactors">
+				<a style="display:none" id = "div26text4">  </a>
+				<input type="text" name="textbox4" value="inhibitor">
+				<a style="display:none" id = "div26text5">  </a>
+				<input type="text" name="textbox5" value="Cofactors">
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox27" value="Click here" onClick="toggleShowHide('ckbox27','question27');"></p>
+		<DIV ID="question27">
+			<INPUT type="button" id="button27" value="Finalize Question" name="finalizeOne" onClick="finalize('question27'); this.disabled=1">
+			<br>
+			<a>correct answer: cofactors</a>
+			<ol>
+				<a>  ___________________  are minerals </a>
+				<br>
+				<a style="display:none" id = "div27text1">  </a>
+				<input type="text" name="textbox1" value="catalysts">
+				<a style="display:none" id = "div27text2">  </a>
+				<input type="text" name="textbox2" value="inhibitor">
+				<a style="display:none" id = "div27text3">  </a>
+				<input type="text" name="textbox3" value="inhibition">
+				<a style="display:none" id = "div27text4">  </a>
+				<input type="text" name="textbox4" value="enzymes">
+				<a style="display:none" id = "div27text5">  </a>
+				<input type="text" name="textbox5" value="cofactors">
+			</ol>
+	</body>
 </html>
