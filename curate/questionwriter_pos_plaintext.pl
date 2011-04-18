@@ -304,9 +304,8 @@ foreach my $file (@qfile)
 	push(@fileregex2, $subfileregex2);
 	push(@fileregex3, $subfileregex3);
 	push(@fileregex4, $subfileregex4);
-	#push will not apply the desired effect for adding hash/array to array, so instead we add references
-	$fileans[$#fileans + 1] = \%subfileans;
-	$filelines[$#filelines + 1] = \@subfilelines;
+	push(@fileans, \%subfileans);
+	push(@filelines, \@subfilelines);
 }
 
 #foreach sentence, create the requested/relevant question
@@ -457,30 +456,30 @@ sub years
 				{
 					if($match>99)
 					{
-						print OUT "$j\. ".$post[$j-1]."\n";
+						print OUT "$j \. ".$post[$j-1]."\n";
 					}
 					elsif($post[$j-1]<0) #note that the conditions are exclusive
 					{ 
-						print OUT "$j\. ".$post[$j-1]." B.C.\n";
+						print OUT "$j \. ".$post[$j-1]." B.C.\n";
 					}
 					else
 					{
-						print OUT "$j\. ".$post[$j-1]." A.D.\n";
+						print OUT "$j \. ".$post[$j-1]." A.D.\n";
 					}
 				}
 				else	#print the correct answer
 				{
 					if($match>99)
 					{
-						print OUT "$j\. ".$post[$j-1]."\n";
+						print OUT "$j \. ".$post[$j-1]."\n";
 					}
 					elsif($post[$j-1]<0) #note that the conditions are exclusive
 					{ 
-						print OUT "$j\. ".((-1)*$post[$j-1])." B\.C\.\n";
+						print OUT "$j \. ".((-1)*$post[$j-1])." B\.C\.\n";
 					}
 					else
 					{
-						print OUT "$j\. ".$post[$j-1]." A\.D\.\n";
+						print OUT "$j \. ".$post[$j-1]." A\.D\.\n";
 					}
 				}
 			}
@@ -548,7 +547,7 @@ sub qword
 		{
 			if($j==$correct)
 			{
-					print OUT "$j\. $qword\n";
+					print OUT "$j \. $qword\n";
 			}
 			else
 			{
@@ -580,7 +579,7 @@ sub qword
 				my $toprint = $topwords[$random];
 				$toprint =~ s/\b(\w+)\b/ucfirst($1)/ge if $nt_capitalize; 
 
-				print OUT "$j\. ".$toprint."\n";
+				print OUT "$j \. ".$toprint."\n";
 
 			}			
 		}
@@ -696,11 +695,11 @@ sub qfile
 				{
 					if($answers[$i-1] =~ $match)
 					{
-						print OUT "$i\. ". $match."\n";
+						print OUT "$i \. ". $match."\n";
 					}			
 					else
 					{
-						print OUT "$i\. ". $answers[$i-1]."\n";	#text box
+						print OUT "$i \. ". $answers[$i-1]."\n";	#text box
 					}
 				}
 				print OUT "\n\n";
@@ -769,7 +768,7 @@ sub default
 			{
 				if($j==$correct) #print the correct answer
 				{
-					print OUT "$j\. $topwords[$i]\n";
+					print OUT "$j \. $topwords[$i]\n";
 				}
 				else
 				{
@@ -798,7 +797,7 @@ sub default
 					my $toprint = $topwords[$random];
 					$toprint =~ s/\b(\w+)\b/ucfirst($1)/ge if $nt_capitalize; 
 
-					print OUT "$j\. ".$toprint."\n";	#text box
+					print OUT "$j \. ".$toprint."\n";	#text box
 				}
 			}
 			print OUT "\n\n"; 
