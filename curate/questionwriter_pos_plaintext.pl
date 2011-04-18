@@ -9,7 +9,6 @@ use List::MoreUtils qw(uniq);
 ## creates questions, outputs to an html doc
 
 #TODO Months, what about ? and ! to end sentences?
-#TODO can explicitly request default behavior
 #TODO make qfile and Countries non-case sensitive
 
 die "wrong number of parameters from comand line \n
@@ -32,7 +31,8 @@ shift(@ARGV);	#we have to pop off the first @ARGV element because otherwise it w
 #flags for what "mode" we will be in.
 #qword will call sub &qword and will write questions only about a specific word
 #years tells us whether to target numbers in the text, and to treat them as years when near a time preposition
-#countries will call sub &countries and will write questions about countries
+#countries will call sub &qfile with the list of countries
+#qfile will ask questions about words or phrases in a given file (see format and restrictions above)
 #we then get these options from the command line input.
 my $default; my $qword; my $years; my $countries; my $qfile;
 GetOptions ("default"=>\$default, "qword=s" => \$qword, "years" => \$years, "countries" => \$countries, "qfile=s" => \$qfile) or die "Whups, got options we don't recognize!";
@@ -40,38 +40,29 @@ GetOptions ("default"=>\$default, "qword=s" => \$qword, "years" => \$years, "cou
 
 #######MAIN#######
 
-#open dicitonary files don't use if ($years) or if ($countries)
+#open dicitonary files don't use if ($years) | ($countries) ($qfile)
 open(DICTIONARY, "<index_regex2.idx") or die "Can't open dicitonary file index_regex2.idx\n";
 my @dict = <DICTIONARY>;
 
 #open an output file with html format
 open(OUT, ">uncurated_questions.txt") or die "Can't open file to write to";
 
-
-#TODO print quiz button #call it something else because print is associated with printer?
-#print OUT "<input type=\"button\" id=\"PrintQuiz\" value=\"Print Quiz\" name=\"PrintQuiz\" onClick=\"printQuiz(); this\.disabled=1\">\n"; 
-
-
+my @file = <INFILE>; #the file you are making quizes out of (different file than the rest of the file names refer to)
 my %hdict=(); #TODO
 my %localfreq=(); #key is the word and the value is the local freqency (number of times apearing in the document)
 my @topwords=(); #list of the highest relative frequency words in the document (#TODO)
-my @countries=(); #list of countries (one to four words long)
-my @qfilelines=(); #list of desired answers for the qfile input (one to four words long)
-my %countryans=(); #group of answers that are also countries found in the document
-my %qfileans=(); #group of answers that are relevant to the desired options
-my @file = <INFILE>; #the file you are making quizes on
+my @filelines=(); #list of a list of desired answers (one to four words long) of each important-word bearing file
+my @fileans=(); #list of groups of answers that are relevant to the targeted words/phrases of each important-word bearing file
+my @qfile=(); #the list of files that contain words/phrases that will have questions targeted towards (important-word bearing files)
 my $total=0; #TODO ?
 my @line = (); #used for parsing the dictionary/determining localfreq 
-#The following regex's are in the form:  ( word )|( word )|... where the word is sometimes a phrase
+
+#The following regex's are in the form:   word | word |... where the word is sometimes a phrase
 my $timeprepregex=""; #for determining if the sentence could contain a date
-my $countriesregex=""; #regex of all lines in the country list file
-my $countriesregex2=""; #regex of two word lines in the country list file
-my $countriesregex3=""; #regex of three word lines in the country list file
-my $countriesregex4=""; #regex of four word lines in the country list file
-my $qfileregex=""; #regex of all lines in qfile
-my $qfileregex2=""; #regex of two word lines in qfile
-my $qfileregex3=""; #regex of three word lines in qfile
-my $qfileregex4=""; #regex of four word lines in qfile
+my @fileregex=(); #list of regex's of all lines in each important-word bearing file
+my @fileregex2=(); #list of regex's of two word lines in each important-word bearing file
+my @fileregex3=(); #list of regex's of three word lines in each important-word bearing file
+my @fileregex4=(); #list of regex's of four word lines in each important-word bearing file
 
 #read each line from the dictionary file, then put into a hash
 # whose key is the word, and whose value is a two-elt array
@@ -163,224 +154,162 @@ my @sentences = split(/\."?\s+/, $wholefile); #split into sentences
 foreach (@sentences) {
 	$_ = " ".$_." ";  #allow the first and last words in sentences to be in the regex format
 }
+#read file into sentences
+my $wholefile = "";
+foreach (@file)
+{
+	$_ =~ s/\r|\n//g; #the new chomp
+	$wholefile.=$_." ";
+}
 
-#breaks up the list of countrys and finds relevant answers
+my @sentences = split(/\."?\s+/, $wholefile); #split into sentences
+
+#to be used for more relevant answers, only used with some command line args
+my @words;			#all the words in the file
+my @two_words;		#sequences of two words apeice, delimited by sentence
+my @three_words;	#sequences of three words apeice, delimited by sentence
+my @four_words;		#sequences of four words apeice, delimited by sentence
+
+#compose a list of single words in the file and lists of every two, three and four word phrases (delimited by sentence)
+if($countries || $qfile) 
+{
+	foreach (@sentences) 
+	{
+		$_ = " ".$_." ";  #allow the first and last words in sentences to be in the regex format
+	}
+	
+	#read the file into words
+	foreach my $sentence (@sentences)
+	{
+		my @temparray=();		#words in current sentence
+		@temparray = split(/\s+/, $sentence);
+		
+		for my $i (0..$#temparray) #trim all empty strings in the sentence
+		{
+			if($temparray[$i] eq "") 
+			{
+				splice(@temparray, $i, 1);
+			}
+		}	
+		
+		foreach my $i (0..$#temparray)
+		{
+			push(@words, " ".$temparray[$i]." ");
+
+			#make the mulitple-word-per-index arrays
+			if($i<=$#temparray-1)
+			{
+				push(@two_words, " ".$temparray[$i]." ".$temparray[$i+1]." ");
+			}
+			if($i<=$#temparray-2)
+			{
+				push(@three_words, " ".$temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]." ");
+			}
+			if($i<=$#temparray-3)
+			{
+				push(@four_words, " ".$temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]." ".$temparray[$i+3]." ");				
+			}
+		}
+	}
+}
+
+#add the country_list.txt to the @qfile
 if ($countries)
 {
-	#use only if $countries
-	open(COUNTRIES, "<country_list.txt") or die "Can't find country dictionary country_list.txt\n";
-	
-	#do this only if --countries
-	
-	#read in list of countries
-	foreach my $place (<COUNTRIES>)
-	{
-		$place =~ s/\r|\n//g;
-		push(@countries, $place);
-		$countriesregex.=" ".$place." \|";	#this way they can be a regex of "or" expressions
-												#like ( Soviet Union )|( Peru )|...
-		my @tokenized_country = split(/\s/, $place);
-		$countriesregex2.=" ".$place." \|" if($#tokenized_country==1);
-		$countriesregex3.=" ".$place." \|" if($#tokenized_country==2);
-		$countriesregex4.=" ".$place." \|" if($#tokenized_country==3);
-	}
-	chop($countriesregex); 				#to take last "|" off
-	chop($countriesregex2); 			#to take last "|" off
-	chop($countriesregex3); 			#to take last "|" off
-	chop($countriesregex4); 			#to take last "|" off
-	close(COUNTRIES);
-
-	#to be used for more relevant answers
-	my @words;	#all the words in the file
-	my @two_words;	#sequences of two words apeice, delimited by sentence
-	my @three_words;	#sequences of three words apeice, delimited by sentence
-	my @four_words;		#sequences of four words apeice, delimited by sentence
-	#read the file into words
-	foreach my $sentence (@sentences)
-	{
-		my @temparray=();		#words in current sentence
-		@temparray = split(/\s+/, $sentence);
-
-		for my $i (0..$#temparray) #trim all empty strings in the sentence
-		{
-			if($temparray[$i] eq "") 
-			{
-				splice(@temparray, $i, 1);
-			}
-		}	
-		
-		foreach my $i (0..$#temparray)
-		{
-			push(@words, " ".$temparray[$i]." ");
-
-			#make the mulitple-word-per-index arrays
-			if($i<=$#temparray-1)
-			{
-				push(@two_words, " ".$temparray[$i]." ".$temparray[$i+1]." ");
-			}
-			if($i<=$#temparray-2)
-			{
-				push(@three_words, " ".$temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]." ");
-			}
-			if($i<=$#temparray-3)
-			{
-				push(@four_words, " ".$temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]." ".$temparray[$i+3]." ");				
-			}
-		}
-	}
-
-	#for each word in the file, check if it's a country
-	foreach my $word (@words)
-	{
-		$word =~ s/[^A-Za-z\s]//g;
-		if ($word =~ /$countriesregex/i)
-		{
-			$countryans{$word}++;
-		}
-	}
-
-	#for each two words in the file, check if it's a country
-	foreach my $two_word (@two_words)
-	{
-		$two_word =~ s/[^A-Za-z\s]//g;
-		if ($two_word =~ /$countriesregex2/i) 
-		{
-			$countryans{$two_word}++;
-		}
-	}
-
-	#for each three words in the file, check if it's a country
-	foreach my $three_word (@three_words)
-	{
-		$three_word =~ s/[^A-Za-z\s]//g;
-		if ($three_word =~ /$countriesregex3/i) 
-		{
-			$countryans{$three_word}++;
-		}
-	}
-
-	#for each four words in the file, check if it's a country
-	foreach my $four_word (@four_words)
-	{
-		$four_word =~ s/[^A-Za-z\s]//g;
-		if ($four_word =~ /$countriesregex4/i) 
-		{
-			$countryans{$four_word}++;
-		}
-	}
+	push(@qfile, "country_list.txt");
 }
 
-#breaks up the list given by qfile and finds relevant answers
 if ($qfile)
 {
-	#use only if $qfile
-	open(QFILE, "<".$qfile) or die "Can't find ".$qfile." Confirm that this is the correct path to the file.\n";
-	
-	#do this only if --qfile=<file>
-	
-	#read in list of desired question topics
-	foreach my $line (<QFILE>)
-	{
-		$line =~ s/\r|\n//g;
-		push(@qfilelines, $line);
-		$qfileregex.=" ".$line." \|";	#this way they can be a regex of "or" expressions
-											#like ( Soviet Union )|( Peru )|...
-		my @tokenized_line = split(/\s/, $line);
-		$qfileregex2.=" ".$line." \|" if($#tokenized_line==1);
-		$qfileregex3.=" ".$line." \|" if($#tokenized_line==2);
-		$qfileregex4.=" ".$line." \|" if($#tokenized_line==3);
-	}
-	chop($qfileregex); 				#to take last "|" off
-	chop($qfileregex2); 			#to take last "|" off
-	chop($qfileregex3); 			#to take last "|" off
-	chop($qfileregex4); 			#to take last "|" off
-	close(QFILE);
-	
-	#to be used for more relevant answers
-	my @words;	#all the words in the file
-	my @two_words;	#sequences of two words apeice, delimited by sentence
-	my @three_words;	#sequences of three words apeice, delimited by sentence
-	my @four_words;		#sequences of four words apeice, delimited by sentence
-	#read the file into words
-	foreach my $sentence (@sentences)
-	{
-		my @temparray=();		#words in current sentence
-		@temparray = split(/\s+/, $sentence);
-		
-		for my $i (0..$#temparray) #trim all empty strings in the sentence
-		{
-			if($temparray[$i] eq "") 
-			{
-				splice(@temparray, $i, 1);
-			}
-		}	
-		
-		foreach my $i (0..$#temparray)
-		{
-			push(@words, " ".$temparray[$i]." ");
-
-			#make the mulitple-word-per-index arrays
-			if($i<=$#temparray-1)
-			{
-				push(@two_words, " ".$temparray[$i]." ".$temparray[$i+1]." ");
-			}
-			if($i<=$#temparray-2)
-			{
-				push(@three_words, " ".$temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]." ");
-			}
-			if($i<=$#temparray-3)
-			{
-				push(@four_words, " ".$temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]." ".$temparray[$i+3]." ");				
-			}
-		}
-	}
-
-#TODO consider punctuation? dont modity the words before checking them against the regex?	
-	#for each word in the file, check if it's a one word line in qfile
-	foreach my $word (@words)
-	{
-		$word =~ s/[^A-Za-z\s]//g;
-		if ($word =~ /$qfileregex/i)
-		{
-			$qfileans{$word}++;
-		}
-	}
-
-	#for each two words in the file, check if it's a two word line in qfile
-	foreach my $two_word (@two_words)
-	{
-		$two_word =~ s/[^A-Za-z\s]//g;
-		if ($two_word =~ /$qfileregex2/i) 
-		{
-			$qfileans{$two_word}++;
-		}
-	}
-
-	#for each three words in the file, check if it's a three word line in qfile
-	foreach my $three_word (@three_words)
-	{
-		$three_word =~ s/[^A-Za-z\s]//g;
-		if ($three_word =~ /$qfileregex3/i) 
-		{
-			$qfileans{$three_word}++;
-		}
-	}
-
-	#for each four words in the file, check if it's a four word line in qfile
-	foreach my $four_word (@four_words)
-	{
-		$four_word =~ s/[^A-Za-z\s]//g;
-		if ($four_word =~ /$qfileregex4/i) 
-		{
-			$qfileans{$four_word}++;
-		}
-	}
+	push(@qfile, $qfile);
 }
 
-my $counter = 0; #for the OUT formatting/JS methods
+#breaks up the list(s) given by @qfile and finds relevant answers
+foreach my $file (@qfile)
+{
+	my $filenum = &indexArray($file, @qfile); #find the number of the file in @qfile we are on	
+	
+	#instantiate sub regex's/filelines/fileans
+	my @subfilelines = ();
+	my %subfileans = ();
+	my $subfileregex = "";
+	my $subfileregex2 = "";
+	my $subfileregex3 = "";
+	my $subfileregex4 = "";
+
+	
+	open(FILE, "<".$file) or die "Can't find ".$file." Please confirm that this is the correct path to the file.\n";
+	
+	#read in list of desired question topics
+	foreach my $line (<FILE>)
+	{
+		$line =~ s/\r|\n//g;
+		push(@subfilelines, $line);
+		$subfileregex.=" ".$line." \|";	#this way they can be a regex of "or" expressions
+											#like Soviet Union | Peru |...
+		my @tokenized_line = split(/\s/, $line);
+		$subfileregex2.=" ".$line." \|" if($#tokenized_line==1);
+		$subfileregex3.=" ".$line." \|" if($#tokenized_line==2);
+		$subfileregex4.=" ".$line." \|" if($#tokenized_line==3);
+	}
+	chop($subfileregex); 			#to take last "|" off
+	chop($subfileregex2); 			#to take last "|" off
+	chop($subfileregex3); 			#to take last "|" off
+	chop($subfileregex4); 			#to take last "|" off
+	close(FILE);
+
+	#TODO consider punctuation? dont modity the words before checking them against the regex?	
+	#for each word in the file, check if it's a one word line in the current qfile
+	foreach my $word (@words)
+	{
+		$word =~ s/^[^A-Za-z\s]$//g; #kill off all empty strings and non-letters while keeping spaces
+		if ($word =~ /$subfileregex/i && $subfileregex ne "")
+		{
+			$subfileans{$word}++;
+		}
+	}
+
+	#for each two words in the file, check if it's a two word line in the current qfile
+	foreach my $two_word (@two_words)
+	{
+		$two_word =~ s/^[^A-Za-z\s]$//g; #kill off all empty strings and non-letters while keeping spaces
+		if ($two_word =~ /$subfileregex2/i && $subfileregex2 ne "") 
+		{
+			$subfileans{$two_word}++;
+		}
+	}
+
+	#for each three words in the file, check if it's a three word line in the current qfile
+	foreach my $three_word (@three_words)
+	{
+		$three_word =~ s/^[^A-Za-z\s]$//g; #kill off all empty strings and non-letters while keeping spaces
+		if ($three_word =~ /$subfileregex3/i && $subfileregex3 ne "") 
+		{
+			$subfileans{$three_word}++;
+		}
+	}
+
+	#for each four words in the file, check if it's a four word line in the current qfile
+	foreach my $four_word (@four_words)
+	{
+		$four_word =~ s/^[^A-Za-z\s]$//g; #kill off all empty strings and non-letters while keeping spaces
+		if ($four_word =~ /$subfileregex4/i && $subfileregex4 ne "") 
+		{
+			$subfileans{$four_word}++;
+		}
+	}
+	
+	#add all of the sub regex's/filelines/fileans to the parent lists
+	push(@fileregex, $subfileregex);
+	push(@fileregex2, $subfileregex2);
+	push(@fileregex3, $subfileregex3);
+	push(@fileregex4, $subfileregex4);
+	#push will not apply the desired effect for adding hash/array to array, so instead we add references
+	$fileans[$#fileans + 1] = \%subfileans;
+	$filelines[$#filelines + 1] = \@subfilelines;
+}
+
 #foreach sentence, create the requested/relevant question
-#possibly change to calling each of the subs below with parameters instead
-#of depending on $_ to work properly
 foreach my $sentence (@sentences)
 {
 	#find specific questions regarding years
@@ -389,14 +318,8 @@ foreach my $sentence (@sentences)
 		&years($sentence);
 	}
 	
-	#find specific questions containing countries
-	if($countries)
-	{
-		&countries($sentence);
-	}
-	
 	#find specific questions containing a given set of words/phrases
-	if($qfile)
+	if(@qfile != ())
 	{
 		&qfile($sentence);
 	}
@@ -457,10 +380,18 @@ sub years
 				}
 				else
 				{
-					print OUT $word." ";
+					if ($word eq $tokens[$#tokens]) #we don't want a space if it's the last word in a sentence
+					{
+						print OUT $word;
+					}
+					else 
+					{
+						print OUT $word." ";
+					}
 				}
 				#print OUT substr($sentence, -1)."\n"; #print the punctuation
 			}
+			print OUT ".\n";
 
 			if($sentence =~ /$match (BC)|(B\.C\.)|(BCE)|(B\.C\.E\.)/)
 			{
@@ -526,11 +457,11 @@ sub years
 				{
 					if($match>99)
 					{
-						print OUT "$j \. ".$post[$j-1]."\n";
+						print OUT "$j\. ".$post[$j-1]."\n";
 					}
 					elsif($post[$j-1]<0) #note that the conditions are exclusive
 					{ 
-						print OUT "$j \. ".$post[$j-1]." B.C.\n";
+						print OUT "$j\. ".$post[$j-1]." B.C.\n";
 					}
 					else
 					{
@@ -541,19 +472,19 @@ sub years
 				{
 					if($match>99)
 					{
-						print OUT "$j \. ".$post[$j-1]."\n";
+						print OUT "$j\. ".$post[$j-1]."\n";
 					}
 					elsif($post[$j-1]<0) #note that the conditions are exclusive
 					{ 
-						print OUT "$j \. ".((-1)*$post[$j-1])." B\.C\.\n";
+						print OUT "$j\. ".((-1)*$post[$j-1])." B\.C\.\n";
 					}
 					else
 					{
-						print OUT "$j \. ".$post[$j-1]." A\.D\.\n";
+						print OUT "$j\. ".$post[$j-1]." A\.D\.\n";
 					}
 				}
 			}
-			print OUT "\n"; #end HTMl DIV
+			print OUT "\n\n";
 		}
 	}
 }
@@ -588,7 +519,14 @@ sub qword
 			my $word = $tokens[$j];
 			if (!($word =~ /^$qword/i))
 			{
-				print OUT $word." ";
+				if ($j == $#tokens) #we don't want a space if it's the last word in a sentence
+				{
+					print OUT $word;
+				}
+				else 
+				{
+					print OUT $word." ";
+				}
 			}
 			else
 			{
@@ -598,21 +536,19 @@ sub qword
 			}
 			#print OUT substr($sentence, -1)."\n"; #print the punctuation
 		}
-
+		print OUT ".\n";
 
 		#find other candidate answers from @topwords
 		my %numberchoice=(); #hash of randoms chosen
 		my $correct = int(rand(5))+1; #which answer is the correct one
 
-
-	
 		my $maxtries=50;
 
 		for my $j (1..5)
 		{
 			if($j==$correct)
 			{
-					print OUT "$j \. $qword\n";
+					print OUT "$j\. $qword\n";
 			}
 			else
 			{
@@ -644,241 +580,133 @@ sub qword
 				my $toprint = $topwords[$random];
 				$toprint =~ s/\b(\w+)\b/ucfirst($1)/ge if $nt_capitalize; 
 
-				print OUT "$j \. ".$toprint."\n";
+				print OUT "$j\. ".$toprint."\n";
 
 			}			
 		}
-		print OUT "\n"; #end OUT DIV
+		print OUT "\n\n";
 	}
 }
 
+#TODO Address the case of less than 5 words/phrases in a qfile
+#TODO Fix the space/repeation of answers in the output
 #--qfile=<file> command line parameter
 sub qfile
 {
-	my @matches = ();
 	my $sentence = $_[0]; #anon @_
 
-	if(@matches = uniq($sentence =~ m/$qfileregex/g))
-	{					#match global amount of times ^
-		foreach my $match (@matches)
-		{
-			print OUT "correct answer: ".$match;
-			print OUT "\n";
-			
-			my @tokens = split(/\s+/, $sentence);
-			#word doesn't have spaces around it, but match does, because countriesregex has spaces, to prevent things like JapanESE
-
-			my @tmp=split(/\s/, $match);
-			for my $idx (0..$#tmp) #trim out any empty strings from match
+	for my $filenum (0..$#qfile) 
+	{		
+		my @matches = ();
+		
+		if(@matches = uniq($sentence =~ m/$fileregex[$filenum]/g))
+		{					#match global amount of times ^
+			foreach my $match (@matches)
 			{
-				if($tmp[$idx] eq "")
+				print OUT "correct answer: ".$match;
+				print OUT "\n";
+
+				my @tokens = split(/\s+/, $sentence);
+				#word doesn't have spaces around it, but match does, because fileregex has spaces, to prevent things like JapanESE
+
+				my @tmp=split(/\s/, $match);
+				for my $idx (0..$#tmp) #trim out any empty strings from match
 				{
-					splice(@tmp, $idx, 1);
-				}
-			}
-
-			my $length = $#tmp+1;
-
-			my $i = 0;
-			while( $i<=$#tokens)
-			{
-				my $word = $tokens[$i];
-				my $multiword = " ";
-				if($length>1)
-				{	
-					for my $j ($i..$i+$length-1)
+					if($tmp[$idx] eq "")
 					{
-						$multiword.=$tokens[$j]." ";
+						splice(@tmp, $idx, 1);
 					}
 				}
-				if($multiword ne " " && $multiword =~ /$match/) #then we need to not print extra spaces.
+
+				my $length = $#tmp+1;
+
+				my $i = 0;
+				while( $i<=$#tokens)
 				{
-						print OUT " _______________";
-						$i+=($length-1);
-				}
-				elsif((" ".$word." ") =~ /$match/)
-				{
-					#print OUT " ".$` unless $` eq " "; #in case the word has brackets around it or something stupid
-					print OUT " _______________";
-					print OUT $' unless $' =~ " "; #in case the word was followed by punctuation
-				}
-				else
-				{
-					print OUT $word." ";
-				}
-				$i++;
-			}
-			#print OUT substr($sentence, -1)."\n"; #print the punctuation
-			
-			#find other candidate answers out of @qfilelines
-			my %numberchoice=(); #hash of randoms chosen
-
-			my @temp_qfileans = keys(%qfileans);
-
-			for my $j (0..$#temp_qfileans)
-			{
-				$numberchoice{$temp_qfileans[$j]}=0 if ($temp_qfileans[$j] eq $match);
-			}
-
-			my $ans = $match; my $one = $match; my $two = $match; my $three = $match; my $four = $match;
-			my @answers = ($one, $two, $three, $four);
-			$numberchoice{$ans}=0;
-
-			foreach my $i (0..$#answers)
-			{
-				my $most_tries = 50;
-				while(exists($numberchoice{$answers[$i]}) && $most_tries>0)
-				{
-					$answers[$i] = $temp_qfileans[int(rand($#temp_qfileans+1))];
-					$most_tries--;
-				}
-				while(exists($numberchoice{$answers[$i]}) && $most_tries==0) #shouldn't ever get less than 0...
-				{
-					$answers[$i] = $qfilelines[int(rand($#qfilelines+1))];
-				}
-				$numberchoice{$answers[$i]}=0;
-			}
-			push(@answers, $ans);
-
-			@answers = &shuffle(@answers);
-
-			#find and print all answers
-			for my $i (1..5)
-			{
-				if( $answers[$i-1] =~ $match )
-				{
-					print OUT "$i \. ".$match."\n";
-				}			
-				else
-				{
-					print OUT "$i \. ".$answers[$i-1]."\n";	#text box
-				}
-			}
-			print OUT "\n\n";
-		}
-	}
-}
-
-#--countries command line parameter
-sub countries
-{
-	my @matches = ();
-	my $sentence = $_[0]; #anon @_
-
-	if(@matches = uniq($sentence =~ /$countriesregex/g))
-	{					#match global amount of times ^
-		foreach my $match (@matches)
-		{
-			print OUT "correct answer: ".$match;
-			print OUT "\n";
-			
-			my @tokens = split(/\s+/, $sentence);
-			#word doesn't have spaces around it, but match does, because countriesregex has spaces, to prevent things like JapanESE
-
-			my @tmp=split(/\s/, $match);
-			for my $idx (0..$#tmp) #trim out any empty strings from match
-			{
-				if($tmp[$idx] eq "")
-				{
-					splice(@tmp, $idx, 1);
-				}
-			}
-
-			my $length = $#tmp+1;
-
-			my $i = 0;
-			while( $i<=$#tokens)
-			{
-				my $word = $tokens[$i];
-				my $multiword = " ";
-				if($length>1)
-				{	
-					for my $j ($i..$i+$length-1)
+					my $word = $tokens[$i];
+					my $multiword = " ";
+					if($length>1)
+					{	
+						for my $j ($i..$i+$length-1)
+						{
+							$multiword.=$tokens[$j]." ";
+						}
+					}
+					if($multiword ne " " && $multiword =~ /$match/) #then we need to not print extra spaces.
 					{
-						$multiword.=$tokens[$j]." ";
+							print OUT " _______________";
+							$i+=($length-1);
+					}
+					elsif((" ".$word." ") =~ /$match/)
+					{
+						#print OUT " ".$` unless $` eq " "; #in case the word has brackets around it or something stupid
+						print OUT " _______________";
+						print OUT $' unless $' =~ " "; #in case the word was followed by punctuation
+					}
+					else
+					{
+						if ($i == $#tokens) #we don't want a space if it's the last word in a sentence
+						{
+							print OUT $word;
+						}
+						else 
+						{
+							print OUT $word." ";
+						}
+					}
+					$i++;
+				}
+				#print OUT substr($sentence, -1)."\n"; #print the punctuation
+				print OUT ".\n";
+				
+				#find other candidate answers out of @{$filelines[$filenum]}
+				my %numberchoice=(); #hash of randoms chosen
+				my @temp_fileans = keys(%{$fileans[$filenum]}); #contains all of the words/phrases from the important-word bearing file found in the document
+				my @temp_filelines = @{$filelines[$filenum]};
+
+				for my $j (0..$#temp_fileans)
+				{
+					$numberchoice{$temp_fileans[$j]}=0 if ($temp_fileans[$j] eq $match);
+				}
+
+				my $ans = $match; my $one = $match; my $two = $match; my $three = $match; my $four = $match;
+				my @answers = ($one, $two, $three, $four);
+				$numberchoice{$ans}=0;
+
+				foreach my $i (0..$#answers)
+				{
+					my $most_tries = 50;
+					while(exists($numberchoice{$answers[$i]}) && $most_tries>0)
+					{
+						$answers[$i] = $temp_fileans[int(rand($#temp_fileans+1))];
+						$most_tries--;
+					}
+					while(exists($numberchoice{$answers[$i]}) && $most_tries==0) #won't go less than 0 because it never gets decremented further
+					{
+						$answers[$i] = $temp_filelines[int(rand($#temp_filelines+1))];
+					}
+					$numberchoice{$answers[$i]}=0;
+				}
+				push(@answers, $ans);
+
+				@answers = &shuffle(@answers);
+
+				#find and print all answers
+				for my $i (1..5)
+				{
+					if($answers[$i-1] =~ $match)
+					{
+						print OUT "$i\. ". $match."\n";
+					}			
+					else
+					{
+						print OUT "$i\. ". $answers[$i-1]."\n";	#text box
 					}
 				}
-				if($multiword ne " " && $multiword =~ /$match/) #then we need to not print extra spaces.
-				{
-						print OUT " _______________";
-						$i+=($length-1);
-				}
-				elsif((" ".$word." ") =~ /$match/)
-				{
-					#print OUT " ".$` unless $` eq " "; #in case the word has brackets around it or something stupid
-					print OUT " _______________";
-					print OUT $' unless $' =~ " "; #in case the word was followed by punctuation
-				}
-				else
-				{
-					print OUT $word." ";
-				}
-				$i++;
+				print OUT "\n\n";
 			}
-			#print OUT substr($sentence, -1)."\n"; #print the punctuation
-			
-			#find other candidate answers out of @countries
-			my %numberchoice=(); #hash of randoms chosen
-
-			my @temp_countryans = keys(%countryans);
-
-			for my $j (0..$#temp_countryans)
-			{
-				$numberchoice{$temp_countryans[$j]}=0 if ($temp_countryans[$j] eq $match);
-			}
-
-			my $ans = $match; my $one = $match; my $two = $match; my $three = $match; my $four = $match;
-			my @answers = ($one, $two, $three, $four);
-			$numberchoice{$ans}=0;
-
-			foreach my $i (0..$#answers)
-			{
-				my $most_tries = 50;
-				while(exists($numberchoice{$answers[$i]}) && $most_tries>0)
-				{
-					$answers[$i] = $temp_countryans[int(rand($#temp_countryans+1))];
-					$most_tries--;
-				}
-				while(exists($numberchoice{$answers[$i]}) && $most_tries==0) #shouldn't ever get less than 0...
-				{
-					$answers[$i] = $countries[int(rand($#countries+1))];
-				}
-				$numberchoice{$answers[$i]}=0;
-			}
-			push(@answers, $ans);
-
-			@answers = &shuffle(@answers);
-
-			#find and print all answers
-			for my $i (1..5)
-			{
-				if( $answers[$i-1] =~ $match )
-				{
-					print OUT "$i \. ".$match."\n";
-				}			
-				else
-				{
-					print OUT "$i \. ".$answers[$i-1]."\n";	#text box
-				}
-			}
-			print OUT "\n\n";
-			$counter++;
 		}
 	}
-}
-
-sub shuffle
-{
-	#shuffle answers
-	my @pre = @_;
-	my @post = ();
-	for (my $i=$#_+1; $i>=1; $i--)
-	{
-		my $choice = int(rand($i));
-		push(@post, $pre[$choice]);
-		splice(@pre,$choice,1);
-	}
-	return @post;
 }
 
 #TODO middle of sentence capitalization of candidate answers
@@ -909,7 +737,14 @@ sub default
 				my $word = $tokens[$j];
 				if (!($word =~ /^$topwords[$i]/i))
 				{
-					print OUT $word." ";
+					if ($j == $#tokens) #we don't want a space if it's the last word in a sentence
+					{
+						print OUT $word;
+					}
+					else 
+					{
+						print OUT $word." ";
+					}
 				}
 				else
 				{ 
@@ -919,7 +754,7 @@ sub default
 				}
 				#print OUT "substr($sentence, -1)\n"; #print the punctuation
 			}
-			print OUT "\n";
+			print OUT ".\n";
 
 
 			#find other candidate answers out of @topwords
@@ -934,7 +769,7 @@ sub default
 			{
 				if($j==$correct) #print the correct answer
 				{
-					print OUT "$j \. $topwords[$i]\n";
+					print OUT "$j\. $topwords[$i]\n";
 				}
 				else
 				{
@@ -963,13 +798,31 @@ sub default
 					my $toprint = $topwords[$random];
 					$toprint =~ s/\b(\w+)\b/ucfirst($1)/ge if $nt_capitalize; 
 
-					print OUT "$j \. ".$toprint."\n";	#text box
+					print OUT "$j\. ".$toprint."\n";	#text box
 				}
 			}
-			print OUT "\n\n"; #end HTMl DIV
-			$counter++;
+			print OUT "\n\n"; 
 		}
 	}
+}
+
+#gives the index of a given element in a given array
+sub indexArray{
+ 1while$_[0]ne pop;$#_
+}
+
+#shuffle answers
+sub shuffle
+{
+	my @pre = @_;
+	my @post = ();
+	for (my $i=$#_+1; $i>=1; $i--)
+	{
+		my $choice = int(rand($i));
+		push(@post, $pre[$choice]);
+		splice(@pre,$choice,1);
+	}
+	return @post;
 }
 
 print OUT "\n";

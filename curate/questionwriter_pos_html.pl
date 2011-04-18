@@ -9,7 +9,6 @@ use List::MoreUtils qw(uniq);
 ## creates questions, outputs to an html doc
 
 #TODO Months, what about ? and ! to end sentences?
-#TODO can explicitly request default behavior
 #TODO make qfile and Countries non-case sensitive
 
 die "wrong number of parameters from comand line \n
@@ -75,7 +74,7 @@ my @qfile=(); #the list of files that contain words/phrases that will have quest
 my $total=0; #TODO ?
 my @line = (); #used for parsing the dictionary/determining localfreq 
 
-#The following regex's are in the form:  ( word )|( word )|... where the word is sometimes a phrase
+#The following regex's are in the form:   word | word |... where the word is sometimes a phrase
 my $timeprepregex=""; #for determining if the sentence could contain a date
 my @fileregex=(); #list of regex's of all lines in each important-word bearing file
 my @fileregex2=(); #list of regex's of two word lines in each important-word bearing file
@@ -219,7 +218,7 @@ if($countries || $qfile)
 	}
 }
 
-#add the country list to the @qfile
+#add the country_list.txt to the @qfile
 if ($countries)
 {
 	push(@qfile, "country_list.txt");
@@ -317,8 +316,6 @@ foreach my $file (@qfile)
 
 my $counter = 0; #for the HTML formatting/JS methods
 #foreach sentence, create the requested/relevant question
-#possibly change to calling each of the subs below with parameters instead
-#of depending on $_ to work properly
 foreach my $sentence (@sentences)
 {
 	#find specific questions regarding years
@@ -487,7 +484,7 @@ sub years
 						print HTML "<input type=\"text\" id=\"textbox".$j."\" value=\"$j \. ".$post[$j-1]." A.D.\">\n";
 					}
 				}
-				else	#print just the correct answer
+				else	#print the correct answer
 				{
 					if($match>99)
 					{
@@ -503,7 +500,7 @@ sub years
 					}
 				}
 			}
-			print HTML "<\/DIV>\n"; #end HTMl DIV
+			print HTML "<\/DIV>\n"; #end HTML DIV
 			$counter++;
 		}
 	}
@@ -616,6 +613,8 @@ sub qword
 	}
 }
 
+#TODO Address the case of less than 5 words/phrases in a qfile
+#TODO Fix the space/repeation of answers in the output
 #--qfile=<file> command line parameter
 sub qfile
 {
@@ -744,24 +743,6 @@ sub qfile
 	}
 }
 
-sub indexArray{
- 1while$_[0]ne pop;$#_
-}
-
-sub shuffle
-{
-	#shuffle answers
-	my @pre = @_;
-	my @post = ();
-	for (my $i=$#_+1; $i>=1; $i--)
-	{
-		my $choice = int(rand($i));
-		push(@post, $pre[$choice]);
-		splice(@pre,$choice,1);
-	}
-	return @post;
-}
-
 #TODO middle of sentence capitalization of candidate answers
 #default, i.e. if no command line parameters
 sub default
@@ -862,10 +843,29 @@ sub default
 					print HTML "<input type=\"text\" id=\"textbox".$j."\" value=\"$j \. ".$toprint."\">\n";	#text box
 				}
 			}
-			print HTML "<\/DIV>\n\n"; #end HTMl DIV
+			print HTML "<\/DIV>\n\n"; #end HTML DIV
 			$counter++;
 		}
 	}
+}
+
+#gives the index of a given element in a given array
+sub indexArray{
+ 1while$_[0]ne pop;$#_
+}
+
+#shuffle answers
+sub shuffle
+{
+	my @pre = @_;
+	my @post = ();
+	for (my $i=$#_+1; $i>=1; $i--)
+	{
+		my $choice = int(rand($i));
+		push(@post, $pre[$choice]);
+		splice(@pre,$choice,1);
+	}
+	return @post;
 }
 
 print HTML "<\/body>\n<\/html>\n";
