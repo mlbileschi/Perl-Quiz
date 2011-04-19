@@ -57,8 +57,9 @@ my @qfile=(); #the list of files that contain words/phrases that will have quest
 my $total=0; #TODO ?
 my @line = (); #used for parsing the dictionary/determining localfreq 
 
-#The following regex's are in the form:   word | word |... where the word is sometimes a phrase
+#The following regex is in the form:   ( in )|( during )|... #TODO change this one to be like the others
 my $timeprepregex=""; #for determining if the sentence could contain a date
+#The following regex's are in the form:   word|word|... where the word is sometimes a phrase
 my @fileregex=(); #list of regex's of all lines in each important-word bearing file
 my @fileregex2=(); #list of regex's of two word lines in each important-word bearing file
 my @fileregex3=(); #list of regex's of three word lines in each important-word bearing file
@@ -151,9 +152,11 @@ foreach (@file)
 
 my @sentences = split(/\."?\s+/, $wholefile); #split into sentences
 
+#allow the first and last words in sentences to be in the regex format
 foreach (@sentences) {
-	$_ = " ".$_." ";  #allow the first and last words in sentences to be in the regex format
+	$_ = " ".$_." "; 
 }
+
 #read file into sentences
 my $wholefile = "";
 foreach (@file)
@@ -173,11 +176,6 @@ my @four_words;		#sequences of four words apeice, delimited by sentence
 #compose a list of single words in the file and lists of every two, three and four word phrases (delimited by sentence)
 if($countries || $qfile) 
 {
-	foreach (@sentences) 
-	{
-		$_ = " ".$_." ";  #allow the first and last words in sentences to be in the regex format
-	}
-	
 	#read the file into words
 	foreach my $sentence (@sentences)
 	{
@@ -194,20 +192,20 @@ if($countries || $qfile)
 		
 		foreach my $i (0..$#temparray)
 		{
-			push(@words, " ".$temparray[$i]." ");
+			push(@words, $temparray[$i]);
 
 			#make the mulitple-word-per-index arrays
 			if($i<=$#temparray-1)
 			{
-				push(@two_words, " ".$temparray[$i]." ".$temparray[$i+1]." ");
+				push(@two_words, $temparray[$i]." ".$temparray[$i+1]);
 			}
 			if($i<=$#temparray-2)
 			{
-				push(@three_words, " ".$temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]." ");
+				push(@three_words, $temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]);
 			}
 			if($i<=$#temparray-3)
 			{
-				push(@four_words, " ".$temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]." ".$temparray[$i+3]." ");				
+				push(@four_words, $temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]." ".$temparray[$i+3]);				
 			}
 		}
 	}
@@ -236,21 +234,20 @@ foreach my $file (@qfile)
 	my $subfileregex2 = "";
 	my $subfileregex3 = "";
 	my $subfileregex4 = "";
-
 	
 	open(FILE, "<".$file) or die "Can't find ".$file." Please confirm that this is the correct path to the file.\n";
 	
 	#read in list of desired question topics
 	foreach my $line (<FILE>)
 	{
-		$line =~ s/\r|\n//g;
+		$line =~ s/\r|\n//g; #trim new lines and returns
 		push(@subfilelines, $line);
-		$subfileregex.=" ".$line." \|";	#this way they can be a regex of "or" expressions
-											#like Soviet Union | Peru |...
+		$subfileregex.=$line."\|";	#this way they can be a regex of "or" expressions
+											#like Soviet Union|Peru|...
 		my @tokenized_line = split(/\s/, $line);
-		$subfileregex2.=" ".$line." \|" if($#tokenized_line==1);
-		$subfileregex3.=" ".$line." \|" if($#tokenized_line==2);
-		$subfileregex4.=" ".$line." \|" if($#tokenized_line==3);
+		$subfileregex2.=$line."\|" if($#tokenized_line==1);
+		$subfileregex3.=$line."\|" if($#tokenized_line==2);
+		$subfileregex4.=$line."\|" if($#tokenized_line==3);
 	}
 	chop($subfileregex); 			#to take last "|" off
 	chop($subfileregex2); 			#to take last "|" off
@@ -258,46 +255,10 @@ foreach my $file (@qfile)
 	chop($subfileregex4); 			#to take last "|" off
 	close(FILE);
 
-	#TODO consider punctuation? dont modity the words before checking them against the regex?	
-	#for each word in the file, check if it's a one word line in the current qfile
-	foreach my $word (@words)
-	{
-		$word =~ s/^[^A-Za-z\s]$//g; #kill off all empty strings and non-letters while keeping spaces
-		if ($word =~ /$subfileregex/i && $subfileregex ne "")
-		{
-			$subfileans{$word}++;
-		}
-	}
-
-	#for each two words in the file, check if it's a two word line in the current qfile
-	foreach my $two_word (@two_words)
-	{
-		$two_word =~ s/^[^A-Za-z\s]$//g; #kill off all empty strings and non-letters while keeping spaces
-		if ($two_word =~ /$subfileregex2/i && $subfileregex2 ne "") 
-		{
-			$subfileans{$two_word}++;
-		}
-	}
-
-	#for each three words in the file, check if it's a three word line in the current qfile
-	foreach my $three_word (@three_words)
-	{
-		$three_word =~ s/^[^A-Za-z\s]$//g; #kill off all empty strings and non-letters while keeping spaces
-		if ($three_word =~ /$subfileregex3/i && $subfileregex3 ne "") 
-		{
-			$subfileans{$three_word}++;
-		}
-	}
-
-	#for each four words in the file, check if it's a four word line in the current qfile
-	foreach my $four_word (@four_words)
-	{
-		$four_word =~ s/^[^A-Za-z\s]$//g; #kill off all empty strings and non-letters while keeping spaces
-		if ($four_word =~ /$subfileregex4/i && $subfileregex4 ne "") 
-		{
-			$subfileans{$four_word}++;
-		}
-	}
+	%subfileans = %{&parseFileIntoPhrases(\%subfileans, $subfileregex, \@words)};
+	%subfileans = %{&parseFileIntoPhrases(\%subfileans, $subfileregex2, \@two_words)};
+	%subfileans = %{&parseFileIntoPhrases(\%subfileans, $subfileregex3, \@three_words)};
+	%subfileans = %{&parseFileIntoPhrases(\%subfileans, $subfileregex4, \@four_words)};
 	
 	#add all of the sub regex's/filelines/fileans to the parent lists
 	push(@fileregex, $subfileregex);
@@ -311,28 +272,32 @@ foreach my $file (@qfile)
 #foreach sentence, create the requested/relevant question
 foreach my $sentence (@sentences)
 {
+
+	my @tokens = split(/\s+/, $sentence);
+	#TODO kill off empty strings in @tokens
+
 	#find specific questions regarding years
 	if($years) 
 	{
-		&years($sentence);
+		&years($sentence, \@tokens);
 	}
 	
 	#find specific questions containing a given set of words/phrases
 	if(@qfile != ())
 	{
-		&qfile($sentence);
+		&qfile($sentence, \@tokens);
 	}
 	
 	#find specific questions containing a given word
 	if($qword)
 	{
-		&qword($sentence);
+		&qword($sentence, \@tokens);
 	}
 	
 	#print questions about each of the top words
 	if(( !($countries) && !($qword) && !($years) && !($qfile)) || $default)
 	{
-		&default($sentence);
+		&default($sentence, \@tokens);
 	}
 }
 
@@ -341,8 +306,8 @@ foreach my $sentence (@sentences)
 #--years command line parameter
 sub years
 {
-	my @matches = ();
 	my $sentence = $_[0]; #anon @_
+	my @tokens = @{$_[1]};
 
 	#if sentence has a time preposition
 	# and if sentence has a digit in one of the predetermined formats
@@ -351,11 +316,10 @@ sub years
 	# (digit,digit) etc.
 	#also, @matches gets each digit match per sentence.
 	#TODO fix the below regex... backreferences for months?
-	if(($sentence =~ $timeprepregex) && (@matches = uniq($sentence=~m/[^(,\d)]\s+,?\(?\-?(\d+),?\.?\s?\-?\)?[^(,\d+)( years)($months)]/ig)))
+	if(($sentence =~ $timeprepregex) && (my @matches = uniq($sentence=~m/[^(,\d)]\s+,?\(?\-?(\d+),?\.?\s?\-?\)?[^(,\d+)( years)($months)]/ig)))
 	{	
 		foreach my $match (@matches)
 		{
-
 			print OUT "correct answer: $match "; ##correct answer with AD/BC thing?
 			#account for BC in years
 			if($sentence =~ /$match (BC)|(B\.C\.)|(BCE)|(B\.C\.E\.)/)
@@ -366,31 +330,9 @@ sub years
 			{
 				print OUT "A\.D\.";
 			}
-			print OUT "\n";
-			my @tokens = split(/\s+/, $sentence);
-			foreach my $word (@tokens)
-			{
-				if($word=~/(AD)|(BC)|(A\.D\.)|(B\.C\.)|(BCE)|(B\.C\.E\.)/) { next; }
-				if($word =~ $match)
-				{
-					print OUT " ".$` unless $` eq " "; #in case the number has brackets around it or something stupid
-					print OUT " _______________";
-					print OUT $'." " unless $' eq " "; #in case the number was followed by punctuation
-				}
-				else
-				{
-					if ($word eq $tokens[$#tokens]) #we don't want a space if it's the last word in a sentence
-					{
-						print OUT $word;
-					}
-					else 
-					{
-						print OUT $word." ";
-					}
-				}
-				#print OUT substr($sentence, -1)."\n"; #print the punctuation
-			}
-			print OUT ".\n";
+			
+			#Print the question to OUT
+			&questionLineOut(\@tokens, $match, "YEARS", 1);
 
 			if($sentence =~ /$match (BC)|(B\.C\.)|(BCE)|(B\.C\.E\.)/)
 			{
@@ -492,6 +434,7 @@ sub years
 sub qword
 {
 	my $sentence = $_[0]; #anon @_
+	my @tokens = @{$_[1]};
 	my $nt_capitalize = 0;
 	#we can't write a question about a word that's not there
 	if(! exists( $localfreq{$qword} ) )
@@ -509,33 +452,10 @@ sub qword
 	#if qword appears in the text in a logical way, then proceed
 	if($sentence=~/\s+$qword[\.,\s+]?/i || $sentence=~/^$qword\s/i) #TODO why doesn't this conditional have more under it, like the correct answers, etc also this happens elsewhere?!?!?!
 	{
-		print OUT "correct answer: $qword\n";
-		print OUT "\n";
-
-		my @tokens = split(/\s+/, $sentence);
-		for my $j (0..$#tokens)
-		{
-			my $word = $tokens[$j];
-			if (!($word =~ /^$qword/i))
-			{
-				if ($j == $#tokens) #we don't want a space if it's the last word in a sentence
-				{
-					print OUT $word;
-				}
-				else 
-				{
-					print OUT $word." ";
-				}
-			}
-			else
-			{
-				if($j==0) {$nt_capitalize=1;}
-				print OUT " ___________________ ";
-				print OUT $'." " unless $' eq " "; #in case the word was followed by puncutation
-			}
-			#print OUT substr($sentence, -1)."\n"; #print the punctuation
-		}
-		print OUT ".\n";
+		print OUT "correct answer: $qword";
+	
+		#Print the question to OUT and determine the correct capitalization
+		$nt_capitalize = &questionLineOut(\@tokens, $qword, "QWORD", 1);
 
 		#find other candidate answers from @topwords
 		my %numberchoice=(); #hash of randoms chosen
@@ -593,70 +513,28 @@ sub qword
 sub qfile
 {
 	my $sentence = $_[0]; #anon @_
+	my @tokens = @{$_[1]};	
 
 	for my $filenum (0..$#qfile) 
-	{		
-		my @matches = ();
-		
-		if(@matches = uniq($sentence =~ m/$fileregex[$filenum]/g))
+	{				
+		if(my @matches = uniq($sentence =~ m/$fileregex[$filenum]/g))
 		{					#match global amount of times ^
 			foreach my $match (@matches)
 			{
 				print OUT "correct answer: ".$match;
-				print OUT "\n";
-
-				my @tokens = split(/\s+/, $sentence);
-				#word doesn't have spaces around it, but match does, because fileregex has spaces, to prevent things like JapanESE
-
-				my @tmp=split(/\s/, $match);
-				for my $idx (0..$#tmp) #trim out any empty strings from match
+				
+				my @tmp = split(/\s/, $match);
+				for my $idx (0..$#tmp) #trim out any empty strings from $match
 				{
 					if($tmp[$idx] eq "")
 					{
 						splice(@tmp, $idx, 1);
 					}
 				}
-
 				my $length = $#tmp+1;
-
-				my $i = 0;
-				while( $i<=$#tokens)
-				{
-					my $word = $tokens[$i];
-					my $multiword = " ";
-					if($length>1)
-					{	
-						for my $j ($i..$i+$length-1)
-						{
-							$multiword.=$tokens[$j]." ";
-						}
-					}
-					if($multiword ne " " && $multiword =~ /$match/) #then we need to not print extra spaces.
-					{
-							print OUT " _______________";
-							$i+=($length-1);
-					}
-					elsif((" ".$word." ") =~ /$match/)
-					{
-						#print OUT " ".$` unless $` eq " "; #in case the word has brackets around it or something stupid
-						print OUT " _______________";
-						print OUT $' unless $' =~ " "; #in case the word was followed by punctuation
-					}
-					else
-					{
-						if ($i == $#tokens) #we don't want a space if it's the last word in a sentence
-						{
-							print OUT $word;
-						}
-						else 
-						{
-							print OUT $word." ";
-						}
-					}
-					$i++;
-				}
-				#print OUT substr($sentence, -1)."\n"; #print the punctuation
-				print OUT ".\n";
+				
+				#Print the question to OUT
+				&questionLineOut(\@tokens, $match, "QFILE", $length);
 				
 				#find other candidate answers out of @{$filelines[$filenum]}
 				my %numberchoice=(); #hash of randoms chosen
@@ -713,6 +591,7 @@ sub qfile
 sub default
 {
 	my $sentence = $_[0]; #anon @_
+	my @tokens = @{$_[1]};	
 
 	#ten of top words
 	for my $i (0..10)
@@ -729,32 +608,10 @@ sub default
 		my $tempregex = $topwords[$i];
 		if($sentence=~/(\s+$tempregex[\.,\s+]?)|(^$tempregex[\.,\s+]?)/i)
 		{
-			print OUT "correct answer: $topwords[$i]\n";
-			my @tokens = split(/\s+/, $sentence);
-			for my $j (0..$#tokens)
-			{
-				my $word = $tokens[$j];
-				if (!($word =~ /^$topwords[$i]/i))
-				{
-					if ($j == $#tokens) #we don't want a space if it's the last word in a sentence
-					{
-						print OUT $word;
-					}
-					else 
-					{
-						print OUT $word." ";
-					}
-				}
-				else
-				{ 
-					if($j==0){$nt_capitalize=1;}
-					print OUT " ___________________ ";
-					print OUT $'." " unless $' eq " "; #in case the word was followed by puncutation
-				}
-				#print OUT "substr($sentence, -1)\n"; #print the punctuation
-			}
-			print OUT ".\n";
-
+			print OUT "correct answer: $topwords[$i]";
+			
+			#Print the question to OUT and determine the correct capitalization
+			$nt_capitalize = &questionLineOut(\@tokens, $topwords[$i], "DEFAULT", 1);
 
 			#find other candidate answers out of @topwords
 			my %numberchoice=(); #hash of randoms chosen
@@ -805,8 +662,93 @@ sub default
 	}
 }
 
+#prints each word in the question while replacing each correct answer with a blank
+sub questionLineOut #(\@tokens,$match,"SUB")
+{ #TODO attempt to reduce shit, make params explicit?
+	my @tokens = @{$_[0]}; #list of words in the sentence
+	my $match = $_[1]; #this is what we are matching to
+	my $sub = $_[2]; #which sub called this sub
+	my $length = $_[3]; #used when match is a phrase
+	my $toreturn = 0; #for qword to return capitalization information
+	my $next = 0; #for skipping runs through the loop for phrases
+	print OUT "\n";
+	for my $i (0..$#tokens)
+	{
+		my $word = $tokens[$i];
+		if($next>0) { $next--; next;} #skipping words since the answer is a phrase
+		if($sub eq "YEARS") {if($word=~/(AD)|(BC)|(A\.D\.)|(B\.C\.)|(BCE)|(B\.C\.E\.)/) { next; } } #if years, we don't want to print any variation of AD or BC
+		my $hit = ($word =~ /^$match/i);
+		if($sub eq "QFILE") {$next = &phraseQuestion(\@tokens, $match, $i, $length);} #call sub to determine if it is a hit and how many skips need to be made
+		if (!$hit && !$next)
+		{
+			if ($i == $#tokens) #we don't want a space if it's the last word in a sentence
+			{
+				print OUT $word;
+			}
+			else 
+			{
+				print OUT $word." ";
+			}
+		}
+		else #we've hit a match
+		{ #TODO fuck with the spacing around the blank
+			if($sub eq "QWORD"|"DEAFULT") {if($i==0) {$toreturn=1;} } #if qword or default and the first word, then return a 1 for capitalization
+			
+			#print OUT " ".$` unless $` eq " "; #in case the number has brackets around it or something stupid
+			print OUT "___________________ ";
+			#print OUT $'." " unless $' eq " "; #in case the word was followed by puncutation
+		}
+	}	
+	#print OUT "substr($sentence, -1)\n"; #print the punctuation		
+	print OUT ".\n";
+	return($toreturn); #notifies capitalization for certain calling subs
+}
+
+sub phraseQuestion #(\@tokens, $match, $i)
+{
+	my @tokens = @{$_[0]}; #list of words in the sentence
+	my $match = $_[1]; #this is what we are matching to
+	my $i = $_[2]; #current index of the @tokens array
+	my $length = $_[3]; #the number of words in match
+	my $multiword = "";
+	if($length>1)
+	{	
+		for my $j ($i..$i+$length-1)
+		{
+			$multiword.=$tokens[$j]." ";
+		}
+		chop($multiword); #get rid of the last space
+	}
+#print "\|".$multiword."\|\n";
+#TODO match could have spaces at the end - address this	
+	if($multiword ne "" && $multiword =~ /^$match/) #then we need to skip printing words (part of the answer) and printing extra spaces.
+	{												#dont anchor the end to allow for punctuation 
+		return($length-1); #the number of words that need to be skipped
+	} 	#implied else
+	return(0); #no match
+}
+
+sub parseFileIntoPhrases #(%subfileans, $subfileregex, @words)
+{	
+#TODO consider punctuation? dont modity the words before checking them against the regex?	
+	my %ans = %{$_[0]};
+	my $regex = $_[1];
+	my @tokens = @{$_[2]};
+	#for each word/phrase in the file, check if it's a intX word line in the current qfile (1<=X<=4)
+	foreach my $token (@tokens)
+	{
+		$token =~ s/^[^A-Za-z\s]$//g; #kill off all empty strings and non-letters while keeping spaces
+		if ($token =~ /$regex/i && $regex ne "") 
+		{
+			$ans{$token}++;
+		}
+	}
+	return(\%ans);
+}
+
 #gives the index of a given element in a given array
-sub indexArray{
+sub indexArray
+{
  1while$_[0]ne pop;$#_
 }
 
