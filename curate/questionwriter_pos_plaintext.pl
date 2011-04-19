@@ -180,8 +180,7 @@ if($countries || $qfile)
 	foreach my $sentence (@sentences)
 	{
 		my @temparray=();		#words in current sentence
-		@temparray = split(/\s+/, $sentence);
-		
+		@temparray = split(/\s+/, $sentence);	
 		for my $i (0..$#temparray) #trim all empty strings in the sentence
 		{
 			if($temparray[$i] eq "") 
@@ -244,7 +243,7 @@ foreach my $file (@qfile)
 		push(@subfilelines, $line);
 		$subfileregex.=$line."\|";	#this way they can be a regex of "or" expressions
 											#like Soviet Union|Peru|...
-		my @tokenized_line = split(/\s/, $line);
+		my @tokenized_line = split(/\s+/, $line);
 		$subfileregex2.=$line."\|" if($#tokenized_line==1);
 		$subfileregex3.=$line."\|" if($#tokenized_line==2);
 		$subfileregex4.=$line."\|" if($#tokenized_line==3);
@@ -274,6 +273,13 @@ foreach my $sentence (@sentences)
 {
 
 	my @tokens = split(/\s+/, $sentence);
+	for my $i (0..$#tokens) #trim out any empty strings from @tokens
+	{		
+		if($tokens[$i] eq "")
+		{
+			splice(@tokens, $i, 1);
+		}
+	}
 	#TODO kill off empty strings in @tokens
 
 	#find specific questions regarding years
@@ -523,7 +529,7 @@ sub qfile
 			{
 				print OUT "correct answer: ".$match;
 				
-				my @tmp = split(/\s/, $match);
+				my @tmp = split(/\s+/, $match);
 				for my $idx (0..$#tmp) #trim out any empty strings from $match
 				{
 					if($tmp[$idx] eq "")
@@ -695,8 +701,8 @@ sub questionLineOut #(\@tokens,$match,"SUB")
 			if($sub eq "QWORD"|"DEAFULT") {if($i==0) {$toreturn=1;} } #if qword or default and the first word, then return a 1 for capitalization
 			
 			#print OUT " ".$` unless $` eq " "; #in case the number has brackets around it or something stupid
-			print OUT "___________________ ";
-			#print OUT $'." " unless $' eq " "; #in case the word was followed by puncutation
+			print OUT "___________________";
+			print OUT $'." " unless $' eq " "; #in case the word was followed by puncutation
 		}
 	}	
 	#print OUT "substr($sentence, -1)\n"; #print the punctuation		
@@ -718,8 +724,8 @@ sub phraseQuestion #(\@tokens, $match, $i)
 			$multiword.=$tokens[$j]." ";
 		}
 		chop($multiword); #get rid of the last space
+#print "\|".$multiword."\|\n";		
 	}
-#print "\|".$multiword."\|\n";
 #TODO match could have spaces at the end - address this	
 	if($multiword ne "" && $multiword =~ /^$match/) #then we need to skip printing words (part of the answer) and printing extra spaces.
 	{												#dont anchor the end to allow for punctuation 
@@ -737,7 +743,7 @@ sub parseFileIntoPhrases #(%subfileans, $subfileregex, @words)
 	#for each word/phrase in the file, check if it's a intX word line in the current qfile (1<=X<=4)
 	foreach my $token (@tokens)
 	{
-		$token =~ s/^[^A-Za-z\s]$//g; #kill off all empty strings and non-letters while keeping spaces
+		$token =~ s/[^A-Za-z\s]//g; #kill off all empty strings and non-letters while keeping spaces
 		if ($token =~ /$regex/i && $regex ne "") 
 		{
 			$ans{$token}++;
