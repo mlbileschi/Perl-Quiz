@@ -535,7 +535,7 @@ sub qfile
 						splice(@tmp, $idx, 1);
 					}
 				}
-				my $length = $#tmp+1;
+				my $length = $#tmp+1; #used for outputting the correct words for the question
 				
 				#Print the question to OUT
 				&questionLineOut(\@tokens, $match, "QFILE", $length);
@@ -562,9 +562,15 @@ sub qfile
 						$answers[$i] = $temp_fileans[int(rand($#temp_fileans+1))];
 						$most_tries--;
 					}
-					while(exists($numberchoice{$answers[$i]}) && $most_tries==0) #won't go less than 0 because it never gets decremented further
+					while(exists($numberchoice{$answers[$i]}) && ($most_tries<=0) && ($most_tries>(-50)))
 					{
 						$answers[$i] = $temp_filelines[int(rand($#temp_filelines+1))];
+						$most_tries--;
+					}
+					#REQ (@topwords >= 30)
+					while(exists($numberchoice{$answers[$i]}) && ($most_tries<=(-50)))
+					{
+						$answers[$i] = $topwords[int(rand(31))]; #look at the top 30 words from top words
 					}
 					$numberchoice{$answers[$i]}=0;
 				}
