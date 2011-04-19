@@ -271,7 +271,6 @@ foreach my $file (@qfile)
 #foreach sentence, create the requested/relevant question
 foreach my $sentence (@sentences)
 {
-
 	my @tokens = split(/\s+/, $sentence);
 	for my $i (0..$#tokens) #trim out any empty strings from @tokens
 	{		
@@ -280,7 +279,6 @@ foreach my $sentence (@sentences)
 			splice(@tokens, $i, 1);
 		}
 	}
-	#TODO kill off empty strings in @tokens
 
 	#find specific questions regarding years
 	if($years) 
@@ -710,23 +708,25 @@ sub questionLineOut #(\@tokens,$match,"SUB")
 	return($toreturn); #notifies capitalization for certain calling subs
 }
 
-sub phraseQuestion #(\@tokens, $match, $i)
+sub phraseQuestion #(\@tokens, $match, $i, $length)
 {
 	my @tokens = @{$_[0]}; #list of words in the sentence
 	my $match = $_[1]; #this is what we are matching to
 	my $i = $_[2]; #current index of the @tokens array
 	my $length = $_[3]; #the number of words in match
+	
+	if (($i + $length-1) > $#tokens) {return(0);} #cant possibly be a match if you would go past the last word in the sentence
+	
 	my $multiword = "";
-	if($length>1)
+	if($length > 1)
 	{	
 		for my $j ($i..$i+$length-1)
 		{
 			$multiword.=$tokens[$j]." ";
 		}
 		chop($multiword); #get rid of the last space
-#print "\|".$multiword."\|\n";		
 	}
-#TODO match could have spaces at the end - address this	
+	
 	if($multiword ne "" && $multiword =~ /^$match/) #then we need to skip printing words (part of the answer) and printing extra spaces.
 	{												#dont anchor the end to allow for punctuation 
 		return($length-1); #the number of words that need to be skipped
