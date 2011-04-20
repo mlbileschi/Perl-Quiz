@@ -10,6 +10,7 @@ use List::MoreUtils qw(uniq);
 
 #TODO Months, what about ? and ! to end sentences?
 #TODO make qfile and Countries non-case sensitive
+#TODO for alex $hash{key}=value
 
 die "wrong number of parameters from comand line \n
 usage:  executable   <input text file> [options] \n    OPTIONS:
@@ -51,7 +52,7 @@ my @file = <INFILE>; #the file you are making quizes out of (different file than
 my %hdict=(); #TODO
 my %localfreq=(); #key is the word and the value is the local freqency (number of times apearing in the document)
 my @topwords=(); #list of the highest relative frequency words in the document (#TODO)
-my @filelines=(); #list of a list of desired answers (one to four words long) of each important-word bearing file
+my @filelines=(); #list of a list of desired answers (things you want to ask questions about) (one to four words long) of each important-word bearing file
 my @fileans=(); #list of groups of answers that are relevant to the targeted words/phrases of each important-word bearing file
 my @qfile=(); #the list of files that contain words/phrases that will have questions targeted towards (important-word bearing files)
 my $total=0; #TODO ?
@@ -511,9 +512,7 @@ sub qword
 	}
 }
 
-#TODO Address the case of less than 5 words/phrases in a qfile
-#TODO Fix the space/repeation of answers in the output
-#--qfile=<file> command line parameter
+#--qfile=<file> or --countries command line parameter
 sub qfile
 {
 	my $sentence = $_[0]; #anon @_
@@ -740,16 +739,19 @@ sub phraseQuestion #(\@tokens, $match, $i, $length)
 	return(0); #no match
 }
 
+#creating a "bank" of all the desired answers; things we've found in the file that 
+#match what the user requested
 sub parseFileIntoPhrases #(%subfileans, $subfileregex, @words)
 {	
 #TODO consider punctuation? dont modity the words before checking them against the regex?	
-	my %ans = %{$_[0]};
+	my %ans = %{$_[0]}; #important phrases we've found in the file we want to write a quiz about,
 	my $regex = $_[1];
 	my @tokens = @{$_[2]};
-	#for each word/phrase in the file, check if it's a intX word line in the current qfile (1<=X<=4)
+	#for each word/phrase in the file, check if it's a one_word, or two_word, ... line in the current qfile
 	foreach my $token (@tokens)
 	{
 		$token =~ s/[^A-Za-z\s]//g; #kill off all empty strings and non-letters while keeping spaces
+		#why ne ""? e.g. if your qfile only has phrases of lenght 3 or less, four_words will be ""
 		if ($token =~ /$regex/i && $regex ne "") 
 		{
 			$ans{$token}++;

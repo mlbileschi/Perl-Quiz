@@ -1,253 +1,136 @@
-correct answer: enzymes
-  ___________________  are biological catalysts 
-1 . lowering
-2 . cofactors
-3 . Enzymes
-4 . reactant
-5 . enzymes
+correct answer: Axis
+World War II, or the Second World War[1] (often abbreviated as WWII or WW2), was a global military conflict lasting from 1939 to 1945, which involved most of the world's nations, including all of the great powers: eventually forming two opposing military alliances, the Allies and the ___________________ .
+1 . decolonization
+2 . Axis
+3 . possessions
+4 . superpowers
+5 . Slovakia
 
 
-correct answer: catalysts
- Enzymes are biological  ___________________  
-1 . reactant
-2 . reactants
-3 . catalysts
-4 . binds
-5 . polarity
+correct answer: mobilised
+It was the most widespread war in history, with more than 100 million military personnel ___________________ .
+1 . imminent
+2 . mobilised
+3 . erasing
+4 . tying
+5 . conquering
 
 
-correct answer: reactants
- This is accomplished by increasing the local concentration of  ___________________  (the compounds used in the reaction) and bringing the  ___________________  into proper orientation for the reaction to begin 
-1 . binding
-2 . vitamins
-3 . saturation
-4 . reactants
-5 . reactant
+correct answer: erasing
+In a state of "total war," the major participants placed their entire economic, industrial, and scientific capabilities at the service of the war effort, ___________________ the distinction between civilian and military resources.
+1 . nominally
+2 . conquering
+3 . neighbours
+4 . imminent
+5 . erasing
 
 
-correct answer: reactant
- This is accomplished by increasing the local concentration of  ___________________ s (the compounds used in the reaction) and bringing the  ___________________ s into proper orientation for the reaction to begin 
-1 . binding
-2 . inhibition
-3 . reactions
-4 . reactant
-5 . polarity
+correct answer: Axis
+Britain and the Commonwealth remained the only major force continuing the fight against the ___________________ in North Africa and in extensive naval warfare.
+1 . Axis
+2 . superpowers
+3 . defeats
+4 . surrender
+5 . alliances
 
 
-correct answer: enzymes
- All  ___________________  are made of protein and their production is controlled by DNA 
-1 . enzymes
-2 . reaction
-3 . substrates
-4 . Cofactors
-5 . inhibitor
+correct answer: Axis
+In June 1941, the European ___________________ launched an invasion of the Soviet Union, giving a start to the largest land theatre of war in history, which, from this moment on, was tying down the major part of the ___________________ military power.
+1 . Axis
+2 . Slovakia
+3 . alliances
+4 . Archipelago
+5 . decolonization
 
 
-correct answer: enzymes
-  ___________________  can be reused many times 
-1 . enzymes
-2 . inhibition
-3 . substrate
-4 . enzyme
-5 . polarity
+correct answer: conquering
+In December 1941, Japan, which had been at war with China since 1937,[3] and aimed to dominate Asia, attacked the United States and European possessions in the Pacific Ocean, quickly ___________________ much of the region.
+1 . surrender
+2 . conquering
+3 . dominate
+4 . mobilised
+5 . decisively
 
 
-correct answer: enzymes
- The standard suffix for  ___________________  is "ase 
-1 . reaction
-2 . Cofactors
-3 . Enzymes
-4 . catalysts
-5 . enzymes
+correct answer: Stalingrad
+The Axis advance was stopped in 1942 after the defeat of Japan in a series of naval battles and after defeats of European Axis troops in North Africa and, decisively, at ___________________ .
+1 . decolonization
+2 . Stalingrad
+3 . conquering
+4 . tying
+5 . alliances
 
 
-correct answer: enzymes
- The induced fit model describes how  ___________________  work 
-1 . reactants
-2 . substrate
-3 . Cofactors
-4 . catalysts
-5 . enzymes
+correct answer: decisively
+The Axis advance was stopped in 1942 after the defeat of Japan in a series of naval battles and after defeats of European Axis troops in North Africa and, ___________________, at Stalingrad.
+1 . dominate
+2 . imminent
+3 . defeats
+4 . regained
+5 . decisively
 
 
-correct answer: reactant
- Each enzyme has active sites that are specific in shape, size, or polarity to the particular  ___________________  
-1 . reactants
-2 . reactant
-3 . enzymes
-4 . saturation
-5 . enzyme
+correct answer: Axis
+The ___________________ advance was stopped in 1942 after the defeat of Japan in a series of naval battles and after defeats of European ___________________ troops in North Africa and, decisively, at Stalingrad.
+1 . superpowers
+2 . possessions
+3 . neighbours
+4 . Slovakia
+5 . Axis
 
 
-correct answer: polarity
- Each enzyme has active sites that are specific in shape, size, or  ___________________  to the particular reactant 
-1 . polarity
-2 . reactants
-3 . Cofactors
-4 . inhibitor
-5 . cofactors
+correct answer: fronts
+In 1943, with a series of German defeats in Eastern Europe, the Allied invasion of Fascist Italy, and American victories in the Pacific, the Axis lost the initiative and undertook strategic retreat on all ___________________ .
+1 . WWII
+2 . superpowers
+3 . tying
+4 . fronts
+5 . declarations
 
 
-correct answer: enzymes
- induced fit Many factors influence enzyme function: * Different  ___________________  function better at different pHs 
-1 . reactants
-2 . enzymes
-3 . polarity
-4 . vitamins
-5 . reaction
+correct answer: Axis
+In 1943, with a series of German defeats in Eastern Europe, the Allied invasion of Fascist Italy, and American victories in the Pacific, the ___________________ lost the initiative and undertook strategic retreat on all fronts.
+1 . superpowers
+2 . fronts
+3 . possessions
+4 . surrender
+5 . Axis
 
 
-correct answer: enzymes
-  ___________________  in your stomach may prefer an acidic environment with a low pH while  ___________________  elsewhere may not 
-1 . reactant
-2 . Enzymes
-3 . enzymes
-4 . inhibition
-5 . saturation
+correct answer: unconditional
+The war in Europe ended with the capture of Berlin by Soviet and Polish troops and the subsequent German ___________________ surrender on 8 May 1945.
+1 . unconditional
+2 . imminent
+3 . deadliest
+4 . subdued
+5 . postwar
 
 
-correct answer: denatured
- Above 104 degrees fahreinheit, enzymes become  ___________________  and can no longer catalyze reactions 
-1 . denatured
-2 . denatures
-3 . noncompetitive
-4 . Irreversible
-5 . acidic
+correct answer: superpowers
+The Soviet Union and the United States emerged as rival ___________________, setting the stage for the Cold War, which would last for the next 46 years.
+1 . decolonization
+2 . superpowers
+3 . neighbours
+4 . Axis
+5 . Slovakia
 
 
-correct answer: enzymes
- Above 104 degrees fahreinheit,  ___________________  become denatured and can no longer catalyze reactions 
-1 . reactants
-2 . catalysts
-3 . substrates
-4 . vitamins
-5 . enzymes
+correct answer: decolonization
+Meanwhile, the influence of European great powers started to decline, while the ___________________ of Asia and Africa began.
+1 . Axis
+2 . neighbours
+3 . decolonization
+4 . fronts
+5 . declarations
 
 
-correct answer: denatures
- * Irreversible inhibition occurs when the inhibitor added  ___________________  or destroys the enzyme 
-1 . lowering
-2 . catalyze
-3 . binds
-4 . denatures
-5 . denatured
-
-
-correct answer: Irreversible
- *  ___________________  inhibition occurs when the inhibitor added denatures or destroys the enzyme 
-1 . Reversible
-2 . Irreversible
-3 . noncompetitive
-4 . allosteric
-5 . reactions
-
-
-correct answer: inhibition
- * Irreversible  ___________________  occurs when the inhibitor added denatures or destroys the enzyme 
-1 . inhibition
-2 . vitamins
-3 . cofactors
-4 . substrate
-5 . lowering
-
-
-correct answer: enzymes
- Addition of more substrate into the system will have no effect on reaction speed since the  ___________________  are not functioning 
-1 . enzymes
-2 . reactions
-3 . binds
-4 . reactants
-5 . Cofactors
-
-
-correct answer: enzymes
- Similarly, removal of the inhibitor will have no effect on the reaction speed since the  ___________________  have already been destroyed 
-1 . enzymes
-2 . reactant
-3 . vitamins
-4 . Enzymes
-5 . inhibitor
-
-
-correct answer: noncompetitive
- * Reversible inhibition can be competitive or  ___________________  
-1 . Irreversible
-2 . lowering
-3 . Reversible
-4 . noncompetitive
-5 . induced
-
-
-correct answer: inhibition
- * Reversible  ___________________  can be competitive or noncompetitive 
-1 . vitamins
-2 . substrates
-3 . saturation
-4 . inhibition
-5 . Cofactors
-
-
-correct answer: inhibition
- In competitive  ___________________ , the inhibitor competes with the substrate for the same binding site on the enzyme 
-1 . inhibition
-2 . Enzymes
-3 . enzymes
-4 . cofactors
-5 . vitamins
-
-
-correct answer: noncompetitive
- In  ___________________  inhibition the inhibitor temporarily binds to a site other than the binding site 
-1 . denatured
-2 . induced
-3 . acidic
-4 . binding
-5 . noncompetitive
-
-
-correct answer: inhibition
- In noncompetitive  ___________________  the inhibitor temporarily binds to a site other than the binding site 
-1 . substrate
-2 . saturation
-3 . reactants
-4 . inhibition
-5 . binds
-
-
-correct answer: enzymes
- The addition of more  ___________________  into this system would speed up the reaction slightly 
-1 . reactant
-2 . lowering
-3 . enzymes
-4 . binding
-5 . polarity
-
-
-correct answer: enzymes
- Along with  ___________________ , coenzymes and cofactors also influence reactions 
-1 . polarity
-2 . binds
-3 . cofactors
-4 . substrates
-5 . enzymes
-
-
-correct answer: cofactors
- Along with enzymes, coenzymes and  ___________________  also influence reactions 
-1 . reactant
-2 . catalysts
-3 . cofactors
-4 . inhibitor
-5 . Cofactors
-
-
-correct answer: cofactors
-  ___________________  are minerals 
-1 . catalysts
-2 . inhibitor
-3 . inhibition
-4 . enzymes
-5 . cofactors
+correct answer: stabilise
+Political integration emerged as an effort to ___________________ postwar relations.
+1 . tying
+2 . fronts
+3 . dominate
+4 . stabilise
+5 . defeats
 
 
 
