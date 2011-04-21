@@ -213,7 +213,7 @@ if($countries || $qfile)
 #add the country_list.txt to @qfile
 if ($countries)
 {
-	push(@qfile, "country_list.txt");
+	push(@qfile, "country_list.txt");	
 }
 
 #add $qfile to @qfile
@@ -221,6 +221,8 @@ if ($qfile)
 {
 	push(@qfile, $qfile);
 }
+
+@qfile = uniq(@qfile);
 
 #breaks up the list(s) given by @qfile and finds relevant answers
 foreach my $file (@qfile)
