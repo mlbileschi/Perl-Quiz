@@ -6,11 +6,10 @@ use List::MoreUtils qw(uniq);
 
 ## Written by Max Bileschi, Spring 2011
 ## mlbileschi@gmail.com
-## creates questions, outputs to an html doc
+## creates questions, outputs to a txt doc
 
 #TODO Months, what about ? and ! to end sentences?
 #TODO make qfile and Countries non-case sensitive
-#TODO for alex $hash{key}=value
 
 die "wrong number of parameters from comand line \n
 usage:  executable   <input text file> [options] \n    OPTIONS:
@@ -169,10 +168,10 @@ foreach (@file)
 my @sentences = split(/\."?\s+/, $wholefile); #split into sentences
 
 #to be used for more relevant answers, only used with some command line args
-my @words;			#all the words in the file
-my @two_words;		#sequences of two words apeice, delimited by sentence
-my @three_words;	#sequences of three words apeice, delimited by sentence
-my @four_words;		#sequences of four words apeice, delimited by sentence
+my %words;			#all the words in the file; value = number of occurances
+my %two_words;		#sequences of two words apeice, delimited by sentence; value = number of occurances
+my %three_words;	#sequences of three words apeice, delimited by sentence; value = number of occurances
+my %four_words;		#sequences of four words apeice, delimited by sentence; value = number of occurances
 
 #compose a list of single words in the file and lists of every two, three and four word phrases (delimited by sentence)
 if($countries || $qfile) 
@@ -192,31 +191,32 @@ if($countries || $qfile)
 		
 		foreach my $i (0..$#temparray)
 		{
-			push(@words, $temparray[$i]);
+			$words{$temparray[$i]}++;
 
 			#make the mulitple-word-per-index arrays
 			if($i<=$#temparray-1)
 			{
-				push(@two_words, $temparray[$i]." ".$temparray[$i+1]);
+				$two_words{$temparray[$i]." ".$temparray[$i+1]}++;
 			}
 			if($i<=$#temparray-2)
 			{
-				push(@three_words, $temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]);
+				$three_words{$temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]}++;
 			}
 			if($i<=$#temparray-3)
 			{
-				push(@four_words, $temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]." ".$temparray[$i+3]);				
+				$four_words{$temparray[$i]." ".$temparray[$i+1]." ".$temparray[$i+2]." ".$temparray[$i+3]}++;				
 			}
 		}
 	}
 }
 
-#add the country_list.txt to the @qfile
+#add the country_list.txt to @qfile
 if ($countries)
 {
 	push(@qfile, "country_list.txt");
 }
 
+#add $qfile to @qfile
 if ($qfile)
 {
 	push(@qfile, $qfile);
@@ -225,8 +225,6 @@ if ($qfile)
 #breaks up the list(s) given by @qfile and finds relevant answers
 foreach my $file (@qfile)
 {
-	my $filenum = &indexArray($file, @qfile); #find the number of the file in @qfile we are on	
-	
 	#instantiate sub regex's/filelines/fileans
 	my @subfilelines = ();
 	my %subfileans = ();
@@ -255,10 +253,10 @@ foreach my $file (@qfile)
 	chop($subfileregex4); 			#to take last "|" off
 	close(FILE);
 
-	%subfileans = %{&parseFileIntoPhrases(\%subfileans, $subfileregex, \@words)};
-	%subfileans = %{&parseFileIntoPhrases(\%subfileans, $subfileregex2, \@two_words)};
-	%subfileans = %{&parseFileIntoPhrases(\%subfileans, $subfileregex3, \@three_words)};
-	%subfileans = %{&parseFileIntoPhrases(\%subfileans, $subfileregex4, \@four_words)};
+	%subfileans = %{&parseFileIntoPhrases(\%subfileans, $subfileregex, \%words)};
+	%subfileans = %{&parseFileIntoPhrases(\%subfileans, $subfileregex2, \%two_words)};
+	%subfileans = %{&parseFileIntoPhrases(\%subfileans, $subfileregex3, \%three_words)};
+	%subfileans = %{&parseFileIntoPhrases(\%subfileans, $subfileregex4, \%four_words)};
 	
 	#add all of the sub regex's/filelines/fileans to the parent lists
 	push(@fileregex, $subfileregex);
@@ -741,29 +739,24 @@ sub phraseQuestion #(\@tokens, $match, $i, $length)
 
 #creating a "bank" of all the desired answers; things we've found in the file that 
 #match what the user requested
-sub parseFileIntoPhrases #(%subfileans, $subfileregex, @words)
+sub parseFileIntoPhrases #(%subfileans, $subfileregex, %words/phrases)
 {	
 #TODO consider punctuation? dont modity the words before checking them against the regex?	
 	my %ans = %{$_[0]}; #important phrases we've found in the file we want to write a quiz about,
 	my $regex = $_[1];
-	my @tokens = @{$_[2]};
+	my %tokens = %{$_[2]};
 	#for each word/phrase in the file, check if it's a one_word, or two_word, ... line in the current qfile
-	foreach my $token (@tokens)
+	foreach my $token (keys %tokens)
 	{
-		$token =~ s/[^A-Za-z\s]//g; #kill off all empty strings and non-letters while keeping spaces
-		#why ne ""? e.g. if your qfile only has phrases of lenght 3 or less, four_words will be ""
+		$token =~ s/[^A-Za-z\s]//g; #kill off all non-letters while keeping spaces
+		#why ne ""? e.g. if your qfile only has phrases of length 3 or less, four_words will be ""
 		if ($token =~ /$regex/i && $regex ne "") 
 		{
-			$ans{$token}++;
+			$ans{$token} = $tokens{$token}; #assigns the value of $token in %subfileans to be the value that was for $token in %words/phrases
+			#TODO will the above put it in or no?
 		}
 	}
 	return(\%ans);
-}
-
-#gives the index of a given element in a given array
-sub indexArray
-{
- 1while$_[0]ne pop;$#_
 }
 
 #shuffle answers
