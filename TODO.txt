@@ -9,6 +9,7 @@ For the Javascript/HTML:
 
 Text to HTML script:
 	Store each question in an array
+
 For the question generator:
 	Periods for acronyms addressed? (so they aren’t considered new sentences)
 	Percent symbol means it’s not a year
@@ -52,3 +53,5 @@ Other shit:
 	Clean up git directory
 	Get a past and present Country list
 
+Open Questions:
+	How much of wikipedia can we use, and still make money from this thing?
