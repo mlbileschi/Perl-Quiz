@@ -2,7 +2,6 @@
 use strict;
 #warnings??
 use Getopt::Long;
-use List::MoreUtils qw(uniq);
 
 ## Written by Max Bileschi, Spring 2011
 ## mlbileschi@gmail.com
@@ -89,10 +88,12 @@ foreach(@file)
 #	$total+=$#line+1; for counting the number of lines #TODO
 	foreach my $token (@line)
 	{
+#TODO change the regex to accept words in quotes, bracket?, parens, both, brackets number after, and other combinations (" ," ,[3] ." ") : ; ' ? ! (> < / \)?	
+#TODO allow for hyphen in the word? break it into two words?
+#TODO check to see if the next word after any comb of ! . ? with an optional " is in the dict, otherwise check the lowercase of that word instead, else set freq to one of the upper case word, or ignore?
 		if($token =~ /^[A-Za-z]+[\.,]?$/)
 		{
 			chop($token) if ($token =~ /[\.,]+$/);	#chop that punctuation right off of there
-#			$token = lc($token);							#treat words as all lower case for now #TODO
 			if(exists($localfreq{$token}))			#increase frequency/add depending if seen. #TODO different casings of same word fix
 			{
 				$localfreq{$token}++;
@@ -140,21 +141,6 @@ if ($years)
 		}
 	chop($timeprepregex);           				#to take last "|" off
 	close(TIMEPREPS);
-}
-
-#read file into sentences
-my $wholefile = "";
-foreach (@file)
-{
-	$_ =~ s/\r|\n//g; #the new chomp
-	$wholefile.=$_." ";
-}
-
-my @sentences = split(/\."?\s+/, $wholefile); #split into sentences
-
-#allow the first and last words in sentences to be in the regex format
-foreach (@sentences) {
-	$_ = " ".$_." "; 
 }
 
 #read file into sentences
@@ -222,7 +208,7 @@ if ($qfile)
 	push(@qfile, $qfile);
 }
 
-@qfile = uniq(@qfile);
+#TODO qfile can have repeats. uniq
 
 #breaks up the list(s) given by @qfile and finds relevant answers
 foreach my $file (@qfile)
@@ -321,7 +307,8 @@ sub years
 	# (digit,digit) etc.
 	#also, @matches gets each digit match per sentence.
 	#TODO fix the below regex... backreferences for months?
-	if(($sentence =~ $timeprepregex) && (my @matches = uniq($sentence=~m/[^(,\d)]\s+,?\(?\-?(\d+),?\.?\s?\-?\)?[^(,\d+)( years)($months)]/ig)))
+	#TODO matches can not be uniq
+	if(($sentence =~ $timeprepregex) && (my @matches = $sentence=~m/[^(,\d)]\s+,?\(?\-?(\d+),?\.?\s?\-?\)?[^(,\d+)( years)($months)]/ig))
 	{	
 		foreach my $match (@matches)
 		{
@@ -520,7 +507,8 @@ sub qfile
 
 	for my $filenum (0..$#qfile) 
 	{				
-		if(my @matches = uniq($sentence =~ m/$fileregex[$filenum]/g))
+		#TODO matches will be not uniq
+		if(my @matches = $sentence =~ m/$fileregex[$filenum]/g)
 		{					#match global amount of times ^
 			foreach my $match (@matches)
 			{
