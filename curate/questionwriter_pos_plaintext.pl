@@ -70,7 +70,7 @@ my @fileregex4=(); #list of regex's of four word lines in each important-word be
 foreach (@dict)
 {
 	$_ =~ s/\r|\n//g; #the new chomp
-	my @line = split(/\t/, $_); 			#to the left of the | is word(space)pos(space)....
+	my @line = split(/\t/, $_); 			#tab delimited
 
 	my $word = $line[0];	#pop first elt off
 	my $pos=$line[1];
