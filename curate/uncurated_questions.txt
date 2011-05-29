@@ -1,136 +1,202 @@
-correct answer: Axis
-World War II, or the Second World War[1] (often abbreviated as WWII or WW2), was a global military conflict lasting from 1939 to 1945, which involved most of the world's nations, including all of the great powers: eventually forming two opposing military alliances, the Allies and the ___________________ .
-1 . decolonization
-2 . Axis
-3 . possessions
-4 . superpowers
-5 . Slovakia
+correct answer: Photosynthesis ((noun))
+___________________ occurs in two stages.
+1 . thylakoid
+2 . Photosynthesis
+3 . dark
+4 . sunlight
+5 . fixation
 
 
-correct answer: mobilised
-It was the most widespread war in history, with more than 100 million military personnel ___________________ .
-1 . imminent
-2 . mobilised
-3 . erasing
-4 . tying
-5 . conquering
+correct answer: reactions ((noun)|(plural))
+These stages are called the light ___________________ and the dark ___________________ .
+1 . sucrose
+2 . fructose
+3 . sunlight
+4 . reactions
+5 . fixation
 
 
-correct answer: erasing
-In a state of "total war," the major participants placed their entire economic, industrial, and scientific capabilities at the service of the war effort, ___________________ the distinction between civilian and military resources.
-1 . nominally
-2 . conquering
-3 . neighbours
-4 . imminent
-5 . erasing
+correct answer: reactions ((noun)|(plural))
+The light ___________________ take place in the presence of light.
+1 . sucrose
+2 . splitting
+3 . fixation
+4 . reactions
+5 . fructose
 
 
-correct answer: Axis
-Britain and the Commonwealth remained the only major force continuing the fight against the ___________________ in North Africa and in extensive naval warfare.
-1 . Axis
-2 . superpowers
-3 . defeats
-4 . surrender
-5 . alliances
+correct answer: reactions ((noun)|(plural))
+The dark ___________________ do not require direct light, however dark ___________________ in most plants occur during the day.
+1 . sucrose
+2 . stroma
+3 . Oxygen
+4 . reactions
+5 . thylakoid
 
 
-correct answer: Axis
-In June 1941, the European ___________________ launched an invasion of the Soviet Union, giving a start to the largest land theatre of war in history, which, from this moment on, was tying down the major part of the ___________________ military power.
-1 . Axis
-2 . Slovakia
-3 . alliances
-4 . Archipelago
-5 . decolonization
+correct answer: thylakoid ((noun))
+Light reactions occur mostly in the ___________________ stacks of the grana.
+1 . thylakoid
+2 . stomata
+3 . oxygen
+4 . sucrose
+5 . sunlight
 
 
-correct answer: conquering
-In December 1941, Japan, which had been at war with China since 1937,[3] and aimed to dominate Asia, attacked the United States and European possessions in the Pacific Ocean, quickly ___________________ much of the region.
-1 . surrender
-2 . conquering
-3 . dominate
-4 . mobilised
-5 . decisively
+correct answer: reactions ((noun)|(plural))
+Light ___________________ occur mostly in the thylakoid stacks of the grana.
+1 . thylakoid
+2 . reactions
+3 . steps
+4 . splitting
+5 . stroma
 
 
-correct answer: Stalingrad
-The Axis advance was stopped in 1942 after the defeat of Japan in a series of naval battles and after defeats of European Axis troops in North Africa and, decisively, at ___________________ .
-1 . decolonization
-2 . Stalingrad
-3 . conquering
-4 . tying
-5 . alliances
+correct answer: stacks ((noun)|(verb)|(plural))
+Light reactions occur mostly in the thylakoid ___________________ of the grana.
+1 . stroma
+2 . molecules
+3 . stacks
+4 . glucose
+5 . reactions
 
 
-correct answer: decisively
-The Axis advance was stopped in 1942 after the defeat of Japan in a series of naval battles and after defeats of European Axis troops in North Africa and, ___________________, at Stalingrad.
-1 . dominate
-2 . imminent
-3 . defeats
-4 . regained
-5 . decisively
+correct answer: NADPH ()
+Here, sunlight is converted to chemical energy in the form of ATP (free energy containing molecule) and ___________________ (high energy electron carrying molecule).
+1 . NADPH
+2 . stomata
+3 . molecules
+4 . sunlight
+5 . sugar
 
 
-correct answer: Axis
-The ___________________ advance was stopped in 1942 after the defeat of Japan in a series of naval battles and after defeats of European ___________________ troops in North Africa and, decisively, at Stalingrad.
-1 . superpowers
-2 . possessions
-3 . neighbours
-4 . Slovakia
-5 . Axis
+correct answer: Chlorophyll ((noun))
+___________________ absorbs light energy and starts a chain of steps that result in the production of ATP, NADPH, and oxygen (through the splitting of water).
+1 . stroma
+2 . stacks
+3 . Chlorophyll
+4 . Carbon
+5 . thylakoid
 
 
-correct answer: fronts
-In 1943, with a series of German defeats in Eastern Europe, the Allied invasion of Fascist Italy, and American victories in the Pacific, the Axis lost the initiative and undertook strategic retreat on all ___________________ .
-1 . WWII
-2 . superpowers
-3 . tying
-4 . fronts
-5 . declarations
+correct answer: NADPH ()
+Chlorophyll absorbs light energy and starts a chain of steps that result in the production of ATP, ___________________, and oxygen (through the splitting of water).
+1 . sucrose
+2 . fructose
+3 . glucose
+4 . NADPH
+5 . Chlorophyll
 
 
-correct answer: Axis
-In 1943, with a series of German defeats in Eastern Europe, the Allied invasion of Fascist Italy, and American victories in the Pacific, the ___________________ lost the initiative and undertook strategic retreat on all fronts.
-1 . superpowers
-2 . fronts
-3 . possessions
-4 . surrender
-5 . Axis
+correct answer: stomata ((noun)|(plural))
+Oxygen is released through the ___________________ .
+1 . sucrose
+2 . fructose
+3 . splitting
+4 . stomata
+5 . electron
 
 
-correct answer: unconditional
-The war in Europe ended with the capture of Berlin by Soviet and Polish troops and the subsequent German ___________________ surrender on 8 May 1945.
-1 . unconditional
-2 . imminent
-3 . deadliest
-4 . subdued
-5 . postwar
+correct answer: NADPH ()
+Both ATP and ___________________ are used in the dark reactions to produce sugar.
+1 . NADPH
+2 . stomata
+3 . reactions
+4 . Photosynthesis
+5 . glucose
 
 
-correct answer: superpowers
-The Soviet Union and the United States emerged as rival ___________________, setting the stage for the Cold War, which would last for the next 46 years.
-1 . decolonization
-2 . superpowers
-3 . neighbours
-4 . Axis
-5 . Slovakia
+correct answer: reactions ((noun)|(plural))
+Both ATP and NADPH are used in the dark ___________________ to produce sugar.
+1 . sucrose
+2 . dark
+3 . thylakoid
+4 . reactions
+5 . glucose
 
 
-correct answer: decolonization
-Meanwhile, the influence of European great powers started to decline, while the ___________________ of Asia and Africa began.
-1 . Axis
-2 . neighbours
-3 . decolonization
-4 . fronts
-5 . declarations
+correct answer: stroma ((noun)|(adjective))
+Dark reactions occur in the ___________________ .
+1 . stroma
+2 . stomata
+3 . Photosynthesis
+4 . fixation
+5 . reactions
 
 
-correct answer: stabilise
-Political integration emerged as an effort to ___________________ postwar relations.
-1 . tying
-2 . fronts
-3 . dominate
-4 . stabilise
-5 . defeats
+correct answer: reactions ((noun)|(plural))
+Dark ___________________ occur in the stroma.
+1 . reactions
+2 . stomata
+3 . glucose
+4 . fructose
+5 . Chlorophyll
 
 
+correct answer: NADPH ()
+Carbon dioxide is converted to sugar using ATP and ___________________ .
+1 . Photosynthesis
+2 . glucose
+3 . reactions
+4 . fixation
+5 . NADPH
+
+
+correct answer: fixation ((noun))
+This process is known as carbon ___________________ or the Calvin cycle.
+1 . stroma
+2 . sugar
+3 . fixation
+4 . electron
+5 . stages
+
+
+correct answer: fructose ((noun))
+The 6-carbon sugar is eventually broken-down into two molecules, glucose and ___________________ .
+1 . thylakoid
+2 . fructose
+3 . fixation
+4 . sunlight
+5 . reactions
+
+
+correct answer: sucrose ((noun))
+These two molecules make ___________________ or sugar.
+1 . thylakoid
+2 . sucrose
+3 . reactions
+4 . oxygen
+5 . sunlight
+
+
+
+nouns:
+stomata
+thylakoid
+stroma
+sucrose
+fixation
+reactions
+fructose
+stacks
+dioxide
+sunlight
+sugar
+molecules
+splitting
+glucose
+
+plurals:
+stomata
+reactions
+stacks
+molecules
+
+proper nouns:
+
+verbs:
+stacks
+absorbs
+sugar
+splitting
 

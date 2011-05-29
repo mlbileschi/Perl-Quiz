@@ -127,6 +127,33 @@ foreach my $key (sort {$localfreq{$b} <=> $localfreq{$a}} keys(%localfreq))
 }
 #	foreach (@topwords) { print "topword: $_\n"; } #TODO possibly print if --verbose / for troubleshooting
 
+#split topwords into parts of speech
+#and, i'm gonna try sticking with just nouns and verbs for now
+my @verbs = ();
+my @nouns = ();
+my @propernouns = ();
+my @plurals = ();
+#there's gonna be problems if the input is REALLY short.
+foreach my $i (0..19)
+{#print "YOOOOOOOOO";#@{$hdict{$topwords[$i]]}}[0]";
+	if(@{$hdict{$topwords[$i]}}[0]=~m/noun/) #gotta match those parts of speech
+	{
+		push(@nouns,$topwords[$i]);
+	}
+	if(@{$hdict{$topwords[$i]}}[0]=~m/verb/)
+	{
+		push(@verbs,$topwords[$i]);
+	}
+	if(@{$hdict{$topwords[$i]}}[0]=~m/proper/)
+	{
+		push(@propernouns,$topwords[$i]);
+	}
+	if(@{$hdict{$topwords[$i]}}[0]=~m/plural/)
+	{
+		push(@plurals,$topwords[$i]);
+	}
+}
+
 #TODO months... declaration of $months outside the following due to a scoping issue?
 my $months = "(\s?)\(Jan\)\|\(Feb\)\|\(Mar\)\|\(Apr\)\|\(May\)\|\(Jun\)\|\(Jul\)\|\(Aug\)\|\(Sep\)\|\(Oct\)\|\(Nov\)\|\(Dec\)(\s?)";
 if ($years)
@@ -151,13 +178,14 @@ foreach (@file)
 	$wholefile.=$_." ";
 }
 
-my @sentences = split(/\."?\s+/, $wholefile); #split into sentences
+my @sentences = split(/\."?(\[\d+\])*\s+/, $wholefile); #split into sentences. That funky thing (\[\d+\])*
+																			#is in there to deal with Wikipedia citations
 
 #to be used for more relevant answers, only used with some command line args
 my %words;			#all the words in the file; value = number of occurances
-my %two_words;		#sequences of two words apeice, delimited by sentence; value = number of occurances
-my %three_words;	#sequences of three words apeice, delimited by sentence; value = number of occurances
-my %four_words;		#sequences of four words apeice, delimited by sentence; value = number of occurances
+my %two_words;		#sequences of two words apiece, delimited by sentence; value = number of occurences
+my %three_words;	#sequences of three words apiece, delimited by sentence; value = number of occurences
+my %four_words;		#sequences of four words apiece, delimited by sentence; value = number of occurences
 
 #compose a list of single words in the file and lists of every two, three and four word phrases (delimited by sentence)
 if($countries || $qfile) 
@@ -292,7 +320,21 @@ foreach my $sentence (@sentences)
 	}
 }
 
+print OUT "\nnouns:\n";
+foreach (@nouns) { print OUT $_."\n"; }
+print OUT "\nplurals:\n";
+foreach (@plurals) { print OUT $_."\n"; }
+print OUT "\nproper nouns:\n";
+foreach (@propernouns) { print OUT $_."\n"; }
+print OUT "\nverbs:\n";
+foreach (@verbs) { print OUT $_."\n"; }
+
+############################
 ######### END MAIN #########
+############################
+
+
+
 ####### SUBROUTINES ########
 #--years command line parameter
 sub years
@@ -312,7 +354,7 @@ sub years
 	{	
 		foreach my $match (@matches)
 		{
-			print OUT "correct answer: $match "; ##correct answer with AD/BC thing?
+			printCorrectAnswer($match);
 			#account for BC in years
 			if($sentence =~ /$match (BC)|(B\.C\.)|(BCE)|(B\.C\.E\.)/)
 			{
@@ -444,7 +486,7 @@ sub qword
 	#if qword appears in the text in a logical way, then proceed
 	if($sentence=~/\s+$qword[\.,\s+]?/i || $sentence=~/^$qword\s/i) #TODO why doesn't this conditional have more under it, like the correct answers, etc also this happens elsewhere?!?!?!
 	{
-		print OUT "correct answer: $qword";
+		printCorrectAnswer($qword,$hdict{lc($qword)}[0]);
 	
 		#Print the question to OUT and determine the correct capitalization
 		$nt_capitalize = &questionLineOut(\@tokens, $qword, "QWORD", 1);
@@ -512,7 +554,7 @@ sub qfile
 		{					#match global amount of times ^
 			foreach my $match (@matches)
 			{
-				print OUT "correct answer: ".$match;
+				printCorrectAnswer($match,$hdict{lc($match)}[0]);
 				
 				my @tmp = split(/\s+/, $match);
 				for my $idx (0..$#tmp) #trim out any empty strings from $match
@@ -605,7 +647,7 @@ sub default
 		my $tempregex = $topwords[$i];
 		if($sentence=~/(\s+$tempregex[\.,\s+]?)|(^$tempregex[\.,\s+]?)/i)
 		{
-			print OUT "correct answer: $topwords[$i]";
+			printCorrectAnswer($topwords[$i],$hdict{lc($topwords[$i])}[0]);
 			
 			#Print the question to OUT and determine the correct capitalization
 			$nt_capitalize = &questionLineOut(\@tokens, $topwords[$i], "DEFAULT", 1);
@@ -747,6 +789,14 @@ sub parseFileIntoPhrases #(%subfileans, $subfileregex, %words/phrases)
 		}
 	}
 	return(\%ans);
+}
+
+#prints correct answer along with part of speech, so that the plaintext to html interpreter
+#can use the part of speech to generate more answers "on the fly"
+#(note: the part of speech is only viewable in the flat text file)
+sub printCorrectAnswer
+{
+	print OUT "correct answer: $_[0] ($_[1])";
 }
 
 #shuffle answers

@@ -41,7 +41,7 @@ my %context = (); #hash of words which form a "context" around $target
 foreach (@dict)
 {
 	$_ =~ s/\r|\n//g; #the new chomp
-	my @line = split(/\t/, $_); #tab delmimited
+	@line = split(/\t/, $_); #tab delmimited
 
 	my $word = $line[0];	#pop first elt off
 	my $pos=$line[1];
@@ -88,7 +88,7 @@ foreach my $key ( keys(%localfreq) )
 #add each of the keys in decreasing order to @topwords
 foreach my $key (sort {$localfreq{$b} <=> $localfreq{$a}} keys(%localfreq)) 
 {
-	print "$key, ".@{$hdict{$key}}[0].", $localfreq{$key}\n";		#TODO possibly print if --verbose
+#	print "$key, ".@{$hdict{$key}}[0].", $localfreq{$key}\n";		#TODO possibly print if --verbose
 	push(@topwords, $key);
 }
 #foreach (@topwords) { print "topword: $_\n"; } #TODO possibly print if --verbose / for troubleshooting
