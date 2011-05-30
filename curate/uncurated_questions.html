@@ -1822,7 +1822,7 @@ function getPrev(eltId, posId)
 	else if( pos.substr("plural")!=-1 ) arr = plurals;
 	else if( pos.substr("proper")!=-1 ) arr = propers;
 	else arr = nouns; //we get here if there is no pos, or if i've made an error
-	document.getElementById(eltId).value = arr[(findIdx(arr, elt)-1)%arr.length]; //note: will return last element if not found in findIdx
+	document.getElementById(eltId).value = arr[(findIdx(arr, elt)-1+arr.length)%arr.length]; //note: will return last element if not found in findIdx
 	return false;
 }
 	nouns.push("carburetors");
