@@ -52,14 +52,14 @@ while ($i < $#pt)
 		
 		my @tokens = split(/ /,$pt[$i]);
 		$pos = pop(@tokens);	
-		$pos=~s/.//; #chop first character
-		chop($pos);
+		 
+		$pt[$i]=join(" ",@tokens);
 		#create an HTML DIV for each question for show/hide
 		my $tempdiv = "question".$divNum;
 		my $tempbox = "ckbox".$divNum;
 		print HTML "\t\t<p><input type=\"checkbox\" id=\"ckbox".$divNum."\" value=\"Click here\" onClick=\"toggleShowHide('".$tempbox."','".$tempdiv."');\"></p>\n";
 		print HTML "\t\t<DIV ID=\"question".$divNum."\">\n";
-		print HTML "\t\t<input type = \"hidden\" id=\"pos".$divNum."\" value = \"$pos\"/>\n";
+		print HTML "\t\t<a style=\"display:none\" id=\"pos".$divNum."\" >$pos</a>\n";
 		print HTML "\t\t\t<INPUT type=\"button\" id=\"button".$divNum."\" value=\"Finalize Question\" name=\"finalizeOne\" onClick=\"finalize('question".$divNum."'); this\.disabled=1\">\n";
 		print HTML "\t\t\t<br>\n";
 
@@ -81,8 +81,9 @@ while ($i < $#pt)
 			$pt[$i]=~s/\r|\n//g; #the new chomp
 
 			print HTML "\t\t\t\t<li>\n\t\t\t\t\t<a style=\"display:none\" id = \"div".$divNum."text".$j."\">  </a>\n"; #text
+			print HTML "\t\t\t\t\t<input type =\"button\" onclick=\"getPrev(\'div".$divNum."textbox".$j."\', \'pos".$divNum."\');\" value = \"&laquo;\">\n\t\t\t\t\n";
 			print HTML "\t\t\t\t\t<input type=\"text\" name=\"textbox".$j."\" id = \"div".$divNum."textbox".$j."\" value=\"".$pt[$i]."\">\n";	#text box
-			print HTML "\t\t\t\t\t<input type =\"button\" onclick=\"changeTerm(\'div".$divNum."textbox".$j."\');\"\n\t\t\t\t<\/li>\n";
+			print HTML "\t\t\t\t\t<input type =\"button\" onclick=\"getNext(\'div".$divNum."textbox".$j."\', \'pos".$divNum."\');\"value = \"&raquo;\">\n\t\t\t\t<\/li>\n";
 
 			if($j==5)
 			{
@@ -104,10 +105,45 @@ while ($i < $#pt)
 	{
 		print HTML "\t<\/body>\n<\/html>\n";
 		print HTML "<script type=\"text\/javascript\">\nnouns = new Array();\nverbs = new Array();\n".
-						"plurals = new Array();\npropers = new Array();\nfunction changeTerm(elId)\n".
-						"{\n\t
-hidden = document.getElementById()\/\/if substr(noun)!=-1, then look at the nouns array
-if(document.getElementById(elId).value=nouns[0];\n}\n";
+						"plurals = new Array();\npropers = new Array();\n";
+		print HTML"
+function findIdx(arr, elt)
+{
+	for (var i = 0; i < arr.length; i++)
+	{
+		if(arr[i]==elt) { return i; }
+	}
+	return -1;
+}
+
+function getNext(eltId, posId)
+{
+	var pos = document.getElementById(posId).innerHTML;
+	var elt = document.getElementById(eltId).value;
+	var arr;
+	if( pos.substr(\"noun\")!=-1 ) arr = nouns;
+	else if( pos.substr(\"verb\")!=-1 ) arr = verbs;
+	else if( pos.substr(\"plural\")!=-1 ) arr = plurals;
+	else if( pos.substr(\"proper\")!=-1 ) arr = propers;
+	else arr = nouns; \/\/we get here if there is no pos, or if i've made an error
+	document.getElementById(eltId).value = arr[(findIdx(arr, elt)+1)%arr.length]; \/\/note: will return first element if not found in findIdx
+	return false;
+}
+
+function getPrev(eltId, posId)
+{
+	var pos = document.getElementById(posId).innerHTML;
+	var elt = document.getElementById(eltId).value;
+	var arr;
+	if( pos.substr(\"noun\")!=-1 ) arr = nouns;
+	else if( pos.substr(\"verb\")!=-1 ) arr = verbs;
+	else if( pos.substr(\"plural\")!=-1 ) arr = plurals;
+	else if( pos.substr(\"proper\")!=-1 ) arr = propers;
+	else arr = nouns; \/\/we get here if there is no pos, or if i've made an error
+	document.getElementById(eltId).value = arr[(findIdx(arr, elt)-1)%arr.length]; \/\/note: will return last element if not found in findIdx
+	return false;
+}
+";
 		$noun=1;
 	}
 	elsif($pt[$i]eq"plurals:")
@@ -125,22 +161,22 @@ if(document.getElementById(elId).value=nouns[0];\n}\n";
 	elsif($noun==1)
 	{
 		$pt[$i]=~s/\r|\n//g; #the new chomp
-		print HTML "\tnouns.push(".$pt[$i].")\;\n";
+		print HTML "\tnouns.push(\"".$pt[$i]."\")\;\n";
 	}
 	elsif($plural==1)
 	{
 		$pt[$i]=~s/\r|\n//g;
-		print HTML "\tplurals.push(".$pt[$i].")\;\n";
+		print HTML "\tplurals.push(\"".$pt[$i]."\")\;\n";
 	}
 	elsif($proper==1)
 	{
 		$pt[$i]=~s/\r|\n//g;
-		print HTML "\tpropers.push(".$pt[$i].")\;\n";
+		print HTML "\tpropers.push(\"".$pt[$i]."\")\;\n";
 	}
 	elsif($verb==1)
 	{
 		$pt[$i]=~s/\r|\n//g;
-		print HTML "\tverbs.push(".$pt[$i].")\;\n";
+		print HTML "\tverbs.push(\"".$pt[$i]."\")\;\n";
 	}
 
 

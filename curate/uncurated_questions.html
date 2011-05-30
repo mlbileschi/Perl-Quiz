@@ -10,37 +10,47 @@
 <input type="button" id="FinalizeAll" value="Finalize Quiz" name="FinalizeAll" onClick="finalizeAll(); this.disabled=1">
 		<p><input type="checkbox" id="ckbox0" value="Click here" onClick="toggleShowHide('ckbox0','question0');"></p>
 		<DIV ID="question0">
-		<input type = "hidden" id="pos0" value = "(noun)"/>
+		<a style="display:none" id="pos0" >((noun))</a>
 			<INPUT type="button" id="button0" value="Finalize Question" name="finalizeOne" onClick="finalize('question0'); this.disabled=1">
 			<br>
-			<a>correct answer: Photosynthesis ((noun))</a>
+			<a>correct answer: carburetor</a>
 			<ol>
-				<a>___________________ occurs in two stages.</a>
+				<a>The ___________________ works on Bernoulli's principle: the faster air moves, the lower its static pressure, and the higher its dynamic pressure.</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div0text1">  </a>
-					<input type="text" name="textbox1" id = "div0textbox1" value="thylakoid">
-					<input type ="button" onclick="changeTerm('div0textbox1');"
+					<input type ="button" onclick="getPrev('div0textbox1', 'pos0');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div0textbox1" value="updraft">
+					<input type ="button" onclick="getNext('div0textbox1', 'pos0');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div0text2">  </a>
-					<input type="text" name="textbox2" id = "div0textbox2" value="Photosynthesis">
-					<input type ="button" onclick="changeTerm('div0textbox2');"
+					<input type ="button" onclick="getPrev('div0textbox2', 'pos0');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div0textbox2" value="mesh">
+					<input type ="button" onclick="getNext('div0textbox2', 'pos0');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div0text3">  </a>
-					<input type="text" name="textbox3" id = "div0textbox3" value="dark">
-					<input type ="button" onclick="changeTerm('div0textbox3');"
+					<input type ="button" onclick="getPrev('div0textbox3', 'pos0');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div0textbox3" value="carburetor">
+					<input type ="button" onclick="getNext('div0textbox3', 'pos0');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div0text4">  </a>
-					<input type="text" name="textbox4" id = "div0textbox4" value="sunlight">
-					<input type ="button" onclick="changeTerm('div0textbox4');"
+					<input type ="button" onclick="getPrev('div0textbox4', 'pos0');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div0textbox4" value="venturi">
+					<input type ="button" onclick="getNext('div0textbox4', 'pos0');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div0text5">  </a>
-					<input type="text" name="textbox5" id = "div0textbox5" value="fixation">
-					<input type ="button" onclick="changeTerm('div0textbox5');"
+					<input type ="button" onclick="getPrev('div0textbox5', 'pos0');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div0textbox5" value="fueling">
+					<input type ="button" onclick="getNext('div0textbox5', 'pos0');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -48,37 +58,47 @@
 
 		<p><input type="checkbox" id="ckbox1" value="Click here" onClick="toggleShowHide('ckbox1','question1');"></p>
 		<DIV ID="question1">
-		<input type = "hidden" id="pos1" value = "(noun)|(plural)"/>
+		<a style="display:none" id="pos1" >((verb))</a>
 			<INPUT type="button" id="button1" value="Finalize Question" name="finalizeOne" onClick="finalize('question1'); this.disabled=1">
 			<br>
-			<a>correct answer: reactions ((noun)|(plural))</a>
+			<a>correct answer: actuates</a>
 			<ol>
-				<a>These stages are called the light ___________________ and the dark ___________________ .</a>
+				<a>Instead, it ___________________ carburetor mechanisms which meter the flow of air being pulled into the engine.</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div1text1">  </a>
-					<input type="text" name="textbox1" id = "div1textbox1" value="sucrose">
-					<input type ="button" onclick="changeTerm('div1textbox1');"
+					<input type ="button" onclick="getPrev('div1textbox1', 'pos1');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div1textbox1" value="choke">
+					<input type ="button" onclick="getNext('div1textbox1', 'pos1');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div1text2">  </a>
-					<input type="text" name="textbox2" id = "div1textbox2" value="fructose">
-					<input type ="button" onclick="changeTerm('div1textbox2');"
+					<input type ="button" onclick="getPrev('div1textbox2', 'pos1');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div1textbox2" value="actuates">
+					<input type ="button" onclick="getNext('div1textbox2', 'pos1');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div1text3">  </a>
-					<input type="text" name="textbox3" id = "div1textbox3" value="sunlight">
-					<input type ="button" onclick="changeTerm('div1textbox3');"
+					<input type ="button" onclick="getPrev('div1textbox3', 'pos1');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div1textbox3" value="stacked">
+					<input type ="button" onclick="getNext('div1textbox3', 'pos1');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div1text4">  </a>
-					<input type="text" name="textbox4" id = "div1textbox4" value="reactions">
-					<input type ="button" onclick="changeTerm('div1textbox4');"
+					<input type ="button" onclick="getPrev('div1textbox4', 'pos1');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div1textbox4" value="suck">
+					<input type ="button" onclick="getNext('div1textbox4', 'pos1');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div1text5">  </a>
-					<input type="text" name="textbox5" id = "div1textbox5" value="fixation">
-					<input type ="button" onclick="changeTerm('div1textbox5');"
+					<input type ="button" onclick="getPrev('div1textbox5', 'pos1');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div1textbox5" value="cleaner">
+					<input type ="button" onclick="getNext('div1textbox5', 'pos1');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -86,37 +106,47 @@
 
 		<p><input type="checkbox" id="ckbox2" value="Click here" onClick="toggleShowHide('ckbox2','question2');"></p>
 		<DIV ID="question2">
-		<input type = "hidden" id="pos2" value = "(noun)|(plural)"/>
+		<a style="display:none" id="pos2" >((noun))</a>
 			<INPUT type="button" id="button2" value="Finalize Question" name="finalizeOne" onClick="finalize('question2'); this.disabled=1">
 			<br>
-			<a>correct answer: reactions ((noun)|(plural))</a>
+			<a>correct answer: carburetor</a>
 			<ol>
-				<a>The light ___________________ take place in the presence of light.</a>
+				<a>Instead, it actuates ___________________ mechanisms which meter the flow of air being pulled into the engine.</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div2text1">  </a>
-					<input type="text" name="textbox1" id = "div2textbox1" value="sucrose">
-					<input type ="button" onclick="changeTerm('div2textbox1');"
+					<input type ="button" onclick="getPrev('div2textbox1', 'pos2');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div2textbox1" value="updraft">
+					<input type ="button" onclick="getNext('div2textbox1', 'pos2');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div2text2">  </a>
-					<input type="text" name="textbox2" id = "div2textbox2" value="splitting">
-					<input type ="button" onclick="changeTerm('div2textbox2');"
+					<input type ="button" onclick="getPrev('div2textbox2', 'pos2');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div2textbox2" value="filters">
+					<input type ="button" onclick="getNext('div2textbox2', 'pos2');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div2text3">  </a>
-					<input type="text" name="textbox3" id = "div2textbox3" value="fixation">
-					<input type ="button" onclick="changeTerm('div2textbox3');"
+					<input type ="button" onclick="getPrev('div2textbox3', 'pos2');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div2textbox3" value="carburetor">
+					<input type ="button" onclick="getNext('div2textbox3', 'pos2');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div2text4">  </a>
-					<input type="text" name="textbox4" id = "div2textbox4" value="reactions">
-					<input type ="button" onclick="changeTerm('div2textbox4');"
+					<input type ="button" onclick="getPrev('div2textbox4', 'pos2');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div2textbox4" value="carburetors">
+					<input type ="button" onclick="getNext('div2textbox4', 'pos2');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div2text5">  </a>
-					<input type="text" name="textbox5" id = "div2textbox5" value="fructose">
-					<input type ="button" onclick="changeTerm('div2textbox5');"
+					<input type ="button" onclick="getPrev('div2textbox5', 'pos2');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div2textbox5" value="manifold">
+					<input type ="button" onclick="getNext('div2textbox5', 'pos2');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -124,37 +154,47 @@
 
 		<p><input type="checkbox" id="ckbox3" value="Click here" onClick="toggleShowHide('ckbox3','question3');"></p>
 		<DIV ID="question3">
-		<input type = "hidden" id="pos3" value = "(noun)|(plural)"/>
+		<a style="display:none" id="pos3" >((noun))</a>
 			<INPUT type="button" id="button3" value="Finalize Question" name="finalizeOne" onClick="finalize('question3'); this.disabled=1">
 			<br>
-			<a>correct answer: reactions ((noun)|(plural))</a>
+			<a>correct answer: airstream</a>
 			<ol>
-				<a>The dark ___________________ do not require direct light, however dark ___________________ in most plants occur during the day.</a>
+				<a>The speed of this flow, and therefore its pressure, determines the amount of fuel drawn into the ___________________ .</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div3text1">  </a>
-					<input type="text" name="textbox1" id = "div3textbox1" value="sucrose">
-					<input type ="button" onclick="changeTerm('div3textbox1');"
+					<input type ="button" onclick="getPrev('div3textbox1', 'pos3');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div3textbox1" value="throttle">
+					<input type ="button" onclick="getNext('div3textbox1', 'pos3');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div3text2">  </a>
-					<input type="text" name="textbox2" id = "div3textbox2" value="stroma">
-					<input type ="button" onclick="changeTerm('div3textbox2');"
+					<input type ="button" onclick="getPrev('div3textbox2', 'pos3');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div3textbox2" value="airstream">
+					<input type ="button" onclick="getNext('div3textbox2', 'pos3');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div3text3">  </a>
-					<input type="text" name="textbox3" id = "div3textbox3" value="Oxygen">
-					<input type ="button" onclick="changeTerm('div3textbox3');"
+					<input type ="button" onclick="getPrev('div3textbox3', 'pos3');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div3textbox3" value="starvation">
+					<input type ="button" onclick="getNext('div3textbox3', 'pos3');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div3text4">  </a>
-					<input type="text" name="textbox4" id = "div3textbox4" value="reactions">
-					<input type ="button" onclick="changeTerm('div3textbox4');"
+					<input type ="button" onclick="getPrev('div3textbox4', 'pos3');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div3textbox4" value="mesh">
+					<input type ="button" onclick="getNext('div3textbox4', 'pos3');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div3text5">  </a>
-					<input type="text" name="textbox5" id = "div3textbox5" value="thylakoid">
-					<input type ="button" onclick="changeTerm('div3textbox5');"
+					<input type ="button" onclick="getPrev('div3textbox5', 'pos3');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div3textbox5" value="Outboard">
+					<input type ="button" onclick="getNext('div3textbox5', 'pos3');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -162,37 +202,47 @@
 
 		<p><input type="checkbox" id="ckbox4" value="Click here" onClick="toggleShowHide('ckbox4','question4');"></p>
 		<DIV ID="question4">
-		<input type = "hidden" id="pos4" value = "(noun)"/>
+		<a style="display:none" id="pos4" >((noun)|(plural))</a>
 			<INPUT type="button" id="button4" value="Finalize Question" name="finalizeOne" onClick="finalize('question4'); this.disabled=1">
 			<br>
-			<a>correct answer: thylakoid ((noun))</a>
+			<a>correct answer: carburetors</a>
 			<ol>
-				<a>Light reactions occur mostly in the ___________________ stacks of the grana.</a>
+				<a>When ___________________ are used in aircraft with piston engines, special designs and features are needed to prevent fuel starvation during inverted flight.</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div4text1">  </a>
-					<input type="text" name="textbox1" id = "div4textbox1" value="thylakoid">
-					<input type ="button" onclick="changeTerm('div4textbox1');"
+					<input type ="button" onclick="getPrev('div4textbox1', 'pos4');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div4textbox1" value="carburetor">
+					<input type ="button" onclick="getNext('div4textbox1', 'pos4');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div4text2">  </a>
-					<input type="text" name="textbox2" id = "div4textbox2" value="stomata">
-					<input type ="button" onclick="changeTerm('div4textbox2');"
+					<input type ="button" onclick="getPrev('div4textbox2', 'pos4');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div4textbox2" value="mesh">
+					<input type ="button" onclick="getNext('div4textbox2', 'pos4');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div4text3">  </a>
-					<input type="text" name="textbox3" id = "div4textbox3" value="oxygen">
-					<input type ="button" onclick="changeTerm('div4textbox3');"
+					<input type ="button" onclick="getPrev('div4textbox3', 'pos4');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div4textbox3" value="enhancements">
+					<input type ="button" onclick="getNext('div4textbox3', 'pos4');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div4text4">  </a>
-					<input type="text" name="textbox4" id = "div4textbox4" value="sucrose">
-					<input type ="button" onclick="changeTerm('div4textbox4');"
+					<input type ="button" onclick="getPrev('div4textbox4', 'pos4');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div4textbox4" value="carburetors">
+					<input type ="button" onclick="getNext('div4textbox4', 'pos4');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div4text5">  </a>
-					<input type="text" name="textbox5" id = "div4textbox5" value="sunlight">
-					<input type ="button" onclick="changeTerm('div4textbox5');"
+					<input type ="button" onclick="getPrev('div4textbox5', 'pos4');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div4textbox5" value="filters">
+					<input type ="button" onclick="getNext('div4textbox5', 'pos4');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -200,37 +250,47 @@
 
 		<p><input type="checkbox" id="ckbox5" value="Click here" onClick="toggleShowHide('ckbox5','question5');"></p>
 		<DIV ID="question5">
-		<input type = "hidden" id="pos5" value = "(noun)|(plural)"/>
+		<a style="display:none" id="pos5" >((noun))</a>
 			<INPUT type="button" id="button5" value="Finalize Question" name="finalizeOne" onClick="finalize('question5'); this.disabled=1">
 			<br>
-			<a>correct answer: reactions ((noun)|(plural))</a>
+			<a>correct answer: carburetor</a>
 			<ol>
-				<a>Light ___________________ occur mostly in the thylakoid stacks of the grana.</a>
+				<a>When ___________________s are used in aircraft with piston engines, special designs and features are needed to prevent fuel starvation during inverted flight.</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div5text1">  </a>
-					<input type="text" name="textbox1" id = "div5textbox1" value="thylakoid">
-					<input type ="button" onclick="changeTerm('div5textbox1');"
+					<input type ="button" onclick="getPrev('div5textbox1', 'pos5');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div5textbox1" value="carburetors">
+					<input type ="button" onclick="getNext('div5textbox1', 'pos5');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div5text2">  </a>
-					<input type="text" name="textbox2" id = "div5textbox2" value="reactions">
-					<input type ="button" onclick="changeTerm('div5textbox2');"
+					<input type ="button" onclick="getPrev('div5textbox2', 'pos5');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div5textbox2" value="carburetor">
+					<input type ="button" onclick="getNext('div5textbox2', 'pos5');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div5text3">  </a>
-					<input type="text" name="textbox3" id = "div5textbox3" value="steps">
-					<input type ="button" onclick="changeTerm('div5textbox3');"
+					<input type ="button" onclick="getPrev('div5textbox3', 'pos5');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div5textbox3" value="choke">
+					<input type ="button" onclick="getNext('div5textbox3', 'pos5');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div5text4">  </a>
-					<input type="text" name="textbox4" id = "div5textbox4" value="splitting">
-					<input type ="button" onclick="changeTerm('div5textbox4');"
+					<input type ="button" onclick="getPrev('div5textbox4', 'pos5');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div5textbox4" value="airstream">
+					<input type ="button" onclick="getNext('div5textbox4', 'pos5');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div5text5">  </a>
-					<input type="text" name="textbox5" id = "div5textbox5" value="stroma">
-					<input type ="button" onclick="changeTerm('div5textbox5');"
+					<input type ="button" onclick="getPrev('div5textbox5', 'pos5');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div5textbox5" value="throttle">
+					<input type ="button" onclick="getNext('div5textbox5', 'pos5');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -238,37 +298,47 @@
 
 		<p><input type="checkbox" id="ckbox6" value="Click here" onClick="toggleShowHide('ckbox6','question6');"></p>
 		<DIV ID="question6">
-		<input type = "hidden" id="pos6" value = "(noun)|(verb)|(plural)"/>
+		<a style="display:none" id="pos6" >((noun))</a>
 			<INPUT type="button" id="button6" value="Finalize Question" name="finalizeOne" onClick="finalize('question6'); this.disabled=1">
 			<br>
-			<a>correct answer: stacks ((noun)|(verb)|(plural))</a>
+			<a>correct answer: carburetor</a>
 			<ol>
-				<a>Light reactions occur mostly in the thylakoid ___________________ of the grana.</a>
+				<a>Later engines used an early form of fuel injection known as a pressure ___________________ .</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div6text1">  </a>
-					<input type="text" name="textbox1" id = "div6textbox1" value="stroma">
-					<input type ="button" onclick="changeTerm('div6textbox1');"
+					<input type ="button" onclick="getPrev('div6textbox1', 'pos6');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div6textbox1" value="updraft">
+					<input type ="button" onclick="getNext('div6textbox1', 'pos6');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div6text2">  </a>
-					<input type="text" name="textbox2" id = "div6textbox2" value="molecules">
-					<input type ="button" onclick="changeTerm('div6textbox2');"
+					<input type ="button" onclick="getPrev('div6textbox2', 'pos6');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div6textbox2" value="linkage">
+					<input type ="button" onclick="getNext('div6textbox2', 'pos6');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div6text3">  </a>
-					<input type="text" name="textbox3" id = "div6textbox3" value="stacks">
-					<input type ="button" onclick="changeTerm('div6textbox3');"
+					<input type ="button" onclick="getPrev('div6textbox3', 'pos6');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div6textbox3" value="carburetor">
+					<input type ="button" onclick="getNext('div6textbox3', 'pos6');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div6text4">  </a>
-					<input type="text" name="textbox4" id = "div6textbox4" value="glucose">
-					<input type ="button" onclick="changeTerm('div6textbox4');"
+					<input type ="button" onclick="getPrev('div6textbox4', 'pos6');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div6textbox4" value="movable">
+					<input type ="button" onclick="getNext('div6textbox4', 'pos6');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div6text5">  </a>
-					<input type="text" name="textbox5" id = "div6textbox5" value="reactions">
-					<input type ="button" onclick="changeTerm('div6textbox5');"
+					<input type ="button" onclick="getPrev('div6textbox5', 'pos6');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div6textbox5" value="viscosity">
+					<input type ="button" onclick="getNext('div6textbox5', 'pos6');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -276,37 +346,47 @@
 
 		<p><input type="checkbox" id="ckbox7" value="Click here" onClick="toggleShowHide('ckbox7','question7');"></p>
 		<DIV ID="question7">
-		<input type = "hidden" id="pos7" value = ""/>
+		<a style="display:none" id="pos7" >((noun)|(plural))</a>
 			<INPUT type="button" id="button7" value="Finalize Question" name="finalizeOne" onClick="finalize('question7'); this.disabled=1">
 			<br>
-			<a>correct answer: NADPH ()</a>
+			<a>correct answer: carburetors</a>
 			<ol>
-				<a>Here, sunlight is converted to chemical energy in the form of ATP (free energy containing molecule) and ___________________ (high energy electron carrying molecule).</a>
+				<a>Most production carbureted (as opposed to fuel-injected) engines have a single carburetor and a matching intake manifold that divides and transports the air fuel mixture to the intake valves, though some engines (like motorcycle engines) use multiple ___________________ on split heads.</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div7text1">  </a>
-					<input type="text" name="textbox1" id = "div7textbox1" value="NADPH">
-					<input type ="button" onclick="changeTerm('div7textbox1');"
+					<input type ="button" onclick="getPrev('div7textbox1', 'pos7');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div7textbox1" value="movable">
+					<input type ="button" onclick="getNext('div7textbox1', 'pos7');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div7text2">  </a>
-					<input type="text" name="textbox2" id = "div7textbox2" value="stomata">
-					<input type ="button" onclick="changeTerm('div7textbox2');"
+					<input type ="button" onclick="getPrev('div7textbox2', 'pos7');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div7textbox2" value="carburetors">
+					<input type ="button" onclick="getNext('div7textbox2', 'pos7');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div7text3">  </a>
-					<input type="text" name="textbox3" id = "div7textbox3" value="molecules">
-					<input type ="button" onclick="changeTerm('div7textbox3');"
+					<input type ="button" onclick="getPrev('div7textbox3', 'pos7');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div7textbox3" value="suck">
+					<input type ="button" onclick="getNext('div7textbox3', 'pos7');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div7text4">  </a>
-					<input type="text" name="textbox4" id = "div7textbox4" value="sunlight">
-					<input type ="button" onclick="changeTerm('div7textbox4');"
+					<input type ="button" onclick="getPrev('div7textbox4', 'pos7');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div7textbox4" value="enhancements">
+					<input type ="button" onclick="getNext('div7textbox4', 'pos7');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div7text5">  </a>
-					<input type="text" name="textbox5" id = "div7textbox5" value="sugar">
-					<input type ="button" onclick="changeTerm('div7textbox5');"
+					<input type ="button" onclick="getPrev('div7textbox5', 'pos7');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div7textbox5" value="intake">
+					<input type ="button" onclick="getNext('div7textbox5', 'pos7');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -314,37 +394,47 @@
 
 		<p><input type="checkbox" id="ckbox8" value="Click here" onClick="toggleShowHide('ckbox8','question8');"></p>
 		<DIV ID="question8">
-		<input type = "hidden" id="pos8" value = "(noun)"/>
+		<a style="display:none" id="pos8" >((noun))</a>
 			<INPUT type="button" id="button8" value="Finalize Question" name="finalizeOne" onClick="finalize('question8'); this.disabled=1">
 			<br>
-			<a>correct answer: Chlorophyll ((noun))</a>
+			<a>correct answer: carburetor</a>
 			<ol>
-				<a>___________________ absorbs light energy and starts a chain of steps that result in the production of ATP, NADPH, and oxygen (through the splitting of water).</a>
+				<a>Most production carbureted (as opposed to fuel-injected) engines have a single ___________________ and a matching intake manifold that divides and transports the air fuel mixture to the intake valves, though some engines (like motorcycle engines) use multiple ___________________s on split heads.</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div8text1">  </a>
-					<input type="text" name="textbox1" id = "div8textbox1" value="stroma">
-					<input type ="button" onclick="changeTerm('div8textbox1');"
+					<input type ="button" onclick="getPrev('div8textbox1', 'pos8');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div8textbox1" value="linkage">
+					<input type ="button" onclick="getNext('div8textbox1', 'pos8');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div8text2">  </a>
-					<input type="text" name="textbox2" id = "div8textbox2" value="stacks">
-					<input type ="button" onclick="changeTerm('div8textbox2');"
+					<input type ="button" onclick="getPrev('div8textbox2', 'pos8');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div8textbox2" value="starvation">
+					<input type ="button" onclick="getNext('div8textbox2', 'pos8');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div8text3">  </a>
-					<input type="text" name="textbox3" id = "div8textbox3" value="Chlorophyll">
-					<input type ="button" onclick="changeTerm('div8textbox3');"
+					<input type ="button" onclick="getPrev('div8textbox3', 'pos8');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div8textbox3" value="mesh">
+					<input type ="button" onclick="getNext('div8textbox3', 'pos8');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div8text4">  </a>
-					<input type="text" name="textbox4" id = "div8textbox4" value="Carbon">
-					<input type ="button" onclick="changeTerm('div8textbox4');"
+					<input type ="button" onclick="getPrev('div8textbox4', 'pos8');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div8textbox4" value="carburetor">
+					<input type ="button" onclick="getNext('div8textbox4', 'pos8');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div8text5">  </a>
-					<input type="text" name="textbox5" id = "div8textbox5" value="thylakoid">
-					<input type ="button" onclick="changeTerm('div8textbox5');"
+					<input type ="button" onclick="getPrev('div8textbox5', 'pos8');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div8textbox5" value="intake">
+					<input type ="button" onclick="getNext('div8textbox5', 'pos8');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -352,37 +442,47 @@
 
 		<p><input type="checkbox" id="ckbox9" value="Click here" onClick="toggleShowHide('ckbox9','question9');"></p>
 		<DIV ID="question9">
-		<input type = "hidden" id="pos9" value = ""/>
+		<a style="display:none" id="pos9" >((verb))</a>
 			<INPUT type="button" id="button9" value="Finalize Question" name="finalizeOne" onClick="finalize('question9'); this.disabled=1">
 			<br>
-			<a>correct answer: NADPH ()</a>
+			<a>correct answer: carbureted</a>
 			<ol>
-				<a>Chlorophyll absorbs light energy and starts a chain of steps that result in the production of ATP, ___________________, and oxygen (through the splitting of water).</a>
+				<a>Most production ___________________ (as opposed to fuel-injected) engines have a single carburetor and a matching intake manifold that divides and transports the air fuel mixture to the intake valves, though some engines (like motorcycle engines) use multiple carburetors on split heads.</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div9text1">  </a>
-					<input type="text" name="textbox1" id = "div9textbox1" value="sucrose">
-					<input type ="button" onclick="changeTerm('div9textbox1');"
+					<input type ="button" onclick="getPrev('div9textbox1', 'pos9');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div9textbox1" value="inverted">
+					<input type ="button" onclick="getNext('div9textbox1', 'pos9');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div9text2">  </a>
-					<input type="text" name="textbox2" id = "div9textbox2" value="fructose">
-					<input type ="button" onclick="changeTerm('div9textbox2');"
+					<input type ="button" onclick="getPrev('div9textbox2', 'pos9');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div9textbox2" value="resisting">
+					<input type ="button" onclick="getNext('div9textbox2', 'pos9');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div9text3">  </a>
-					<input type="text" name="textbox3" id = "div9textbox3" value="glucose">
-					<input type ="button" onclick="changeTerm('div9textbox3');"
+					<input type ="button" onclick="getPrev('div9textbox3', 'pos9');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div9textbox3" value="basing">
+					<input type ="button" onclick="getNext('div9textbox3', 'pos9');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div9text4">  </a>
-					<input type="text" name="textbox4" id = "div9textbox4" value="NADPH">
-					<input type ="button" onclick="changeTerm('div9textbox4');"
+					<input type ="button" onclick="getPrev('div9textbox4', 'pos9');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div9textbox4" value="stacked">
+					<input type ="button" onclick="getNext('div9textbox4', 'pos9');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div9text5">  </a>
-					<input type="text" name="textbox5" id = "div9textbox5" value="Chlorophyll">
-					<input type ="button" onclick="changeTerm('div9textbox5');"
+					<input type ="button" onclick="getPrev('div9textbox5', 'pos9');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div9textbox5" value="carbureted">
+					<input type ="button" onclick="getNext('div9textbox5', 'pos9');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -390,37 +490,47 @@
 
 		<p><input type="checkbox" id="ckbox10" value="Click here" onClick="toggleShowHide('ckbox10','question10');"></p>
 		<DIV ID="question10">
-		<input type = "hidden" id="pos10" value = "(noun)|(plural)"/>
+		<a style="display:none" id="pos10" >((noun)|(verb))</a>
 			<INPUT type="button" id="button10" value="Finalize Question" name="finalizeOne" onClick="finalize('question10'); this.disabled=1">
 			<br>
-			<a>correct answer: stomata ((noun)|(plural))</a>
+			<a>correct answer: intake</a>
 			<ol>
-				<a>Oxygen is released through the ___________________ .</a>
+				<a>Most production carbureted (as opposed to fuel-injected) engines have a single carburetor and a matching ___________________ manifold that divides and transports the air fuel mixture to the ___________________ valves, though some engines (like motorcycle engines) use multiple carburetors on split heads.</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div10text1">  </a>
-					<input type="text" name="textbox1" id = "div10textbox1" value="sucrose">
-					<input type ="button" onclick="changeTerm('div10textbox1');"
+					<input type ="button" onclick="getPrev('div10textbox1', 'pos10');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div10textbox1" value="actuates">
+					<input type ="button" onclick="getNext('div10textbox1', 'pos10');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div10text2">  </a>
-					<input type="text" name="textbox2" id = "div10textbox2" value="fructose">
-					<input type ="button" onclick="changeTerm('div10textbox2');"
+					<input type ="button" onclick="getPrev('div10textbox2', 'pos10');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div10textbox2" value="intake">
+					<input type ="button" onclick="getNext('div10textbox2', 'pos10');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div10text3">  </a>
-					<input type="text" name="textbox3" id = "div10textbox3" value="splitting">
-					<input type ="button" onclick="changeTerm('div10textbox3');"
+					<input type ="button" onclick="getPrev('div10textbox3', 'pos10');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div10textbox3" value="carbureted">
+					<input type ="button" onclick="getNext('div10textbox3', 'pos10');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div10text4">  </a>
-					<input type="text" name="textbox4" id = "div10textbox4" value="stomata">
-					<input type ="button" onclick="changeTerm('div10textbox4');"
+					<input type ="button" onclick="getPrev('div10textbox4', 'pos10');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div10textbox4" value="throttle">
+					<input type ="button" onclick="getNext('div10textbox4', 'pos10');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div10text5">  </a>
-					<input type="text" name="textbox5" id = "div10textbox5" value="electron">
-					<input type ="button" onclick="changeTerm('div10textbox5');"
+					<input type ="button" onclick="getPrev('div10textbox5', 'pos10');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div10textbox5" value="inverted">
+					<input type ="button" onclick="getNext('div10textbox5', 'pos10');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -428,37 +538,47 @@
 
 		<p><input type="checkbox" id="ckbox11" value="Click here" onClick="toggleShowHide('ckbox11','question11');"></p>
 		<DIV ID="question11">
-		<input type = "hidden" id="pos11" value = ""/>
+		<a style="display:none" id="pos11" >((noun))</a>
 			<INPUT type="button" id="button11" value="Finalize Question" name="finalizeOne" onClick="finalize('question11'); this.disabled=1">
 			<br>
-			<a>correct answer: NADPH ()</a>
+			<a>correct answer: carburetor</a>
 			<ol>
-				<a>Both ATP and ___________________ are used in the dark reactions to produce sugar.</a>
+				<a>Multiple ___________________ engines were also common enhancements for modifying engines in the USA from the 1950s to mid-1960s, as well as during the following decade of high-performance muscle cars fueling different chambers of the engine's intake manifold.</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div11text1">  </a>
-					<input type="text" name="textbox1" id = "div11textbox1" value="NADPH">
-					<input type ="button" onclick="changeTerm('div11textbox1');"
+					<input type ="button" onclick="getPrev('div11textbox1', 'pos11');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div11textbox1" value="cleaner">
+					<input type ="button" onclick="getNext('div11textbox1', 'pos11');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div11text2">  </a>
-					<input type="text" name="textbox2" id = "div11textbox2" value="stomata">
-					<input type ="button" onclick="changeTerm('div11textbox2');"
+					<input type ="button" onclick="getPrev('div11textbox2', 'pos11');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div11textbox2" value="carburetor">
+					<input type ="button" onclick="getNext('div11textbox2', 'pos11');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div11text3">  </a>
-					<input type="text" name="textbox3" id = "div11textbox3" value="reactions">
-					<input type ="button" onclick="changeTerm('div11textbox3');"
+					<input type ="button" onclick="getPrev('div11textbox3', 'pos11');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div11textbox3" value="choke">
+					<input type ="button" onclick="getNext('div11textbox3', 'pos11');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div11text4">  </a>
-					<input type="text" name="textbox4" id = "div11textbox4" value="Photosynthesis">
-					<input type ="button" onclick="changeTerm('div11textbox4');"
+					<input type ="button" onclick="getPrev('div11textbox4', 'pos11');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div11textbox4" value="updraft">
+					<input type ="button" onclick="getNext('div11textbox4', 'pos11');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div11text5">  </a>
-					<input type="text" name="textbox5" id = "div11textbox5" value="glucose">
-					<input type ="button" onclick="changeTerm('div11textbox5');"
+					<input type ="button" onclick="getPrev('div11textbox5', 'pos11');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div11textbox5" value="fueling">
+					<input type ="button" onclick="getNext('div11textbox5', 'pos11');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -466,37 +586,47 @@
 
 		<p><input type="checkbox" id="ckbox12" value="Click here" onClick="toggleShowHide('ckbox12','question12');"></p>
 		<DIV ID="question12">
-		<input type = "hidden" id="pos12" value = "(noun)|(plural)"/>
+		<a style="display:none" id="pos12" >((noun)|(verb))</a>
 			<INPUT type="button" id="button12" value="Finalize Question" name="finalizeOne" onClick="finalize('question12'); this.disabled=1">
 			<br>
-			<a>correct answer: reactions ((noun)|(plural))</a>
+			<a>correct answer: intake</a>
 			<ol>
-				<a>Both ATP and NADPH are used in the dark ___________________ to produce sugar.</a>
+				<a>Multiple carburetor engines were also common enhancements for modifying engines in the USA from the 1950s to mid-1960s, as well as during the following decade of high-performance muscle cars fueling different chambers of the engine's ___________________ manifold.</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div12text1">  </a>
-					<input type="text" name="textbox1" id = "div12textbox1" value="sucrose">
-					<input type ="button" onclick="changeTerm('div12textbox1');"
+					<input type ="button" onclick="getPrev('div12textbox1', 'pos12');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div12textbox1" value="actuates">
+					<input type ="button" onclick="getNext('div12textbox1', 'pos12');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div12text2">  </a>
-					<input type="text" name="textbox2" id = "div12textbox2" value="dark">
-					<input type ="button" onclick="changeTerm('div12textbox2');"
+					<input type ="button" onclick="getPrev('div12textbox2', 'pos12');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div12textbox2" value="intake">
+					<input type ="button" onclick="getNext('div12textbox2', 'pos12');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div12text3">  </a>
-					<input type="text" name="textbox3" id = "div12textbox3" value="thylakoid">
-					<input type ="button" onclick="changeTerm('div12textbox3');"
+					<input type ="button" onclick="getPrev('div12textbox3', 'pos12');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div12textbox3" value="throttle">
+					<input type ="button" onclick="getNext('div12textbox3', 'pos12');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div12text4">  </a>
-					<input type="text" name="textbox4" id = "div12textbox4" value="reactions">
-					<input type ="button" onclick="changeTerm('div12textbox4');"
+					<input type ="button" onclick="getPrev('div12textbox4', 'pos12');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div12textbox4" value="carbureted">
+					<input type ="button" onclick="getNext('div12textbox4', 'pos12');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div12text5">  </a>
-					<input type="text" name="textbox5" id = "div12textbox5" value="glucose">
-					<input type ="button" onclick="changeTerm('div12textbox5');"
+					<input type ="button" onclick="getPrev('div12textbox5', 'pos12');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div12textbox5" value="linkage">
+					<input type ="button" onclick="getNext('div12textbox5', 'pos12');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -504,37 +634,47 @@
 
 		<p><input type="checkbox" id="ckbox13" value="Click here" onClick="toggleShowHide('ckbox13','question13');"></p>
 		<DIV ID="question13">
-		<input type = "hidden" id="pos13" value = "(noun)|(adjective)"/>
+		<a style="display:none" id="pos13" >((noun)|(plural))</a>
 			<INPUT type="button" id="button13" value="Finalize Question" name="finalizeOne" onClick="finalize('question13'); this.disabled=1">
 			<br>
-			<a>correct answer: stroma ((noun)|(adjective))</a>
+			<a>correct answer: carburetors</a>
 			<ol>
-				<a>Dark reactions occur in the ___________________ .</a>
+				<a>Older engines used updraft ___________________, where the air enters from below the carburetor and exits through the top.</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div13text1">  </a>
-					<input type="text" name="textbox1" id = "div13textbox1" value="stroma">
-					<input type ="button" onclick="changeTerm('div13textbox1');"
+					<input type ="button" onclick="getPrev('div13textbox1', 'pos13');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div13textbox1" value="venturi">
+					<input type ="button" onclick="getNext('div13textbox1', 'pos13');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div13text2">  </a>
-					<input type="text" name="textbox2" id = "div13textbox2" value="stomata">
-					<input type ="button" onclick="changeTerm('div13textbox2');"
+					<input type ="button" onclick="getPrev('div13textbox2', 'pos13');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div13textbox2" value="Outboard">
+					<input type ="button" onclick="getNext('div13textbox2', 'pos13');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div13text3">  </a>
-					<input type="text" name="textbox3" id = "div13textbox3" value="Photosynthesis">
-					<input type ="button" onclick="changeTerm('div13textbox3');"
+					<input type ="button" onclick="getPrev('div13textbox3', 'pos13');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div13textbox3" value="droplets">
+					<input type ="button" onclick="getNext('div13textbox3', 'pos13');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div13text4">  </a>
-					<input type="text" name="textbox4" id = "div13textbox4" value="fixation">
-					<input type ="button" onclick="changeTerm('div13textbox4');"
+					<input type ="button" onclick="getPrev('div13textbox4', 'pos13');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div13textbox4" value="airstream">
+					<input type ="button" onclick="getNext('div13textbox4', 'pos13');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div13text5">  </a>
-					<input type="text" name="textbox5" id = "div13textbox5" value="reactions">
-					<input type ="button" onclick="changeTerm('div13textbox5');"
+					<input type ="button" onclick="getPrev('div13textbox5', 'pos13');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div13textbox5" value="carburetors">
+					<input type ="button" onclick="getNext('div13textbox5', 'pos13');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -542,37 +682,47 @@
 
 		<p><input type="checkbox" id="ckbox14" value="Click here" onClick="toggleShowHide('ckbox14','question14');"></p>
 		<DIV ID="question14">
-		<input type = "hidden" id="pos14" value = "(noun)|(plural)"/>
+		<a style="display:none" id="pos14" >((noun))</a>
 			<INPUT type="button" id="button14" value="Finalize Question" name="finalizeOne" onClick="finalize('question14'); this.disabled=1">
 			<br>
-			<a>correct answer: reactions ((noun)|(plural))</a>
+			<a>correct answer: updraft</a>
 			<ol>
-				<a>Dark ___________________ occur in the stroma.</a>
+				<a>Older engines used ___________________ carburetors, where the air enters from below the carburetor and exits through the top.</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div14text1">  </a>
-					<input type="text" name="textbox1" id = "div14textbox1" value="reactions">
-					<input type ="button" onclick="changeTerm('div14textbox1');"
+					<input type ="button" onclick="getPrev('div14textbox1', 'pos14');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div14textbox1" value="Outboard">
+					<input type ="button" onclick="getNext('div14textbox1', 'pos14');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div14text2">  </a>
-					<input type="text" name="textbox2" id = "div14textbox2" value="stomata">
-					<input type ="button" onclick="changeTerm('div14textbox2');"
+					<input type ="button" onclick="getPrev('div14textbox2', 'pos14');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div14textbox2" value="starvation">
+					<input type ="button" onclick="getNext('div14textbox2', 'pos14');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div14text3">  </a>
-					<input type="text" name="textbox3" id = "div14textbox3" value="glucose">
-					<input type ="button" onclick="changeTerm('div14textbox3');"
+					<input type ="button" onclick="getPrev('div14textbox3', 'pos14');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div14textbox3" value="updraft">
+					<input type ="button" onclick="getNext('div14textbox3', 'pos14');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div14text4">  </a>
-					<input type="text" name="textbox4" id = "div14textbox4" value="fructose">
-					<input type ="button" onclick="changeTerm('div14textbox4');"
+					<input type ="button" onclick="getPrev('div14textbox4', 'pos14');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div14textbox4" value="throttle">
+					<input type ="button" onclick="getNext('div14textbox4', 'pos14');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div14text5">  </a>
-					<input type="text" name="textbox5" id = "div14textbox5" value="Chlorophyll">
-					<input type ="button" onclick="changeTerm('div14textbox5');"
+					<input type ="button" onclick="getPrev('div14textbox5', 'pos14');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div14textbox5" value="airstream">
+					<input type ="button" onclick="getNext('div14textbox5', 'pos14');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -580,37 +730,47 @@
 
 		<p><input type="checkbox" id="ckbox15" value="Click here" onClick="toggleShowHide('ckbox15','question15');"></p>
 		<DIV ID="question15">
-		<input type = "hidden" id="pos15" value = ""/>
+		<a style="display:none" id="pos15" >((noun))</a>
 			<INPUT type="button" id="button15" value="Finalize Question" name="finalizeOne" onClick="finalize('question15'); this.disabled=1">
 			<br>
-			<a>correct answer: NADPH ()</a>
+			<a>correct answer: carburetor</a>
 			<ol>
-				<a>Carbon dioxide is converted to sugar using ATP and ___________________ .</a>
+				<a>Older engines used updraft ___________________s, where the air enters from below the ___________________ and exits through the top.</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div15text1">  </a>
-					<input type="text" name="textbox1" id = "div15textbox1" value="Photosynthesis">
-					<input type ="button" onclick="changeTerm('div15textbox1');"
+					<input type ="button" onclick="getPrev('div15textbox1', 'pos15');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div15textbox1" value="updraft">
+					<input type ="button" onclick="getNext('div15textbox1', 'pos15');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div15text2">  </a>
-					<input type="text" name="textbox2" id = "div15textbox2" value="glucose">
-					<input type ="button" onclick="changeTerm('div15textbox2');"
+					<input type ="button" onclick="getPrev('div15textbox2', 'pos15');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div15textbox2" value="mesh">
+					<input type ="button" onclick="getNext('div15textbox2', 'pos15');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div15text3">  </a>
-					<input type="text" name="textbox3" id = "div15textbox3" value="reactions">
-					<input type ="button" onclick="changeTerm('div15textbox3');"
+					<input type ="button" onclick="getPrev('div15textbox3', 'pos15');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div15textbox3" value="carburetor">
+					<input type ="button" onclick="getNext('div15textbox3', 'pos15');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div15text4">  </a>
-					<input type="text" name="textbox4" id = "div15textbox4" value="fixation">
-					<input type ="button" onclick="changeTerm('div15textbox4');"
+					<input type ="button" onclick="getPrev('div15textbox4', 'pos15');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div15textbox4" value="linkage">
+					<input type ="button" onclick="getNext('div15textbox4', 'pos15');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div15text5">  </a>
-					<input type="text" name="textbox5" id = "div15textbox5" value="NADPH">
-					<input type ="button" onclick="changeTerm('div15textbox5');"
+					<input type ="button" onclick="getPrev('div15textbox5', 'pos15');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div15textbox5" value="viscosity">
+					<input type ="button" onclick="getNext('div15textbox5', 'pos15');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -618,37 +778,47 @@
 
 		<p><input type="checkbox" id="ckbox16" value="Click here" onClick="toggleShowHide('ckbox16','question16');"></p>
 		<DIV ID="question16">
-		<input type = "hidden" id="pos16" value = "(noun)"/>
+		<a style="display:none" id="pos16" >((noun))</a>
 			<INPUT type="button" id="button16" value="Finalize Question" name="finalizeOne" onClick="finalize('question16'); this.disabled=1">
 			<br>
-			<a>correct answer: fixation ((noun))</a>
+			<a>correct answer: carburetor</a>
 			<ol>
-				<a>This process is known as carbon ___________________ or the Calvin cycle.</a>
+				<a>This had the advantage of never "flooding" the engine, as any liquid fuel droplets would fall out of the ___________________ instead of into the intake manifold; it also lent itself to use of an oil bath air cleaner, where a pool of oil below a mesh element below the ___________________ is sucked up into the mesh and the air is drawn through the oil-covered mesh; this was an effective system in a time when paper air filters did not exist.</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div16text1">  </a>
-					<input type="text" name="textbox1" id = "div16textbox1" value="stroma">
-					<input type ="button" onclick="changeTerm('div16textbox1');"
+					<input type ="button" onclick="getPrev('div16textbox1', 'pos16');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div16textbox1" value="viscosity">
+					<input type ="button" onclick="getNext('div16textbox1', 'pos16');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div16text2">  </a>
-					<input type="text" name="textbox2" id = "div16textbox2" value="sugar">
-					<input type ="button" onclick="changeTerm('div16textbox2');"
+					<input type ="button" onclick="getPrev('div16textbox2', 'pos16');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div16textbox2" value="choke">
+					<input type ="button" onclick="getNext('div16textbox2', 'pos16');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div16text3">  </a>
-					<input type="text" name="textbox3" id = "div16textbox3" value="fixation">
-					<input type ="button" onclick="changeTerm('div16textbox3');"
+					<input type ="button" onclick="getPrev('div16textbox3', 'pos16');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div16textbox3" value="starvation">
+					<input type ="button" onclick="getNext('div16textbox3', 'pos16');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div16text4">  </a>
-					<input type="text" name="textbox4" id = "div16textbox4" value="electron">
-					<input type ="button" onclick="changeTerm('div16textbox4');"
+					<input type ="button" onclick="getPrev('div16textbox4', 'pos16');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div16textbox4" value="manifold">
+					<input type ="button" onclick="getNext('div16textbox4', 'pos16');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div16text5">  </a>
-					<input type="text" name="textbox5" id = "div16textbox5" value="stages">
-					<input type ="button" onclick="changeTerm('div16textbox5');"
+					<input type ="button" onclick="getPrev('div16textbox5', 'pos16');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div16textbox5" value="carburetor">
+					<input type ="button" onclick="getNext('div16textbox5', 'pos16');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -656,37 +826,47 @@
 
 		<p><input type="checkbox" id="ckbox17" value="Click here" onClick="toggleShowHide('ckbox17','question17');"></p>
 		<DIV ID="question17">
-		<input type = "hidden" id="pos17" value = "(noun)"/>
+		<a style="display:none" id="pos17" >((noun)|(verb))</a>
 			<INPUT type="button" id="button17" value="Finalize Question" name="finalizeOne" onClick="finalize('question17'); this.disabled=1">
 			<br>
-			<a>correct answer: fructose ((noun))</a>
+			<a>correct answer: intake</a>
 			<ol>
-				<a>The 6-carbon sugar is eventually broken-down into two molecules, glucose and ___________________ .</a>
+				<a>This had the advantage of never "flooding" the engine, as any liquid fuel droplets would fall out of the carburetor instead of into the ___________________ manifold; it also lent itself to use of an oil bath air cleaner, where a pool of oil below a mesh element below the carburetor is sucked up into the mesh and the air is drawn through the oil-covered mesh; this was an effective system in a time when paper air filters did not exist.</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div17text1">  </a>
-					<input type="text" name="textbox1" id = "div17textbox1" value="thylakoid">
-					<input type ="button" onclick="changeTerm('div17textbox1');"
+					<input type ="button" onclick="getPrev('div17textbox1', 'pos17');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div17textbox1" value="carbureted">
+					<input type ="button" onclick="getNext('div17textbox1', 'pos17');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div17text2">  </a>
-					<input type="text" name="textbox2" id = "div17textbox2" value="fructose">
-					<input type ="button" onclick="changeTerm('div17textbox2');"
+					<input type ="button" onclick="getPrev('div17textbox2', 'pos17');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div17textbox2" value="enhancements">
+					<input type ="button" onclick="getNext('div17textbox2', 'pos17');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div17text3">  </a>
-					<input type="text" name="textbox3" id = "div17textbox3" value="fixation">
-					<input type ="button" onclick="changeTerm('div17textbox3');"
+					<input type ="button" onclick="getPrev('div17textbox3', 'pos17');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div17textbox3" value="throttle">
+					<input type ="button" onclick="getNext('div17textbox3', 'pos17');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div17text4">  </a>
-					<input type="text" name="textbox4" id = "div17textbox4" value="sunlight">
-					<input type ="button" onclick="changeTerm('div17textbox4');"
+					<input type ="button" onclick="getPrev('div17textbox4', 'pos17');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div17textbox4" value="stacked">
+					<input type ="button" onclick="getNext('div17textbox4', 'pos17');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div17text5">  </a>
-					<input type="text" name="textbox5" id = "div17textbox5" value="reactions">
-					<input type ="button" onclick="changeTerm('div17textbox5');"
+					<input type ="button" onclick="getPrev('div17textbox5', 'pos17');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div17textbox5" value="intake">
+					<input type ="button" onclick="getNext('div17textbox5', 'pos17');"value = "&raquo;">
 				</li>
 			</ol>
 
@@ -694,37 +874,911 @@
 
 		<p><input type="checkbox" id="ckbox18" value="Click here" onClick="toggleShowHide('ckbox18','question18');"></p>
 		<DIV ID="question18">
-		<input type = "hidden" id="pos18" value = "(noun)"/>
+		<a style="display:none" id="pos18" >((noun)|(verb))</a>
 			<INPUT type="button" id="button18" value="Finalize Question" name="finalizeOne" onClick="finalize('question18'); this.disabled=1">
 			<br>
-			<a>correct answer: sucrose ((noun))</a>
+			<a>correct answer: mesh</a>
 			<ol>
-				<a>These two molecules make ___________________ or sugar.</a>
+				<a>This had the advantage of never "flooding" the engine, as any liquid fuel droplets would fall out of the carburetor instead of into the intake manifold; it also lent itself to use of an oil bath air cleaner, where a pool of oil below a ___________________ element below the carburetor is sucked up into the ___________________ and the air is drawn through the oil-covered ___________________; this was an effective system in a time when paper air filters did not exist.</a>
 				<br>
 				<li>
 					<a style="display:none" id = "div18text1">  </a>
-					<input type="text" name="textbox1" id = "div18textbox1" value="thylakoid">
-					<input type ="button" onclick="changeTerm('div18textbox1');"
+					<input type ="button" onclick="getPrev('div18textbox1', 'pos18');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div18textbox1" value="updraft">
+					<input type ="button" onclick="getNext('div18textbox1', 'pos18');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div18text2">  </a>
-					<input type="text" name="textbox2" id = "div18textbox2" value="sucrose">
-					<input type ="button" onclick="changeTerm('div18textbox2');"
+					<input type ="button" onclick="getPrev('div18textbox2', 'pos18');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div18textbox2" value="choke">
+					<input type ="button" onclick="getNext('div18textbox2', 'pos18');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div18text3">  </a>
-					<input type="text" name="textbox3" id = "div18textbox3" value="reactions">
-					<input type ="button" onclick="changeTerm('div18textbox3');"
+					<input type ="button" onclick="getPrev('div18textbox3', 'pos18');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div18textbox3" value="mesh">
+					<input type ="button" onclick="getNext('div18textbox3', 'pos18');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div18text4">  </a>
-					<input type="text" name="textbox4" id = "div18textbox4" value="oxygen">
-					<input type ="button" onclick="changeTerm('div18textbox4');"
+					<input type ="button" onclick="getPrev('div18textbox4', 'pos18');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div18textbox4" value="actuates">
+					<input type ="button" onclick="getNext('div18textbox4', 'pos18');"value = "&raquo;">
 				</li>
 				<li>
 					<a style="display:none" id = "div18text5">  </a>
-					<input type="text" name="textbox5" id = "div18textbox5" value="sunlight">
-					<input type ="button" onclick="changeTerm('div18textbox5');"
+					<input type ="button" onclick="getPrev('div18textbox5', 'pos18');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div18textbox5" value="enhancements">
+					<input type ="button" onclick="getNext('div18textbox5', 'pos18');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox19" value="Click here" onClick="toggleShowHide('ckbox19','question19');"></p>
+		<DIV ID="question19">
+		<a style="display:none" id="pos19" >((noun)|(plural))</a>
+			<INPUT type="button" id="button19" value="Finalize Question" name="finalizeOne" onClick="finalize('question19'); this.disabled=1">
+			<br>
+			<a>correct answer: carburetors</a>
+			<ol>
+				<a>Beginning in the late 1930s, downdraft ___________________ were the most popular type for automotive use in the United States.</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div19text1">  </a>
+					<input type ="button" onclick="getPrev('div19textbox1', 'pos19');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div19textbox1" value="carburetors">
+					<input type ="button" onclick="getNext('div19textbox1', 'pos19');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div19text2">  </a>
+					<input type ="button" onclick="getPrev('div19textbox2', 'pos19');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div19textbox2" value="airstream">
+					<input type ="button" onclick="getNext('div19textbox2', 'pos19');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div19text3">  </a>
+					<input type ="button" onclick="getPrev('div19textbox3', 'pos19');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div19textbox3" value="cleaner">
+					<input type ="button" onclick="getNext('div19textbox3', 'pos19');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div19text4">  </a>
+					<input type ="button" onclick="getPrev('div19textbox4', 'pos19');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div19textbox4" value="venturi">
+					<input type ="button" onclick="getNext('div19textbox4', 'pos19');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div19text5">  </a>
+					<input type ="button" onclick="getPrev('div19textbox5', 'pos19');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div19textbox5" value="filters">
+					<input type ="button" onclick="getNext('div19textbox5', 'pos19');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox20" value="Click here" onClick="toggleShowHide('ckbox20','question20');"></p>
+		<DIV ID="question20">
+		<a style="display:none" id="pos20" >((noun))</a>
+			<INPUT type="button" id="button20" value="Finalize Question" name="finalizeOne" onClick="finalize('question20'); this.disabled=1">
+			<br>
+			<a>correct answer: carburetor</a>
+			<ol>
+				<a>Beginning in the late 1930s, downdraft ___________________s were the most popular type for automotive use in the United States.</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div20text1">  </a>
+					<input type ="button" onclick="getPrev('div20textbox1', 'pos20');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div20textbox1" value="fueling">
+					<input type ="button" onclick="getNext('div20textbox1', 'pos20');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div20text2">  </a>
+					<input type ="button" onclick="getPrev('div20textbox2', 'pos20');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div20textbox2" value="carburetor">
+					<input type ="button" onclick="getNext('div20textbox2', 'pos20');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div20text3">  </a>
+					<input type ="button" onclick="getPrev('div20textbox3', 'pos20');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div20textbox3" value="filters">
+					<input type ="button" onclick="getNext('div20textbox3', 'pos20');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div20text4">  </a>
+					<input type ="button" onclick="getPrev('div20textbox4', 'pos20');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div20textbox4" value="carburetors">
+					<input type ="button" onclick="getNext('div20textbox4', 'pos20');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div20text5">  </a>
+					<input type ="button" onclick="getPrev('div20textbox5', 'pos20');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div20textbox5" value="venturi">
+					<input type ="button" onclick="getNext('div20textbox5', 'pos20');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox21" value="Click here" onClick="toggleShowHide('ckbox21','question21');"></p>
+		<DIV ID="question21">
+		<a style="display:none" id="pos21" >((noun)|(plural))</a>
+			<INPUT type="button" id="button21" value="Finalize Question" name="finalizeOne" onClick="finalize('question21'); this.disabled=1">
+			<br>
+			<a>correct answer: carburetors</a>
+			<ol>
+				<a>In Europe, the sidedraft ___________________ replaced downdraft as free space in the engine bay decreased and the use of the SU-type carburetor (and similar units from other manufacturers) increased.</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div21text1">  </a>
+					<input type ="button" onclick="getPrev('div21textbox1', 'pos21');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div21textbox1" value="carburetors">
+					<input type ="button" onclick="getNext('div21textbox1', 'pos21');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div21text2">  </a>
+					<input type ="button" onclick="getPrev('div21textbox2', 'pos21');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div21textbox2" value="airstream">
+					<input type ="button" onclick="getNext('div21textbox2', 'pos21');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div21text3">  </a>
+					<input type ="button" onclick="getPrev('div21textbox3', 'pos21');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div21textbox3" value="enhancements">
+					<input type ="button" onclick="getNext('div21textbox3', 'pos21');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div21text4">  </a>
+					<input type ="button" onclick="getPrev('div21textbox4', 'pos21');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div21textbox4" value="linkage">
+					<input type ="button" onclick="getNext('div21textbox4', 'pos21');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div21text5">  </a>
+					<input type ="button" onclick="getPrev('div21textbox5', 'pos21');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div21textbox5" value="valves">
+					<input type ="button" onclick="getNext('div21textbox5', 'pos21');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox22" value="Click here" onClick="toggleShowHide('ckbox22','question22');"></p>
+		<DIV ID="question22">
+		<a style="display:none" id="pos22" >((noun))</a>
+			<INPUT type="button" id="button22" value="Finalize Question" name="finalizeOne" onClick="finalize('question22'); this.disabled=1">
+			<br>
+			<a>correct answer: carburetor</a>
+			<ol>
+				<a>In Europe, the sidedraft ___________________s replaced downdraft as free space in the engine bay decreased and the use of the SU-type ___________________ (and similar units from other manufacturers) increased.</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div22text1">  </a>
+					<input type ="button" onclick="getPrev('div22textbox1', 'pos22');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div22textbox1" value="enhancements">
+					<input type ="button" onclick="getNext('div22textbox1', 'pos22');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div22text2">  </a>
+					<input type ="button" onclick="getPrev('div22textbox2', 'pos22');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div22textbox2" value="carburetor">
+					<input type ="button" onclick="getNext('div22textbox2', 'pos22');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div22text3">  </a>
+					<input type ="button" onclick="getPrev('div22textbox3', 'pos22');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div22textbox3" value="valves">
+					<input type ="button" onclick="getNext('div22textbox3', 'pos22');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div22text4">  </a>
+					<input type ="button" onclick="getPrev('div22textbox4', 'pos22');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div22textbox4" value="manifold">
+					<input type ="button" onclick="getNext('div22textbox4', 'pos22');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div22text5">  </a>
+					<input type ="button" onclick="getPrev('div22textbox5', 'pos22');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div22textbox5" value="filters">
+					<input type ="button" onclick="getNext('div22textbox5', 'pos22');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox23" value="Click here" onClick="toggleShowHide('ckbox23','question23');"></p>
+		<DIV ID="question23">
+		<a style="display:none" id="pos23" >((noun))</a>
+			<INPUT type="button" id="button23" value="Finalize Question" name="finalizeOne" onClick="finalize('question23'); this.disabled=1">
+			<br>
+			<a>correct answer: updraft</a>
+			<ol>
+				<a>Some small propeller-driven aircraft engines still use the ___________________ carburetor design.</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div23text1">  </a>
+					<input type ="button" onclick="getPrev('div23textbox1', 'pos23');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div23textbox1" value="carburetor">
+					<input type ="button" onclick="getNext('div23textbox1', 'pos23');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div23text2">  </a>
+					<input type ="button" onclick="getPrev('div23textbox2', 'pos23');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div23textbox2" value="starvation">
+					<input type ="button" onclick="getNext('div23textbox2', 'pos23');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div23text3">  </a>
+					<input type ="button" onclick="getPrev('div23textbox3', 'pos23');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div23textbox3" value="filters">
+					<input type ="button" onclick="getNext('div23textbox3', 'pos23');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div23text4">  </a>
+					<input type ="button" onclick="getPrev('div23textbox4', 'pos23');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div23textbox4" value="updraft">
+					<input type ="button" onclick="getNext('div23textbox4', 'pos23');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div23text5">  </a>
+					<input type ="button" onclick="getPrev('div23textbox5', 'pos23');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div23textbox5" value="cleaner">
+					<input type ="button" onclick="getNext('div23textbox5', 'pos23');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox24" value="Click here" onClick="toggleShowHide('ckbox24','question24');"></p>
+		<DIV ID="question24">
+		<a style="display:none" id="pos24" >((noun))</a>
+			<INPUT type="button" id="button24" value="Finalize Question" name="finalizeOne" onClick="finalize('question24'); this.disabled=1">
+			<br>
+			<a>correct answer: carburetor</a>
+			<ol>
+				<a>Some small propeller-driven aircraft engines still use the updraft ___________________ design.</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div24text1">  </a>
+					<input type ="button" onclick="getPrev('div24textbox1', 'pos24');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div24textbox1" value="starvation">
+					<input type ="button" onclick="getNext('div24textbox1', 'pos24');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div24text2">  </a>
+					<input type ="button" onclick="getPrev('div24textbox2', 'pos24');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div24textbox2" value="carburetors">
+					<input type ="button" onclick="getNext('div24textbox2', 'pos24');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div24text3">  </a>
+					<input type ="button" onclick="getPrev('div24textbox3', 'pos24');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div24textbox3" value="movable">
+					<input type ="button" onclick="getNext('div24textbox3', 'pos24');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div24text4">  </a>
+					<input type ="button" onclick="getPrev('div24textbox4', 'pos24');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div24textbox4" value="fueling">
+					<input type ="button" onclick="getNext('div24textbox4', 'pos24');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div24text5">  </a>
+					<input type ="button" onclick="getPrev('div24textbox5', 'pos24');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div24textbox5" value="carburetor">
+					<input type ="button" onclick="getNext('div24textbox5', 'pos24');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox25" value="Click here" onClick="toggleShowHide('ckbox25','question25');"></p>
+		<DIV ID="question25">
+		<a style="display:none" id="pos25" >((noun)|(plural))</a>
+			<INPUT type="button" id="button25" value="Finalize Question" name="finalizeOne" onClick="finalize('question25'); this.disabled=1">
+			<br>
+			<a>correct answer: carburetors</a>
+			<ol>
+				<a>Outboard motor ___________________ are typically sidedraft, because they must be stacked one on top of the other in order to feed the cylinders in a vertically-oriented cylinder block.</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div25text1">  </a>
+					<input type ="button" onclick="getPrev('div25textbox1', 'pos25');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div25textbox1" value="airstream">
+					<input type ="button" onclick="getNext('div25textbox1', 'pos25');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div25text2">  </a>
+					<input type ="button" onclick="getPrev('div25textbox2', 'pos25');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div25textbox2" value="cleaner">
+					<input type ="button" onclick="getNext('div25textbox2', 'pos25');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div25text3">  </a>
+					<input type ="button" onclick="getPrev('div25textbox3', 'pos25');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div25textbox3" value="mesh">
+					<input type ="button" onclick="getNext('div25textbox3', 'pos25');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div25text4">  </a>
+					<input type ="button" onclick="getPrev('div25textbox4', 'pos25');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div25textbox4" value="filters">
+					<input type ="button" onclick="getNext('div25textbox4', 'pos25');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div25text5">  </a>
+					<input type ="button" onclick="getPrev('div25textbox5', 'pos25');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div25textbox5" value="carburetors">
+					<input type ="button" onclick="getNext('div25textbox5', 'pos25');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox26" value="Click here" onClick="toggleShowHide('ckbox26','question26');"></p>
+		<DIV ID="question26">
+		<a style="display:none" id="pos26" >((noun))</a>
+			<INPUT type="button" id="button26" value="Finalize Question" name="finalizeOne" onClick="finalize('question26'); this.disabled=1">
+			<br>
+			<a>correct answer: carburetor</a>
+			<ol>
+				<a>Outboard motor ___________________s are typically sidedraft, because they must be stacked one on top of the other in order to feed the cylinders in a vertically-oriented cylinder block.</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div26text1">  </a>
+					<input type ="button" onclick="getPrev('div26textbox1', 'pos26');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div26textbox1" value="carburetor">
+					<input type ="button" onclick="getNext('div26textbox1', 'pos26');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div26text2">  </a>
+					<input type ="button" onclick="getPrev('div26textbox2', 'pos26');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div26textbox2" value="airstream">
+					<input type ="button" onclick="getNext('div26textbox2', 'pos26');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div26text3">  </a>
+					<input type ="button" onclick="getPrev('div26textbox3', 'pos26');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div26textbox3" value="linkage">
+					<input type ="button" onclick="getNext('div26textbox3', 'pos26');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div26text4">  </a>
+					<input type ="button" onclick="getPrev('div26textbox4', 'pos26');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div26textbox4" value="filters">
+					<input type ="button" onclick="getNext('div26textbox4', 'pos26');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div26text5">  </a>
+					<input type ="button" onclick="getPrev('div26textbox5', 'pos26');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div26textbox5" value="cleaner">
+					<input type ="button" onclick="getNext('div26textbox5', 'pos26');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox27" value="Click here" onClick="toggleShowHide('ckbox27','question27');"></p>
+		<DIV ID="question27">
+		<a style="display:none" id="pos27" >((adjective)|(noun))</a>
+			<INPUT type="button" id="button27" value="Finalize Question" name="finalizeOne" onClick="finalize('question27'); this.disabled=1">
+			<br>
+			<a>correct answer: Outboard</a>
+			<ol>
+				<a>___________________ motor carburetors are typically sidedraft, because they must be stacked one on top of the other in order to feed the cylinders in a vertically-oriented cylinder block.</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div27text1">  </a>
+					<input type ="button" onclick="getPrev('div27textbox1', 'pos27');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div27textbox1" value="Outboard">
+					<input type ="button" onclick="getNext('div27textbox1', 'pos27');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div27text2">  </a>
+					<input type ="button" onclick="getPrev('div27textbox2', 'pos27');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div27textbox2" value="airstream">
+					<input type ="button" onclick="getNext('div27textbox2', 'pos27');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div27text3">  </a>
+					<input type ="button" onclick="getPrev('div27textbox3', 'pos27');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div27textbox3" value="carburetor">
+					<input type ="button" onclick="getNext('div27textbox3', 'pos27');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div27text4">  </a>
+					<input type ="button" onclick="getPrev('div27textbox4', 'pos27');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div27textbox4" value="intake">
+					<input type ="button" onclick="getNext('div27textbox4', 'pos27');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div27text5">  </a>
+					<input type ="button" onclick="getPrev('div27textbox5', 'pos27');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div27textbox5" value="filters">
+					<input type ="button" onclick="getNext('div27textbox5', 'pos27');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox28" value="Click here" onClick="toggleShowHide('ckbox28','question28');"></p>
+		<DIV ID="question28">
+		<a style="display:none" id="pos28" >((noun))</a>
+			<INPUT type="button" id="button28" value="Finalize Question" name="finalizeOne" onClick="finalize('question28'); this.disabled=1">
+			<br>
+			<a>correct answer: carburetor</a>
+			<ol>
+				<a>1979 Evinrude Type I marine sidedraft ___________________ The main disadvantage of basing a ___________________'s operation on Bernoulli's principle is that, being a fluid dynamic device, the pressure reduction in a venturi tends to be proportional to the square of the intake air speed.</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div28text1">  </a>
+					<input type ="button" onclick="getPrev('div28textbox1', 'pos28');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div28textbox1" value="carburetor">
+					<input type ="button" onclick="getNext('div28textbox1', 'pos28');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div28text2">  </a>
+					<input type ="button" onclick="getPrev('div28textbox2', 'pos28');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div28textbox2" value="airstream">
+					<input type ="button" onclick="getNext('div28textbox2', 'pos28');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div28text3">  </a>
+					<input type ="button" onclick="getPrev('div28textbox3', 'pos28');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div28textbox3" value="filters">
+					<input type ="button" onclick="getNext('div28textbox3', 'pos28');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div28text4">  </a>
+					<input type ="button" onclick="getPrev('div28textbox4', 'pos28');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div28textbox4" value="enhancements">
+					<input type ="button" onclick="getNext('div28textbox4', 'pos28');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div28text5">  </a>
+					<input type ="button" onclick="getPrev('div28textbox5', 'pos28');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div28textbox5" value="fueling">
+					<input type ="button" onclick="getNext('div28textbox5', 'pos28');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox29" value="Click here" onClick="toggleShowHide('ckbox29','question29');"></p>
+		<DIV ID="question29">
+		<a style="display:none" id="pos29" >((noun)|(adjective)|(plural))</a>
+			<INPUT type="button" id="button29" value="Finalize Question" name="finalizeOne" onClick="finalize('question29'); this.disabled=1">
+			<br>
+			<a>correct answer: venturi</a>
+			<ol>
+				<a>1979 Evinrude Type I marine sidedraft carburetor The main disadvantage of basing a carburetor's operation on Bernoulli's principle is that, being a fluid dynamic device, the pressure reduction in a ___________________ tends to be proportional to the square of the intake air speed.</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div29text1">  </a>
+					<input type ="button" onclick="getPrev('div29textbox1', 'pos29');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div29textbox1" value="updraft">
+					<input type ="button" onclick="getNext('div29textbox1', 'pos29');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div29text2">  </a>
+					<input type ="button" onclick="getPrev('div29textbox2', 'pos29');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div29textbox2" value="movable">
+					<input type ="button" onclick="getNext('div29textbox2', 'pos29');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div29text3">  </a>
+					<input type ="button" onclick="getPrev('div29textbox3', 'pos29');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div29textbox3" value="venturi">
+					<input type ="button" onclick="getNext('div29textbox3', 'pos29');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div29text4">  </a>
+					<input type ="button" onclick="getPrev('div29textbox4', 'pos29');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div29textbox4" value="starvation">
+					<input type ="button" onclick="getNext('div29textbox4', 'pos29');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div29text5">  </a>
+					<input type ="button" onclick="getPrev('div29textbox5', 'pos29');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div29textbox5" value="choke">
+					<input type ="button" onclick="getNext('div29textbox5', 'pos29');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox30" value="Click here" onClick="toggleShowHide('ckbox30','question30');"></p>
+		<DIV ID="question30">
+		<a style="display:none" id="pos30" >((noun)|(verb))</a>
+			<INPUT type="button" id="button30" value="Finalize Question" name="finalizeOne" onClick="finalize('question30'); this.disabled=1">
+			<br>
+			<a>correct answer: intake</a>
+			<ol>
+				<a>1979 Evinrude Type I marine sidedraft carburetor The main disadvantage of basing a carburetor's operation on Bernoulli's principle is that, being a fluid dynamic device, the pressure reduction in a venturi tends to be proportional to the square of the ___________________ air speed.</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div30text1">  </a>
+					<input type ="button" onclick="getPrev('div30textbox1', 'pos30');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div30textbox1" value="intake">
+					<input type ="button" onclick="getNext('div30textbox1', 'pos30');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div30text2">  </a>
+					<input type ="button" onclick="getPrev('div30textbox2', 'pos30');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div30textbox2" value="airstream">
+					<input type ="button" onclick="getNext('div30textbox2', 'pos30');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div30text3">  </a>
+					<input type ="button" onclick="getPrev('div30textbox3', 'pos30');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div30textbox3" value="carburetors">
+					<input type ="button" onclick="getNext('div30textbox3', 'pos30');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div30text4">  </a>
+					<input type ="button" onclick="getPrev('div30textbox4', 'pos30');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div30textbox4" value="throttle">
+					<input type ="button" onclick="getNext('div30textbox4', 'pos30');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div30text5">  </a>
+					<input type ="button" onclick="getPrev('div30textbox5', 'pos30');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div30textbox5" value="sucked">
+					<input type ="button" onclick="getNext('div30textbox5', 'pos30');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox31" value="Click here" onClick="toggleShowHide('ckbox31','question31');"></p>
+		<DIV ID="question31">
+		<a style="display:none" id="pos31" >((verb))</a>
+			<INPUT type="button" id="button31" value="Finalize Question" name="finalizeOne" onClick="finalize('question31'); this.disabled=1">
+			<br>
+			<a>correct answer: starve</a>
+			<ol>
+				<a>So jets sized for full power tend to ___________________ the engine at lower speed and part throttle.</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div31text1">  </a>
+					<input type ="button" onclick="getPrev('div31textbox1', 'pos31');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div31textbox1" value="starve">
+					<input type ="button" onclick="getNext('div31textbox1', 'pos31');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div31text2">  </a>
+					<input type ="button" onclick="getPrev('div31textbox2', 'pos31');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div31textbox2" value="fueling">
+					<input type ="button" onclick="getNext('div31textbox2', 'pos31');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div31text3">  </a>
+					<input type ="button" onclick="getPrev('div31textbox3', 'pos31');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div31textbox3" value="filters">
+					<input type ="button" onclick="getNext('div31textbox3', 'pos31');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div31text4">  </a>
+					<input type ="button" onclick="getPrev('div31textbox4', 'pos31');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div31textbox4" value="actuates">
+					<input type ="button" onclick="getNext('div31textbox4', 'pos31');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div31text5">  </a>
+					<input type ="button" onclick="getPrev('div31textbox5', 'pos31');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div31textbox5" value="resisting">
+					<input type ="button" onclick="getNext('div31textbox5', 'pos31');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox32" value="Click here" onClick="toggleShowHide('ckbox32','question32');"></p>
+		<DIV ID="question32">
+		<a style="display:none" id="pos32" >((noun)|(plural))</a>
+			<INPUT type="button" id="button32" value="Finalize Question" name="finalizeOne" onClick="finalize('question32'); this.disabled=1">
+			<br>
+			<a>correct answer: carburetors</a>
+			<ol>
+				<a>In SU and other movable jet ___________________, it was corrected by varying the jet size.</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div32text1">  </a>
+					<input type ="button" onclick="getPrev('div32textbox1', 'pos32');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div32textbox1" value="carburetors">
+					<input type ="button" onclick="getNext('div32textbox1', 'pos32');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div32text2">  </a>
+					<input type ="button" onclick="getPrev('div32textbox2', 'pos32');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div32textbox2" value="airstream">
+					<input type ="button" onclick="getNext('div32textbox2', 'pos32');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div32text3">  </a>
+					<input type ="button" onclick="getPrev('div32textbox3', 'pos32');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div32textbox3" value="Outboard">
+					<input type ="button" onclick="getNext('div32textbox3', 'pos32');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div32text4">  </a>
+					<input type ="button" onclick="getPrev('div32textbox4', 'pos32');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div32textbox4" value="movable">
+					<input type ="button" onclick="getNext('div32textbox4', 'pos32');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div32text5">  </a>
+					<input type ="button" onclick="getPrev('div32textbox5', 'pos32');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div32textbox5" value="updraft">
+					<input type ="button" onclick="getNext('div32textbox5', 'pos32');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox33" value="Click here" onClick="toggleShowHide('ckbox33','question33');"></p>
+		<DIV ID="question33">
+		<a style="display:none" id="pos33" >((noun))</a>
+			<INPUT type="button" id="button33" value="Finalize Question" name="finalizeOne" onClick="finalize('question33'); this.disabled=1">
+			<br>
+			<a>correct answer: carburetor</a>
+			<ol>
+				<a>In SU and other movable jet ___________________s, it was corrected by varying the jet size.</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div33text1">  </a>
+					<input type ="button" onclick="getPrev('div33textbox1', 'pos33');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div33textbox1" value="valves">
+					<input type ="button" onclick="getNext('div33textbox1', 'pos33');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div33text2">  </a>
+					<input type ="button" onclick="getPrev('div33textbox2', 'pos33');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div33textbox2" value="choke">
+					<input type ="button" onclick="getNext('div33textbox2', 'pos33');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div33text3">  </a>
+					<input type ="button" onclick="getPrev('div33textbox3', 'pos33');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div33textbox3" value="manifold">
+					<input type ="button" onclick="getNext('div33textbox3', 'pos33');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div33text4">  </a>
+					<input type ="button" onclick="getPrev('div33textbox4', 'pos33');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div33textbox4" value="airstream">
+					<input type ="button" onclick="getNext('div33textbox4', 'pos33');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div33text5">  </a>
+					<input type ="button" onclick="getPrev('div33textbox5', 'pos33');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div33textbox5" value="carburetor">
+					<input type ="button" onclick="getNext('div33textbox5', 'pos33');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox34" value="Click here" onClick="toggleShowHide('ckbox34','question34');"></p>
+		<DIV ID="question34">
+		<a style="display:none" id="pos34" >((noun)|(plural))</a>
+			<INPUT type="button" id="button34" value="Finalize Question" name="finalizeOne" onClick="finalize('question34'); this.disabled=1">
+			<br>
+			<a>correct answer: carburetors</a>
+			<ol>
+				<a>For cold starting, a different principle was used, in multi-jet ___________________ .</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div34text1">  </a>
+					<input type ="button" onclick="getPrev('div34textbox1', 'pos34');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div34textbox1" value="cleaner">
+					<input type ="button" onclick="getNext('div34textbox1', 'pos34');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div34text2">  </a>
+					<input type ="button" onclick="getPrev('div34textbox2', 'pos34');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div34textbox2" value="throttle">
+					<input type ="button" onclick="getNext('div34textbox2', 'pos34');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div34text3">  </a>
+					<input type ="button" onclick="getPrev('div34textbox3', 'pos34');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div34textbox3" value="airstream">
+					<input type ="button" onclick="getNext('div34textbox3', 'pos34');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div34text4">  </a>
+					<input type ="button" onclick="getPrev('div34textbox4', 'pos34');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div34textbox4" value="starvation">
+					<input type ="button" onclick="getNext('div34textbox4', 'pos34');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div34text5">  </a>
+					<input type ="button" onclick="getPrev('div34textbox5', 'pos34');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div34textbox5" value="carburetors">
+					<input type ="button" onclick="getNext('div34textbox5', 'pos34');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox35" value="Click here" onClick="toggleShowHide('ckbox35','question35');"></p>
+		<DIV ID="question35">
+		<a style="display:none" id="pos35" >((noun))</a>
+			<INPUT type="button" id="button35" value="Finalize Question" name="finalizeOne" onClick="finalize('question35'); this.disabled=1">
+			<br>
+			<a>correct answer: carburetor</a>
+			<ol>
+				<a>For cold starting, a different principle was used, in multi-jet ___________________s .</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div35text1">  </a>
+					<input type ="button" onclick="getPrev('div35textbox1', 'pos35');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div35textbox1" value="updraft">
+					<input type ="button" onclick="getNext('div35textbox1', 'pos35');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div35text2">  </a>
+					<input type ="button" onclick="getPrev('div35textbox2', 'pos35');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div35textbox2" value="starvation">
+					<input type ="button" onclick="getNext('div35textbox2', 'pos35');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div35text3">  </a>
+					<input type ="button" onclick="getPrev('div35textbox3', 'pos35');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div35textbox3" value="carburetor">
+					<input type ="button" onclick="getNext('div35textbox3', 'pos35');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div35text4">  </a>
+					<input type ="button" onclick="getPrev('div35textbox4', 'pos35');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div35textbox4" value="filters">
+					<input type ="button" onclick="getNext('div35textbox4', 'pos35');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div35text5">  </a>
+					<input type ="button" onclick="getPrev('div35textbox5', 'pos35');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div35textbox5" value="manifold">
+					<input type ="button" onclick="getNext('div35textbox5', 'pos35');"value = "&raquo;">
+				</li>
+			</ol>
+
+		</DIV>
+
+		<p><input type="checkbox" id="ckbox36" value="Click here" onClick="toggleShowHide('ckbox36','question36');"></p>
+		<DIV ID="question36">
+		<a style="display:none" id="pos36" >((noun)|(verb))</a>
+			<INPUT type="button" id="button36" value="Finalize Question" name="finalizeOne" onClick="finalize('question36'); this.disabled=1">
+			<br>
+			<a>correct answer: intake</a>
+			<ol>
+				<a>A flow resisting valve called a choke, similar to the throttle valve, was placed upstream of the main jet to reduce the ___________________ pressure and suck additional fuel out of the jets.</a>
+				<br>
+				<li>
+					<a style="display:none" id = "div36text1">  </a>
+					<input type ="button" onclick="getPrev('div36textbox1', 'pos36');" value = "&laquo;">
+				
+					<input type="text" name="textbox1" id = "div36textbox1" value="carbureted">
+					<input type ="button" onclick="getNext('div36textbox1', 'pos36');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div36text2">  </a>
+					<input type ="button" onclick="getPrev('div36textbox2', 'pos36');" value = "&laquo;">
+				
+					<input type="text" name="textbox2" id = "div36textbox2" value="manifold">
+					<input type ="button" onclick="getNext('div36textbox2', 'pos36');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div36text3">  </a>
+					<input type ="button" onclick="getPrev('div36textbox3', 'pos36');" value = "&laquo;">
+				
+					<input type="text" name="textbox3" id = "div36textbox3" value="starve">
+					<input type ="button" onclick="getNext('div36textbox3', 'pos36');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div36text4">  </a>
+					<input type ="button" onclick="getPrev('div36textbox4', 'pos36');" value = "&laquo;">
+				
+					<input type="text" name="textbox4" id = "div36textbox4" value="enhancements">
+					<input type ="button" onclick="getNext('div36textbox4', 'pos36');"value = "&raquo;">
+				</li>
+				<li>
+					<a style="display:none" id = "div36text5">  </a>
+					<input type ="button" onclick="getPrev('div36textbox5', 'pos36');" value = "&laquo;">
+				
+					<input type="text" name="textbox5" id = "div36textbox5" value="intake">
+					<input type ="button" onclick="getNext('div36textbox5', 'pos36');"value = "&raquo;">
 				</li>
 			</ol>
 	</body>
@@ -734,30 +1788,85 @@ nouns = new Array();
 verbs = new Array();
 plurals = new Array();
 propers = new Array();
-function changeTerm(elId)
+
+function findIdx(arr, elt)
 {
-	document.getElementById(elId).value=nouns[0];
+	for (var i = 0; i < arr.length; i++)
+	{
+		if(arr[i]==elt) { return i; }
+	}
+	return -1;
 }
-	nouns.push(stomata);
-	nouns.push(thylakoid);
-	nouns.push(stroma);
-	nouns.push(sucrose);
-	nouns.push(fixation);
-	nouns.push(reactions);
-	nouns.push(fructose);
-	nouns.push(stacks);
-	nouns.push(dioxide);
-	nouns.push(sunlight);
-	nouns.push(sugar);
-	nouns.push(molecules);
-	nouns.push(splitting);
-	nouns.push(glucose);
-	plurals.push(stomata);
-	plurals.push(reactions);
-	plurals.push(stacks);
-	plurals.push(molecules);
-	verbs.push(stacks);
-	verbs.push(absorbs);
-	verbs.push(sugar);
-	verbs.push(splitting);
+
+function getNext(eltId, posId)
+{
+	var pos = document.getElementById(posId).innerHTML;
+	var elt = document.getElementById(eltId).value;
+	var arr;
+	if( pos.substr("noun")!=-1 ) arr = nouns;
+	else if( pos.substr("verb")!=-1 ) arr = verbs;
+	else if( pos.substr("plural")!=-1 ) arr = plurals;
+	else if( pos.substr("proper")!=-1 ) arr = propers;
+	else arr = nouns; //we get here if there is no pos, or if i've made an error
+	document.getElementById(eltId).value = arr[(findIdx(arr, elt)+1)%arr.length]; //note: will return first element if not found in findIdx
+	return false;
+}
+
+function getPrev(eltId, posId)
+{
+	var pos = document.getElementById(posId).innerHTML;
+	var elt = document.getElementById(eltId).value;
+	var arr;
+	if( pos.substr("noun")!=-1 ) arr = nouns;
+	else if( pos.substr("verb")!=-1 ) arr = verbs;
+	else if( pos.substr("plural")!=-1 ) arr = plurals;
+	else if( pos.substr("proper")!=-1 ) arr = propers;
+	else arr = nouns; //we get here if there is no pos, or if i've made an error
+	document.getElementById(eltId).value = arr[(findIdx(arr, elt)-1)%arr.length]; //note: will return last element if not found in findIdx
+	return false;
+}
+	nouns.push("carburetors");
+	nouns.push("airstream");
+	nouns.push("updraft");
+	nouns.push("carburetor");
+	nouns.push("venturi");
+	nouns.push("intake");
+	nouns.push("mesh");
+	nouns.push("throttle");
+	nouns.push("viscosity");
+	nouns.push("enhancements");
+	nouns.push("fueling");
+	nouns.push("choke");
+	nouns.push("starvation");
+	nouns.push("suck");
+	nouns.push("droplets");
+	nouns.push("movable");
+	nouns.push("manifold");
+	nouns.push("linkage");
+	nouns.push("cleaner");
+	nouns.push("filters");
+	nouns.push("valves");
+	plurals.push("carburetors");
+	plurals.push("venturi");
+	plurals.push("enhancements");
+	plurals.push("droplets");
+	plurals.push("filters");
+	plurals.push("valves");
+	verbs.push("actuates");
+	verbs.push("carbureted");
+	verbs.push("starve");
+	verbs.push("intake");
+	verbs.push("mesh");
+	verbs.push("throttle");
+	verbs.push("fueling");
+	verbs.push("choke");
+	verbs.push("basing");
+	verbs.push("suck");
+	verbs.push("sucked");
+	verbs.push("stacked");
+	verbs.push("manifold");
+	verbs.push("resisting");
+	verbs.push("cleaner");
+	verbs.push("filters");
+	verbs.push("inverted");
 </script>

@@ -134,7 +134,7 @@ my @nouns = ();
 my @propernouns = ();
 my @plurals = ();
 #there's gonna be problems if the input is REALLY short.
-foreach my $i (0..19)
+foreach my $i (0..29)
 {#print "YOOOOOOOOO";#@{$hdict{$topwords[$i]]}}[0]";
 	if(@{$hdict{$topwords[$i]}}[0]=~m/noun/) #gotta match those parts of speech
 	{
