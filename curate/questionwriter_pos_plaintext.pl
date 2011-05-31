@@ -40,7 +40,7 @@ GetOptions ("default"=>\$default, "qword=s" => \$qword, "years" => \$years, "cou
 #######MAIN#######
 
 #open dicitonary files don't use if ($years) | ($countries) ($qfile)
-open(DICTIONARY, "<dictionary20110411.txt") or die "Can't open dicitonary file\n"; #case-sensitive dictionary file
+open(DICTIONARY, "<dictionary20110531.txt") or die "Can't open dicitonary file\n"; #case-sensitive dictionary file
 my @dict = <DICTIONARY>;
 
 #open an output file with html format
@@ -256,10 +256,10 @@ foreach my $file (@qfile)
 	my $subfileregex3 = "";
 	my $subfileregex4 = "";
 	
-	open(FILE, "<".$file) or die "Can't find ".$file." Please confirm that this is the correct path to the file.\n";
+	open(QFILE, "<".$file) or die "Can't find ".$file."\. Please confirm that this is the correct path to the file.\n";
 	
 	#read in list of desired question topics
-	foreach my $line (<FILE>)
+	foreach my $line (<QFILE>)
 	{
 		$line =~ s/\r|\n//g; #trim new lines and returns
 		push(@subfilelines, $line);
@@ -270,11 +270,11 @@ foreach my $file (@qfile)
 		$subfileregex3.=$line."\|" if($#tokenized_line==2);
 		$subfileregex4.=$line."\|" if($#tokenized_line==3);
 	}
+	close(QFILE);
 	chop($subfileregex); 			#to take last "|" off
 	chop($subfileregex2); 			#to take last "|" off
 	chop($subfileregex3); 			#to take last "|" off
 	chop($subfileregex4); 			#to take last "|" off
-	close(FILE);
 
 	%subfileans = %{&parseFileIntoPhrases(\%subfileans, $subfileregex, \%words)};
 	%subfileans = %{&parseFileIntoPhrases(\%subfileans, $subfileregex2, \%two_words)};
@@ -326,16 +326,25 @@ foreach my $sentence (@sentences)
 		&default($sentence, \@tokens);
 	}
 }
-
-print OUT "\nnouns:\n";
-foreach (@nouns) { print OUT $_."\n"; }
-print OUT "\nplurals:\n";
-foreach (@plurals) { print OUT $_."\n"; }
-print OUT "\nproper nouns:\n";
-foreach (@propernouns) { print OUT $_."\n"; }
-print OUT "\nverbs:\n";
-foreach (@verbs) { print OUT $_."\n"; }
-
+if(!($qfile))
+{ print "here";
+	print OUT "\nnouns:\n";
+	foreach (@nouns) { print OUT $_."\n"; }
+	print OUT "\nplurals:\n";
+	foreach (@plurals) { print OUT $_."\n"; }
+	print OUT "\npropers:\n";
+	foreach (@propernouns) { print OUT $_."\n"; }
+	print OUT "\nverbs:\n";
+	foreach (@verbs) { print OUT $_."\n"; }
+} else { 
+	open(QFILE, "<$qfile") or die "Can't find ".$qfile."\. Please confirm that this is the correct path to the file.\n";
+	print OUT "\nnouns:\n"; #note: nouns are the default for the .js.. I can do this better later...
+	foreach (<QFILE>) { print OUT $_; }
+	print OUT "\nplurals:\n";
+	print OUT "\npropers:\n";
+	print OUT "\nverbs:\n";
+}
+close(QFILE);
 ############################
 ######### END MAIN #########
 ############################
@@ -493,10 +502,18 @@ sub qword
 	#if qword appears in the text in a logical way, then proceed
 	if($sentence=~/\s+$qword[\.,\s+]?/i || $sentence=~/^$qword\s/i) #TODO why doesn't this conditional have more under it, like the correct answers, etc also this happens elsewhere?!?!?!
 	{
-		printCorrectAnswer($qword,$hdict{$qword}[0]);
-	
+		my $question;
 		#Print the question to OUT and determine the correct capitalization
-		$nt_capitalize = &questionLineOut(\@tokens, $qword, "QWORD", 1);
+		($question, $nt_capitalize) = &questionLineOut(\@tokens, $qword, "DEFAULT", 1);
+
+		if($nt_capitalize==1)
+		{
+			printCorrectAnswer(uc(substr($qword, 0, 1)).substr($qword, 1),$hdict{$qword}[0]);
+		} else {
+			printCorrectAnswer($qword, $hdict{$qword}[0]);
+		}
+		print OUT $question;
+
 
 		#find other candidate answers from @topwords
 		my %numberchoice=(); #hash of randoms chosen
@@ -563,7 +580,9 @@ sub qfile
 		{					#match global amount of times ^
 			foreach my $match (@matches)
 			{
-				printCorrectAnswer($match,$hdict{$match}[0]);
+				print OUT "correct answer: $match ()"; #the empty brackets will work with
+																	#plaintext_to_html for the forward
+																	#back arrows in javascript
 				
 				my @tmp = split(/\s+/, $match);
 				for my $idx (0..$#tmp) #trim out any empty strings from $match
@@ -576,7 +595,8 @@ sub qfile
 				my $length = $#tmp+1; #used for outputting the correct words for the question
 				
 				#Print the question to OUT
-				&questionLineOut(\@tokens, $match, "QFILE", $length);
+				my @tmp_arr = &questionLineOut(\@tokens, $match, "QFILE", $length);
+				print OUT $tmp_arr[0];
 				
 				#find other candidate answers out of @{$filelines[$filenum]}
 				my %numberchoice=(); #hash of randoms chosen
@@ -649,18 +669,24 @@ sub default
 
 		if( !exists( $hdict{$topwords[$i]} ) )
 		{
-			#print OUT "<br>\n ".lc($topwords[$i])." is not in dictionary file.<br>\n<br>\n"; #for cl output
+			#print OUT "<br>\n ".lc($topwords[$i])." is not in dictionary file.<br>\$toprint =(uc(substr($toprint, 0, 1)).substr($toprint, 1)) if $nt_capitalize; n<br>\n"; #for cl output
 			next;
 		}
 
 		my $tempregex = $topwords[$i];
 		if($sentence=~/(\s+$tempregex[\.,\s+]?)|(^$tempregex[\.,\s+]?)/i)
 		{
-			printCorrectAnswer($topwords[$i],$hdict{$topwords[$i]}[0]);
-			
+			my $question;
 			#Print the question to OUT and determine the correct capitalization
-			$nt_capitalize = &questionLineOut(\@tokens, $topwords[$i], "DEFAULT", 1);
-			print "YOOOOOOOoooo" if ($nt_capitalize==1);
+			($question, $nt_capitalize) = &questionLineOut(\@tokens, $topwords[$i], "DEFAULT", 1);
+
+			if($nt_capitalize==1)
+			{
+				printCorrectAnswer(uc(substr($topwords[$i], 0, 1)).substr($topwords[$i], 1),$hdict{$topwords[$i]}[0]);
+			} else {
+				printCorrectAnswer($topwords[$i], $hdict{$topwords[$i]}[0]);
+			}
+			print OUT $question;
 
 			#find other candidate answers out of @topwords
 			my %numberchoice=(); #hash of randoms chosen
@@ -674,6 +700,7 @@ sub default
 			{
 				if($j==$correct) #print the correct answer
 				{
+					my $tmp_toprint =(uc(substr($topwords[$i], 0, 1)).substr($topwords[$i], 1)) if $nt_capitalize; 
 					print OUT "$j \. $topwords[$i]\n";
 				}
 				else
@@ -702,7 +729,6 @@ sub default
 					$numberchoice{$random}=0;
 					my $toprint = $topwords[$random];
 					$toprint =(uc(substr($toprint, 0, 1)).substr($toprint, 1)) if $nt_capitalize; 
-
 					print OUT "$j \. ".$toprint."\n";	#text box
 				}
 			}
@@ -711,16 +737,23 @@ sub default
 	}
 }
 
-#prints each word in the question while replacing each correct answer with a blank
+#Creates a string which will phrase the question
+#how it will be outputted to screen (i.e. with a blank).
+#Also returns whether or not the first replacement 
+#is at the beginning of the sentence.
+#@return: [0] = $phrased_question
+#			 [1] = $need_to_captialize
 sub questionLineOut #(\@tokens,$match,"SUB")
-{ #TODO attempt to reduce shit, make params explicit?
-	my @tokens = @{$_[0]}; #list of words in the sentence
-	my $match = $_[1]; #this is what we are matching to
-	my $sub = $_[2]; #which sub called this sub
-	my $length = $_[3]; #used when match is a phrase
-	my $toreturn = 0; #for qword to return capitalization information
-	my $next = 0; #for skipping runs through the loop for phrases
-	print OUT "\n";
+{                              #TODO attempt to reduce, make params explicit?
+	my @tokens = @{$_[0]};      #list of words in the sentence
+	my $match = $_[1];          #this is what we are matching to
+	my $sub = $_[2];            #which sub called this sub
+	my $length = $_[3];         #used when match is a phrase
+	my $need_to_capitalize = 0; #for qword to return capitalization information
+	my $next = 0;               #for skipping runs through the loop for phrases
+	my $phrased_question="";    #string containing the question how it will be printed to screen.
+										 #Note: will be returned
+	$phrased_question.="\n";
 	for my $i (0..$#tokens)
 	{
 		my $word = $tokens[$i];
@@ -732,25 +765,26 @@ sub questionLineOut #(\@tokens,$match,"SUB")
 		{
 			if ($i == $#tokens) #we don't want a space if it's the last word in a sentence
 			{
-				print OUT $word;
+				$phrased_question.= $word;
 			}
 			else 
 			{
-				print OUT $word." ";
+				$phrased_question.= $word." ";
 			}
 		}
 		else #we've hit a match
 		{ #TODO fuck with the spacing around the blank
-			if($sub eq "QWORD"|"DEAFULT" && $i==0) { $toreturn=1; } #if qword or default and the first word, then return a 1 for capitalization
-			
+			if($i==0 && ($sub eq "QWORD" || $sub eq "DEFAULT")) { $need_to_capitalize=1; } #if qword or default and the first word, then return a 1 for capitalization
+
 			#print OUT " ".$` unless $` eq " "; #in case the number has brackets around it or something stupid
-			print OUT "___________________";
-			print OUT $'." " unless $' eq " "; #in case the word was followed by puncutation
+			$phrased_question.= "___________________";
+			$phrased_question.= $'." " unless $' eq " "; #in case the word was followed by puncutation
 		}
 	}	
 	#print OUT "substr($sentence, -1)\n"; #print the punctuation		
-	print OUT ".\n";
-	return($toreturn); #notifies capitalization for certain calling subs
+	$phrased_question.=".\n";
+
+	return($phrased_question, $need_to_capitalize); #notifies capitalization for certain calling subs
 }
 
 sub phraseQuestion #(\@tokens, $match, $i, $length)
