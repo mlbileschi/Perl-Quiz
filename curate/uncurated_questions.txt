@@ -1,183 +1,408 @@
-correct answer: Python ((proper noun))
-I don't know how to write in ___________________ .
-1 . noun
-2 . Python
-3 . proper
-4 . God
-5 . acceptable
+correct answer: Poland ()
+The war is generally accepted to have begun on 1 September 1939, with the invasion of ___________________ by Germany and Slovakia, and subsequent declarations of war on Germany by France and most of the countries of the British Empire and Commonwealth.
+1 . Slovakia
+2 . France
+3 . Soviet Union
+4 . Italy
+5 . Poland
 
 
-correct answer: write ((verb))
-I don't know how to ___________________ in Python.
-1 . write
-2 . three
-3 . for
-4 . how
-5 . is
+correct answer: Germany ()
+The war is generally accepted to have begun on 1 September 1939, with the invasion of Poland by ___________________ and Slovakia, and subsequent declarations of war on ___________________ by France and most of the countries of the British Empire and Commonwealth.
+1 . China
+2 . Italy
+3 . Germany
+4 . Soviet Union
+5 . Japanese
 
 
-correct answer: photosynthesis ((noun))
-___________________ is a great first word for this sentence.
-1 . photosynthesis
-2 . Python
-3 . a
-4 . enough
-5 . first
+correct answer: Slovakia ()
+The war is generally accepted to have begun on 1 September 1939, with the invasion of Poland by Germany and ___________________, and subsequent declarations of war on Germany by France and most of the countries of the British Empire and Commonwealth.
+1 . Japan
+2 . Italy
+3 . Slovakia
+4 . Poland
+5 . Soviet Union
 
 
-correct answer: sentence ((noun)|(verb))
-Photosynthesis is a great first word for this ___________________ .
-1 . sentence
-2 . Python
-3 . times
-4 . hope
-5 . in
+correct answer: Germany ()
+The war is generally accepted to have begun on 1 September 1939, with the invasion of Poland by ___________________ and Slovakia, and subsequent declarations of war on ___________________ by France and most of the countries of the British Empire and Commonwealth.
+1 . Japanese
+2 . China
+3 . Germany
+4 . Italy
+5 . Poland
 
 
-correct answer: word ((noun)|(verb))
-Photosynthesis is a great first ___________________ for this sentence.
-1 . noun
-2 . a
-3 . word
-4 . i
-5 . document
+correct answer: France ()
+The war is generally accepted to have begun on 1 September 1939, with the invasion of Poland by Germany and Slovakia, and subsequent declarations of war on Germany by ___________________ and most of the countries of the British Empire and Commonwealth.
+1 . Slovakia
+2 . Japan
+3 . Soviet Union
+4 . France
+5 . Poland
 
 
-correct answer: noun ((noun)|(verb)|(proper noun))
-God is a proper ___________________, and the word God is in this sentence three times, God.
-1 . sentence
-2 . how
-3 . first
-4 . noun
-5 . be
+correct answer: Germany ()
+___________________ set out to establish a large empire in Europe.
+1 . Slovakia
+2 . Soviet Union
+3 . Japanese
+4 . Germany
+5 . Italy
 
 
-correct answer: sentence ((noun)|(verb))
-God is a proper noun, and the word God is in this ___________________ three times, God.
-1 . hope
-2 . noun
-3 . this
-4 . to
-5 . sentence
+correct answer: Germany ()
+From late 1939 to early 1941, in a series of campaigns and treaties, ___________________ conquered or subdued much of continental Europe; amid Nazi-Soviet agreements, the nominally neutral Soviet Union fully or partially occupied and annexed territories of its six European neighbours.
+1 . Italy
+2 . Germany
+3 . Japanese
+4 . China
+5 . Slovakia
 
 
-correct answer: proper ((adjective)|(noun)|(proper noun))
-God is a ___________________ noun, and the word God is in this sentence three times, God.
-1 . noun
-2 . in
-3 . proper
-4 . first
-5 . know
+correct answer: Soviet Union ()
+From late 1939 to early 1941, in a series of campaigns and treaties, Germany conquered or subdued much of continental Europe; amid Nazi-Soviet agreements, the nominally neutral ___________________ fully or partially occupied and annexed territories of its six European neighbours fully or partially occupied and annexed territories of its six European neighbours.
+1 . Italy
+2 . Germany
+3 . Soviet Union
+4 . Japanese
+5 . China
 
 
-correct answer: God ((proper noun))
-___________________ is a proper noun, and the word ___________________ is in this sentence three times, ___________________ .
-1 . God
-2 . Python
-3 . proper
-4 . noun
-5 . sentence
+correct answer: Soviet Union ()
+In June 1941, the European Axis launched an invasion of the ___________________, giving a start to the largest land theatre of war in history, which, from this moment on, was tying down the major part of the Axis military power giving a start to the largest land theatre of war in history, which, from this moment on, was tying down the major part of the Axis military power.
+1 . Slovakia
+2 . Italy
+3 . Germany
+4 . Soviet Union
+5 . Japanese
 
 
-correct answer: word ((noun)|(verb))
-God is a proper noun, and the ___________________ God is in this sentence three times, God.
-1 . word
-2 . Python
-3 . how
-4 . and
-5 . know
+correct answer: Japan ()
+In December 1941, ___________________, which had been at war with China since 1937,[3] and aimed to dominate Asia, attacked the United States and European possessions in the Pacific Ocean, quickly conquering much of the region.
+1 . Japan
+2 . Slovakia
+3 . Germany
+4 . China
+5 . Soviet Union
 
 
-correct answer: acceptable ((adjective))
-I just hope that this document is long enough to be ___________________ .
-1 . in
-2 . acceptable
-3 . and
-4 . how
-5 . first
+correct answer: China ()
+In December 1941, Japan, which had been at war with ___________________ since 1937,[3] and aimed to dominate Asia, attacked the United States and European possessions in the Pacific Ocean, quickly conquering much of the region.
+1 . Japan
+2 . Japanese
+3 . China
+4 . Slovakia
+5 . France
 
 
-correct answer: hope ((noun)|(verb))
-I just ___________________ that this document is long enough to be acceptable.
-1 . write
-2 . word
-3 . times
-4 . that
-5 . hope
+correct answer: Japan ()
+The Axis advance was stopped in 1942 after the defeat of ___________________ in a series of naval battles and after defeats of European Axis troops in North Africa and, decisively, at Stalingrad.
+1 . Poland
+2 . China
+3 . Italy
+4 . France
+5 . Japan
 
 
-correct answer: document ((noun)|(verb))
-I just hope that this ___________________ is long enough to be acceptable.
-1 . hope
-2 . to
-3 . God
-4 . write
-5 . document
+correct answer: Italy ()
+In 1943, with a series of German defeats in Eastern Europe, the Allied invasion of Fascist ___________________, and American victories in the Pacific, the Axis lost the initiative and undertook strategic retreat on all fronts.
+1 . China
+2 . Slovakia
+3 . Italy
+4 . France
+5 . Japanese
+
+
+correct answer: France ()
+In 1944, the Western Allies invaded ___________________, while the Soviet Union regained all territorial losses and invaded Germany and its allies.
+1 . France
+2 . Germany
+3 . Japan
+4 . China
+5 . Japanese
+
+
+correct answer: Soviet Union ()
+In 1944, the Western Allies invaded France, while the ___________________ and its allies regained all territorial losses and invaded Germany and its allies.
+1 . Japan
+2 . Soviet Union
+3 . France
+4 . China
+5 . Italy
+
+
+correct answer: Germany ()
+In 1944, the Western Allies invaded France, while the Soviet Union regained all territorial losses and invaded ___________________ and its allies.
+1 . Germany
+2 . Italy
+3 . France
+4 . China
+5 . Poland
+
+
+correct answer: Japan ()
+The ___________________ese Navy was defeated by the United States, and invasion of the ___________________ese Archipelago ("Home Islands") became imminent.
+1 . Slovakia
+2 . Soviet Union
+3 . Italy
+4 . France
+5 . Japan
+
+
+correct answer: Japan ()
+The ___________________ese Navy was defeated by the United States, and invasion of the ___________________ese Archipelago ("Home Islands") became imminent.
+1 . Japan
+2 . Soviet Union
+3 . Japan
+4 . France
+5 . Italy
+
+
+correct answer: Japan ()
+The war in Asia ended on 15 August 1945 with the surrender of ___________________ .
+1 . Germany
+2 . France
+3 . Japan
+4 . Poland
+5 . Japan
+
+
+correct answer: Germany ()
+The war ended with the total victory of the Allies over ___________________ and Japan in 1945.
+1 . Soviet Union
+2 . Slovakia
+3 . Germany
+4 . Italy
+5 . Japan
+
+
+correct answer: Japan ()
+The war ended with the total victory of the Allies over Germany and ___________________ in 1945.
+1 . Japan
+2 . China
+3 . Japan
+4 . France
+5 . Soviet Union
+
+
+correct answer: Soviet Union ()
+The ___________________ and the United States emerged as rival superpowers, setting the stage for the Cold War, which would last for the next 46 years and the United States emerged as rival superpowers, setting the stage for the Cold War, which would last for the next 46 years.
+1 . Poland
+2 . France
+3 . China
+4 . Soviet Union
+5 . Slovakia
 
 
 
 nouns:
-photosynthesis
-Python
-noun
-sentence
-hope
-proper
-document
-God
-word
-i
-enough
-know
-how
-great
-times
-just
-long
-three
-first
-this
-be
-is
-that
-to
-for
-a
-in
-and
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua and Barbuda
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia
+Bosnia and Herzegovina
+Botswana
+Brazil
+Brunei 
+Bulgaria
+Burkina Faso
+Burma
+Burundi
+Cambodia
+Cameroon
+Canada
+Cape Verde
+Central African Republic
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo
+Costa Rica
+Cote d'Ivoire
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+East Timor
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Holy See
+Honduras
+Hong Kong
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland
+Israel
+Italy
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+North Korea
+South Korea
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macau
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Mauritania
+Mauritius
+Mexico
+Micronesia
+Moldova
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Namibia
+Nauru
+Nepal
+Netherlands
+Netherlands Antilles
+New Zealand
+Nicaragua
+Niger
+Nigeria
+North Korea
+Norway
+Oman
+Pakistan
+Palau
+Palestinian Territories
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Qatar
+Romania
+Russia
+Rwanda
+Saint Kitts and Nevis
+Saint Lucia
+Saint Vincent and the Grenadines
+Samoa
+San Marino
+Sao Tome and Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Korea
+Soviet Union
+Spain
+Sri Lanka
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syria
+Taiwan
+Tajikistan
+Tanzania
+Thailand
+Timor-Leste
+Togo
+Tonga
+Trinidad and Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+Uruguay
+Uzbekistan
+Vanuatu
+Venezuela
+Vietnam
+Yemen
+Zambia
+Zimbabwe
 
 plurals:
-times
-is
 
-proper nouns:
-Python
-noun
-proper
-God
+propers:
 
 verbs:
-noun
-sentence
-hope
-write
-document
-word
-i
-enough
-know
-how
-times
-just
-long
-three
-first
-be
-is
-that
-to
-for
-a
-in
-and
 
