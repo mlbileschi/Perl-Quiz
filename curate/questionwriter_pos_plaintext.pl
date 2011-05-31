@@ -40,7 +40,7 @@ GetOptions ("default"=>\$default, "qword=s" => \$qword, "years" => \$years, "cou
 #######MAIN#######
 
 #open dicitonary files don't use if ($years) | ($countries) ($qfile)
-open(DICTIONARY, "<index_regex2.idx") or die "Can't open dicitonary file index_regex2.idx\n";
+open(DICTIONARY, "<dictionary20110411.txt") or die "Can't open dicitonary file\n"; #case-sensitive dictionary file
 my @dict = <DICTIONARY>;
 
 #open an output file with html format
@@ -75,32 +75,48 @@ foreach (@dict)
 	my $word = $line[0];	#pop first elt off
 	my $pos=$line[1];
 
-	$hdict{$word}=[$pos, $line[2]/8382231];	#key is word, value is (part of speech, freq)#possibly add it with a really high value?
+	$hdict{$word}=[$pos, $line[2]];	#key is word, value is (part of speech, freq)#possibly add it with a really high value?
 											#want to change the denominator if you care, which is no longer the number of words spotted.
 #	$total+=$line[2]; #for counting the number of word occurrences in the dictionary #TODO
 }
 #$total=0; #the number of words in the input text file #TODO
+######---------------------------------------
 
-foreach(@file)
+#read file into sentences
+my $wholefile = "";
+foreach (@file)
 {
 	$_ =~ s/\r|\n//g; #the new chomp
-	@line = split(/ /, $_);
-#	$total+=$#line+1; for counting the number of lines #TODO
-	foreach my $token (@line)
+	$wholefile.=$_." ";
+}
+
+my @sentences = split(/\."?(\[\d+\])*\s+/, $wholefile); #split into sentences. That funky thing (\[\d+\])*
+																			#is in there to deal with Wikipedia citations
+foreach(@sentences)
+{
+	my @words = split(/ /, $_);
+	for my $i (0..$#words)
 	{
-#TODO change the regex to accept words in quotes, bracket?, parens, both, brackets number after, and other combinations (" ," ,[3] ." ") : ; ' ? ! (> < / \)?	
-#TODO allow for hyphen in the word? break it into two words?
-#TODO check to see if the next word after any comb of ! . ? with an optional " is in the dict, otherwise check the lowercase of that word instead, else set freq to one of the upper case word, or ignore?
-		if($token =~ /^[A-Za-z]+[\.,]?$/)
+		my $word = $words[$i];
+		#check to see if the first word needs to be lowercased
+		if($i==0 && @{$hdict{$word}}[0]!~m/proper/)
 		{
-			chop($token) if ($token =~ /[\.,]+$/);	#chop that punctuation right off of there
-			if(exists($localfreq{$token}))			#increase frequency/add depending if seen. #TODO different casings of same word fix
+			$word=lc(substr($word, 0, 1)) .  substr($word, 1);
+		}
+
+		#TODO change the regex to accept words in quotes, bracket?, parens, both, brackets number after, and other combinations (" ," ,[3] ." ") : ; ' ? ! (> < / \)?	
+		#TODO allow for hyphen in the word? break it into two words?
+		#TODO check to see if the next word after any comb of ! . ? with an optional " is in the dict, otherwise check the lowercase of that word instead, else set freq to one of the upper case word, or ignore?
+		if($word =~ /^[A-Za-z]+[\.,]?$/)
+		{
+			chop($word) if ($word =~ /[\.,]+$/);	#chop that punctuation right off of there
+			if(exists($localfreq{$word}))			#increase frequency/add depending if seen. #TODO different casings of same word fix
 			{
-				$localfreq{$token}++;
+				$localfreq{$word}++;
 			}
 			else
 			{
-				$localfreq{$token} = 1;
+				$localfreq{$word} = 1;
 			}
 		} 
 	}
@@ -109,16 +125,17 @@ foreach(@file)
 #compute relative frequencies
 foreach my $key ( keys(%localfreq) ) 
 {
-	if(!exists($hdict{lc($key)}))
+	if(!exists($hdict{$key}))
 	{
 		$localfreq{$key}=0;		#possibly add it with a really high value?
 		#print "word $key is not in hdict\n"; #for cl output
 	} 
 	else
 	{	
-		$localfreq{$key} = ($localfreq{$key})/(@{$hdict{lc($key)}}[1]);  #tricky syntax because of array references in hash table
+		$localfreq{$key} = ($localfreq{$key})/(@{$hdict{$key}}[1]);  #tricky syntax because of array references in hash table
 	}
 }
+
 #add each of the keys in decreasing order to @topwords
 foreach my $key (sort {$localfreq{$b} <=> $localfreq{$a}} keys(%localfreq)) 
 {
@@ -135,7 +152,7 @@ my @propernouns = ();
 my @plurals = ();
 #there's gonna be problems if the input is REALLY short.
 foreach my $i (0..29)
-{#print "YOOOOOOOOO";#@{$hdict{$topwords[$i]]}}[0]";
+{
 	if(@{$hdict{$topwords[$i]}}[0]=~m/noun/) #gotta match those parts of speech
 	{
 		push(@nouns,$topwords[$i]);
@@ -170,16 +187,6 @@ if ($years)
 	close(TIMEPREPS);
 }
 
-#read file into sentences
-my $wholefile = "";
-foreach (@file)
-{
-	$_ =~ s/\r|\n//g; #the new chomp
-	$wholefile.=$_." ";
-}
-
-my @sentences = split(/\."?(\[\d+\])*\s+/, $wholefile); #split into sentences. That funky thing (\[\d+\])*
-																			#is in there to deal with Wikipedia citations
 
 #to be used for more relevant answers, only used with some command line args
 my %words;			#all the words in the file; value = number of occurances
@@ -350,7 +357,7 @@ sub years
 	#also, @matches gets each digit match per sentence.
 	#TODO fix the below regex... backreferences for months?
 	#TODO matches can not be uniq
-	if(($sentence =~ $timeprepregex) && (my @matches = $sentence=~m/[^(,\d)]\s+,?\(?\-?(\d+),?\.?\s?\-?\)?[^(,\d+)( years)($months)]/ig))
+	if(($sentence =~ $timeprepregex) && (my @matches = $sentence=~m/[^(,\d)]\s+,?\(?\-?(\d+),?\.?\s?\-?\)?[^(,\d+)( years)($months)]/g)) ##got rid of i
 	{	
 		foreach my $match (@matches)
 		{
@@ -477,16 +484,16 @@ sub qword
 		last;
 	}
 	#not quite sure how to handle these cases right now
-	if(! exists( $hdict{lc($qword)} ) )
+	if(! exists( $hdict{$qword} ) )
 	{
-		print OUT "\n$qword is not in dictionary file.\n\n";
+		print "\n$qword is not in dictionary file.\n\n"; #print to terminal
 		last;
 	}
 
 	#if qword appears in the text in a logical way, then proceed
 	if($sentence=~/\s+$qword[\.,\s+]?/i || $sentence=~/^$qword\s/i) #TODO why doesn't this conditional have more under it, like the correct answers, etc also this happens elsewhere?!?!?!
 	{
-		printCorrectAnswer($qword,$hdict{lc($qword)}[0]);
+		printCorrectAnswer($qword,$hdict{$qword}[0]);
 	
 		#Print the question to OUT and determine the correct capitalization
 		$nt_capitalize = &questionLineOut(\@tokens, $qword, "QWORD", 1);
@@ -507,12 +514,13 @@ sub qword
 			{
 				my $random=$correct;
 				#goes until a new topword is chosen
-				if(@{$hdict{lc($qword)}}[0] ne "")
+				#if pos is not empty
+				if(@{$hdict{$qword}}[0] ne "")
 				{
 					while ( $maxtries>0		#just in case we can't match parts of speech we have a sentinel
 								&& ( exists($numberchoice{$random})	#while we've already chosen this word
-								|| ($topwords[$random] eq lc($qword)) #and it's not the correct answer
-								|| @{$hdict{$topwords[$random]}}[0]!~@{$hdict{lc($qword)}}[0]   ) #and it doesn't match the part of speech
+								|| ($topwords[$random] eq $qword) #and it's not the correct answer
+								|| @{$hdict{$topwords[$random]}}[0]!~@{$hdict{$qword}}[0]   ) #and it doesn't match the part of speech
 								 )
 					{
 						$random=int(rand(20)); #how far into @topwords i want to look for candidate answers
@@ -520,11 +528,12 @@ sub qword
 					}
 				}
 				#unable to match parts of speech, indicated by print OUT *
-				if($maxtries<=0 || @{$hdict{lc($qword)}}[0] eq "")
+				# if we're unable to pick a good topword, or we don't have a pos
+				if($maxtries<=0 || @{$hdict{$qword}}[0] eq "")
 				{
 					#print "Unable to match parts of speech in this question.\n";
 					#print OUT "*"; 
-					while ( exists($numberchoice{$random}) ||	$topwords[$random] eq lc($qword) )
+					while ( exists($numberchoice{$random}) ||	$topwords[$random] eq $qword )
 					{
 						$random=int(rand(20)); #how far into @topwords i want to look for candidate answers
 					}						
@@ -554,7 +563,7 @@ sub qfile
 		{					#match global amount of times ^
 			foreach my $match (@matches)
 			{
-				printCorrectAnswer($match,$hdict{lc($match)}[0]);
+				printCorrectAnswer($match,$hdict{$match}[0]);
 				
 				my @tmp = split(/\s+/, $match);
 				for my $idx (0..$#tmp) #trim out any empty strings from $match
@@ -638,7 +647,7 @@ sub default
 		my $nt_capitalize = 0; #whether the replacement is the first word
 		#but what about if there are two replacements in the same line?
 
-		if( !exists( $hdict{lc($topwords[$i])} ) )
+		if( !exists( $hdict{$topwords[$i]} ) )
 		{
 			#print OUT "<br>\n ".lc($topwords[$i])." is not in dictionary file.<br>\n<br>\n"; #for cl output
 			next;
@@ -647,10 +656,11 @@ sub default
 		my $tempregex = $topwords[$i];
 		if($sentence=~/(\s+$tempregex[\.,\s+]?)|(^$tempregex[\.,\s+]?)/i)
 		{
-			printCorrectAnswer($topwords[$i],$hdict{lc($topwords[$i])}[0]);
+			printCorrectAnswer($topwords[$i],$hdict{$topwords[$i]}[0]);
 			
 			#Print the question to OUT and determine the correct capitalization
 			$nt_capitalize = &questionLineOut(\@tokens, $topwords[$i], "DEFAULT", 1);
+			print "YOOOOOOOoooo" if ($nt_capitalize==1);
 
 			#find other candidate answers out of @topwords
 			my %numberchoice=(); #hash of randoms chosen
@@ -670,17 +680,17 @@ sub default
 				{
 					my $random=$correct;
 					#goes until a new topword is chosen
-					if(@{$hdict{lc($topwords[$i])}}[0] ne "")
+					if(@{$hdict{$topwords[$i]}}[0] ne "")
 					{
 						while ( (exists($numberchoice{$random} ) #while we haven't already chosen it
-								|| @{$hdict{lc($topwords[$random])}}[0]!~@{$hdict{lc($topwords[$i])}}[0]) #and it doesn't match the part of speech
+								|| @{$hdict{$topwords[$random]}}[0]!~@{$hdict{$topwords[$i]}}[0]) #and it doesn't match the part of speech
 								&& $maxtries>0)	#just in case we can't match parts of speech we have a sentinel
 						{
 							$random=int(rand(30)); #how far into @topwords i want to look for wrong answers
 							$maxtries--;
 						}
 					}
-					if($maxtries<=0 || @{$hdict{lc($topwords[$i])}}[0] eq "")
+					if($maxtries<=0 || @{$hdict{$topwords[$i]}}[0] eq "")
 					{
 					#print "Unable to match parts of speech in this question.\n";
 					#print OUT "*";
@@ -691,7 +701,7 @@ sub default
 					}
 					$numberchoice{$random}=0;
 					my $toprint = $topwords[$random];
-					$toprint =~ s/\b(\w+)\b/ucfirst($1)/ge if $nt_capitalize; 
+					$toprint =(uc(substr($toprint, 0, 1)).substr($toprint, 1)) if $nt_capitalize; 
 
 					print OUT "$j \. ".$toprint."\n";	#text box
 				}
@@ -731,7 +741,7 @@ sub questionLineOut #(\@tokens,$match,"SUB")
 		}
 		else #we've hit a match
 		{ #TODO fuck with the spacing around the blank
-			if($sub eq "QWORD"|"DEAFULT") {if($i==0) {$toreturn=1;} } #if qword or default and the first word, then return a 1 for capitalization
+			if($sub eq "QWORD"|"DEAFULT" && $i==0) { $toreturn=1; } #if qword or default and the first word, then return a 1 for capitalization
 			
 			#print OUT " ".$` unless $` eq " "; #in case the number has brackets around it or something stupid
 			print OUT "___________________";

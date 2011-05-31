@@ -1,386 +1,183 @@
-correct answer: carburetor ((noun))
-The ___________________ works on Bernoulli's principle: the faster air moves, the lower its static pressure, and the higher its dynamic pressure.
-1 . updraft
-2 . mesh
-3 . carburetor
-4 . venturi
-5 . fueling
-
-
-correct answer: actuates ((verb))
-Instead, it ___________________ carburetor mechanisms which meter the flow of air being pulled into the engine.
-1 . choke
-2 . actuates
-3 . stacked
-4 . suck
-5 . cleaner
-
-
-correct answer: carburetor ((noun))
-Instead, it actuates ___________________ mechanisms which meter the flow of air being pulled into the engine.
-1 . updraft
-2 . filters
-3 . carburetor
-4 . carburetors
-5 . manifold
-
-
-correct answer: airstream ((noun))
-The speed of this flow, and therefore its pressure, determines the amount of fuel drawn into the ___________________ .
-1 . throttle
-2 . airstream
-3 . starvation
-4 . mesh
-5 . Outboard
-
-
-correct answer: carburetors ((noun)|(plural))
-When ___________________ are used in aircraft with piston engines, special designs and features are needed to prevent fuel starvation during inverted flight.
-1 . carburetor
-2 . mesh
-3 . enhancements
-4 . carburetors
-5 . filters
-
-
-correct answer: carburetor ((noun))
-When ___________________s are used in aircraft with piston engines, special designs and features are needed to prevent fuel starvation during inverted flight.
-1 . carburetors
-2 . carburetor
-3 . choke
-4 . airstream
-5 . throttle
-
-
-correct answer: carburetor ((noun))
-Later engines used an early form of fuel injection known as a pressure ___________________ .
-1 . updraft
-2 . linkage
-3 . carburetor
-4 . movable
-5 . viscosity
-
-
-correct answer: carburetors ((noun)|(plural))
-Most production carbureted (as opposed to fuel-injected) engines have a single carburetor and a matching intake manifold that divides and transports the air fuel mixture to the intake valves, though some engines (like motorcycle engines) use multiple ___________________ on split heads.
-1 . movable
-2 . carburetors
-3 . suck
-4 . enhancements
-5 . intake
-
-
-correct answer: carburetor ((noun))
-Most production carbureted (as opposed to fuel-injected) engines have a single ___________________ and a matching intake manifold that divides and transports the air fuel mixture to the intake valves, though some engines (like motorcycle engines) use multiple ___________________s on split heads.
-1 . linkage
-2 . starvation
-3 . mesh
-4 . carburetor
-5 . intake
-
-
-correct answer: carbureted ((verb))
-Most production ___________________ (as opposed to fuel-injected) engines have a single carburetor and a matching intake manifold that divides and transports the air fuel mixture to the intake valves, though some engines (like motorcycle engines) use multiple carburetors on split heads.
-1 . inverted
-2 . resisting
-3 . basing
-4 . stacked
-5 . carbureted
-
-
-correct answer: intake ((noun)|(verb))
-Most production carbureted (as opposed to fuel-injected) engines have a single carburetor and a matching ___________________ manifold that divides and transports the air fuel mixture to the ___________________ valves, though some engines (like motorcycle engines) use multiple carburetors on split heads.
-1 . actuates
-2 . intake
-3 . carbureted
-4 . throttle
-5 . inverted
-
-
-correct answer: carburetor ((noun))
-Multiple ___________________ engines were also common enhancements for modifying engines in the USA from the 1950s to mid-1960s, as well as during the following decade of high-performance muscle cars fueling different chambers of the engine's intake manifold.
-1 . cleaner
-2 . carburetor
-3 . choke
-4 . updraft
-5 . fueling
-
-
-correct answer: intake ((noun)|(verb))
-Multiple carburetor engines were also common enhancements for modifying engines in the USA from the 1950s to mid-1960s, as well as during the following decade of high-performance muscle cars fueling different chambers of the engine's ___________________ manifold.
-1 . actuates
-2 . intake
-3 . throttle
-4 . carbureted
-5 . linkage
-
-
-correct answer: carburetors ((noun)|(plural))
-Older engines used updraft ___________________, where the air enters from below the carburetor and exits through the top.
-1 . venturi
-2 . Outboard
-3 . droplets
-4 . airstream
-5 . carburetors
-
-
-correct answer: updraft ((noun))
-Older engines used ___________________ carburetors, where the air enters from below the carburetor and exits through the top.
-1 . Outboard
-2 . starvation
-3 . updraft
-4 . throttle
-5 . airstream
-
-
-correct answer: carburetor ((noun))
-Older engines used updraft ___________________s, where the air enters from below the ___________________ and exits through the top.
-1 . updraft
-2 . mesh
-3 . carburetor
-4 . linkage
-5 . viscosity
-
-
-correct answer: carburetor ((noun))
-This had the advantage of never "flooding" the engine, as any liquid fuel droplets would fall out of the ___________________ instead of into the intake manifold; it also lent itself to use of an oil bath air cleaner, where a pool of oil below a mesh element below the ___________________ is sucked up into the mesh and the air is drawn through the oil-covered mesh; this was an effective system in a time when paper air filters did not exist.
-1 . viscosity
-2 . choke
-3 . starvation
-4 . manifold
-5 . carburetor
-
-
-correct answer: intake ((noun)|(verb))
-This had the advantage of never "flooding" the engine, as any liquid fuel droplets would fall out of the carburetor instead of into the ___________________ manifold; it also lent itself to use of an oil bath air cleaner, where a pool of oil below a mesh element below the carburetor is sucked up into the mesh and the air is drawn through the oil-covered mesh; this was an effective system in a time when paper air filters did not exist.
-1 . carbureted
-2 . enhancements
-3 . throttle
-4 . stacked
-5 . intake
-
-
-correct answer: mesh ((noun)|(verb))
-This had the advantage of never "flooding" the engine, as any liquid fuel droplets would fall out of the carburetor instead of into the intake manifold; it also lent itself to use of an oil bath air cleaner, where a pool of oil below a ___________________ element below the carburetor is sucked up into the ___________________ and the air is drawn through the oil-covered ___________________; this was an effective system in a time when paper air filters did not exist.
-1 . updraft
-2 . choke
-3 . mesh
-4 . actuates
-5 . enhancements
-
-
-correct answer: carburetors ((noun)|(plural))
-Beginning in the late 1930s, downdraft ___________________ were the most popular type for automotive use in the United States.
-1 . carburetors
-2 . airstream
-3 . cleaner
-4 . venturi
-5 . filters
-
-
-correct answer: carburetor ((noun))
-Beginning in the late 1930s, downdraft ___________________s were the most popular type for automotive use in the United States.
-1 . fueling
-2 . carburetor
-3 . filters
-4 . carburetors
-5 . venturi
-
-
-correct answer: carburetors ((noun)|(plural))
-In Europe, the sidedraft ___________________ replaced downdraft as free space in the engine bay decreased and the use of the SU-type carburetor (and similar units from other manufacturers) increased.
-1 . carburetors
-2 . airstream
-3 . enhancements
-4 . linkage
-5 . valves
-
-
-correct answer: carburetor ((noun))
-In Europe, the sidedraft ___________________s replaced downdraft as free space in the engine bay decreased and the use of the SU-type ___________________ (and similar units from other manufacturers) increased.
-1 . enhancements
-2 . carburetor
-3 . valves
-4 . manifold
-5 . filters
-
-
-correct answer: updraft ((noun))
-Some small propeller-driven aircraft engines still use the ___________________ carburetor design.
-1 . carburetor
-2 . starvation
-3 . filters
-4 . updraft
-5 . cleaner
-
-
-correct answer: carburetor ((noun))
-Some small propeller-driven aircraft engines still use the updraft ___________________ design.
-1 . starvation
-2 . carburetors
-3 . movable
-4 . fueling
-5 . carburetor
-
-
-correct answer: carburetors ((noun)|(plural))
-Outboard motor ___________________ are typically sidedraft, because they must be stacked one on top of the other in order to feed the cylinders in a vertically-oriented cylinder block.
-1 . airstream
-2 . cleaner
-3 . mesh
-4 . filters
-5 . carburetors
-
-
-correct answer: carburetor ((noun))
-Outboard motor ___________________s are typically sidedraft, because they must be stacked one on top of the other in order to feed the cylinders in a vertically-oriented cylinder block.
-1 . carburetor
-2 . airstream
-3 . linkage
-4 . filters
-5 . cleaner
-
-
-correct answer: Outboard ((adjective)|(noun))
-___________________ motor carburetors are typically sidedraft, because they must be stacked one on top of the other in order to feed the cylinders in a vertically-oriented cylinder block.
-1 . Outboard
-2 . airstream
-3 . carburetor
-4 . intake
-5 . filters
-
-
-correct answer: carburetor ((noun))
-1979 Evinrude Type I marine sidedraft ___________________ The main disadvantage of basing a ___________________'s operation on Bernoulli's principle is that, being a fluid dynamic device, the pressure reduction in a venturi tends to be proportional to the square of the intake air speed.
-1 . carburetor
-2 . airstream
-3 . filters
-4 . enhancements
-5 . fueling
-
-
-correct answer: venturi ((noun)|(adjective)|(plural))
-1979 Evinrude Type I marine sidedraft carburetor The main disadvantage of basing a carburetor's operation on Bernoulli's principle is that, being a fluid dynamic device, the pressure reduction in a ___________________ tends to be proportional to the square of the intake air speed.
-1 . updraft
-2 . movable
-3 . venturi
-4 . starvation
-5 . choke
-
-
-correct answer: intake ((noun)|(verb))
-1979 Evinrude Type I marine sidedraft carburetor The main disadvantage of basing a carburetor's operation on Bernoulli's principle is that, being a fluid dynamic device, the pressure reduction in a venturi tends to be proportional to the square of the ___________________ air speed.
-1 . intake
-2 . airstream
-3 . carburetors
-4 . throttle
-5 . sucked
-
-
-correct answer: starve ((verb))
-So jets sized for full power tend to ___________________ the engine at lower speed and part throttle.
-1 . starve
-2 . fueling
-3 . filters
-4 . actuates
-5 . resisting
-
-
-correct answer: carburetors ((noun)|(plural))
-In SU and other movable jet ___________________, it was corrected by varying the jet size.
-1 . carburetors
-2 . airstream
-3 . Outboard
-4 . movable
-5 . updraft
-
-
-correct answer: carburetor ((noun))
-In SU and other movable jet ___________________s, it was corrected by varying the jet size.
-1 . valves
-2 . choke
-3 . manifold
-4 . airstream
-5 . carburetor
-
-
-correct answer: carburetors ((noun)|(plural))
-For cold starting, a different principle was used, in multi-jet ___________________ .
-1 . cleaner
-2 . throttle
-3 . airstream
-4 . starvation
-5 . carburetors
-
-
-correct answer: carburetor ((noun))
-For cold starting, a different principle was used, in multi-jet ___________________s .
-1 . updraft
-2 . starvation
-3 . carburetor
-4 . filters
-5 . manifold
-
-
-correct answer: intake ((noun)|(verb))
-A flow resisting valve called a choke, similar to the throttle valve, was placed upstream of the main jet to reduce the ___________________ pressure and suck additional fuel out of the jets.
-1 . carbureted
-2 . manifold
-3 . starve
-4 . enhancements
-5 . intake
+correct answer: Python ((proper noun))
+I don't know how to write in ___________________ .
+1 . noun
+2 . Python
+3 . proper
+4 . God
+5 . acceptable
+
+
+correct answer: write ((verb))
+I don't know how to ___________________ in Python.
+1 . write
+2 . three
+3 . for
+4 . how
+5 . is
+
+
+correct answer: photosynthesis ((noun))
+___________________ is a great first word for this sentence.
+1 . photosynthesis
+2 . Python
+3 . a
+4 . enough
+5 . first
+
+
+correct answer: sentence ((noun)|(verb))
+Photosynthesis is a great first word for this ___________________ .
+1 . sentence
+2 . Python
+3 . times
+4 . hope
+5 . in
+
+
+correct answer: word ((noun)|(verb))
+Photosynthesis is a great first ___________________ for this sentence.
+1 . noun
+2 . a
+3 . word
+4 . i
+5 . document
+
+
+correct answer: noun ((noun)|(verb)|(proper noun))
+God is a proper ___________________, and the word God is in this sentence three times, God.
+1 . sentence
+2 . how
+3 . first
+4 . noun
+5 . be
+
+
+correct answer: sentence ((noun)|(verb))
+God is a proper noun, and the word God is in this ___________________ three times, God.
+1 . hope
+2 . noun
+3 . this
+4 . to
+5 . sentence
+
+
+correct answer: proper ((adjective)|(noun)|(proper noun))
+God is a ___________________ noun, and the word God is in this sentence three times, God.
+1 . noun
+2 . in
+3 . proper
+4 . first
+5 . know
+
+
+correct answer: God ((proper noun))
+___________________ is a proper noun, and the word ___________________ is in this sentence three times, ___________________ .
+1 . God
+2 . Python
+3 . proper
+4 . noun
+5 . sentence
+
+
+correct answer: word ((noun)|(verb))
+God is a proper noun, and the ___________________ God is in this sentence three times, God.
+1 . word
+2 . Python
+3 . how
+4 . and
+5 . know
+
+
+correct answer: acceptable ((adjective))
+I just hope that this document is long enough to be ___________________ .
+1 . in
+2 . acceptable
+3 . and
+4 . how
+5 . first
+
+
+correct answer: hope ((noun)|(verb))
+I just ___________________ that this document is long enough to be acceptable.
+1 . write
+2 . word
+3 . times
+4 . that
+5 . hope
+
+
+correct answer: document ((noun)|(verb))
+I just hope that this ___________________ is long enough to be acceptable.
+1 . hope
+2 . to
+3 . God
+4 . write
+5 . document
 
 
 
 nouns:
-carburetors
-airstream
-updraft
-carburetor
-venturi
-intake
-mesh
-throttle
-viscosity
-enhancements
-fueling
-choke
-starvation
-suck
-droplets
-movable
-manifold
-linkage
-cleaner
-filters
-valves
+photosynthesis
+Python
+noun
+sentence
+hope
+proper
+document
+God
+word
+i
+enough
+know
+how
+great
+times
+just
+long
+three
+first
+this
+be
+is
+that
+to
+for
+a
+in
+and
 
 plurals:
-carburetors
-venturi
-enhancements
-droplets
-filters
-valves
+times
+is
 
 proper nouns:
+Python
+noun
+proper
+God
 
 verbs:
-actuates
-carbureted
-starve
-intake
-mesh
-throttle
-fueling
-choke
-basing
-suck
-sucked
-stacked
-manifold
-resisting
-cleaner
-filters
-inverted
+noun
+sentence
+hope
+write
+document
+word
+i
+enough
+know
+how
+times
+just
+long
+three
+first
+be
+is
+that
+to
+for
+a
+in
+and
 
