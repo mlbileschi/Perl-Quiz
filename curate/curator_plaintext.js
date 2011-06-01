@@ -21,13 +21,20 @@ function finalize(divId)
 	{
 		inputArr[i].style.visibility = 'hidden';
 		inputArr[i].style.display = 'none';
-		var toAppend = (inputArr[i].id).substr((inputArr[i].name).indexOf("text\d")+5);
-		var toShow = ("div" + divId.substr(8) + "text" + (inputArr[i].name).substr(7));
-
-		//alert(toShow); //debug
-		document.getElementById(toShow).style.visibility = 'visible';
-		document.getElementById(toShow).style.display = 'block';
-		document.getElementById(toShow).firstChild.nodeValue = inputArr[i].value;
+		if(inputArr[i].name.indexOf("text")!=-1)
+		{
+			var toAppend = (inputArr[i].id).substr((inputArr[i].name).indexOf("text\d")+5);
+			var toShow = ("div" + divId.substr(8) + "text" + (inputArr[i].name).substr(7));
+			
+			//alert(toShow); //debug
+			document.getElementById(toShow).style.visibility = 'visible';
+			document.getElementById(toShow).style.display = 'inline';
+			document.getElementById(toShow).firstChild.nodeValue = inputArr[i].value;
+		}
+		else //it's a button
+		{
+			
+		}
 	}
 	//to hide the show hide tickbox
 	inputArr[0].style.visibility = 'hidden';

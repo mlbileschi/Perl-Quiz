@@ -81,9 +81,9 @@ while ($i < $#pt)
 			$pt[$i]=~s/\r|\n//g; #the new chomp
 
 			print HTML "\t\t\t\t<li>\n\t\t\t\t\t<a style=\"display:none\" id = \"div".$divNum."text".$j."\">  </a>\n"; #text
-			print HTML "\t\t\t\t\t<input type =\"button\" onclick=\"getPrev(\'div".$divNum."textbox".$j."\', \'pos".$divNum."\');\" value = \"&laquo;\">\n\t\t\t\t\n";
+			print HTML "\t\t\t\t\t<input type =\"button\" name=\"prev\" onclick=\"getPrev(\'div".$divNum."textbox".$j."\', \'pos".$divNum."\');\" value = \"&laquo;\">\t\t\t\t\n";
 			print HTML "\t\t\t\t\t<input type=\"text\" name=\"textbox".$j."\" id = \"div".$divNum."textbox".$j."\" value=\"".$pt[$i]."\">\n";	#text box
-			print HTML "\t\t\t\t\t<input type =\"button\" onclick=\"getNext(\'div".$divNum."textbox".$j."\', \'pos".$divNum."\');\"value = \"&raquo;\">\n\t\t\t\t<\/li>\n";
+			print HTML "\t\t\t\t\t<input type =\"button\" name=\"next\" onclick=\"getNext(\'div".$divNum."textbox".$j."\', \'pos".$divNum."\');\"value = \"&raquo;\">\n\t\t\t\t<\/li>\n";
 
 			if($j==5)
 			{
