@@ -1,408 +1,223 @@
-correct answer: Poland ()
-The war is generally accepted to have begun on 1 September 1939, with the invasion of ___________________ by Germany and Slovakia, and subsequent declarations of war on Germany by France and most of the countries of the British Empire and Commonwealth.
-1 . Slovakia
-2 . France
-3 . Soviet Union
-4 . Italy
-5 . Poland
+correct answer: Photosynthesis ((noun))
+___________________ occurs in two stages.
+1 . Chlorophyll
+2 . Reactions
+3 . photosynthesis
+4 . Sunlight
+5 . Sugar
 
 
-correct answer: Germany ()
-The war is generally accepted to have begun on 1 September 1939, with the invasion of Poland by ___________________ and Slovakia, and subsequent declarations of war on ___________________ by France and most of the countries of the British Empire and Commonwealth.
-1 . China
-2 . Italy
-3 . Germany
-4 . Soviet Union
-5 . Japanese
+correct answer: reactions ((noun)|(plural))
+These stages are called the light ___________________ and the dark ___________________ .
+1 . sucrose
+2 . steps
+3 . stages
+4 . reactions
+5 . sugar
 
 
-correct answer: Slovakia ()
-The war is generally accepted to have begun on 1 September 1939, with the invasion of Poland by Germany and ___________________, and subsequent declarations of war on Germany by France and most of the countries of the British Empire and Commonwealth.
-1 . Japan
-2 . Italy
-3 . Slovakia
-4 . Poland
-5 . Soviet Union
+correct answer: reactions ((noun)|(plural))
+The light ___________________ take place in the presence of light.
+1 . chlorophyll
+2 . grana
+3 . reactions
+4 . sugar
+5 . stroma
 
 
-correct answer: Germany ()
-The war is generally accepted to have begun on 1 September 1939, with the invasion of Poland by ___________________ and Slovakia, and subsequent declarations of war on ___________________ by France and most of the countries of the British Empire and Commonwealth.
-1 . Japanese
-2 . China
-3 . Germany
-4 . Italy
-5 . Poland
+correct answer: reactions ((noun)|(plural))
+The dark ___________________ do not require direct light, however dark ___________________ in most plants occur during the day.
+1 . chlorophyll
+2 . stomata
+3 . reactions
+4 . grana
+5 . splitting
 
 
-correct answer: France ()
-The war is generally accepted to have begun on 1 September 1939, with the invasion of Poland by Germany and Slovakia, and subsequent declarations of war on Germany by ___________________ and most of the countries of the British Empire and Commonwealth.
-1 . Slovakia
-2 . Japan
-3 . Soviet Union
-4 . France
-5 . Poland
+correct answer: reactions ((noun)|(plural))
+Light ___________________ occur mostly in the thylakoid stacks of the grana.
+1 . stroma
+2 . reactions
+3 . stages
+4 . electron
+5 . dark
 
 
-correct answer: Germany ()
-___________________ set out to establish a large empire in Europe.
-1 . Slovakia
-2 . Soviet Union
-3 . Japanese
-4 . Germany
-5 . Italy
+correct answer: grana ((noun)|(verb)|(plural))
+Light reactions occur mostly in the thylakoid stacks of the ___________________ .
+1 . grana
+2 . stomata
+3 . sugar
+4 . dark
+5 . oxygen
 
 
-correct answer: Germany ()
-From late 1939 to early 1941, in a series of campaigns and treaties, ___________________ conquered or subdued much of continental Europe; amid Nazi-Soviet agreements, the nominally neutral Soviet Union fully or partially occupied and annexed territories of its six European neighbours.
-1 . Italy
-2 . Germany
-3 . Japanese
-4 . China
-5 . Slovakia
+correct answer: NADPH ()
+Here, sunlight is converted to chemical energy in the form of ATP (free energy containing molecule) and ___________________ (high energy electron carrying molecule).
+1 . photosynthesis
+2 . absorbs
+3 . stomata
+4 . molecules
+5 . NADPH
 
 
-correct answer: Soviet Union ()
-From late 1939 to early 1941, in a series of campaigns and treaties, Germany conquered or subdued much of continental Europe; amid Nazi-Soviet agreements, the nominally neutral ___________________ fully or partially occupied and annexed territories of its six European neighbours fully or partially occupied and annexed territories of its six European neighbours.
-1 . Italy
-2 . Germany
-3 . Soviet Union
-4 . Japanese
-5 . China
+correct answer: sunlight ((noun))
+Here, ___________________ is converted to chemical energy in the form of ATP (free energy containing molecule) and NADPH (high energy electron carrying molecule).
+1 . photosynthesis
+2 . splitting
+3 . steps
+4 . sucrose
+5 . sunlight
 
 
-correct answer: Soviet Union ()
-In June 1941, the European Axis launched an invasion of the ___________________, giving a start to the largest land theatre of war in history, which, from this moment on, was tying down the major part of the Axis military power giving a start to the largest land theatre of war in history, which, from this moment on, was tying down the major part of the Axis military power.
-1 . Slovakia
-2 . Italy
-3 . Germany
-4 . Soviet Union
-5 . Japanese
+correct answer: NADPH ()
+Chlorophyll absorbs light energy and starts a chain of steps that result in the production of ATP, ___________________, and oxygen (through the splitting of water).
+1 . stroma
+2 . NADPH
+3 . chlorophyll
+4 . ATP
+5 . photosynthesis
 
 
-correct answer: Japan ()
-In December 1941, ___________________, which had been at war with China since 1937,[3] and aimed to dominate Asia, attacked the United States and European possessions in the Pacific Ocean, quickly conquering much of the region.
-1 . Japan
-2 . Slovakia
-3 . Germany
-4 . China
-5 . Soviet Union
+correct answer: Chlorophyll ((noun))
+___________________ absorbs light energy and starts a chain of steps that result in the production of ATP, NADPH, and oxygen (through the splitting of water).
+1 . Light
+2 . Photosynthesis
+3 . chlorophyll
+4 . Sunlight
+5 . Sucrose
 
 
-correct answer: China ()
-In December 1941, Japan, which had been at war with ___________________ since 1937,[3] and aimed to dominate Asia, attacked the United States and European possessions in the Pacific Ocean, quickly conquering much of the region.
-1 . Japan
-2 . Japanese
-3 . China
-4 . Slovakia
-5 . France
+correct answer: absorbs ((verb))
+Chlorophyll ___________________ light energy and starts a chain of steps that result in the production of ATP, NADPH, and oxygen (through the splitting of water).
+1 . stacks
+2 . absorbs
+3 . sugar
+4 . light
+5 . steps
 
 
-correct answer: Japan ()
-The Axis advance was stopped in 1942 after the defeat of ___________________ in a series of naval battles and after defeats of European Axis troops in North Africa and, decisively, at Stalingrad.
-1 . Poland
-2 . China
-3 . Italy
-4 . France
-5 . Japan
+correct answer: stomata ((noun)|(plural))
+Oxygen is released through the ___________________ .
+1 . stomata
+2 . sunlight
+3 . fixation
+4 . molecules
+5 . chlorophyll
 
 
-correct answer: Italy ()
-In 1943, with a series of German defeats in Eastern Europe, the Allied invasion of Fascist ___________________, and American victories in the Pacific, the Axis lost the initiative and undertook strategic retreat on all fronts.
-1 . China
-2 . Slovakia
-3 . Italy
-4 . France
-5 . Japanese
+correct answer: NADPH ()
+Both ATP and ___________________ are used in the dark reactions to produce sugar.
+1 . photosynthesis
+2 . reactions
+3 . dioxide
+4 . stomata
+5 . NADPH
 
 
-correct answer: France ()
-In 1944, the Western Allies invaded ___________________, while the Soviet Union regained all territorial losses and invaded Germany and its allies.
-1 . France
-2 . Germany
-3 . Japan
-4 . China
-5 . Japanese
+correct answer: reactions ((noun)|(plural))
+Both ATP and NADPH are used in the dark ___________________ to produce sugar.
+1 . photosynthesis
+2 . fixation
+3 . electron
+4 . grana
+5 . reactions
 
 
-correct answer: Soviet Union ()
-In 1944, the Western Allies invaded France, while the ___________________ and its allies regained all territorial losses and invaded Germany and its allies.
-1 . Japan
-2 . Soviet Union
-3 . France
-4 . China
-5 . Italy
+correct answer: stroma ((noun)|(adjective))
+Dark reactions occur in the ___________________ .
+1 . chlorophyll
+2 . grana
+3 . stroma
+4 . converted
+5 . dark
 
 
-correct answer: Germany ()
-In 1944, the Western Allies invaded France, while the Soviet Union regained all territorial losses and invaded ___________________ and its allies.
-1 . Germany
-2 . Italy
-3 . France
-4 . China
-5 . Poland
+correct answer: reactions ((noun)|(plural))
+Dark ___________________ occur in the stroma.
+1 . stroma
+2 . reactions
+3 . oxygen
+4 . energy
+5 . stomata
 
 
-correct answer: Japan ()
-The ___________________ese Navy was defeated by the United States, and invasion of the ___________________ese Archipelago ("Home Islands") became imminent.
-1 . Slovakia
-2 . Soviet Union
-3 . Italy
-4 . France
-5 . Japan
+correct answer: NADPH ()
+Carbon dioxide is converted to sugar using ATP and ___________________ .
+1 . sucrose
+2 . grana
+3 . stacks
+4 . NADPH
+5 . carbon
 
 
-correct answer: Japan ()
-The ___________________ese Navy was defeated by the United States, and invasion of the ___________________ese Archipelago ("Home Islands") became imminent.
-1 . Japan
-2 . Soviet Union
-3 . Japan
-4 . France
-5 . Italy
+correct answer: fixation ((noun))
+This process is known as carbon ___________________ or the Calvin cycle.
+1 . sucrose
+2 . stages
+3 . carbon
+4 . fixation
+5 . chlorophyll
 
 
-correct answer: Japan ()
-The war in Asia ended on 15 August 1945 with the surrender of ___________________ .
-1 . Germany
-2 . France
-3 . Japan
-4 . Poland
-5 . Japan
-
-
-correct answer: Germany ()
-The war ended with the total victory of the Allies over ___________________ and Japan in 1945.
-1 . Soviet Union
-2 . Slovakia
-3 . Germany
-4 . Italy
-5 . Japan
-
-
-correct answer: Japan ()
-The war ended with the total victory of the Allies over Germany and ___________________ in 1945.
-1 . Japan
-2 . China
-3 . Japan
-4 . France
-5 . Soviet Union
-
-
-correct answer: Soviet Union ()
-The ___________________ and the United States emerged as rival superpowers, setting the stage for the Cold War, which would last for the next 46 years and the United States emerged as rival superpowers, setting the stage for the Cold War, which would last for the next 46 years.
-1 . Poland
-2 . France
-3 . China
-4 . Soviet Union
-5 . Slovakia
+correct answer: sucrose ((noun))
+These two molecules make ___________________ or sugar.
+1 . electron
+2 . light
+3 . steps
+4 . sucrose
+5 . stacks
 
 
 
 nouns:
-Afghanistan
-Albania
-Algeria
-Andorra
-Angola
-Antigua and Barbuda
-Argentina
-Armenia
-Australia
-Austria
-Azerbaijan
-Bahamas
-Bahrain
-Bangladesh
-Barbados
-Belarus
-Belgium
-Belize
-Benin
-Bhutan
-Bolivia
-Bosnia and Herzegovina
-Botswana
-Brazil
-Brunei 
-Bulgaria
-Burkina Faso
-Burma
-Burundi
-Cambodia
-Cameroon
-Canada
-Cape Verde
-Central African Republic
-Chad
-Chile
-China
-Colombia
-Comoros
-Congo
-Costa Rica
-Cote d'Ivoire
-Croatia
-Cuba
-Cyprus
-Czech Republic
-Denmark
-Djibouti
-Dominica
-Dominican Republic
-East Timor
-Ecuador
-Egypt
-El Salvador
-Equatorial Guinea
-Eritrea
-Estonia
-Ethiopia
-Fiji
-Finland
-France
-Gabon
-Gambia
-Georgia
-Germany
-Ghana
-Greece
-Grenada
-Guatemala
-Guinea
-Guinea-Bissau
-Guyana
-Haiti
-Holy See
-Honduras
-Hong Kong
-Hungary
-Iceland
-India
-Indonesia
-Iran
-Iraq
-Ireland
-Israel
-Italy
-Jamaica
-Japan
-Jordan
-Kazakhstan
-Kenya
-Kiribati
-North Korea
-South Korea
-Kosovo
-Kuwait
-Kyrgyzstan
-Laos
-Latvia
-Lebanon
-Lesotho
-Liberia
-Libya
-Liechtenstein
-Lithuania
-Luxembourg
-Macau
-Macedonia
-Madagascar
-Malawi
-Malaysia
-Maldives
-Mali
-Malta
-Marshall Islands
-Mauritania
-Mauritius
-Mexico
-Micronesia
-Moldova
-Monaco
-Mongolia
-Montenegro
-Morocco
-Mozambique
-Namibia
-Nauru
-Nepal
-Netherlands
-Netherlands Antilles
-New Zealand
-Nicaragua
-Niger
-Nigeria
-North Korea
-Norway
-Oman
-Pakistan
-Palau
-Palestinian Territories
-Panama
-Papua New Guinea
-Paraguay
-Peru
-Philippines
-Poland
-Portugal
-Qatar
-Romania
-Russia
-Rwanda
-Saint Kitts and Nevis
-Saint Lucia
-Saint Vincent and the Grenadines
-Samoa
-San Marino
-Sao Tome and Principe
-Saudi Arabia
-Senegal
-Serbia
-Seychelles
-Sierra Leone
-Singapore
-Slovakia
-Slovenia
-Solomon Islands
-Somalia
-South Africa
-South Korea
-Soviet Union
-Spain
-Sri Lanka
-Sudan
-Suriname
-Swaziland
-Sweden
-Switzerland
-Syria
-Taiwan
-Tajikistan
-Tanzania
-Thailand
-Timor-Leste
-Togo
-Tonga
-Trinidad and Tobago
-Tunisia
-Turkey
-Turkmenistan
-Tuvalu
-Uganda
-Ukraine
-United Arab Emirates
-United Kingdom
-Uruguay
-Uzbekistan
-Vanuatu
-Venezuela
-Vietnam
-Yemen
-Zambia
-Zimbabwe
+stomata
+stroma
+chlorophyll
+sucrose
+photosynthesis
+reactions
+grana
+fixation
+sunlight
+stacks
+glucose
+dioxide
+sugar
+molecules
+splitting
+electron
+carbon
+oxygen
+dark
+energy
+stages
+light
+steps
 
 plurals:
+stomata
+reactions
+grana
+stacks
+molecules
+stages
+steps
 
 propers:
+Calvin
 
 verbs:
+grana
+absorbs
+stacks
+sugar
+splitting
+dark
+occur
+stages
+light
+converted
+steps
+carrying
 

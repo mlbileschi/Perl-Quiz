@@ -1,6 +1,6 @@
 pKa		70.5
-Arrhenius		49.5
-neutralization	(noun)	46.5
+Arrhenius		51
+neutralization	(noun)	45
 hydronium	(noun)	40.5
 buffering	(verb)	34
 electronegative	(adjective)	30
@@ -8,7 +8,7 @@ nederlands		25.5
 adduct	(verb)|(noun)	22.5
 HSAB		22.5
 ionic	(adjective)	22
-dissociation	(noun)	21
+dissociation	(noun)	21.3333333333333
 citric	(adjective)	21
 oxyanions	(noun)|(plural)	21
 amphoteric	(adjective)	18
@@ -16,14 +16,14 @@ oxophilic		16.5
 chromate	(noun)	16
 predominance	(noun)	15
 oxyanion	(noun)	15
-monoprotic	(adjective)	13.5
-polyprotic	(adjective)	13.5
 dissociated	(verb)	12
 amphiprotic	(adjective)	12
 Grotthuss		12
 hcl		12
+monoprotic	(adjective)	12
 suomi	(noun)|(verb)	12
 bergveld		12
+polyprotic	(adjective)	12
 Miessler		12
 protonated	(verb)	12
 bisulfide	(noun)	12
@@ -54,18 +54,17 @@ Dibasic		7.5
 monomeric	(adjective)	7.5
 Zundel		7.5
 oxophilicity		7.5
-carboxylic	(adjective)	7.5
 Buffering		7.5
 aqueous	(adjective)	7.4
 ammonia	(noun)	7
 dichromate	(noun)	7
 perchloric	(adjective)	7
+carboxylic	(adjective)	7
 anion	(noun)	7
 hardness	(noun)	6.33333333333333
 hydroxide	(noun)	6.16666666666667
 Lavoisier		6
 Usanovich		6
-sulfonic	(adjective)	6
 anc		6
 cymraeg		6
 softness	(noun)	6
@@ -104,12 +103,14 @@ proton	(noun)	4.85
 HOMO		4.5
 hydrogens	(noun)|(plural)	4.5
 ieee		4.5
+Neutralization		4.5
 fluoroantimonic		4.5
 hydrolyze	(verb)	4.5
 electropositive	(adjective)	4.5
 diprotic	(adjective)	4.5
 euskara	(noun)	4.5
 pK		4.5
+sulfonic	(adjective)	4.5
 hsab		4.5
 Nernst	(noun)	4.5
 pitzer		4.5
@@ -131,6 +132,7 @@ Solvent		4.5
 tagalog	(noun)	4.5
 ZnO		4.5
 tartaric	(adjective)	4.5
+Dissociation		4.5
 oxalic	(adjective)	4.5
 troubleshooting	(noun)|(verb)	4.5
 charlot		4.5
@@ -166,7 +168,6 @@ cola	(noun)|(verb)|(plural)|(preposition)	3
 carbonyls	(noun)|(plural)	3
 Nitric		3
 predominates	(verb)	3
-Neutralization		3
 oxyacids	(noun)|(plural)	3
 solute	(adjective)|(noun)	3
 acidified	(verb)	3
@@ -183,11 +184,13 @@ amphoterism	(noun)	3
 stoichiometry	(noun)	3
 electrolytes	(noun)|(plural)	3
 bicine		3
+Monoprotic		3
 Rossotti		3
 polyoxyanions		3
 dissociating	(verb)	3
 fluorosulfuric		3
 Monomeric		3
+Carboxylic		3
 Ascanioa		3
 sulfoxide	(noun)	3
 cytosol	(noun)	3
@@ -195,6 +198,3 @@ alcohols	(noun)|(plural)	3
 Reformulation		3
 galego	(adjective)|(noun)|(proper noun)	3
 quinhydrone	(noun)	3
-dihydrogen	(noun)	3
-hydrofluoric	(adjective)	3
-undissociated	(adjective)	3
