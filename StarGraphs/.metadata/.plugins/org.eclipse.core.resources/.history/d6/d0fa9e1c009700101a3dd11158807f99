@@ -1,0 +1,65 @@
+'''
+Created on Jun 14, 2011
+
+@author: Max
+'''
+
+import sys; #command line args
+
+print("Hello World");
+DICT = open('C:\\Users\\Max\\Perl-Quiz\\curate\\dictionary20110531.txt','r')
+dictionary={};
+
+''' read file into hash table'''
+for line in DICT:
+	tokens=line.split()
+	if(len(tokens)==2):
+		dictionary[tokens[0]]=["",tokens[1]]
+	else:#there is a part of speech
+		dictionary[tokens[0]]=[tokens[1],tokens[2]]
+DICT.close()
+
+
+
+print(sys.argv[1]) #debug
+inputFileHandle = open(sys.argv[1], 'r')
+inputFileParagraphs=[]
+inputFileSentences=[]
+#read file into words
+for line in inputFileHandle:
+	inputFileParagraphs.append(line.split())
+
+sentence = []
+#read file into sentences
+for para in inputFileParagraphs:
+	print(para)
+	if(para==['']):
+		inputFileSentences.append(['']) #append empty so we keep track of paras
+		continue
+	for word in para:
+		#start a sentence
+		sentence.append(word)
+		if(word.find('.')!=-1):
+			inputFileSentences.append(sentence)
+			sentence=[]
+
+for sentence in inputFileSentences:
+	print(sentence)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			

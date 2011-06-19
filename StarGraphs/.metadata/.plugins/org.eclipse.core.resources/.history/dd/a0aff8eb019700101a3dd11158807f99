@@ -1,0 +1,71 @@
+'''
+Created on Jun 14, 2011
+
+@author: Max
+'''
+
+import sys; #command line args
+
+print("Hello World");
+DICT = open('C:\\Users\\Max\\Perl-Quiz\\curate\\dictionary20110531.txt','r')
+dictionary={};
+
+dictEntryCount = 0; #the total number of entries in the dictionary
+''' read file into hash table'''
+for line in DICT:
+	tokens=line.split()
+	if(len(tokens)==2):
+		dictEntryCount+=int(tokens[1])
+		dictionary[tokens[0]]=["",tokens[1]]
+	else:#there is a part of speech
+		dictEntryCount+=int(tokens[2])
+		dictionary[tokens[0]]=[tokens[1],tokens[2]]
+DICT.close()
+
+
+inputFileHandle = open(sys.argv[1], 'r')
+inputFileParagraphs=[]
+inputFileSentences=[]
+wordImportances={} #for the input file
+
+#read file into words
+for line in inputFileHandle:
+	inputFileParagraphs.append(line.split())
+
+sentence = [] #temp variable used for parsing the file into sentences
+#read file into sentences
+for para in inputFileParagraphs:
+	if(para==[]):
+		inputFileSentences.append([]) #append empty so we keep track of paras
+		continue
+	for word in para:
+		#start a sentence and read into hash
+		sentence.append(word)
+		if(word.find('.')!=-1):
+			inputFileSentences.append(sentence)
+			sentence=[]
+			if(word in dictionary):
+				wordImportances[word]=[dictionary[word][0],dictionary[word][1]]
+			else: #we add with an occurrence frequency of .7
+				wordImportances[word]=['',.7]
+
+
+		
+for word in sort(dictionary.keys()):
+	print("hey")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			

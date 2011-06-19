@@ -1,0 +1,7 @@
+
+from StarGraph import StarGraph
+
+
+star = StarGraph(sys.argv[1])
+
+print(star.center)

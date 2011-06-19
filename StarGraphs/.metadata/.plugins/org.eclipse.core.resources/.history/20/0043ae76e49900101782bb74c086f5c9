@@ -1,0 +1,14 @@
+class StarGraph:
+
+	def chomp(self, str):
+		return re.sub('\r|\s', ' ', str)
+	
+	center=""
+	spokes = []
+	def __init__(self,filename):
+		IN = open(filename,'r')
+		self.center=IN.readline()
+		for line in IN:
+			self.spokes.append(chomp(line))
+
+

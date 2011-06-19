@@ -1,0 +1,9 @@
+class StarGraph:
+
+
+	center="kat"
+	spokes = []
+	def __init__(self,filename):
+		IN = open(filename,'r')
+		for line in IN:
+			
