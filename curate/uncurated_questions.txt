@@ -1,223 +1,402 @@
-correct answer: Photosynthesis ((noun))
-___________________ occurs in two stages.
-1 . Chlorophyll
-2 . Reactions
-3 . photosynthesis
-4 . Sunlight
-5 . Sugar
+correct answer: actuates ()
+Instead, it ___________________ carburetor mechanisms which meter the flow of air being pulled into the engine.
+1 . actuates
+2 . main
+3 . space
+4 . motor
+5 . aircraft
 
 
-correct answer: reactions ((noun)|(plural))
-These stages are called the light ___________________ and the dark ___________________ .
-1 . sucrose
-2 . steps
-3 . stages
-4 . reactions
-5 . sugar
+correct answer: engine ()
+Instead, it actuates carburetor mechanisms which meter the flow of air being pulled into the ___________________ .
+1 . aircraft
+2 . venturi
+3 . engine
+4 . varying
+5 . motor
 
 
-correct answer: reactions ((noun)|(plural))
-The light ___________________ take place in the presence of light.
-1 . chlorophyll
-2 . grana
-3 . reactions
-4 . sugar
-5 . stroma
+correct answer: airstream ()
+The speed of this flow, and therefore its pressure, determines the amount of fuel drawn into the ___________________ .
+1 . main
+2 . Europe
+3 . actuates
+4 . venturi
+5 . airstream
 
 
-correct answer: reactions ((noun)|(plural))
-The dark ___________________ do not require direct light, however dark ___________________ in most plants occur during the day.
-1 . chlorophyll
-2 . stomata
-3 . reactions
-4 . grana
-5 . splitting
+correct answer: aircraft ()
+When carburetors are used in ___________________ with piston engines, special designs and features are needed to prevent fuel starvation during inverted flight.
+1 . varying
+2 . main
+3 . actuates
+4 . aircraft
+5 . venturi
 
 
-correct answer: reactions ((noun)|(plural))
-Light ___________________ occur mostly in the thylakoid stacks of the grana.
-1 . stroma
-2 . reactions
-3 . stages
-4 . electron
-5 . dark
+correct answer: piston ()
+When carburetors are used in aircraft with ___________________ engines, special designs and features are needed to prevent fuel starvation during inverted flight.
+1 . varying
+2 . manifold
+3 . space
+4 . piston
+5 . actuates
 
 
-correct answer: grana ((noun)|(verb)|(plural))
-Light reactions occur mostly in the thylakoid stacks of the ___________________ .
-1 . grana
-2 . stomata
-3 . sugar
-4 . dark
-5 . oxygen
+correct answer: engine ()
+When carburetors are used in aircraft with piston ___________________s, special designs and features are needed to prevent fuel starvation during inverted flight.
+1 . space
+2 . engine
+3 . main
+4 . airstream
+5 . actuates
 
 
-correct answer: NADPH ()
-Here, sunlight is converted to chemical energy in the form of ATP (free energy containing molecule) and ___________________ (high energy electron carrying molecule).
-1 . photosynthesis
-2 . absorbs
-3 . stomata
-4 . molecules
-5 . NADPH
+correct answer: engine ()
+Later ___________________s used an early form of fuel injection known as a pressure carburetor.
+1 . actuates
+2 . aircraft
+3 . main
+4 . corrected
+5 . engine
 
 
-correct answer: sunlight ((noun))
-Here, ___________________ is converted to chemical energy in the form of ATP (free energy containing molecule) and NADPH (high energy electron carrying molecule).
-1 . photosynthesis
-2 . splitting
-3 . steps
-4 . sucrose
-5 . sunlight
+correct answer: engine ()
+Most production carbureted (as opposed to fuel-injected) ___________________s have a single carburetor and a matching intake manifold that divides and transports the air fuel mixture to the intake valves, though some ___________________s (like motorcycle ___________________s) use multiple carburetors on split heads.
+1 . engine
+2 . piston
+3 . corrected
+4 . main
+5 . Europe
 
 
-correct answer: NADPH ()
-Chlorophyll absorbs light energy and starts a chain of steps that result in the production of ATP, ___________________, and oxygen (through the splitting of water).
-1 . stroma
-2 . NADPH
-3 . chlorophyll
-4 . ATP
-5 . photosynthesis
+correct answer: manifold ()
+Most production carbureted (as opposed to fuel-injected) engines have a single carburetor and a matching intake ___________________ that divides and transports the air fuel mixture to the intake valves, though some engines (like motorcycle engines) use multiple carburetors on split heads.
+1 . aircraft
+2 . varying
+3 . manifold
+4 . main
+5 . viscosity
 
 
-correct answer: Chlorophyll ((noun))
-___________________ absorbs light energy and starts a chain of steps that result in the production of ATP, NADPH, and oxygen (through the splitting of water).
-1 . Light
-2 . Photosynthesis
-3 . chlorophyll
-4 . Sunlight
-5 . Sucrose
+correct answer: engine ()
+Most production carbureted (as opposed to fuel-injected) ___________________s have a single carburetor and a matching intake manifold that divides and transports the air fuel mixture to the intake valves, though some ___________________s (like motorcycle ___________________s) use multiple carburetors on split heads.
+1 . piston
+2 . aircraft
+3 . main
+4 . jet
+5 . engine
 
 
-correct answer: absorbs ((verb))
-Chlorophyll ___________________ light energy and starts a chain of steps that result in the production of ATP, NADPH, and oxygen (through the splitting of water).
-1 . stacks
-2 . absorbs
-3 . sugar
-4 . light
-5 . steps
+correct answer: motor ()
+Most production carbureted (as opposed to fuel-injected) engines have a single carburetor and a matching intake manifold that divides and transports the air fuel mixture to the intake valves, though some engines (like ___________________cycle engines) use multiple carburetors on split heads.
+1 . motor
+2 . aircraft
+3 . main
+4 . jet
+5 . viscosity
 
 
-correct answer: stomata ((noun)|(plural))
-Oxygen is released through the ___________________ .
-1 . stomata
-2 . sunlight
-3 . fixation
-4 . molecules
-5 . chlorophyll
+correct answer: engine ()
+Most production carbureted (as opposed to fuel-injected) ___________________s have a single carburetor and a matching intake manifold that divides and transports the air fuel mixture to the intake valves, though some ___________________s (like motorcycle ___________________s) use multiple carburetors on split heads.
+1 . actuates
+2 . aircraft
+3 . jet
+4 . engine
+5 . piston
 
 
-correct answer: NADPH ()
-Both ATP and ___________________ are used in the dark reactions to produce sugar.
-1 . photosynthesis
-2 . reactions
-3 . dioxide
-4 . stomata
-5 . NADPH
+correct answer: engine ()
+Multiple carburetor ___________________s were also common enhancements for modifying ___________________s in the USA from the 1950s to mid-1960s, as well as during the following decade of high-performance muscle cars fueling different chambers of the ___________________'s intake manifold.
+1 . manifold
+2 . engine
+3 . varying
+4 . aircraft
+5 . piston
 
 
-correct answer: reactions ((noun)|(plural))
-Both ATP and NADPH are used in the dark ___________________ to produce sugar.
-1 . photosynthesis
-2 . fixation
-3 . electron
-4 . grana
-5 . reactions
+correct answer: engine ()
+Multiple carburetor ___________________s were also common enhancements for modifying ___________________s in the USA from the 1950s to mid-1960s, as well as during the following decade of high-performance muscle cars fueling different chambers of the ___________________'s intake manifold.
+1 . Europe
+2 . corrected
+3 . engine
+4 . venturi
+5 . viscosity
 
 
-correct answer: stroma ((noun)|(adjective))
-Dark reactions occur in the ___________________ .
-1 . chlorophyll
-2 . grana
-3 . stroma
-4 . converted
-5 . dark
+correct answer: engine ()
+Multiple carburetor ___________________s were also common enhancements for modifying ___________________s in the USA from the 1950s to mid-1960s, as well as during the following decade of high-performance muscle cars fueling different chambers of the ___________________'s intake manifold.
+1 . corrected
+2 . jet
+3 . engine
+4 . airstream
+5 . viscosity
 
 
-correct answer: reactions ((noun)|(plural))
-Dark ___________________ occur in the stroma.
-1 . stroma
-2 . reactions
-3 . oxygen
-4 . energy
-5 . stomata
+correct answer: manifold ()
+Multiple carburetor engines were also common enhancements for modifying engines in the USA from the 1950s to mid-1960s, as well as during the following decade of high-performance muscle cars fueling different chambers of the engine's intake ___________________ .
+1 . manifold
+2 . motor
+3 . varying
+4 . viscosity
+5 . jet
 
 
-correct answer: NADPH ()
-Carbon dioxide is converted to sugar using ATP and ___________________ .
-1 . sucrose
-2 . grana
-3 . stacks
-4 . NADPH
-5 . carbon
+correct answer: engine ()
+Older ___________________s used updraft carburetors, where the air enters from below the carburetor and exits through the top.
+1 . varying
+2 . engine
+3 . actuates
+4 . viscosity
+5 . aircraft
 
 
-correct answer: fixation ((noun))
-This process is known as carbon ___________________ or the Calvin cycle.
-1 . sucrose
-2 . stages
-3 . carbon
-4 . fixation
-5 . chlorophyll
+correct answer: engine ()
+This had the advantage of never "flooding" the ___________________, as any liquid fuel droplets would fall out of the carburetor instead of into the intake manifold; it also lent itself to use of an oil bath air cleaner, where a pool of oil below a mesh element below the carburetor is sucked up into the mesh and the air is drawn through the oil-covered mesh; this was an effective system in a time when paper air filters did not exist.
+1 . varying
+2 . engine
+3 . piston
+4 . corrected
+5 . airstream
 
 
-correct answer: sucrose ((noun))
-These two molecules make ___________________ or sugar.
-1 . electron
-2 . light
-3 . steps
-4 . sucrose
-5 . stacks
+correct answer: manifold ()
+This had the advantage of never "flooding" the engine, as any liquid fuel droplets would fall out of the carburetor instead of into the intake ___________________; it also lent itself to use of an oil bath air cleaner, where a pool of oil below a mesh element below the carburetor is sucked up into the mesh and the air is drawn through the oil-covered mesh; this was an effective system in a time when paper air filters did not exist.
+1 . Europe
+2 . space
+3 . manifold
+4 . corrected
+5 . jet
+
+
+correct answer: Europe ()
+In ___________________, the sidedraft carburetors replaced downdraft as free space in the engine bay decreased and the use of the SU-type carburetor (and similar units from other manufacturers) increased.
+1 . Europe
+2 . engine
+3 . varying
+4 . piston
+5 . viscosity
+
+
+correct answer: space ()
+In Europe, the sidedraft carburetors replaced downdraft as free ___________________ in the engine bay decreased and the use of the SU-type carburetor (and similar units from other manufacturers) increased.
+1 . Europe
+2 . corrected
+3 . actuates
+4 . space
+5 . engine
+
+
+correct answer: engine ()
+In Europe, the sidedraft carburetors replaced downdraft as free space in the ___________________ bay decreased and the use of the SU-type carburetor (and similar units from other manufacturers) increased.
+1 . main
+2 . space
+3 . corrected
+4 . engine
+5 . manifold
+
+
+correct answer: aircraft ()
+Some small propeller-driven ___________________ engines still use the updraft carburetor design.
+1 . piston
+2 . viscosity
+3 . aircraft
+4 . space
+5 . venturi
+
+
+correct answer: engine ()
+Some small propeller-driven aircraft ___________________s still use the updraft carburetor design.
+1 . varying
+2 . main
+3 . airstream
+4 . Europe
+5 . engine
+
+
+correct answer: motor ()
+Outboard ___________________ carburetors are typically sidedraft, because they must be stacked one on top of the other in order to feed the cylinders in a vertically-oriented cylinder block.
+1 . motor
+2 . piston
+3 . space
+4 . varying
+5 . actuates
+
+
+correct answer: main ()
+The ___________________ disadvantage of basing a carburetor's operation on Bernoulli's principle is that, being a fluid dynamic device, the pressure reduction in a venturi tends to be proportional to the square of the intake air speed.
+1 . viscosity
+2 . manifold
+3 . corrected
+4 . main
+5 . engine
+
+
+correct answer: venturi ()
+The main disadvantage of basing a carburetor's operation on Bernoulli's principle is that, being a fluid dynamic device, the pressure reduction in a ___________________ tends to be proportional to the square of the intake air speed.
+1 . venturi
+2 . viscosity
+3 . Europe
+4 . aircraft
+5 . piston
+
+
+correct answer: jet ()
+The fuel ___________________s are much smaller and limited mainly by viscosity, so that the fuel flow tends to be proportional to the pressure difference.
+1 . aircraft
+2 . varying
+3 . motor
+4 . Europe
+5 . jet
+
+
+correct answer: main ()
+The fuel jets are much smaller and limited ___________________ly by viscosity, so that the fuel flow tends to be proportional to the pressure difference.
+1 . viscosity
+2 . piston
+3 . corrected
+4 . main
+5 . motor
+
+
+correct answer: viscosity ()
+The fuel jets are much smaller and limited mainly by ___________________, so that the fuel flow tends to be proportional to the pressure difference.
+1 . viscosity
+2 . Europe
+3 . piston
+4 . corrected
+5 . manifold
+
+
+correct answer: jet ()
+So ___________________s sized for full power tend to starve the engine at lower speed and part throttle.
+1 . aircraft
+2 . space
+3 . engine
+4 . jet
+5 . piston
+
+
+correct answer: engine ()
+So jets sized for full power tend to starve the ___________________ at lower speed and part throttle.
+1 . venturi
+2 . viscosity
+3 . manifold
+4 . engine
+5 . motor
+
+
+correct answer: corrected ()
+Most commonly this has been ___________________ by using multiple jets.
+1 . manifold
+2 . main
+3 . piston
+4 . corrected
+5 . varying
+
+
+correct answer: jet ()
+Most commonly this has been corrected by using multiple ___________________s .
+1 . engine
+2 . aircraft
+3 . manifold
+4 . jet
+5 . viscosity
+
+
+correct answer: jet ()
+In SU and other movable ___________________ carburetors, it was corrected by varying the ___________________ size.
+1 . jet
+2 . viscosity
+3 . venturi
+4 . Europe
+5 . main
+
+
+correct answer: corrected ()
+In SU and other movable jet carburetors, it was ___________________ by varying the jet size.
+1 . corrected
+2 . venturi
+3 . manifold
+4 . motor
+5 . space
+
+
+correct answer: varying ()
+In SU and other movable jet carburetors, it was corrected by ___________________ the jet size.
+1 . manifold
+2 . space
+3 . engine
+4 . aircraft
+5 . varying
+
+
+correct answer: jet ()
+In SU and other movable ___________________ carburetors, it was corrected by varying the ___________________ size.
+1 . engine
+2 . corrected
+3 . motor
+4 . jet
+5 . actuates
+
+
+correct answer: jet ()
+For cold starting, a different principle was used, in multi-jet carburetors.
+1 . main
+2 . actuates
+3 . piston
+4 . aircraft
+5 . jet
+
+
+correct answer: main ()
+A flow resisting valve called a choke, similar to the throttle valve, was placed upstream of the ___________________ jet to reduce the intake pressure and suck additional fuel out of the jets.
+1 . main
+2 . engine
+3 . space
+4 . corrected
+5 . actuates
+
+
+correct answer: jet ()
+A flow resisting valve called a choke, similar to the throttle valve, was placed upstream of the main ___________________ to reduce the intake pressure and suck additional fuel out of the ___________________s .
+1 . airstream
+2 . corrected
+3 . motor
+4 . jet
+5 . viscosity
+
+
+correct answer: jet ()
+A flow resisting valve called a choke, similar to the throttle valve, was placed upstream of the main ___________________ to reduce the intake pressure and suck additional fuel out of the ___________________s .
+1 . jet
+2 . varying
+3 . Europe
+4 . airstream
+5 . main
 
 
 
 nouns:
-stomata
-stroma
-chlorophyll
-sucrose
-photosynthesis
-reactions
-grana
-fixation
-sunlight
-stacks
-glucose
-dioxide
-sugar
-molecules
-splitting
-electron
-carbon
-oxygen
-dark
-energy
-stages
-light
-steps
+Europe
+aircraft
+jet
+viscosity
+varying
+motor
+space
+manifold
+main
+airstream
+venturi
+engine
+corrected
+piston
+actuates
 
 plurals:
-stomata
-reactions
-grana
-stacks
-molecules
-stages
-steps
 
 propers:
-Calvin
 
 verbs:
-grana
-absorbs
-stacks
-sugar
-splitting
-dark
-occur
-stages
-light
-converted
-steps
-carrying
 

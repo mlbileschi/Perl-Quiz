@@ -1,0 +1,7 @@
+
+import StarGraph
+
+
+star = StarGraph()
+
+print(star.center)

@@ -37,6 +37,7 @@ my $default; my $qword; my $years; my $countries; my $qfile;
 GetOptions ("default"=>\$default, "qword=s" => \$qword, "years" => \$years, "countries" => \$countries, "qfile=s" => \$qfile) or die "Whups, got options we don't recognize!";
 #$qword=lc($qword); #TODO
 
+
 #######MAIN#######
 
 #open dicitonary files don't use if ($years) | ($countries) ($qfile)
@@ -63,6 +64,8 @@ my @fileregex=(); #list of regex's of all lines in each important-word bearing f
 my @fileregex2=(); #list of regex's of two word lines in each important-word bearing file
 my @fileregex3=(); #list of regex's of three word lines in each important-word bearing file
 my @fileregex4=(); #list of regex's of four word lines in each important-word bearing file
+
+my $qfile_and_text = ""; #used for qfile. intersection of words in qfile and text input file
 
 #read each line from the dictionary file, then put into a hash
 # whose key is the word, and whose value is a two-elt array
@@ -150,6 +153,7 @@ my @verbs = ();
 my @nouns = ();
 my @propernouns = ();
 my @plurals = ();
+
 #there's gonna be problems if the input is REALLY short.
 foreach my $i (0..29)
 {
@@ -263,14 +267,16 @@ foreach my $file (@qfile)
 	{
 		$line =~ s/\r|\n//g; #trim new lines and returns
 		push(@subfilelines, $line);
-		$subfileregex.=$line."\|";	#this way they can be a regex of "or" expressions
+		$subfileregex.= "(^".$line."\$)|";	#this way they can be a regex of "or" expressions
 											#like Soviet Union|Peru|...
 		my @tokenized_line = split(/\s+/, $line);
 		$subfileregex2.=$line."\|" if($#tokenized_line==1);
 		$subfileregex3.=$line."\|" if($#tokenized_line==2);
 		$subfileregex4.=$line."\|" if($#tokenized_line==3);
 	}
+
 	close(QFILE);
+
 	chop($subfileregex); 			#to take last "|" off
 	chop($subfileregex2); 			#to take last "|" off
 	chop($subfileregex3); 			#to take last "|" off
@@ -289,6 +295,15 @@ foreach my $file (@qfile)
 	push(@fileans, \%subfileans);
 	push(@filelines, \@subfilelines);
 }
+
+foreach my $thing (@fileans)
+{
+	foreach my $entry (keys %{$thing})
+	{
+		$qfile_and_text.= $entry."|";
+	}
+}
+chop($qfile_and_text);
 
 #foreach sentence, create the requested/relevant question
 foreach my $sentence (@sentences)
@@ -327,7 +342,7 @@ foreach my $sentence (@sentences)
 	}
 }
 if(!($qfile))
-{ print "here";
+{
 	print OUT "\nnouns:\n";
 	foreach (@nouns) { print OUT $_."\n"; }
 	print OUT "\nplurals:\n";
@@ -336,15 +351,35 @@ if(!($qfile))
 	foreach (@propernouns) { print OUT $_."\n"; }
 	print OUT "\nverbs:\n";
 	foreach (@verbs) { print OUT $_."\n"; }
-} else { 
+} 
+else 
+{ #there is a qfile
+	#not quite sure which way to do this. both work.
+	#for now, I'll say that we should only use the entire qfile for the forward and back js buttons is
+	#when the length of the file isn't too long and when we have enough words in 
+	#@qfile_and_text to make a decent use of the buttons. When it is too long, we use $qfile_and_text instead.
 	open(QFILE, "<$qfile") or die "Can't find ".$qfile."\. Please confirm that this is the correct path to the file.\n";
-	print OUT "\nnouns:\n"; #note: nouns are the default for the .js.. I can do this better later...
-	foreach (<QFILE>) { print OUT $_; }
-	print OUT "\nplurals:\n";
-	print OUT "\npropers:\n";
-	print OUT "\nverbs:\n";
+	my @whole_file = <QFILE>;
+	my @qfile_and_text_list = split(/\|/, $qfile_and_text);
+	if($#whole_file <=300 && $#qfile_and_text_list<=10)
+	{
+		print OUT "\nnouns:\n"; #note: nouns are the default for the .js.. I can do this better later...
+		print OUT $_ foreach (@whole_file);
+		print OUT "\nplurals:\n";
+		print OUT "\npropers:\n";
+		print OUT "\nverbs:\n";
+	}
+	else
+	{
+		print OUT "\nnouns:\n";
+		print OUT $_."\n"  foreach (@qfile_and_text_list);
+		print OUT "\nplurals:\n";
+		print OUT "\npropers:\n";
+		print OUT "\nverbs:\n";
+	}
+	close(QFILE);
 }
-close(QFILE);
+
 ############################
 ######### END MAIN #########
 ############################
@@ -576,7 +611,9 @@ sub qfile
 	for my $filenum (0..$#qfile) 
 	{				
 		#TODO matches will be not uniq
-		if(my @matches = $sentence =~ m/$fileregex[$filenum]/g)
+		my $tempregex = $fileregex[$filenum];
+
+		if(my @matches = $sentence =~ m/$qfile_and_text/g)
 		{					#match global amount of times ^
 			foreach my $match (@matches)
 			{
@@ -645,7 +682,7 @@ sub qfile
 					}			
 					else
 					{
-						print OUT "$i \. ". $answers[$i-1]."\n";	#text box
+						print OUT "$i \. ". $answers[$i-1]."\n";
 					}
 				}
 				print OUT "\n\n";
@@ -820,13 +857,15 @@ sub parseFileIntoPhrases #(%subfileans, $subfileregex, %words/phrases)
 #TODO consider punctuation? dont modity the words before checking them against the regex?	
 	my %ans = %{$_[0]}; #important phrases we've found in the file we want to write a quiz about,
 	my $regex = $_[1];
+	print $regex."\n";
 	my %tokens = %{$_[2]};
 	#for each word/phrase in the file, check if it's a one_word, or two_word, ... line in the current qfile
 	foreach my $token (keys %tokens)
 	{
 		$token =~ s/[^A-Za-z\s]//g; #kill off all non-letters while keeping spaces
+
 		#why ne ""? e.g. if your qfile only has phrases of length 3 or less, four_words will be ""
-		if ($token =~ /$regex/i && $regex ne "") 
+		if ($token =~ m/^$regex$/i && $regex ne "") 
 		{
 			$ans{$token} = $tokens{$token}; #assigns the value of $token in %subfileans to be the value that was for $token in %words/phrases
 			#TODO will the above put it in or no?

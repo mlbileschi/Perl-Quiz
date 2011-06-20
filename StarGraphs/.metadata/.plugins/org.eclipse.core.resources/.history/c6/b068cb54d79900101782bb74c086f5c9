@@ -1,0 +1,178 @@
+'''
+Created on Jun 14, 2011
+
+@author: Max
+'''
+
+import sys #command line args
+import re #regular expressions
+from operator import itemgetter
+
+DICT = open('C:\\Users\\Max\\Perl-Quiz\\curate\\dictionary20110531.txt','r')
+dictionary={};
+inputFileHandle = open(sys.argv[1], 'r')
+inputFileParagraphs=[]
+inputFileSentences=[]
+inputWordCount=0;
+wordImportance={} #for the input file
+target = sys.argv[2] #what word will be at the center of the star
+
+
+#chop off punct. and digits, e.g. 6-carbon->carbon
+def onlyAlpha(str):
+	return(re.sub(r'\d+', '', re.sub(r'\W+', '', str)))
+
+#replaces all endlines with nothing
+def chomp(str):
+	return re.sub(r'\r|\n', '', str)
+
+
+def sort_by_value(d):
+	""" Returns the keys of dictionary d sorted by their values """
+	items=d.items()
+	backitems=[ [v[1],v[0]] for v in items]
+	backitems.sort()
+	return [ backitems[i][1] for i in range(0,len(backitems))]
+
+
+print("start\n");
+
+
+dictEntryCount = 0; #the total number of entries in the dictionary
+# read file into hash table
+for line in DICT:
+	tokens=line.split()
+	if(len(tokens)==2):
+		dictEntryCount+=int(tokens[1])
+		dictionary[tokens[0]]=["",int(tokens[1])]
+	else:#there is a part of speech
+		dictEntryCount+=int(tokens[2])
+		dictionary[tokens[0]]=[tokens[1],int(tokens[2])]
+DICT.close()
+
+
+
+
+#read file into words
+for line in inputFileHandle:
+	inputFileParagraphs.append(line.split())
+
+sentence = [] #temp variable used for parsing the file into sentences
+#read file into sentences
+for para in inputFileParagraphs:
+	if(para==[]):
+		inputFileSentences.append([]) #append empty so we keep track of paras
+		continue
+	for word in para:
+		inputWordCount+=1
+		#start a sentence and read into hash
+		sentence.append(word)
+		wordImportance[onlyAlpha(word)]=wordImportance.get(onlyAlpha(word),0)+1 #second param is default value 
+													#if key DNE in hash
+		if(word.find('.')!=-1):
+			inputFileSentences.append(sentence)
+			sentence=[]
+del sentence;
+
+#check to see correct capitalization at beginning of sentences
+#if the word at the beginning of the sentence is not logged as a proper noun
+#in dictionary, then we want to lower-case it
+for sentence in inputFileSentences:
+	if(len(sentence) != 0 and sentence[0] in dictionary):
+			if(re.match(dictionary[sentence[0]][0],'proper')):
+				# we don't want to delete an entry more than once
+				try:
+					wordImportance[sentence[0].lower()]=wordImportance[sentence[0]]
+					del(wordImportance[sentence[0]])
+				except KeyError:
+					pass
+					
+for key in wordImportance.keys():
+	if(key in dictionary):
+		wordImportance[key]=[dictionary[key][0],(wordImportance[key]/inputWordCount)/
+							(dictionary[key][1]/dictEntryCount)]
+	else:
+		wordImportance[key]=["",(wordImportance[key]/inputWordCount)/
+							(.7/dictEntryCount)]
+	
+
+#debug. Should be equivalent to topwords
+'''
+for entry in sorted(wordImportance.items(),key=lambda e: e[1][1], reverse=True): 
+		print(entry);
+'''
+
+context={}
+for sentence in inputFileSentences:
+	needToExamine = False #just for readability
+	targetIndex = -1
+	for i in range(0,len(sentence)-1):
+		word = sentence[i]
+		if (re.match(target, onlyAlpha(word))):
+			needToExamine=True
+			targetIndex = i
+			break #TODO multiple occurrences
+	if(needToExamine):
+		print(sentence)
+		print(int(targetIndex))
+		for i in range(0,len(sentence)-1):
+			if(i==targetIndex):
+				continue
+			else:
+				try:
+					float(1/2)*(wordImportance[onlyAlpha(sentence[i]]))
+					#context[onlyAlpha(sentence[i])] += (1/(abs(i-targetIndex)))*wordImportance[sentence[i]]
+				except KeyError:
+					print("keyerror");
+					#context[onlyAlpha(sentence[i])] = (1/(abs(i-targetIndex)))*wordImportance[sentence[i]]
+	else:
+		continue
+			
+
+'''
+#foreach sentence we need to count word relevence by proximity (THAT'S FANCY SOUNDIN!)
+foreach my $sentence (@sentences)
+{
+	if($sentence!~m/$target/i)
+	{
+		next;
+	}
+	else
+	{
+		#split sentence into an array of words
+		my @words = split(/[?'"]? /,$sentence);
+		#find the index of $target within words
+		my $location = -1; #will need some sort of array or something for multiple occurrences
+		for my $i (0..$#words)
+		{
+			if ($words[$i]=~m/$target/i)
+			{
+				$location = $i;
+				last;
+			}
+		}
+		print "there was an error in finding the index" if ($location == -1); #because we should never get here, 
+																						#unless the word is part of another word
+		foreach my $i (0..$#words)
+		{
+			next if ($i==$location);
+			my $currword = $words[$i];
+			if ($localfreq{$currword}>.001) #i.e. is relatively ... relevant
+			{											#but i'm worried about words which aren't in hdict...
+				$context{$currword} += (1/(abs($i-$location))*$localfreq{$currword});
+			}
+		}
+	}
+}
+					'''
+
+
+
+
+
+
+
+print("\nend")
+
+
+			
