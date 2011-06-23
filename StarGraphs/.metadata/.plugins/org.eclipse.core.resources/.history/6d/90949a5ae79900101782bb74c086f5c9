@@ -1,9 +1,0 @@
-import sys
-from StarGraph import StarGraph
-
-
-star1 = StarGraph(sys.argv[1])
-star2 = StarGraph(sys.argv[2])
-
-print(star.center)
-print(star.spokes)

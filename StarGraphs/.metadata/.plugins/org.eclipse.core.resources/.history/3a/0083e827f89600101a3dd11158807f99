@@ -1,8 +1,0 @@
-'''
-Created on Jun 14, 2011
-
-@author: Max
-'''
-
-print("Hello World");
-dict = open('C:\Users\Max\Perl-Quiz\','r');

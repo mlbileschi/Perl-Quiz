@@ -1,7 +1,0 @@
-
-import StarGraph
-
-
-star = StarGraph()
-
-star.center

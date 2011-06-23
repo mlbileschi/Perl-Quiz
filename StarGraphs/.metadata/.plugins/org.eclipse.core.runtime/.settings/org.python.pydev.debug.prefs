@@ -1,3 +1,0 @@
-#Tue Jun 14 22:53:45 EDT 2011
-eclipse.preferences.version=1
-INITIAL_INTERPRETER_CMDS=import sys; print('%s %s' % (sys.executable or sys.platform, sys.version))\r\n

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;StarGraphs/src/Star&apos;" deleteContents="false" description="Delete resource &apos;StarGraphs/src/Star&apos;" element1="/StarGraphs/src/Star" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1308424216089"/>&#x0A;<refactoring comment="Delete resource &apos;StarGraphs/src/__init__.py&apos;" deleteContents="false" description="Delete resource &apos;StarGraphs/src/__init__.py&apos;" element1="/StarGraphs/src/__init__.py" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1308425228514"/>
-</session>

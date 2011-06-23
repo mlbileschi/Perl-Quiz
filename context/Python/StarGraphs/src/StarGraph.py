@@ -1,12 +1,23 @@
 class StarGraph:
 
-	
-	center=""
-	spokes = []
+	#python class variables have stupid scope.
+
 	def __init__(self,filename):
+		self.filename = filename
 		IN = open(filename,'r')
-		self.center=IN.readline()
+		self.__center__=IN.readline()
+		self.__spokes__=[]
 		for line in IN:
-			self.spokes.append([line.split()[0], float(line.split()[1])])
+			try:
+				self.__spokes__.append(
+										[
+										line.split()[0], 
+										float(line.split()[1])
+										]
+										)
+			except:
+				print("error reading file in stargraph constructor, line " + line + " of file " +filename)
 
 
+	def __str__( self ) :
+		return ("__center__= " + self.__center__ + "\n __spokes__ = " + str(self.__spokes__) + "\nfilename = " + self.filename)

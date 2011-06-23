@@ -3,15 +3,17 @@ from StarGraph import StarGraph
 import StarCreator
 
 queries = ['NADPH', 'enzyme']
-paths = ['C:\\Users\\Max\\Perl-Quiz\\sampleTexts\\photosynth.txt',
-		'C:\\Users\\Max\\Perl-Quiz\\sampleTexts\\photosynth.txt']
+paths = ['/home/max/Documents/QUIZ/Perl-Quiz/sampleTexts/photosynth.txt',
+		'/home/max/Documents/QUIZ/Perl-Quiz/sampleTexts/enzymes.txt']
 stars = []
 
-for i in range(0,len(paths)):
-	exec('StarCreator.py ' + paths[i] + ' ' + queries[i])
-#	stars.append(StarGraph(paths[i]))
-'''
+
+for i in [0,1]:#range(0,len(paths)):
+	StarCreator.newStar(paths[i], queries[i])
+	tmpStar = StarGraph('./' + queries[i]+ '.txt')
+	stars.append(tmpStar)
+	del tmpStar
+
+
 for star in stars:
-	print("center is: "+star.center)
-	print("spokes are: "+star.spokes)
-'''
+	print(star)

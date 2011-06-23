@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;StarGraphs/src/Star.py&apos; to &apos;StarGraph.py&apos;" description="Rename resource &apos;Star.py&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Star.py" name="StarGraph.py" stamp="1308424624232" updateReferences="true"/>
-</session>

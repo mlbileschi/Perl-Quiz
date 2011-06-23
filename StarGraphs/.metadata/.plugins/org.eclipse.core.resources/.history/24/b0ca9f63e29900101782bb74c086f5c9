@@ -1,8 +1,0 @@
-class StarGraph:
-
-
-	center="kat"
-	spokes = []
-	def __init__(self,):
-		self.center = "puppy"
-		spokes = [1,2,3]

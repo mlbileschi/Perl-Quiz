@@ -1,8 +1,0 @@
-import sys
-from StarGraph import StarGraph
-
-stars = []
-
-for path in sys.argv
-	stars.append(StarGraph(path))
-

@@ -1,3 +1,0 @@
-INDEX VERSION 1.126+/home/maxwellb/Documents/questionwriter/Perl-Quiz/MaxAndroid/.metadata/.plugins/org.eclipse.jdt.core
-1089191386.index
-4231242036.index
