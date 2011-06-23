@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cap">2 of 10</string>
+    <string name="app_name">NCAA Tournament Team Quiz 2011</string>
+    <string name="right">stringA</string>
+    <string name="wrong">StringB</string>
+    <string name="weee">WEEEEEEEEE</string>
+    <string name="hello2">Hello from Activity01!</string>
+</resources>

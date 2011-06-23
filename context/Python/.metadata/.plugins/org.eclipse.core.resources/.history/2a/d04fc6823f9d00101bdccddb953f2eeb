@@ -1,0 +1,13 @@
+class StarGraph:
+
+	
+	center=""
+	spokes = []
+	def __init__(self,filename):
+		IN = open(filename,'r')
+		self.center=IN.readline()
+		for i in range(len(IN)):
+			line = IN[i]
+			self.spokes.append([line.split()[0], float(line.split()[1])])
+
+

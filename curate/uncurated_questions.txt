@@ -1,0 +1,402 @@
+correct answer: actuates ()
+Instead, it ___________________ carburetor mechanisms which meter the flow of air being pulled into the engine.
+1 . actuates
+2 . main
+3 . space
+4 . motor
+5 . aircraft
+
+
+correct answer: engine ()
+Instead, it actuates carburetor mechanisms which meter the flow of air being pulled into the ___________________ .
+1 . aircraft
+2 . venturi
+3 . engine
+4 . varying
+5 . motor
+
+
+correct answer: airstream ()
+The speed of this flow, and therefore its pressure, determines the amount of fuel drawn into the ___________________ .
+1 . main
+2 . Europe
+3 . actuates
+4 . venturi
+5 . airstream
+
+
+correct answer: aircraft ()
+When carburetors are used in ___________________ with piston engines, special designs and features are needed to prevent fuel starvation during inverted flight.
+1 . varying
+2 . main
+3 . actuates
+4 . aircraft
+5 . venturi
+
+
+correct answer: piston ()
+When carburetors are used in aircraft with ___________________ engines, special designs and features are needed to prevent fuel starvation during inverted flight.
+1 . varying
+2 . manifold
+3 . space
+4 . piston
+5 . actuates
+
+
+correct answer: engine ()
+When carburetors are used in aircraft with piston ___________________s, special designs and features are needed to prevent fuel starvation during inverted flight.
+1 . space
+2 . engine
+3 . main
+4 . airstream
+5 . actuates
+
+
+correct answer: engine ()
+Later ___________________s used an early form of fuel injection known as a pressure carburetor.
+1 . actuates
+2 . aircraft
+3 . main
+4 . corrected
+5 . engine
+
+
+correct answer: engine ()
+Most production carbureted (as opposed to fuel-injected) ___________________s have a single carburetor and a matching intake manifold that divides and transports the air fuel mixture to the intake valves, though some ___________________s (like motorcycle ___________________s) use multiple carburetors on split heads.
+1 . engine
+2 . piston
+3 . corrected
+4 . main
+5 . Europe
+
+
+correct answer: manifold ()
+Most production carbureted (as opposed to fuel-injected) engines have a single carburetor and a matching intake ___________________ that divides and transports the air fuel mixture to the intake valves, though some engines (like motorcycle engines) use multiple carburetors on split heads.
+1 . aircraft
+2 . varying
+3 . manifold
+4 . main
+5 . viscosity
+
+
+correct answer: engine ()
+Most production carbureted (as opposed to fuel-injected) ___________________s have a single carburetor and a matching intake manifold that divides and transports the air fuel mixture to the intake valves, though some ___________________s (like motorcycle ___________________s) use multiple carburetors on split heads.
+1 . piston
+2 . aircraft
+3 . main
+4 . jet
+5 . engine
+
+
+correct answer: motor ()
+Most production carbureted (as opposed to fuel-injected) engines have a single carburetor and a matching intake manifold that divides and transports the air fuel mixture to the intake valves, though some engines (like ___________________cycle engines) use multiple carburetors on split heads.
+1 . motor
+2 . aircraft
+3 . main
+4 . jet
+5 . viscosity
+
+
+correct answer: engine ()
+Most production carbureted (as opposed to fuel-injected) ___________________s have a single carburetor and a matching intake manifold that divides and transports the air fuel mixture to the intake valves, though some ___________________s (like motorcycle ___________________s) use multiple carburetors on split heads.
+1 . actuates
+2 . aircraft
+3 . jet
+4 . engine
+5 . piston
+
+
+correct answer: engine ()
+Multiple carburetor ___________________s were also common enhancements for modifying ___________________s in the USA from the 1950s to mid-1960s, as well as during the following decade of high-performance muscle cars fueling different chambers of the ___________________'s intake manifold.
+1 . manifold
+2 . engine
+3 . varying
+4 . aircraft
+5 . piston
+
+
+correct answer: engine ()
+Multiple carburetor ___________________s were also common enhancements for modifying ___________________s in the USA from the 1950s to mid-1960s, as well as during the following decade of high-performance muscle cars fueling different chambers of the ___________________'s intake manifold.
+1 . Europe
+2 . corrected
+3 . engine
+4 . venturi
+5 . viscosity
+
+
+correct answer: engine ()
+Multiple carburetor ___________________s were also common enhancements for modifying ___________________s in the USA from the 1950s to mid-1960s, as well as during the following decade of high-performance muscle cars fueling different chambers of the ___________________'s intake manifold.
+1 . corrected
+2 . jet
+3 . engine
+4 . airstream
+5 . viscosity
+
+
+correct answer: manifold ()
+Multiple carburetor engines were also common enhancements for modifying engines in the USA from the 1950s to mid-1960s, as well as during the following decade of high-performance muscle cars fueling different chambers of the engine's intake ___________________ .
+1 . manifold
+2 . motor
+3 . varying
+4 . viscosity
+5 . jet
+
+
+correct answer: engine ()
+Older ___________________s used updraft carburetors, where the air enters from below the carburetor and exits through the top.
+1 . varying
+2 . engine
+3 . actuates
+4 . viscosity
+5 . aircraft
+
+
+correct answer: engine ()
+This had the advantage of never "flooding" the ___________________, as any liquid fuel droplets would fall out of the carburetor instead of into the intake manifold; it also lent itself to use of an oil bath air cleaner, where a pool of oil below a mesh element below the carburetor is sucked up into the mesh and the air is drawn through the oil-covered mesh; this was an effective system in a time when paper air filters did not exist.
+1 . varying
+2 . engine
+3 . piston
+4 . corrected
+5 . airstream
+
+
+correct answer: manifold ()
+This had the advantage of never "flooding" the engine, as any liquid fuel droplets would fall out of the carburetor instead of into the intake ___________________; it also lent itself to use of an oil bath air cleaner, where a pool of oil below a mesh element below the carburetor is sucked up into the mesh and the air is drawn through the oil-covered mesh; this was an effective system in a time when paper air filters did not exist.
+1 . Europe
+2 . space
+3 . manifold
+4 . corrected
+5 . jet
+
+
+correct answer: Europe ()
+In ___________________, the sidedraft carburetors replaced downdraft as free space in the engine bay decreased and the use of the SU-type carburetor (and similar units from other manufacturers) increased.
+1 . Europe
+2 . engine
+3 . varying
+4 . piston
+5 . viscosity
+
+
+correct answer: space ()
+In Europe, the sidedraft carburetors replaced downdraft as free ___________________ in the engine bay decreased and the use of the SU-type carburetor (and similar units from other manufacturers) increased.
+1 . Europe
+2 . corrected
+3 . actuates
+4 . space
+5 . engine
+
+
+correct answer: engine ()
+In Europe, the sidedraft carburetors replaced downdraft as free space in the ___________________ bay decreased and the use of the SU-type carburetor (and similar units from other manufacturers) increased.
+1 . main
+2 . space
+3 . corrected
+4 . engine
+5 . manifold
+
+
+correct answer: aircraft ()
+Some small propeller-driven ___________________ engines still use the updraft carburetor design.
+1 . piston
+2 . viscosity
+3 . aircraft
+4 . space
+5 . venturi
+
+
+correct answer: engine ()
+Some small propeller-driven aircraft ___________________s still use the updraft carburetor design.
+1 . varying
+2 . main
+3 . airstream
+4 . Europe
+5 . engine
+
+
+correct answer: motor ()
+Outboard ___________________ carburetors are typically sidedraft, because they must be stacked one on top of the other in order to feed the cylinders in a vertically-oriented cylinder block.
+1 . motor
+2 . piston
+3 . space
+4 . varying
+5 . actuates
+
+
+correct answer: main ()
+The ___________________ disadvantage of basing a carburetor's operation on Bernoulli's principle is that, being a fluid dynamic device, the pressure reduction in a venturi tends to be proportional to the square of the intake air speed.
+1 . viscosity
+2 . manifold
+3 . corrected
+4 . main
+5 . engine
+
+
+correct answer: venturi ()
+The main disadvantage of basing a carburetor's operation on Bernoulli's principle is that, being a fluid dynamic device, the pressure reduction in a ___________________ tends to be proportional to the square of the intake air speed.
+1 . venturi
+2 . viscosity
+3 . Europe
+4 . aircraft
+5 . piston
+
+
+correct answer: jet ()
+The fuel ___________________s are much smaller and limited mainly by viscosity, so that the fuel flow tends to be proportional to the pressure difference.
+1 . aircraft
+2 . varying
+3 . motor
+4 . Europe
+5 . jet
+
+
+correct answer: main ()
+The fuel jets are much smaller and limited ___________________ly by viscosity, so that the fuel flow tends to be proportional to the pressure difference.
+1 . viscosity
+2 . piston
+3 . corrected
+4 . main
+5 . motor
+
+
+correct answer: viscosity ()
+The fuel jets are much smaller and limited mainly by ___________________, so that the fuel flow tends to be proportional to the pressure difference.
+1 . viscosity
+2 . Europe
+3 . piston
+4 . corrected
+5 . manifold
+
+
+correct answer: jet ()
+So ___________________s sized for full power tend to starve the engine at lower speed and part throttle.
+1 . aircraft
+2 . space
+3 . engine
+4 . jet
+5 . piston
+
+
+correct answer: engine ()
+So jets sized for full power tend to starve the ___________________ at lower speed and part throttle.
+1 . venturi
+2 . viscosity
+3 . manifold
+4 . engine
+5 . motor
+
+
+correct answer: corrected ()
+Most commonly this has been ___________________ by using multiple jets.
+1 . manifold
+2 . main
+3 . piston
+4 . corrected
+5 . varying
+
+
+correct answer: jet ()
+Most commonly this has been corrected by using multiple ___________________s .
+1 . engine
+2 . aircraft
+3 . manifold
+4 . jet
+5 . viscosity
+
+
+correct answer: jet ()
+In SU and other movable ___________________ carburetors, it was corrected by varying the ___________________ size.
+1 . jet
+2 . viscosity
+3 . venturi
+4 . Europe
+5 . main
+
+
+correct answer: corrected ()
+In SU and other movable jet carburetors, it was ___________________ by varying the jet size.
+1 . corrected
+2 . venturi
+3 . manifold
+4 . motor
+5 . space
+
+
+correct answer: varying ()
+In SU and other movable jet carburetors, it was corrected by ___________________ the jet size.
+1 . manifold
+2 . space
+3 . engine
+4 . aircraft
+5 . varying
+
+
+correct answer: jet ()
+In SU and other movable ___________________ carburetors, it was corrected by varying the ___________________ size.
+1 . engine
+2 . corrected
+3 . motor
+4 . jet
+5 . actuates
+
+
+correct answer: jet ()
+For cold starting, a different principle was used, in multi-jet carburetors.
+1 . main
+2 . actuates
+3 . piston
+4 . aircraft
+5 . jet
+
+
+correct answer: main ()
+A flow resisting valve called a choke, similar to the throttle valve, was placed upstream of the ___________________ jet to reduce the intake pressure and suck additional fuel out of the jets.
+1 . main
+2 . engine
+3 . space
+4 . corrected
+5 . actuates
+
+
+correct answer: jet ()
+A flow resisting valve called a choke, similar to the throttle valve, was placed upstream of the main ___________________ to reduce the intake pressure and suck additional fuel out of the ___________________s .
+1 . airstream
+2 . corrected
+3 . motor
+4 . jet
+5 . viscosity
+
+
+correct answer: jet ()
+A flow resisting valve called a choke, similar to the throttle valve, was placed upstream of the main ___________________ to reduce the intake pressure and suck additional fuel out of the ___________________s .
+1 . jet
+2 . varying
+3 . Europe
+4 . airstream
+5 . main
+
+
+
+nouns:
+Europe
+aircraft
+jet
+viscosity
+varying
+motor
+space
+manifold
+main
+airstream
+venturi
+engine
+corrected
+piston
+actuates
+
+plurals:
+
+propers:
+
+verbs:
+

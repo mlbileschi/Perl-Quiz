@@ -1,0 +1,164 @@
+'''
+Created on Jun 14, 2011
+
+@author: Max
+'''
+
+import sys #command line args
+import re #regular expressions
+
+def newStar(filename, query):
+		DICT = open('/home/max/Documents/QUIZ/Perl-Quiz/curate/dictionary20110531.txt','r')
+		dictionary={}
+		inputFileHandle = inputFileHandle = open(filename, 'r') # open('/home/max/Documents/QUIZ/Perl-Quiz/sampleTexts/photosynth.txt', 'r')
+		inputFileParagraphs=[]
+		inputFileSentences=[]
+		inputWordCount=0
+		wordImportance={} #for the input file
+		target = query #the word that will be at the center of the star #'reactions' 
+		
+		
+		#chop off punct. and digits, e.g. 6-carbon->carbon
+		def onlyAlpha(str):
+			return(re.sub(r'\d+', '', re.sub(r'\W+', '', str)))
+		
+		#replaces all endlines with nothing
+		def chomp(str):
+			return re.sub(r'\r|\n', '', str)
+		
+		print("start\n");
+		
+		dictEntryCount = 0; #the total number of entries in the dictionary
+		# read file into hash table
+		for line in DICT:
+			tokens=line.split()
+			if(len(tokens)==2):
+				dictEntryCount+=int(tokens[1])
+				dictionary[tokens[0]]=["",int(tokens[1])]
+			else:#there is a part of speech
+				dictEntryCount+=int(tokens[2])
+				dictionary[tokens[0]]=[tokens[1],int(tokens[2])]
+		DICT.close()
+		
+		#read file into words
+		for line in inputFileHandle:
+			inputFileParagraphs.append(line.split())
+		
+		sentence = [] #temp variable used for parsing the file into sentences
+		#read file into sentences
+		for para in inputFileParagraphs:
+			if(para==[]):
+				inputFileSentences.append([]) #append empty so we keep track of paras
+				continue
+			for word in para:
+				inputWordCount+=1
+				#start a sentence and read into hash
+				sentence.append(onlyAlpha(word))
+				wordImportance[onlyAlpha(word)]=wordImportance.get(onlyAlpha(word),0)+1 #second param is default value 
+															#if key DNE in hash
+				if(word=='induced'):
+					print('YOOOOOOOO' +word)
+					print(wordImportance[word])
+					
+				if(word.find('.')!=-1):
+					inputFileSentences.append(sentence)
+					sentence=[]
+		del sentence;
+		
+		for sentence in inputFileSentences:
+			print(sentence)
+			
+		for word in sorted(wordImportance.items()):
+			print(word)
+		
+		#check to see correct capitalization at beginning of sentences
+		#if the word at the beginning of the sentence is not logged as a proper noun
+		#in dictionary, then we want to lower-case it
+		for sentence in inputFileSentences:
+			if(len(sentence)!=0 and sentence[0]!=""):
+				if(sentence[0].lower() in dictionary and not sentence[0] in dictionary):
+					if(not re.match(dictionary[sentence[0].lower()][0],'proper')):
+						# we don't want to delete an entry more than once
+						try:
+							wordImportance[sentence[0].lower()]=wordImportance[sentence[0]]
+							del(wordImportance[sentence[0]])
+						except KeyError:
+							pass
+						sentence[0]=sentence[0].lower();
+						
+				elif(not sentence[0].lower() in dictionary and sentence[0] in dictionary):
+					if(not re.match(dictionary[sentence[0]][0],'proper')):
+						# we don't want to delete an entry more than once
+						try:
+							wordImportance[sentence[0].lower()]=wordImportance[sentence[0]]
+							del(wordImportance[sentence[0]])
+						except KeyError:
+							pass
+						sentence[0]=sentence[0].lower();
+						
+				elif(sentence[0].lower() in dictionary and sentence[0] in dictionary):
+					if( len(dictionary[sentence[0]][0])==0 or not re.match(dictionary[sentence[0]][0],'proper')):
+						if(sentence[0]=='induced'):
+							print("HERHEHEHREHR\n\n\n\n")
+						# we don't want to delete an entry more than once
+						try:
+							if(not sentence[0].lower() == sentence[0]:)
+								wordImportance[sentence[0].lower()]=wordImportance[sentence[0]]
+								del(wordImportance[sentence[0]])
+						except KeyError:
+							pass
+						sentence[0]=sentence[0].lower();
+				else:
+					print("wth, |"+sentence[0]+"|")
+		
+							
+		for key in wordImportance.keys():
+			if(key in dictionary):
+				wordImportance[key]=[dictionary[key][0],(wordImportance[key]/inputWordCount)/
+									(dictionary[key][1]/dictEntryCount)]
+			else:
+				wordImportance[key]=["",(wordImportance[key]/inputWordCount)/
+									(.7/dictEntryCount)]
+			
+		#rate sentences
+		context={}
+		for sentence in inputFileSentences:
+			needToExamine = False #just for readability
+			targetIndex = -1
+			for i in range(0,len(sentence)-1):
+				word = sentence[i]
+				if (re.match(target, onlyAlpha(word))):
+					needToExamine=True
+					targetIndex = i
+					break #TODO multiple occurrences
+			if(needToExamine):
+				for i in range(0,len(sentence)-1):
+					if(i==targetIndex):
+						continue
+					else:
+						#we need try catch because we need to add the word to the context dict if its not there
+						try:
+							context[onlyAlpha(sentence[i])] += (1/(abs(i-targetIndex)))*wordImportance[sentence[i]][1]
+						except KeyError:
+							#print("keyerror");
+							context[onlyAlpha(sentence[i])] = (1/(abs(i-targetIndex)))*wordImportance[sentence[i]][1]
+			else:
+				continue
+					
+		OUT = open('./'+target+'.txt','w')
+		OUT.write(target+"\n");
+		spokes = sorted(context.items(),key=lambda e: e[1], reverse=True)
+		for i in range(0,int(len(spokes)/3)): 
+			OUT.write(str(spokes[i][0])+"\t"+str(spokes[i][1])+"\n");
+		
+		
+		
+		
+		
+		
+		
+		
+		print("\nend")
+
+
+			

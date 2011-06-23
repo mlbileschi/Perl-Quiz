@@ -1,0 +1,8 @@
+INSLSTINFOS:&&1|1|1|0&&2|2|1|1&&3|3|1|4&&3|5|1|4&&3|6|1|4&&2|7|1|1
+__init__=2
+filename=3
+StarGraph=1
+StarGraph.__init__=4
+__str__=7
+__spokes__=6
+__center__=5

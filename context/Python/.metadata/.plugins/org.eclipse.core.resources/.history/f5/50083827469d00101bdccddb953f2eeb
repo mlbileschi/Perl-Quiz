@@ -1,0 +1,26 @@
+class StarGraph:
+
+	
+	center=""
+	spokes = []
+	filename = ""
+	def __init__(self,filename):
+		self.filename = filename
+		IN = open(filename,'r')
+		self.center=IN.readline()
+		for line in IN:
+			try:
+				print("File " + filename + str([line.split()[0],	float(line.split()[1])]))
+				self.spokes.append(
+										[
+										line.split()[0], 
+										float(line.split()[1])
+										]
+										)
+			except:
+				print("error reading file in stargraph constructor, line " + line + " of file " +filename)
+		print("spokes2 = " self.spokes)
+
+
+	def __str__( self ) :
+		return ("center= " + self.center + "\n spokes = " + str(self.spokes) + "\nfilename = " + self.filename)

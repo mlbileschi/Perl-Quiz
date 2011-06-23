@@ -1,0 +1,458 @@
+rajaji		11.25
+Rajaji		11.25
+Onrum		6.75
+Patippakam		6.75
+Tavam		4.5
+Illai		4.5
+madras	(noun)	4.5
+Kurai		4.5
+Bharathan		3
+kaivilakku		2.25
+bhaja		2.25
+celvam		2.25
+Bakshi		2.25
+mahabharatha		2.25
+Sumathi		2.25
+vijayam		2.25
+nirantarac		2.25
+plighted	(verb)	2.25
+chakravarti		2.25
+Refuted		2.25
+ramayana		2.25
+Siraiyil		2.25
+thirumakal		2.25
+Thirukkural		2.25
+viruntu		2.25
+chakravarthi		2.25
+bhatia		2.25
+allatu		2.25
+bharati		2.25
+Govindam		2.25
+siraiyil		2.25
+Rajagopalachari		2
+rajagopalachari		1.25
+eva	(verb)	1
+Dalit	(noun)	1
+subbulakshmi		1
+swatantra		1
+Guha		1
+vedanta		1
+satyam		1
+sahitya		1
+Lectureship		0.25
+Cans		0.25
+Ramachandra		0.25
+Ministership		0.25
+salem	(verb)|(noun)	0.222222222222222
+Vidya		0.183673469387755
+Swatantra		0.125
+indian	(adjective)|(noun)|(proper)	0.111111111111111
+benediction	(noun)	0.111111111111111
+Swarajya		0.111111111111111
+Ramaswamy		0.111111111111111
+Upanishad	(proper)	0.0625
+Upanishads	(noun)|(plural)	0.0625
+ambedkar		0.0625
+Bhagavad		0.0625
+Ramayana		0.0612244897959184
+Untouchables		0.0408163265306122
+Hind		0.0408163265306122
+hinduism		0.04
+Chakravarti		0.04
+agitations	(noun)|(plural)	0.04
+Akademi		0.0330578512396694
+Servants		0.03125
+abridged	(adjective)|(verb)	0.03125
+vehemently	(verb)|(adverb)	0.0277777777777778
+wisest	(adjective)	0.0277777777777778
+Bhavan		0.0277777777777778
+Sahitya		0.0247933884297521
+disarmament	(noun)	0.0204081632653061
+Aurelius	(proper)	0.0204081632653061
+Devotion		0.0204081632653061
+creed	(noun)|(verb)|(plural)	0.0204081632653061
+Mahatma		0.02
+retelling	(verb)	0.0165289256198347
+Mahabharata	(proper)	0.015625
+passions	(noun)|(verb)|(plural)	0.0123456790123457
+Bharat	(proper)	0.0123456790123457
+Bharatiya	(proper)	0.0114795918367347
+Hindustan	(proper)	0.0102040816326531
+mankind	(noun)	0.01
+symposium	(noun)	0.01
+chennai		0.01
+Earlier		0.00826446280991736
+english	(noun)	0.00826446280991736
+Ratna		0.00826446280991736
+Gita	(proper)	0.00826446280991736
+Mango	(noun)	0.00694444444444444
+Socrates	(proper)	0.00591715976331361
+cart	(noun)|(verb)	0.00510204081632653
+impending	(adjective)|(verb)	0.00390625
+Carnatic		0.00390625
+botany	(noun)|(adjective)	0.00346020761245675
+Ramakrishna		0.0032
+Hereditary		0.00308641975308642
+Contributions		0.00308641975308642
+devotional	(noun)|(adjective)	0.00308641975308642
+Pg		0.00308641975308642
+explosions	(noun)|(verb)|(plural)	0.00277008310249307
+paul	(noun)	0.00277008310249307
+proponent	(noun)|(verb)	0.0025
+reconciliation	(noun)	0.00226757369614512
+Endowment		0.00173611111111111
+diary	(noun)	0.00173611111111111
+hymn	(noun)|(verb)	0.00173611111111111
+unification	(noun)	0.00173611111111111
+plea	(noun)	0.0016
+informally	(verb)|(adverb)	0.0014792899408284
+lent	(verb)|(adjective)|(adverb)	0.0014792899408284
+speeches	(noun)|(plural)	0.00118906064209275
+Prohibition	(proper)	0.00111111111111111
+statesman	(noun)	0.00104058272632674
+ideals	(noun)|(plural)	0.0009765625
+scholarships	(noun)|(plural)	0.0009765625
+communists	(noun)|(plural)	0.000918273645546373
+innocent	(adjective)|(noun)	0.000865051903114187
+Presidency		0.000732421875
+deathsHidden		0.000730460189919649
+tongue	(noun)|(verb)	0.000594883997620464
+atomic	(adjective)	0.000540832882639265
+compositions	(noun)|(plural)	0.000408163265306122
+teachings	(noun)|(plural)	0.000384467512495194
+Madras	(proper)	0.00036281179138322
+coined	(verb)	0.000342935528120713
+astronomy	(noun)	0.000318877551020408
+accomplished	(adjective)|(verb)	0.000287273771904625
+Literary		0.000277777777777778
+essays	(noun)|(verb)|(plural)	0.000277777777777778
+doctrine	(noun)	0.000260145681581686
+journals	(noun)|(verb)|(plural)	0.000260145681581686
+translations	(noun)|(plural)	0.000246913580246914
+forth	(verb)|(adverb)|(adjective)|(noun)	0.000210039907582441
+Nadu		0.000210039907582441
+Tamil	(adjective)|(proper)	0.00018491124260355
+Salem	(proper)	0.00018491124260355
+nicknamed	(verb)	0.000182615047479912
+administrator	(noun)	0.000177777777777778
+advocate	(noun)|(verb)	0.000168662506324844
+rendered	(verb)	0.000164365548980934
+fatal	(adjective)|(verb)|(adverb)	0.00015625
+imprisonment	(noun)	0.000148720999405116
+democracy	(noun)	0.00014172335600907
+sung	(verb)	0.000129132231404959
+chemistry	(noun)	0.000129132231404959
+discipline	(noun)|(verb)|(plural)	0.000123456790123457
+warfare	(noun)	0.000123456790123457
+unity	(noun)|(adjective)	0.000106281220108407
+instruction	(noun)	0.000104123281965848
+Manual	(proper)	9.42595909133754e-005
+r	(verb)|(noun)	8.11622433244055e-005
+sri		7.9719387755102e-005
+activist	(noun)	7.9719387755102e-005
+devoted	(adjective)|(verb)	7.69467528470299e-005
+Encyclopaedia		7.56143667296786e-005
+physics	(noun)|(verb)|(plural)	7.43162901307967e-005
+Bengal	(proper)	7.30513551026372e-005
+civilian	(noun)|(adjective)	6.4e-005
+meetings	(noun)|(plural)	6.103515625e-005
+Marcus	(proper)	5.48696844993141e-005
+immediate	(adjective)	5.48696844993141e-005
+concerts	(verb)|(noun)|(plural)	5.25099768956102e-005
+s	(preposition)|(noun)	5.25099768956102e-005
+explained	(verb)	5.02992807202857e-005
+Hindu	(adjective)|(proper)	4.57763671875e-005
+lawyer	(noun)|(verb)	4.50430160803567e-005
+Policy		4.00576830636116e-005
+usage	(noun)	3.7180249851279e-005
+answer	(noun)|(verb)|(adjective)	3.58564308508731e-005
+apart	(verb)|(adverb)|(preposition)|(adjective)	3.3802055164954e-005
+regularly	(verb)|(adverb)	3.22830578512397e-005
+medium	(noun)|(adjective)	3.08641975308642e-005
+contributed	(verb)	3.05240987759836e-005
+regarded	(verb)	2.82933454051607e-005
+recipient	(noun)|(verb)	2.7994736989446e-005
+edit	(noun)|(verb)	2.71267361111111e-005
+delivered	(verb)|(adjective)	2.68463582914978e-005
+Musical	(noun)	2.68351916703565e-005
+flag	(noun)|(verb)	2.60308204914619e-005
+challenge	(noun)|(verb)	2.52518875785965e-005
+introducing	(verb)	2.33377675091601e-005
+weapons	(noun)|(plural)	2.24613103928483e-005
+Scientific		2.2249911000356e-005
+literary	(adjective)	2.20748115362965e-005
+Elections		2.06611570247934e-005
+participated	(verb)	1.99298469387755e-005
+setting	(verb)|(noun)|(adjective)	1.94065477692173e-005
+translated	(verb)	1.90519737844841e-005
+Peace	(noun)	1.89035916824197e-005
+formula	(noun)|(verb)	1.84199377406104e-005
+peace	(noun)	1.82628387756593e-005
+edited	(adjective)|(verb)	1.79546107440391e-005
+opposed	(adjective)|(verb)	1.75066963113391e-005
+fast	(verb)|(noun)|(adjective)|(adverb)	1.65245554894573e-005
+read	(noun)|(verb)|(adjective)|(adverb)	1.61287721165788e-005
+why	(verb)|(adverb)|(noun)	1.57470395565634e-005
+basic	(noun)|(adjective)	1.5500031000062e-005
+Communist	(noun)|(adjective)	1.51402746445821e-005
+vol	(noun)|(verb)|(adjective)	1.51402746445821e-005
+founder	(noun)|(verb)	1.45305541226815e-005
+connected	(adjective)|(verb)	1.44573436076855e-005
+nuclear	(adjective)|(noun)	1.40274095582769e-005
+Cultural		1.39229226999332e-005
+independence	(noun)	1.38195989552383e-005
+Limited		1.37174211248285e-005
+Culture		1.34231791457489e-005
+address	(noun)|(verb)	1.34175958351783e-005
+suggested	(verb)	1.30328819611881e-005
+composed	(adjective)|(verb)	1.21932632220698e-005
+poet	(noun)	1.1490950876185e-005
+question	(noun)|(verb)	1.10374057681483e-005
+philosophy	(noun)	1.04058272632674e-005
+stories	(noun)|(plural)	9.52598689224204e-006
+Works		9.12733545696005e-006
+At		9.07243431557556e-006
+Chief	(noun)|(adjective)	8.9179548156956e-006
+collection	(noun)	8.16243240485665e-006
+Online	(adjective)|(verb)|(adverb)	7.34424688420326e-006
+Premier	(noun)	7.07333635129018e-006
+works	(noun)|(verb)|(plural)	6.54103518422826e-006
+society	(noun)	6.12685030879326e-006
+literature	(noun)	5.09556736594836e-006
+Affairs		4.62481211700775e-006
+Minister	(noun)	4.49445608841494e-006
+our	(adjective)|(noun)	4.40260986712923e-006
+Governor	(noun)	4.30433360307157e-006
+newspaper	(noun)|(verb)	4.28652872617226e-006
+wrote	(verb)	4.02394245762286e-006
+Volume		3.93675988914084e-006
+test	(adjective)|(noun)|(verb)	3.92118419762768e-006
+award	(noun)|(verb)	3.90570076083051e-006
+Nations	(noun)|(plural)	3.84467512495194e-006
+highest	(adjective)	3.75578390721711e-006
+Indian	(adjective)|(noun)|(proper)	3.74046715228617e-006
+writer	(noun)	3.71225564077245e-006
+Official		3.68404183597909e-006
+strong	(adjective)|(verb)|(adverb)	3.65591948202933e-006
+Government		3.6131344664123e-006
+This		3.50861804306829e-006
+word	(noun)|(verb)	3.28187355597564e-006
+awarded	(verb)	3.09958341598889e-006
+words	(noun)|(verb)|(plural)	3.06709892314157e-006
+Oxford	(proper)	2.99325918032591e-006
+regular	(adjective)|(noun)|(verb)	2.9021763420389e-006
+unknown	(adjective)|(noun)	2.89231338794021e-006
+India	(proper)	2.81115014593885e-006
+Sri		2.7411078461471e-006
+leader	(noun)|(verb)	2.67865992001522e-006
+mother	(noun)|(verb)	2.61832196981598e-006
+action	(noun)|(verb)	2.4337946996819e-006
+movement	(noun)	2.3523655387858e-006
+Of		2.13117374393947e-006
+culture	(noun)|(verb)|(plural)	2.11878322516945e-006
+Lord	(proper)	2.03499789377718e-006
+Assembly	(proper)	1.98933319540623e-006
+followed	(verb)	1.91834009867941e-006
+Notes		1.88519181826751e-006
+introduced	(adjective)|(verb)	1.82615047479912e-006
+Young	(proper)	1.79208579073097e-006
+author	(noun)|(verb)	1.74967106184037e-006
+issues	(noun)|(verb)|(plural)	1.70428593827758e-006
+He	(noun)	1.66802193448844e-006
+List	(noun)	1.62915182554608e-006
+Congress	(noun)|(proper)	1.56641358644488e-006
+way	(noun)|(verb)|(adverb)|(adjective)	1.54979170799445e-006
+man	(noun)|(verb)|(adjective)|(preposition)|(plural)	1.45509362799949e-006
+C	(noun)|(proper)	1.41526757638494e-006
+books	(noun)|(verb)|(plural)	1.36794227283609e-006
+good	(adjective)|(verb)|(adverb)|(noun)	1.34581532183828e-006
+politician	(noun)	1.30911299739748e-006
+elections	(noun)|(plural)	1.24840048687619e-006
+Home	(noun)|(proper)	1.17891023895332e-006
+topics	(noun)|(plural)	1.12932970893785e-006
+Awards		1.1057042174876e-006
+In		1.10519626443663e-006
+Art	(proper)	1.05193951347798e-006
+served	(verb)	9.06936933872961e-007
+great	(adjective)|(noun)	9.00158067756698e-007
+support	(noun)|(verb)	8.62121733312987e-007
+university	(noun)	8.54172289967576e-007
+started	(verb)	7.87321602766333e-007
+Institute	(noun)|(plural)	7.57460417012258e-007
+Education		7.49611139221529e-007
+Society		7.28022458036785e-007
+book	(noun)|(verb)	7.01085034253262e-007
+song	(noun)	5.97211024515513e-007
+English	(adjective)|(proper)|(verb)	5.91469530693572e-007
+Union	(noun)	5.48696844993141e-007
+district	(noun)|(verb)	5.47656972864419e-007
+Chinese	(proper)|(adjective)|(plural)	5.08749473444295e-007
+best	(adjective)|(verb)|(adverb)|(noun)	5.05858857285076e-007
+service	(noun)|(verb)	5.02280100516294e-007
+Award		4.96632582772511e-007
+Party	(noun)	4.82000998224067e-007
+General	(noun)	4.74314899559077e-007
+main	(adjective)|(noun)|(verb)|(plural)	4.67848514393827e-007
+places	(noun)|(verb)|(plural)	4.30556416668389e-007
+often	(verb)|(adverb)	4.20018237191859e-007
+born	(verb)|(adjective)|(noun)	3.99059974324481e-007
+died	(verb)|(noun)	3.80569491798918e-007
+published	(verb)	3.7407999700736e-007
+called	(verb)	3.61846800939571e-007
+c	(noun)	3.61846800939571e-007
+music	(noun)|(adjective)	3.16242199359082e-007
+see	(verb)|(noun)|(adjective)	3.14202980152426e-007
+named	(adjective)|(verb)	2.73542129864673e-007
+set	(verb)|(noun)|(adjective)	2.73542129864673e-007
+ISBN		2.53281964373865e-007
+December	(proper)	2.42585763703515e-007
+world	(noun)|(verb)	2.19589297744642e-007
+life	(noun)	2.01089907297553e-007
+California	(proper)	1.97355398193132e-007
+state	(noun)|(verb)	1.92366882117575e-007
+births	(noun)|(plural)	1.92029839900882e-007
+British	(proper)|(adjective)	1.84324390282566e-007
+persondata		1.82472395119885e-007
+M	(noun)	1.76244870393047e-007
+established	(verb)	1.74191264795806e-007
+website	(noun)	1.65111290788887e-007
+statements	(noun)|(plural)	1.53907693245345e-007
+description	(noun)	1.46236779281173e-007
+alternative	(noun)|(adjective)|(plural)	1.35363350427017e-007
+same	(adjective)|(noun)|(verb)|(adverb)	1.27278135436409e-007
+both	(noun)	1.18171448100104e-007
+names	(noun)|(verb)|(plural)	1.13673100715731e-007
+being	(verb)|(noun)	1.06448376529197e-007
+short	(adjective)|(verb)|(adverb)|(noun)	8.61500894797904e-008
+West	(proper)	8.05702504502064e-008
+b	(noun)	7.39929531331225e-008
+most	(verb)|(adverb)|(noun)|(adjective)	7.26136205289162e-008
+into	(preposition)|(noun)|(adjective)|(verb)|(adverb)	7.1685810840357e-008
+out	(verb)|(adverb)|(preposition)|(noun)|(adjective)	6.42222975192982e-008
+August	(proper)|(verb)	5.03853852151645e-008
+date	(noun)|(verb)|(plural)	5.0326599500116e-008
+death	(noun)	5.02468615747452e-008
+World		4.78814837514185e-008
+birth	(noun)|(adjective)|(verb)	4.74101888051506e-008
+time	(noun)|(verb)|(adverb)|(preposition)	4.53271986898264e-008
+other	(adjective)|(noun)|(verb)|(adverb)	4.46816636997049e-008
+place	(noun)|(verb)	3.93304687773009e-008
+March	(proper)	3.87307199444385e-008
+National		3.70249573018936e-008
+new	(adjective)|(verb)|(adverb)|(noun)	2.78241320088119e-008
+had	(verb)|(noun)|(plural)	2.46092588029626e-008
+Articles		2.42546303483976e-008
+also	(verb)|(adverb)|(preposition)	2.3886526691875e-008
+v	(noun)|(preposition)	2.32447424286121e-008
+All	(noun)	2.26810857889389e-008
+first	(adjective)|(verb)|(adverb)|(noun)	2.22495741181206e-008
+he	(noun)|(verb)|(adverb)	2.21278273247994e-008
+University		2.10466724905616e-008
+name	(noun)|(verb)|(adverb)	2.06256293781895e-008
+which	(noun)	2.05005679716524e-008
+e	(noun)|(preposition)|(verb)	2.01883801982354e-008
+after	(verb)|(adverb)|(preposition)|(adjective)	1.84505099388838e-008
+who	(noun)|(verb)|(preposition)	1.65637231274297e-008
+Terms		1.64959172893387e-008
+his	(noun)|(adjective)	1.60694918102759e-008
+its	(adjective)|(noun)	1.56798313903827e-008
+terms	(noun)|(plural)	1.50364533625716e-008
+one	(noun)|(adjective)|(verb)|(adverb)|(preposition)	1.41790867431721e-008
+d	(noun)|(adjective)	1.30958476445848e-008
+an	(noun)|(preposition)|(verb)|(adverb)|(adjective)|(plural)	1.26787447855017e-008
+last	(adjective)|(verb)|(adverb)|(noun)|(plural)	1.25976316452507e-008
+articles	(noun)|(plural)	1.16241433899928e-008
+United	(proper)	1.10849992867911e-008
+related	(adjective)|(verb)	1.02773602600172e-008
+under	(preposition)|(verb)|(adverb)|(adjective)|(noun)	9.55989603727778e-009
+contents	(noun)|(verb)|(adjective)|(plural)	8.80299788205593e-009
+or	(noun)|(adjective)|(verb)|(adverb)|(preposition)	8.56274024025396e-009
+disclaimers	(noun)|(plural)	8.27950962120416e-009
+namespaces	(noun)|(plural)	8.27950962120416e-009
+PDFPrintable		8.27950962120416e-009
+bookDownload		8.27950962120416e-009
+toolbox	(noun)	8.27499126595359e-009
+upload	(verb)|(noun)	8.26897254352992e-009
+donate	(verb)|(adverb)	8.25395443449026e-009
+trademark	(noun)|(verb)	8.21212072063823e-009
+log	(noun)|(verb)|(adjective)	8.20914477548395e-009
+Creative		8.18984050285621e-009
+Wikimedia		8.18243390996991e-009
+interaction	(noun)	8.15585320015575e-009
+privacy	(noun)	8.15438029335481e-009
+variants	(noun)|(adjective)|(plural)	8.14261138953957e-009
+apply	(verb)|(adjective)|(noun)	8.11183896208566e-009
+tools	(noun)|(verb)|(plural)	8.09578964211072e-009
+jump	(verb)|(noun)|(adverb)	8.07107967421991e-009
+random	(noun)|(adjective)	8.06962967113741e-009
+modified	(adjective)|(verb)|(noun)	8.04792643203737e-009
+registered	(verb)|(adjective)	8.00048642957492e-009
+views	(noun)|(verb)|(plural)	8.00048642957492e-009
+permanent	(adjective)|(noun)|(verb)|(adverb)	7.98048700698506e-009
+discussion	(noun)	7.94637632684221e-009
+file	(noun)|(verb)|(adverb)|(plural)	7.93788282821304e-009
+us	(noun)|(verb)|(adverb)|(preposition)|(plural)	7.88300553996345e-009
+actions	(noun)|(verb)|(plural)	7.86344473970893e-009
+contact	(noun)|(verb)	7.85647638102792e-009
+account	(noun)|(verb)	7.85508382085322e-009
+content	(noun)|(adjective)|(verb)	7.83701418035616e-009
+policy	(noun)	7.71903193088712e-009
+Use		7.6503198533703e-009
+details	(verb)|(noun)|(plural)	7.57196792054013e-009
+Foundation		7.51692307442515e-009
+recent	(adjective)	7.47797198835447e-009
+portal	(noun)	7.34777849763147e-009
+cite	(verb)|(noun)	7.2964021608762e-009
+featured	(adjective)|(verb)	7.28146709853436e-009
+special	(adjective)|(noun)	7.22218307397764e-009
+get	(noun)|(verb)|(preposition)|(adjective)	7.1842794401929e-009
+Commons	(proper)	7.12978676682914e-009
+community	(noun)	6.89837860509266e-009
+events	(noun)|(plural)	6.8857908476423e-009
+personal	(adjective)|(noun)	6.85050104975708e-009
+here	(noun)|(verb)|(adverb)|(adjective)	6.75289843348355e-009
+current	(noun)|(adjective)|(verb)	6.45669390476796e-009
+what	(noun)|(verb)|(adverb)	6.40819987103626e-009
+available	(adjective)	6.40717402561892e-009
+pages	(noun)|(verb)|(plural)	6.38466760382946e-009
+text	(noun)|(verb)	6.35315474412047e-009
+view	(noun)|(verb)	5.92171405197577e-009
+link	(noun)|(verb)|(adjective)|(preposition)|(adverb)	5.4983665562602e-009
+history	(noun)	5.31086387552729e-009
+additional	(adjective)	5.29927190282742e-009
+about	(preposition)|(verb)|(adverb)|(adjective)|(noun)	5.02600630946487e-009
+be	(verb)|(noun)|(adjective)|(adverb)|(preposition)	4.42789819574838e-009
+null	(noun)|(adjective)|(verb)	4.13260708797369e-009
+cache	(noun)|(verb)|(adjective)	4.12997838228895e-009
+navigation	(noun)	4.11537854717981e-009
+encyclopedia	(noun)	4.10382870474532e-009
+search	(verb)|(noun)	4.0045403157737e-009
+create	(verb)|(adjective)	3.98383490465476e-009
+changes	(noun)|(verb)|(plural)	3.97141785659993e-009
+free	(adjective)|(verb)|(adverb)|(noun)	3.78203371208031e-009
+was	(verb)|(noun)|(plural)	3.68736071895599e-009
+may	(verb)|(noun)|(adverb)	3.46877222713364e-009
+page	(noun)|(verb)	3.30276261031756e-009
+help	(noun)|(verb)|(plural)	2.76106595821837e-009
+for	(preposition)|(verb)|(adverb)|(noun)	2.65823019541947e-009
+links	(noun)|(verb)|(adverb)|(adjective)|(plural)	2.32276706055508e-009
+as	(verb)|(adverb)|(preposition)|(noun)|(adjective)	2.31589103403828e-009
+at	(preposition)|(noun)|(verb)	2.12969709948544e-009
+by	(preposition)|(verb)|(adverb)|(adjective)|(noun)	2.00388384350235e-009
+if	(noun)|(verb)	1.79363657347228e-009
+retrieved	(verb)	1.76452225993885e-009
+on	(adjective)|(verb)|(adverb)|(preposition)|(noun)	1.72882797231177e-009
+article	(noun)|(verb)	1.69809016334227e-009
+from	(preposition)|(adjective)	1.3157954515507e-009
+true	(adjective)|(verb)|(adverb)|(noun)	1.18815574332448e-009
+with	(preposition)|(verb)	1.18174162789722e-009
+Wikipedia	(proper)|(verb)	1.15001629857724e-009
+and	(noun)|(verb)|(adverb)|(adjective)	1.00459459835558e-009
+this	(noun)|(adjective)	9.92765984304719e-010
+to	(preposition)|(verb)|(adverb)|(noun)|(adjective)	9.20999284997862e-010
+a	(noun)|(preposition)|(verb)|(adverb)|(adjective)	9.16620206573207e-010
+of	(preposition)|(verb)|(adverb)|(noun)|(adjective)|(proper)	8.32869233064207e-010
+in	(preposition)|(verb)|(adverb)|(noun)|(adjective)	8.21028302155072e-010
+false	(adjective)|(noun)|(verb)	7.66492749071688e-010
+is	(verb)|(noun)|(adverb)|(adjective)|(preposition)|(plural)	5.47785920739654e-010
+the	(verb)|(adverb)|(noun)|(adjective)|(proper)	3.77503323776146e-010

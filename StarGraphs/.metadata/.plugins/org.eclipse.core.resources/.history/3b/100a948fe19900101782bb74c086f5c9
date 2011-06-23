@@ -1,0 +1,7 @@
+
+import StarGraph
+
+
+star = MyClass()
+
+star.center

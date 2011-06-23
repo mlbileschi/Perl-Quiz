@@ -1,0 +1,7 @@
+
+from StarGraph import StarGraph
+
+
+star = StarGraph()
+
+print9star.center)

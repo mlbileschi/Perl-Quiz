@@ -1,0 +1,7 @@
+class StarGraph:
+
+
+	center = ""
+	spokes = []
+	def __init__(self,filename):
+		center = "puppy"
