@@ -8,7 +8,7 @@ if a number is repeated more than once in a sentence, once with BC and once with
 FIXED check out ww2 years, the last one generated. it's not a year. how can we filter these?
 FIXED correct answer doesn't print whether it's AD or BC
 
-in the pythonProgrammingLanguage file, references in the form of [digit] really fuck up the sentence parsing syntax
+in the pythonProgrammingLanguage file, references in the form of [digit] really mess up the sentence parsing syntax
 
 need to put the words back in in their original capitalization
 
