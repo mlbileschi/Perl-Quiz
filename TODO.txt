@@ -49,7 +49,7 @@ For the webpage:
 	why isn't the fucking perl script running when the other one is?
 
 
-Other shit:
+Other:
 	Clean up git directory
 	Get a past and present Country list
 
